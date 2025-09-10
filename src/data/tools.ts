@@ -1883,7 +1883,7 @@ applications: [
     { id: '1', title: 'Anúncio Facebook', content: 'Crie 3 variações curtas de anúncio para vender [produto].' },
     { id: '2', title: 'Post Instagram', content: 'Escreva uma legenda curta e persuasiva para [tema].' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=5ykB5t3kRQY'
+  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
 {
   id: '46',
@@ -1917,7 +1917,7 @@ applications: [
     { id: '1', title: 'Cortar trechos', content: 'Remova automaticamente pausas e vícios de linguagem deste áudio.' },
     { id: '2', title: 'Transformar vídeo em artigo', content: 'Transcreva e resuma esse vídeo em formato de artigo.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=p6oo0YySsoQ'
+  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
 {
   id: '47',
@@ -1951,7 +1951,7 @@ applications: [
     { id: '1', title: 'Vídeo para anúncio', content: 'Transforme esse texto em um vídeo de até 30 segundos com legendas.' },
     { id: '2', title: 'Resumo visual', content: 'Crie um vídeo com 5 cenas resumindo esse artigo.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=w3F4bxt9Nzg'
+  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
 {
   id: '48',
@@ -1985,6 +1985,6 @@ applications: [
     { id: '1', title: 'Foto de produto', content: 'Remova o fundo desta imagem deixando apenas o produto em destaque.' },
     { id: '2', title: 'Montagem social media', content: 'Recorte a pessoa em PNG para usar em um post com fundo personalizado.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=fQ7q2ZVZtJY'
+  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 } 
 ];
