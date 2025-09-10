@@ -1770,7 +1770,6 @@ applications: [
 ],
   freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
-
     {
     id: '37',
    name: 'CAPCUT PRO',
@@ -1812,4 +1811,174 @@ applications: [
 ],
   freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
+  {
+  id: '44',
+  name: 'Notion AI PRO',
+  description: 'Assistente de escrita e produtividade integrado ao Notion',
+  image: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg',
+  url: 'https://www.notion.so/product/ai',
+  category: 'pro',
+  function: 'Ferramenta que gera resumos, cria textos e organiza informações dentro do Notion.',
+  applications: [
+    'Criar resumos de reuniões automaticamente',
+    'Gerar planejadores e listas de tarefas',
+    'Escrever textos de estudo ou trabalho',
+    'Organizar brainstorms de ideias'
+  ],
+  videos: [
+    {
+      id: '1',
+      title: 'Como usar o Notion AI de graça',
+      thumbnail: 'https://img.youtube.com/vi/2FfOrX16rG0/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=2FfOrX16rG0'
+    },
+    {
+      id: '2',
+      title: 'Produtividade 10x com Notion AI',
+      thumbnail: 'https://img.youtube.com/vi/9hv5QssxP8Q/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=9hv5QssxP8Q'
+    }
+  ],
+  prompts: [
+    { id: '1', title: 'Resumo de reunião', content: 'Resuma em tópicos claros os principais pontos desta reunião.' },
+    { id: '2', title: 'Planner diário', content: 'Monte uma lista de tarefas organizada para o meu dia.' }
+  ],
+  freeAccessVideo: 'https://www.youtube.com/watch?v=iydSXf8Ifvk'
+},
+{
+  id: '45',
+  name: 'Copy.ai PRO',
+  description: 'IA focada em copywriting e textos de marketing',
+  image: 'https://assets-global.website-files.com/5f4e2d1b8a5b4b2e0f4c3d23/603fbba04812157897836982_CopyAI%20Logo.svg',
+  url: 'https://www.copy.ai',
+  category: 'pro',
+  function: 'Gera textos persuasivos, anúncios, posts e e-mails de forma automática.',
+  applications: [
+    'Criar anúncios para Facebook e Instagram',
+    'Gerar posts prontos para redes sociais',
+    'Escrever descrições de produto',
+    'Criar e-mails de vendas em minutos'
+  ],
+  videos: [
+    {
+      id: '1',
+      title: 'Copy.ai grátis: Tutorial completo',
+      thumbnail: 'https://img.youtube.com/vi/dhYrE3AdWlM/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=dhYrE3AdWlM'
+    },
+    {
+      id: '2',
+      title: 'Como criar anúncios com Copy.ai',
+      thumbnail: 'https://img.youtube.com/vi/UHByj0NfVrA/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=UHByj0NfVrA'
+    }
+  ],
+  prompts: [
+    { id: '1', title: 'Anúncio Facebook', content: 'Crie 3 variações curtas de anúncio para vender [produto].' },
+    { id: '2', title: 'Post Instagram', content: 'Escreva uma legenda curta e persuasiva para [tema].' }
+  ],
+  freeAccessVideo: 'https://www.youtube.com/watch?v=5ykB5t3kRQY'
+},
+{
+  id: '46',
+  name: 'Descript PRO',
+  description: 'Edição de áudio e vídeo baseada em texto',
+  image: 'https://seeklogo.com/images/D/descript-logo-DA667E6D47-seeklogo.com.png',
+  url: 'https://www.descript.com',
+  category: 'pro',
+  function: 'Permite editar vídeos e áudios apenas editando o texto, além de clonar vozes.',
+  applications: [
+    'Editar podcasts de forma rápida',
+    'Clonar voz para narrações',
+    'Editar vídeos curtos para redes sociais',
+    'Transformar vídeos em transcrições de texto'
+  ],
+  videos: [
+    {
+      id: '1',
+      title: 'Descript grátis para editar vídeos',
+      thumbnail: 'https://img.youtube.com/vi/VsXvZ8U6oJo/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=VsXvZ8U6oJo'
+    },
+    {
+      id: '2',
+      title: 'Como clonar sua voz no Descript',
+      thumbnail: 'https://img.youtube.com/vi/96wCMoiU4kE/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=96wCMoiU4kE'
+    }
+  ],
+  prompts: [
+    { id: '1', title: 'Cortar trechos', content: 'Remova automaticamente pausas e vícios de linguagem deste áudio.' },
+    { id: '2', title: 'Transformar vídeo em artigo', content: 'Transcreva e resuma esse vídeo em formato de artigo.' }
+  ],
+  freeAccessVideo: 'https://www.youtube.com/watch?v=p6oo0YySsoQ'
+},
+{
+  id: '47',
+  name: 'Pictory AI PRO',
+  description: 'IA para transformar texto em vídeo com narração e legendas',
+  image: 'https://yt3.googleusercontent.com/ytc/AIf8zZRrYlraRkAl7sPQnXHVnMTYxpuG-S6uk6M5arFv=s900-c-k-c0x00ffffff-no-rj',
+  url: 'https://pictory.ai',
+  category: 'pro',
+  function: 'Cria vídeos automáticos a partir de artigos, roteiros ou textos simples.',
+  applications: [
+    'Gerar vídeos automáticos para YouTube',
+    'Criar anúncios em vídeo prontos',
+    'Adicionar legendas automáticas',
+    'Transformar artigos em vídeos curtos'
+  ],
+  videos: [
+    {
+      id: '1',
+      title: 'Como usar Pictory grátis',
+      thumbnail: 'https://img.youtube.com/vi/HyH2rZCVO6M/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=HyH2rZCVO6M'
+    },
+    {
+      id: '2',
+      title: 'Criando vídeos automáticos com Pictory',
+      thumbnail: 'https://img.youtube.com/vi/4U9Rzkz5LPo/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=4U9Rzkz5LPo'
+    }
+  ],
+  prompts: [
+    { id: '1', title: 'Vídeo para anúncio', content: 'Transforme esse texto em um vídeo de até 30 segundos com legendas.' },
+    { id: '2', title: 'Resumo visual', content: 'Crie um vídeo com 5 cenas resumindo esse artigo.' }
+  ],
+  freeAccessVideo: 'https://www.youtube.com/watch?v=w3F4bxt9Nzg'
+},
+{
+  id: '48',
+  name: 'Remove.bg PRO',
+  description: 'Remoção automática de fundo de imagens',
+  image: 'https://static.remove.bg/remove-bg-logo.png',
+  url: 'https://remove.bg',
+  category: 'pro',
+  function: 'Remove fundos de imagens em segundos com qualidade profissional.',
+  applications: [
+    'Criar fotos de produto para e-commerce',
+    'Editar imagens para redes sociais',
+    'Produzir materiais de marketing',
+    'Transformar fotos em PNGs transparentes'
+  ],
+  videos: [
+    {
+      id: '1',
+      title: 'Remove.bg grátis sem limite',
+      thumbnail: 'https://img.youtube.com/vi/olP2M8CrJ6A/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=olP2M8CrJ6A'
+    },
+    {
+      id: '2',
+      title: 'Como editar fotos sem fundo',
+      thumbnail: 'https://img.youtube.com/vi/2evuC6CDHxg/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=2evuC6CDHxg'
+    }
+  ],
+  prompts: [
+    { id: '1', title: 'Foto de produto', content: 'Remova o fundo desta imagem deixando apenas o produto em destaque.' },
+    { id: '2', title: 'Montagem social media', content: 'Recorte a pessoa em PNG para usar em um post com fundo personalizado.' }
+  ],
+  freeAccessVideo: 'https://www.youtube.com/watch?v=fQ7q2ZVZtJY'
+} 
 ];
