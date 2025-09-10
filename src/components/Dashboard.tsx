@@ -1,9 +1,22 @@
 import React from 'react';
 import { ExternalLink, ArrowRight, Users } from 'lucide-react';
+import AnnouncementBanner from './AnnouncementBanner';
 
-export default function Dashboard() {
+interface DashboardProps {
+  onToolSelect?: (tool: any) => void;
+  onViewChange?: (view: string) => void;
+}
+
+export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
+
   const handleCommunityClick = () => {
     window.open('https://whatsapp.com/channel/0029Vb4Byv61noz5kQi01Y1Z', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleViewCategories = () => {
+    if (onViewChange) {
+      onViewChange('categories');
+    }
   };
 
   return (
@@ -54,6 +67,9 @@ export default function Dashboard() {
           <div className="text-slate-400 text-sm">Disponível</div>
         </div>
       </div>
+
+      {/* Announcement Banner */}
+      <AnnouncementBanner onViewCategories={handleViewCategories} />
 
       {/* Comunidade Banner */}
       <section>

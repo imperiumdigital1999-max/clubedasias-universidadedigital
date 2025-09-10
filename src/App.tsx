@@ -68,7 +68,7 @@ function App() {
       case 'recent':
         return <RecentView onToolSelect={handleToolSelect} />;
       default:
-        return <Dashboard onToolSelect={handleToolSelect} />;
+        return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
   };
 
