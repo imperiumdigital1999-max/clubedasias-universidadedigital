@@ -1951,7 +1951,7 @@ applications: [
   id: '48',
   name: 'Remove.bg PRO',
   description: 'Remoção automática de fundo de imagens',
-  image: 'https://static.remove.bg/remove-bg-logo.png',
+  image: 'https://snapbg.ai/preview.jpg',
   url: 'https://remove.bg',
   category: 'pro',
   function: 'Remove fundos de imagens em segundos com qualidade profissional.',
