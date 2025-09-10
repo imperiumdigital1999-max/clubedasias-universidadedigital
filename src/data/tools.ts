@@ -1917,7 +1917,7 @@ applications: [
   id: '47',
   name: 'Pictory AI PRO',
   description: 'IA para transformar texto em vídeo com narração e legendas',
-  image: 'https://yt3.googleusercontent.com/ytc/AIf8zZRrYlraRkAl7sPQnXHVnMTYxpuG-S6uk6M5arFv=s900-c-k-c0x00ffffff-no-rj',
+  image: 'https://media.cybernews.com/images/featured/2025/02/pictory-ai.jpg',
   url: 'https://pictory.ai',
   category: 'pro',
   function: 'Cria vídeos automáticos a partir de artigos, roteiros ou textos simples.',
