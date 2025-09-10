@@ -1849,7 +1849,7 @@ applications: [
     { id: '1', title: 'Resumo de reunião', content: 'Resuma em tópicos claros os principais pontos desta reunião.' },
     { id: '2', title: 'Planner diário', content: 'Monte uma lista de tarefas organizada para o meu dia.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=iydSXf8Ifvk'
+  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
 {
   id: '45',
