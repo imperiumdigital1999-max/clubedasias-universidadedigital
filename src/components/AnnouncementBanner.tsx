@@ -25,7 +25,7 @@ export default function AnnouncementBanner({ onViewCategories }: AnnouncementBan
             <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-purple-400/30">
               <Megaphone className="w-6 h-6 text-purple-400" />
             </div>
-            <h2 className="text-3xl font-bold text-white">🚀 Novas IAs foram adicionadas hoje!</h2>
+            <h2 className="text-3xl font-bold text-white">Novas IAs foram adicionadas hoje!</h2>
           </div>
           <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
             Confira agora as ferramentas PRO que acabaram de chegar no Clube das IAs na área de categorias!
