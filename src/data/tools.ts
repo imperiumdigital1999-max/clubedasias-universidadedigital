@@ -1936,15 +1936,21 @@ applications: [
   videos: [
     {
       id: '1',
-      title: 'Como usar Pictory grátis',
-      thumbnail: 'https://img.youtube.com/vi/HyH2rZCVO6M/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=HyH2rZCVO6M'
+      title: '30 Dias Usando a Pictory AI: Valeu a Pena?',
+      thumbnail: 'https://img.youtube.com/vi/gt76lxPNicM/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=gt76lxPNicM'
     },
     {
       id: '2',
-      title: 'Criando vídeos automáticos com Pictory',
-      thumbnail: 'https://img.youtube.com/vi/4U9Rzkz5LPo/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=4U9Rzkz5LPo'
+      title: 'TRANSFORME QUALQUER TEXTO EM UM VÍDEO PROFISSIONAL',
+      thumbnail: 'https://img.youtube.com/vi/BFp8uao6THc/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=BFp8uao6THc'
+    },
+    {
+      id: '3',
+      title: 'Como Criar Vídeos para Canal Dark 100% Automático',
+      thumbnail: 'https://img.youtube.com/vi/bpkWrkdLkw/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=-bpkWrkdLkw'
     }
   ],
   prompts: [
