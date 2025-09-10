@@ -1523,47 +1523,6 @@ applications: [
 ],
   freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
-  {
-    id: '37',
-   name: 'CAPCUT PRO',
-description: 'Editor de vídeos profissional com IA para criar, cortar, animar e aplicar efeitos visuais rapidamente.',
-image: 'https://hotmart.s3.amazonaws.com/product_pictures/a88895d6-86bd-406a-93c1-2ed6d3556645/CAPCUTPROzip11.png',
-url: 'https://www.capcut.com/',
-category: 'edicao',
-function: 'Ferramenta de edição de vídeo com recursos avançados de IA, permitindo criar conteúdos profissionais sem software complexo.',
-applications: [
-  'Editar vídeos com cortes automáticos e efeitos',
-  'Adicionar textos, legendas e transições',
-  'Criar vídeos para redes sociais e marketing',
-  'Aplicar filtros e animações de forma rápida'
-  ],
-  videos: [
-    {
-      id: '1',
-      title: 'CAPCUT PRO GRÁTIS: Desbloqueie TODOS os Recursos Premium do Capcut de Graça',
-      thumbnail: 'https://img.youtube.com/vi/4e2YyZKnsbo/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=4e2YyZKnsbo'
-    },
-    {
-      id: '2',
-      title: 'GUIA COMPLETO: COMO EDITAR VÍDEOS DO ZERO pelo CELULAR | CAPCUT PARA INICIANTE',
-      thumbnail: 'https://img.youtube.com/vi/wq4zBNYhVnM/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=wq4zBNYhVnM'
-    },
-    {
-      id: '3',
-      title: 'Como DOMINAR o Estilo de Edição que mais VIRALIZA pelo CELULAR! (Tutorial CapCut)',
-      thumbnail: 'https://img.youtube.com/vi/qmIPXGzJe3w/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=qmIPXGzJe3w'
-    }
-  ],
-  prompts: [
-{ id: '1', title: 'Vídeo social', content: 'Crie vídeo curto para Instagram, com cortes rápidos e música de fundo.' },
-  { id: '2', title: 'Tutorial animado', content: 'Gere vídeo tutorial de 2 minutos com animações e narração clara.' },
-  { id: '3', title: 'Promoção de produto', content: 'Crie vídeo promocional de 15 segundos destacando características principais do produto.' }
-],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
-},
   //Streamings
   {
   id: '38',
@@ -1808,6 +1767,48 @@ applications: [
 { id: '1', title: 'Sem Prompt', content: 'N/A' },
   { id: '2', title: 'Sem Prompt', content: 'N/A' },
   { id: '3', title: 'Sem Prompt', content: 'N/A' }
+],
+  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+},
+
+    {
+    id: '37',
+   name: 'CAPCUT PRO',
+description: 'Editor de vídeos profissional com IA para criar, cortar, animar e aplicar efeitos visuais rapidamente.',
+image: 'https://hotmart.s3.amazonaws.com/product_pictures/a88895d6-86bd-406a-93c1-2ed6d3556645/CAPCUTPROzip11.png',
+url: 'https://www.capcut.com/',
+category: 'pro',
+function: 'Ferramenta de edição de vídeo com recursos avançados de IA, permitindo criar conteúdos profissionais sem software complexo.',
+applications: [
+  'Editar vídeos com cortes automáticos e efeitos',
+  'Adicionar textos, legendas e transições',
+  'Criar vídeos para redes sociais e marketing',
+  'Aplicar filtros e animações de forma rápida'
+  ],
+  videos: [
+    {
+      id: '1',
+      title: 'CAPCUT PRO GRÁTIS: Desbloqueie TODOS os Recursos Premium do Capcut de Graça',
+      thumbnail: 'https://img.youtube.com/vi/4e2YyZKnsbo/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=4e2YyZKnsbo'
+    },
+    {
+      id: '2',
+      title: 'GUIA COMPLETO: COMO EDITAR VÍDEOS DO ZERO pelo CELULAR | CAPCUT PARA INICIANTE',
+      thumbnail: 'https://img.youtube.com/vi/wq4zBNYhVnM/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=wq4zBNYhVnM'
+    },
+    {
+      id: '3',
+      title: 'Como DOMINAR o Estilo de Edição que mais VIRALIZA pelo CELULAR! (Tutorial CapCut)',
+      thumbnail: 'https://img.youtube.com/vi/qmIPXGzJe3w/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=qmIPXGzJe3w'
+    }
+  ],
+  prompts: [
+{ id: '1', title: 'Vídeo social', content: 'Crie vídeo curto para Instagram, com cortes rápidos e música de fundo.' },
+  { id: '2', title: 'Tutorial animado', content: 'Gere vídeo tutorial de 2 minutos com animações e narração clara.' },
+  { id: '3', title: 'Promoção de produto', content: 'Crie vídeo promocional de 15 segundos destacando características principais do produto.' }
 ],
   freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
