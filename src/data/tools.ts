@@ -1883,7 +1883,7 @@ applications: [
   id: '46',
   name: 'Descript PRO',
   description: 'Edição de áudio e vídeo baseada em texto',
-  image: 'https://seeklogo.com/images/D/descript-logo-DA667E6D47-seeklogo.com.png',
+  image: 'https://cdn.prod.website-files.com/634e7aa49f5b025e1fd9e87b/65203a32b6439e022d9f6653_61392ac3d9cf6c648ce5743f_CleanShot-2020-07-28-at-06.16.27%402x.png',
   url: 'https://www.descript.com',
   category: 'pro',
   function: 'Permite editar vídeos e áudios apenas editando o texto, além de clonar vozes.',
