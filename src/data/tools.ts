@@ -1902,15 +1902,15 @@ applications: [
   videos: [
     {
       id: '1',
-      title: 'Descript grátis para editar vídeos',
-      thumbnail: 'https://img.youtube.com/vi/VsXvZ8U6oJo/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=VsXvZ8U6oJo'
+      title: 'Como Colocar Legendas Perfeitas no seu Vídeo',
+      thumbnail: 'https://img.youtube.com/vi/m63Wf8w6ROU/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=m63Wf8w6ROU&t=55s'
     },
     {
       id: '2',
-      title: 'Como clonar sua voz no Descript',
-      thumbnail: 'https://img.youtube.com/vi/96wCMoiU4kE/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=96wCMoiU4kE'
+      title: 'Como editar um VSL em 5 minutos: Utilizando a ferramenta Descript',
+      thumbnail: 'https://img.youtube.com/vi/rIfU0u0RRMk/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=rIfU0u0RRMk'
     }
   ],
   prompts: [
