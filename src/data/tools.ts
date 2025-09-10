@@ -1849,7 +1849,7 @@ applications: [
   id: '45',
   name: 'Copy.ai PRO',
   description: 'IA focada em copywriting e textos de marketing',
-  image: 'https://assets-global.website-files.com/5f4e2d1b8a5b4b2e0f4c3d23/603fbba04812157897836982_CopyAI%20Logo.svg',
+  image: 'https://reply.io/wp-content/uploads/copy.ai_-1080x567.jpg',
   url: 'https://www.copy.ai',
   category: 'pro',
   function: 'Gera textos persuasivos, anúncios, posts e e-mails de forma automática.',
