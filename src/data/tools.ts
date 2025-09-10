@@ -1828,15 +1828,21 @@ applications: [
   videos: [
     {
       id: '1',
-      title: 'Como usar o Notion AI de graça',
-      thumbnail: 'https://img.youtube.com/vi/2FfOrX16rG0/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=2FfOrX16rG0'
+      title: 'Notion 100% Gratis! É possível?',
+      thumbnail: 'https://img.youtube.com/vi/cTXjOvZ7pwQ/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=cTXjOvZ7pwQ'
     },
     {
       id: '2',
-      title: 'Produtividade 10x com Notion AI',
-      thumbnail: 'https://img.youtube.com/vi/9hv5QssxP8Q/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=9hv5QssxP8Q'
+      title: 'NOTION AI: FACILITE sua VIDA com a INTELIGÊNCIA ARTIFICIAL!',
+      thumbnail: 'https://img.youtube.com/vi/PmAg5prBap0/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=PmAg5prBap0'
+    },
+    {
+      id: '3',
+      title: 'NOTION PRO DE GRAÇA PARA ESTUDANTES!',
+      thumbnail: 'https://img.youtube.com/vi/7PqulEf9OHs/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=7PqulEf9OHs'
     }
   ],
   prompts: [
