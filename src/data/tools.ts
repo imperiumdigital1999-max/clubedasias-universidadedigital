@@ -980,47 +980,6 @@ applications: [
 ],
   freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
 },
-  {
-    id: '29',
-    name: 'Pack de Edição',
-description: 'Conjunto de recursos de design como templates, efeitos e elementos visuais para edição rápida de imagens e vídeos.',
-image: 'https://img.freepik.com/vetores-premium/ideias-de-design-de-logotipo-de-edicao-de-video_393879-2692.jpg',
-url: 'https://drive.google.com/drive/folders/150yLNLPoRCuswdqj_usc-eYcNHgf4reT?_gl=1*1kauo0w*_ga*MTg5Nzk3NTMzNy4xNzUxNTUwMTUw*_ga_37GXT4VGQK*czE3NTUyMTkzOTkkbzEyMSRnMSR0MTc1NTIxOTQyMiRqMzckbDAkaDA.',
-category: 'video',
-function: 'Fornece templates, efeitos e recursos visuais para acelerar a criação e edição de imagens e vídeos.',
-applications: [
-  'Criar posts animados para redes sociais',
-  'Editar imagens com filtros e efeitos',
-  'Usar templates prontos para campanhas rápidas',
-  'Melhorar qualidade visual de conteúdo digital'
-  ],
-  videos: [
-    {
-      id: '1',
-      title: 'Sem video',
-      thumbnail: '',
-      url: ''
-    },
-    {
-      id: '2',
-      title: 'Sem video',
-      thumbnail: '',
-      url: ''
-    },
-    {
-      id: '3',
-      title: 'Sem video',
-      thumbnail: '',
-      url: ''
-    }
-  ],
-  prompts: [
-  { id: '1', title: 'SENHA:', content: 'breno.pohlig1@gmail.com' },
-  { id: '2', title: 'SENHA:', content: 'breno.pohlig1@gmail.com' },
-  { id: '3', title: 'SENHA:', content: 'breno.pohlig1@gmail.com' }
-],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
-},
   // Automação
   {
     id: '11',
