@@ -1948,9 +1948,9 @@ applications: [
     },
     {
       id: '3',
-      title: 'Como Criar Vídeos para Canal Dark 100% Automático',
-      thumbnail: 'https://img.youtube.com/vi/bpkWrkdLkw/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=-bpkWrkdLkw'
+      title: 'Inteligência Artificial Cria VSL em minutos!,
+      thumbnail: 'https://img.youtube.com/vi/Qn07KQak_vg/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=Qn07KQak_vg'
     }
   ],
   prompts: [
