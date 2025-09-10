@@ -1977,14 +1977,14 @@ applications: [
     {
       id: '1',
       title: 'Remove.bg grátis sem limite',
-      thumbnail: 'https://img.youtube.com/vi/olP2M8CrJ6A/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=olP2M8CrJ6A'
+      thumbnail: 'https://img.youtube.com/vi/VisP78ii5S4/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=VisP78ii5S4'
     },
     {
       id: '2',
       title: 'Como editar fotos sem fundo',
-      thumbnail: 'https://img.youtube.com/vi/2evuC6CDHxg/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=2evuC6CDHxg'
+      thumbnail: 'https://img.youtube.com/vi/qdQoIvg/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=QZK-qdQoIvg'
     }
   ],
   prompts: [
