@@ -1815,7 +1815,7 @@ applications: [
   id: '44',
   name: 'Notion AI PRO',
   description: 'Assistente de escrita e produtividade integrado ao Notion',
-  image: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg',
+  image: 'https://www.conversion.com.br/wp-content/uploads/2023/02/notion-ai.png',
   url: 'https://www.notion.so/product/ai',
   category: 'pro',
   function: 'Ferramenta que gera resumos, cria textos e organiza informações dentro do Notion.',
