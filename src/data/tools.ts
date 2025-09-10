@@ -457,7 +457,7 @@ applications: [
     id: '7',
     name: 'ElevenLabs',
     description: 'Síntese de voz realista com clonagem vocal',
-    image: 'https://xraise.ai/blog/wp-content/uploads/2025/04/ElevenLabs-tool-for-startups-cover-image.jpg',
+    image: 'https://i.ytimg.com/vi/dlscfLAMSXA/maxresdefault.jpg',
     url: 'https://elevenlabs.io',
     category: 'voz',
     featured: true,
