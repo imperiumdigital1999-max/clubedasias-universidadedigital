@@ -68,7 +68,7 @@ const categories: CategoryInfo[] = [
   },
   {
     id: 'stream',
-    name: 'Streamings',
+    name: 'Streamings (Em breve)',
     emoji: '🎬',
     icon: Video,
     gradient: 'from-red-500 to-black-500'
