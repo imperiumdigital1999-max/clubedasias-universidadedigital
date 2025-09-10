@@ -1982,7 +1982,7 @@ applications: [
     },
     {
       id: '2',
-      title: 'COMO REMOVER FUNDOS DE IMAGENS EM SEGUNDOS',
+      title: 'COMO REMOVER O FUNDO DE IMAGEM | 4 Sites Gratuitos',
       thumbnail: 'https://img.youtube.com/vi/732f16D9zxY/hqdefault.jpg',
       url: 'https://www.youtube.com/watch?v=732f16D9zxY'
     }
