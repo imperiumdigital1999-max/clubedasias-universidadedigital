@@ -1868,15 +1868,15 @@ applications: [
   videos: [
     {
       id: '1',
-      title: 'Copy.ai grátis: Tutorial completo',
-      thumbnail: 'https://img.youtube.com/vi/dhYrE3AdWlM/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=dhYrE3AdWlM'
+      title: 'Ferramenta Criadora de Copys Infinitas Copy.ai',
+      thumbnail: 'https://img.youtube.com/vi/rFtH5Ujo2Ik/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=rFtH5Ujo2Ik'
     },
     {
       id: '2',
-      title: 'Como criar anúncios com Copy.ai',
-      thumbnail: 'https://img.youtube.com/vi/UHByj0NfVrA/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=UHByj0NfVrA'
+      title: 'Copy.ai: Ferramenta CRIA Copy INFINITAS',
+      thumbnail: 'https://img.youtube.com/vi/gxzVIvNV994/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=gxzVIvNV994'
     }
   ],
   prompts: [
