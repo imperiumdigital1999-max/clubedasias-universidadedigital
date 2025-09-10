@@ -1983,8 +1983,8 @@ applications: [
     {
       id: '2',
       title: 'COMO REMOVER FUNDOS DE IMAGENS EM SEGUNDOS',
-      thumbnail: 'https://img.youtube.com/vi/qdQoIvg/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=QZK-qdQoIvg'
+      thumbnail: 'https://img.youtube.com/vi/732f16D9zxY/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=732f16D9zxY'
     }
   ],
   prompts: [
