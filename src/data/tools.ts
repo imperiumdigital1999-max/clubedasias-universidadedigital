@@ -433,9 +433,9 @@ applications: [
     },
     {
       id: '2',
-      title: 'COMO TER CANVA PRO DE GRAÇA EM 2025!',
-      thumbnail: 'https://img.youtube.com/vi/dDQLEJoDgn4/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=dDQLEJoDgn4'
+      title: '15 Truques e Dicas SECRETAS Canva que Você Não Sabia',
+      thumbnail: 'https://img.youtube.com/vi/Th8h8REjOzA/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=Th8h8REjOzA'
     },
     {
       id: '3',
