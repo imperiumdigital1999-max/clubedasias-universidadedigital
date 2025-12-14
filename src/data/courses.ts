@@ -8,7 +8,7 @@ export const courses: Course[] = [
     image: 'https://static-media.hotmart.com/qHibGaEC7uaCBR-2a5vdT-Vk6t4=/300x300/smart/filters:format(webp):background_color(white)/hotmart/product_pictures/851abd28-ac21-4e50-8d4c-7b37e6578b3c/ChatGPTImage1deagode202515_16_30.png',
     url: 'https://example.com/clube-das-ias',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
+    coverImage: 'https://static-media.hotmart.com/qHibGaEC7uaCBR-2a5vdT-Vk6t4=/300x300/smart/filters:format(webp):background_color(white)/hotmart/product_pictures/851abd28-ac21-4e50-8d4c-7b37e6578b3c/ChatGPTImage1deagode202515_16_30.png',
     function: 'O Clube das IAs é o ponto de partida definitivo para quem quer parar de apenas “testar IA” e começar a usar essas ferramentas com clareza, estratégia e resultado. Aqui você tem acesso organizado às melhores IAs do mercado, aprende como usar cada uma no momento certo e constrói uma vantagem real enquanto a maioria ainda está perdida.',
     applications: [
       'Uso prático das principais IAs do mercado',
