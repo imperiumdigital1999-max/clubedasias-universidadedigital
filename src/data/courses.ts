@@ -53,7 +53,7 @@ export const courses: Course[] = [
     id: 'codigo-desbloqueio',
     name: 'Código de Desbloqueio das IAs Pagas',
     description: 'Aprenda a acessar recursos premium das IAs',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
+    image: 'https://b2990151.smushcdn.com/2990151/wp-content/uploads/2024/12/tess-ai-multi-ais-one-place-generative-ai-platform.png?lossy=1&strip=0&webp=1',
     url: 'https://example.com/desbloqueio-ias',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop',
