@@ -2,22 +2,21 @@ import { Course } from '../types';
 
 export const courses: Course[] = [
   {
-    id: 'chatgpt-mastery',
-    name: 'ChatGPT Mastery',
-    description: 'Domine o ChatGPT do básico ao avançado e multiplique sua produtividade',
+    id: 'clube-das-ias',
+    name: 'Clube das IAs',
+    description: 'O ecossistema completo para usar IA na prática, todos os dias',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop',
-    url: 'https://example.com/chatgpt-course',
+    url: 'https://example.com/clube-das-ias',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
-    function: 'Este curso completo ensina como usar o ChatGPT de forma profissional para aumentar sua produtividade, criar conteúdos de qualidade e automatizar tarefas do dia a dia.',
+    function: 'O Clube das IAs é o ponto de partida definitivo para quem quer parar de apenas “testar IA” e começar a usar essas ferramentas com clareza, estratégia e resultado. Aqui você tem acesso organizado às melhores IAs do mercado, aprende como usar cada uma no momento certo e constrói uma vantagem real enquanto a maioria ainda está perdida.',
     applications: [
-      'Criação de conteúdo para redes sociais e blogs',
-      'Automação de e-mails e comunicação profissional',
-      'Geração de ideias e brainstorming criativo',
-      'Análise e resumo de documentos extensos',
-      'Criação de roteiros e scripts para vídeos',
-      'Desenvolvimento de estratégias de marketing'
-    ]},
+      'Uso prático das principais IAs do mercado',
+      'Aumento de produtividade no dia a dia',
+      'Criação de conteúdos com IA',
+      'Exploração de oportunidades com inteligência artificial'
+    ]
+  },
   {
     id: 'midjourney-pro',
     name: 'Midjourney Pro',
