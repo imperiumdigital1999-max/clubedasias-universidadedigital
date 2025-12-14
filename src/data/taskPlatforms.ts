@@ -116,30 +116,30 @@ export const taskPlatforms: TaskPlatform[] = [
     freeAccessVideo: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
   },
   {
-    id: 'scale-ai',
-    name: 'Scale AI',
-    description: 'Plataforma premium para anotação de dados de IA',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop',
-    url: 'https://scale.com',
-    coverImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop',
-    function: 'Scale AI é uma plataforma premium que oferece oportunidades para especialistas trabalharem em projetos de anotação de dados para empresas líderes em IA.',
+    id: 'vintepila',
+    name: 'VintePila',
+    description: 'Marketplace brasileiro de serviços rápidos com forte uso de IA',
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop',
+    url: 'https://www.vintepila.com.br',
+    featured: true,
+    coverImage: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop',
+    function: 'VintePila permite vender serviços digitais simples e rápidos, muitos deles potencializados por inteligência artificial.',
     applications: [
-      'Anotação de dados para carros autônomos',
-      'Classificação de conteúdo para redes sociais',
-      'Criação de datasets para robótica',
-      'Análise de documentos e textos',
-      'Validação de modelos de linguagem',
-      'Treinamento de sistemas de reconhecimento'
+      'Criação de textos e copies com IA',
+      'Geração de imagens e artes com IA',
+      'Edição de vídeos automatizada',
+      'Criação de legendas e roteiros',
+      'Serviços rápidos usando ChatGPT e similares'
     ],
     videos: [
       {
         id: '1',
-        title: 'Oportunidades na Scale AI',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        title: 'Como vender serviços com IA no VintePila',
+        thumbnail: 'https://img.youtube.com/vi/3tmd-ClpJxA/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=3tmd-ClpJxA'
       }
     ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    freeAccessVideo: 'https://www.youtube.com/watch?v=3tmd-ClpJxA'
   },
   {
     id: 'remotasks',
