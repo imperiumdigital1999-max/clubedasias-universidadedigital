@@ -82,39 +82,6 @@ export default function CourseDetailView({ course, onBack }: CourseDetailViewPro
           </div>
         </section>
 
-        {/* 3. Exemplos Práticos em Vídeo */}
-        <section>
-          <div className="flex items-center space-x-3 mb-6">
-            <Play className="w-6 h-6 text-purple-500" />
-            <h2 className="text-2xl font-bold text-white">Exemplos Práticos em Vídeo</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {course.videos?.map((video) => (
-              <div 
-                key={video.id}
-                onClick={() => handleVideoClick(video.url)}
-                className="group cursor-pointer bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
-              >
-                <div className="relative">
-                  <img
-                    src={video.thumbnail}
-                    alt={video.title}
-                    className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Play className="w-12 h-12 text-white" />
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-white font-medium text-sm line-clamp-2 group-hover:text-purple-400 transition-colors">
-                    {video.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* 4. Pronto para Começar */}
         <section>
           <div className="bg-gradient-to-r from-orange-500/10 to-cyan-500/10 rounded-2xl p-8 border border-orange-500/20 text-center">
