@@ -41,7 +41,7 @@ export const taskPlatforms: TaskPlatform[] = [
     image: 'https://images.g2crowd.com/uploads/product/image/867ac59026f8a07d10fde9ee225b51de/appen.png',
     url: 'https://www.appen.com',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop',
+    coverImage: 'https://images.g2crowd.com/uploads/product/image/867ac59026f8a07d10fde9ee225b51de/appen.png',
     function: 'Appen oferece trabalhos para coleta, anotação e validação de dados usados no treinamento de IA.',
     applications: [
       'Classificação de dados',
