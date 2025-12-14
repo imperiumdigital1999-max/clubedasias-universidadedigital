@@ -5,7 +5,7 @@ export const courses: Course[] = [
     id: 'clube-das-ias',
     name: 'Clube das IAs',
     description: 'O ecossistema completo para usar IA na prática, todos os dias',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop',
+    image: 'https://drive.google.com/file/d/12ISVMO1NCSzxh6GuAieliMttZXGCeBGe/view?usp=drive_link',
     url: 'https://example.com/clube-das-ias',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
