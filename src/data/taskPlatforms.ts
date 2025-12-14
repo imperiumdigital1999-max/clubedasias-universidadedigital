@@ -5,7 +5,7 @@ export const taskPlatforms: TaskPlatform[] = [
     id: 'clickworker',
     name: 'Clickworker',
     description: 'Plataforma global para microtarefas e trabalhos de IA',
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop',
+    image: 'https://i.ytimg.com/vi/u4zLyFSrX8s/maxresdefault.jpg',
     url: 'https://www.clickworker.com',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop',
