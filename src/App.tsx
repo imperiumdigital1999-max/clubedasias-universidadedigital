@@ -8,6 +8,8 @@ import CategoryView from './components/CategoryView';
 import FavoritesView from './components/FavoritesView';
 import RecentView from './components/RecentView';
 import ToolDetailView from './components/ToolDetailView';
+import TasksView from './components/TasksView';
+import IAsProView from './components/IAsProView';
 import { ViewMode, AITool } from './types';
 
 function App() {
@@ -67,6 +69,10 @@ function App() {
         return <FavoritesView onToolSelect={handleToolSelect} />;
       case 'recent':
         return <RecentView onToolSelect={handleToolSelect} />;
+      case 'tasks':
+        return <TasksView />;
+      case 'ias-pro':
+        return <IAsProView />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }

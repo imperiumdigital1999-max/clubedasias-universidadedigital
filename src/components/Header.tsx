@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Star, Clock, Folder } from 'lucide-react';
+import { Menu, Star, Clock, Folder, CheckSquare, Crown } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface HeaderProps {
@@ -67,6 +67,26 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 }`}
               >
                 Recentes
+              </button>
+              <button
+                onClick={() => onViewChange('tasks')}
+                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
+                  currentView === 'tasks'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                }`}
+              >
+                Tarefas
+              </button>
+              <button
+                onClick={() => onViewChange('ias-pro')}
+                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
+                  currentView === 'ias-pro'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                }`}
+              >
+                IAs Pro
               </button>
             </div>
           </div>

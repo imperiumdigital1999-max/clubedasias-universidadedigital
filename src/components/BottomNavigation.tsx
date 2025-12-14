@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Award, Clock, Folder } from 'lucide-react';
+import { Home, Award, Clock, Folder, CheckSquare, Crown } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface BottomNavigationProps {
@@ -13,6 +13,8 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
     { id: 'categories' as ViewMode, label: 'Categorias', icon: Folder },
     { id: 'favorites' as ViewMode, label: 'Destaque', icon: Award },
     { id: 'recent' as ViewMode, label: 'Recentes', icon: Clock },
+    { id: 'tasks' as ViewMode, label: 'Tarefas', icon: CheckSquare },
+    { id: 'ias-pro' as ViewMode, label: 'IAs Pro', icon: Crown },
   ];
 
   return (

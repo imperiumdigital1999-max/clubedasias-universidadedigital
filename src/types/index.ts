@@ -33,4 +33,4 @@ export interface Category {
   toolCount: number;
 }
 
-export type ViewMode = 'dashboard' | 'category' | 'categories' | 'favorites' | 'recent' | 'tool-detail';
+export type ViewMode = 'dashboard' | 'category' | 'categories' | 'favorites' | 'recent' | 'tasks' | 'ias-pro' | 'tool-detail';
