@@ -79,9 +79,9 @@ export const taskPlatforms: TaskPlatform[] = [
     videos: [
       {
         id: '1',
-        title: 'Oportunidades na Lionbridge AI',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        title: 'Trabalhando em casa pela internet com a Lionbridge',
+        thumbnail: 'https://img.youtube.com/vi/QT7tEUDB9UY/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=QT7tEUDB9UY'
       }
     ],
     freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
