@@ -89,31 +89,31 @@ export const taskPlatforms: TaskPlatform[] = [
     freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
   },
   {
-    id: 'toloka',
-    name: 'Toloka',
-    description: 'Plataforma de crowdsourcing para projetos de IA',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
-    url: 'https://toloka.ai',
-    new: true,
-    coverImage: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop',
-    function: 'Toloka é uma plataforma de crowdsourcing que oferece tarefas variadas relacionadas ao desenvolvimento e treinamento de sistemas de inteligência artificial.',
+    id: 'workana',
+    name: 'Workana',
+    description: 'Plataforma de freelancers com projetos envolvendo IA, automação e criação de conteúdo',
+    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop',
+    url: 'https://www.workana.com',
+    featured: true,
+    coverImage: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=400&fit=crop',
+    function: 'Workana conecta empresas e freelancers para projetos que envolvem inteligência artificial, automações, criação de conteúdo, análise de dados e suporte digital.',
     applications: [
-      'Classificação e rotulagem de imagens',
-      'Transcrição de áudios para datasets',
-      'Verificação de qualidade de dados',
-      'Coleta de informações para pesquisas de mercado',
-      'Teste de usabilidade de aplicativos',
-      'Criação de conteúdo para treinamento de modelos'
+      'Criação de textos com apoio de IA',
+      'Automação de processos com IA',
+      'Gestão de chatbots e assistentes virtuais',
+      'Criação de conteúdos para marketing com IA',
+      'Projetos de análise e organização de dados',
+      'Serviços digitais otimizados com IA'
     ],
     videos: [
       {
         id: '1',
-        title: 'Como usar a Toloka',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        title: 'Como conseguir trabalhos usando IA na Workana',
+        thumbnail: 'https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
       }
     ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    freeAccessVideo: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
   },
   {
     id: 'scale-ai',
