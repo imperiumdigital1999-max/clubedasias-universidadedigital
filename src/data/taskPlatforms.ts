@@ -32,7 +32,6 @@ export const taskPlatforms: TaskPlatform[] = [
         url: 'https://www.youtube.com/watch?v=A1t_yMKA0AQ'
       }
     ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
   },
   {
     id: 'appen',
