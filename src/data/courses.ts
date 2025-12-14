@@ -114,7 +114,7 @@ export const courses: Course[] = [
     id: 'mestres-ia',
     name: 'Treinamento Mestres em IA',
     description: 'Domine a IA em nível avançado',
-    image: 'https://images.unsplash.com/photo-1534759846116-5799c33ce22a?w=400&h=300&fit=crop',
+    image: 'https://static-media.hotmart.com/xpirmkuqY1kI9IKQYmvT7ioNHz0=/300x300/smart/filters:format(webp):background_color(white)/hotmart/product_pictures/1a207dae-5189-43ab-8e47-7fcea41654db/dvyWJh9NwuDWU6ppfrV0QTgSKq7VZwyZaivlx9Zn200x200resized.jpg',
     url: 'https://example.com/mestres-ia',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1534759846116-5799c33ce22a?w=800&h=400&fit=crop',
