@@ -133,7 +133,7 @@ export const taskPlatforms: TaskPlatform[] = [
       {
         id: '1',
         title: 'Como vender serviços com IA no VintePila',
-        thumbnail: 'https://img.youtube.com/vi/3tmd-poJupS8MCcg/hqdefault.jpg',
+        thumbnail: 'https://img.youtube.com/vi/poJupS8MCcg/hqdefault.jpg',
         url: 'https://www.youtube.com/watch?v=poJupS8MCcg'
       }
     ],
