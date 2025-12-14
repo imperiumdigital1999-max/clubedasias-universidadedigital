@@ -93,7 +93,7 @@ function App() {
       case 'tasks':
         return <TasksView onPlatformSelect={handlePlatformSelect} />;
       case 'ias-pro':
-        return <IAsProView />;
+        return <IAsProView onToolSelect={handleToolSelect} />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
