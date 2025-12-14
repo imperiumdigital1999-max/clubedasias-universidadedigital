@@ -98,7 +98,7 @@ export const courses: Course[] = [
     id: 'gestor-ia-40',
     name: 'Treinamento Gestor de IA 4.0',
     description: 'Prepare-se para atuar profissionalmente com IA',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop',
+    image: 'https://hotmart.s3.amazonaws.com/product_pictures/8e8f09de-3fb3-4a7d-8101-bf0e487374ae/Capa_GSI2.jpg',
     url: 'https://example.com/gestor-ia',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=400&fit=crop',
