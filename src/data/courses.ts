@@ -17,29 +17,7 @@ export const courses: Course[] = [
       'Análise e resumo de documentos extensos',
       'Criação de roteiros e scripts para vídeos',
       'Desenvolvimento de estratégias de marketing'
-    ],
-    videos: [
-      {
-        id: '1',
-        title: 'Introdução ao ChatGPT',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      },
-      {
-        id: '2',
-        title: 'Prompts Avançados',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      },
-      {
-        id: '3',
-        title: 'Casos Práticos',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      }
-    ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-  },
+    ]},
   {
     id: 'midjourney-pro',
     name: 'Midjourney Pro',
