@@ -37,29 +37,28 @@ export const taskPlatforms: TaskPlatform[] = [
   {
     id: 'appen',
     name: 'Appen',
-    description: 'Líder mundial em dados de treinamento para IA',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
-    url: 'https://appen.com',
+    description: 'Empresa global de dados e treinamento de inteligência artificial',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
+    url: 'https://www.appen.com',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
-    function: 'Appen é uma das maiores plataformas do mundo para criação de dados de treinamento para inteligência artificial. Oferece projetos de alta qualidade para freelancers especializados em IA.',
+    coverImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop',
+    function: 'Appen oferece trabalhos para coleta, anotação e validação de dados usados no treinamento de IA.',
     applications: [
-      'Anotação de imagens para visão computacional',
-      'Avaliação de qualidade de respostas de chatbots',
-      'Coleta e classificação de dados de fala',
-      'Tradução e localização assistida por IA',
-      'Teste de algoritmos de busca e recomendação',
-      'Criação de datasets para processamento de linguagem natural'
+      'Classificação de dados',
+      'Treinamento de NLP',
+      'Avaliação de buscas e anúncios',
+      'Revisão de resultados de IA',
+      'Anotação de áudio e imagem'
     ],
     videos: [
       {
         id: '1',
-        title: 'Primeiros passos na Appen',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        title: 'Como trabalhar na Appen',
+        thumbnail: 'https://img.youtube.com/vi/5NV6Rdv1a3I/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=5NV6Rdv1a3I'
       }
     ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    freeAccessVideo: 'https://www.youtube.com/watch?v=5NV6Rdv1a3I'
   },
   {
     id: 'lionbridge',
