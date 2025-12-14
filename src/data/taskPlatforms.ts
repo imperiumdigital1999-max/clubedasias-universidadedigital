@@ -106,9 +106,9 @@ export const taskPlatforms: TaskPlatform[] = [
     videos: [
       {
         id: '1',
-        title: 'Como conseguir trabalhos usando IA na Workana',
-        thumbnail: 'https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
+        title: 'Freelancer Iniciante na Workana: Quanto já Ganhei e Vale a Pena?',
+        thumbnail: 'https://img.youtube.com/vi/Jh4F5_yKylE/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=Jh4F5_yKylE'
       }
     ],
     freeAccessVideo: 'https://www.youtube.com/watch?v=9bZkp7q19f0'
