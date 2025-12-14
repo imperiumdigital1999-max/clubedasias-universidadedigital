@@ -12,13 +12,15 @@ import TasksView from './components/TasksView';
 import TaskDetailView from './components/TaskDetailView';
 import IAsProView from './components/IAsProView';
 import CursosView from './components/CursosView';
-import { ViewMode, AITool, TaskPlatform } from './types';
+import CourseDetailView from './components/CourseDetailView';
+import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
   const [currentView, setCurrentView] = useState<ViewMode>('dashboard');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
   const handleViewChange = (view: ViewMode) => {
     setCurrentView(view);
@@ -26,6 +28,7 @@ function App() {
       setSelectedCategory('');
       setSelectedTool(null);
       setSelectedPlatform(null);
+      setSelectedCourse(null);
     }
   };
 
@@ -34,6 +37,7 @@ function App() {
     setSelectedCategory('');
     setSelectedTool(null);
     setSelectedPlatform(null);
+    setSelectedCourse(null);
   };
 
   const handleToolSelect = (tool: AITool) => {
@@ -44,6 +48,11 @@ function App() {
   const handlePlatformSelect = (platform: TaskPlatform) => {
     setSelectedPlatform(platform);
     setCurrentView('task-detail');
+  };
+
+  const handleCourseSelect = (course: Course) => {
+    setSelectedCourse(course);
+    setCurrentView('course-detail');
   };
 
   const handleBackFromTool = () => {
@@ -61,6 +70,11 @@ function App() {
     setCurrentView('tasks');
   };
 
+  const handleBackFromCourse = () => {
+    setSelectedCourse(null);
+    setCurrentView('cursos');
+  };
+
   const renderCurrentView = () => {
     switch (currentView) {
       case 'tool-detail':
@@ -75,6 +89,13 @@ function App() {
           <TaskDetailView
             platform={selectedPlatform}
             onBack={handleBackFromTask}
+          />
+        ) : null;
+      case 'course-detail':
+        return selectedCourse ? (
+          <CourseDetailView
+            course={selectedCourse}
+            onBack={handleBackFromCourse}
           />
         ) : null;
       case 'categories':
@@ -96,7 +117,7 @@ function App() {
       case 'ias-pro':
         return <IAsProView onToolSelect={handleToolSelect} />;
       case 'cursos':
-        return <CursosView />;
+        return <CursosView onCourseSelect={handleCourseSelect} />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
@@ -104,7 +125,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950">
-      {currentView !== 'tool-detail' && currentView !== 'task-detail' && (
+      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
         <Header
           currentView={currentView}
           onViewChange={handleViewChange}
@@ -112,11 +133,11 @@ function App() {
         />
       )}
       
-      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' ? 'pb-20 md:pb-0' : ''}`}>
+      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0' : ''}`}>
         {renderCurrentView()}
       </main>
       
-      {currentView !== 'tool-detail' && currentView !== 'task-detail' && (
+      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
         <BottomNavigation
           currentView={currentView}
           onViewChange={handleViewChange}

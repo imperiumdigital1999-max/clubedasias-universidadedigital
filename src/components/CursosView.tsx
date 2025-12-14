@@ -1,7 +1,14 @@
 import React from 'react';
 import { GraduationCap } from 'lucide-react';
+import { courses } from '../data/courses';
+import CourseCard from './CourseCard';
+import { Course } from '../types';
 
-export default function CursosView() {
+interface CursosViewProps {
+  onCourseSelect: (course: Course) => void;
+}
+
+export default function CursosView({ onCourseSelect }: CursosViewProps) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="flex items-center space-x-3 mb-8">
@@ -12,14 +19,10 @@ export default function CursosView() {
         </div>
       </div>
 
-      <div className="text-center py-12">
-        <GraduationCap className="w-16 h-16 text-slate-600 mx-auto mb-4" />
-        <div className="text-slate-500 text-lg mb-4">
-          Cursos em desenvolvimento
-        </div>
-        <p className="text-slate-600">
-          Em breve você terá acesso aos melhores cursos de IA
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {courses.map((course) => (
+          <CourseCard key={course.id} course={course} onCourseClick={onCourseSelect} />
+        ))}
       </div>
     </div>
   );
