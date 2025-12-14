@@ -8,7 +8,7 @@ export const taskPlatforms: TaskPlatform[] = [
     image: 'https://i.ytimg.com/vi/u4zLyFSrX8s/maxresdefault.jpg',
     url: 'https://www.clickworker.com',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop',
+    coverImage: 'https://i.ytimg.com/vi/u4zLyFSrX8s/maxresdefault.jpg',
     function: 'Clickworker é uma plataforma que conecta empresas com freelancers para executar microtarefas que envolvem inteligência artificial, como treinamento de dados, moderação de conteúdo e validação de informações.',
     applications: [
       'Treinamento de modelos de IA através de classificação de dados',
