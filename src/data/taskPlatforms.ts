@@ -22,7 +22,7 @@ export const taskPlatforms: TaskPlatform[] = [
       {
         id: '1',
         title: 'Como Ganhar dinheiro com TAREFAS DE UHRS',
-        thumbnail: 'https://www.youtube.com/watch?v=jRMqyi_xM5g',
+        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
         url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
       },
       {
