@@ -131,26 +131,6 @@ export default function TaskDetailView({ platform, onBack }: TaskDetailViewProps
             </button>
           </div>
         </section>
-
-        {/* 5. Como Começar */}
-        <section>
-          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-purple-500/20 text-center">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <GraduationCap className="w-8 h-8 text-purple-500" />
-              <h2 className="text-2xl font-bold text-white">Como Começar</h2>
-            </div>
-            <p className="text-slate-300 mb-6">
-              Aprenda o passo a passo para se cadastrar e começar a ganhar na {platform.name}
-            </p>
-            <button
-              onClick={handleFreeAccessVideo}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold flex items-center space-x-2 mx-auto hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-            >
-              <Play className="w-5 h-5" />
-              <span>Ver tutorial completo</span>
-            </button>
-          </div>
-        </section>
       </div>
     </div>
   );
