@@ -160,8 +160,8 @@ export const taskPlatforms: TaskPlatform[] = [
       {
         id: '1',
         title: 'Começando na Remotasks',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        thumbnail: 'https://img.youtube.com/vi/SDkfY0KNVAk/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=SDkfY0KNVAk'
       }
     ],
     freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
