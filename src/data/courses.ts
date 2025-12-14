@@ -18,143 +18,127 @@ export const courses: Course[] = [
     ]
   },
   {
-    id: 'midjourney-pro',
-    name: 'Midjourney Pro',
-    description: 'Crie imagens profissionais com IA e monetize sua criatividade',
-    image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=300&fit=crop',
-    url: 'https://example.com/midjourney-course',
+    id: 'empregado-digital',
+    name: 'Seu Empregado Digital Particular',
+    description: 'Transforme a IA no seu braço direito diário',
+    image: 'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=400&h=300&fit=crop',
+    url: 'https://example.com/empregado-digital',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=400&fit=crop',
-    function: 'Aprenda a criar imagens impressionantes com Midjourney, desde conceitos básicos até técnicas avançadas para monetizar suas criações.',
+    coverImage: 'https://images.unsplash.com/photo-1661956602868-6ae368943878?w=800&h=400&fit=crop',
+    function: 'Este curso muda completamente a forma como você enxerga a IA. Aqui, você aprende a transformar a inteligência artificial em um verdadeiro empregado digital, capaz de executar tarefas, organizar ideias e acelerar resultados. É menos esforço mental, menos sobrecarga e muito mais tempo livre.',
     applications: [
-      'Criação de artes para redes sociais',
-      'Design de logos e identidade visual',
-      'Ilustrações para livros e e-books',
-      'Criação de NFTs e arte digital',
-      'Mockups e protótipos visuais',
-      'Conteúdo visual para marketing'
-    ],
-    videos: [
-      {
-        id: '1',
-        title: 'Primeiros passos no Midjourney',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      },
-      {
-        id: '2',
-        title: 'Técnicas avançadas de prompt',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      }
-    ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+      'Organização de tarefas',
+      'Criação de textos e respostas',
+      'Planejamento de rotina',
+      'Produtividade pessoal e profissional'
+    ]
   },
   {
-    id: 'ia-para-negocios',
-    name: 'IA para Negócios',
-    description: 'Implemente IA na sua empresa e automatize processos',
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop',
-    url: 'https://example.com/ia-negocios-course',
-    new: true,
-    coverImage: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop',
-    function: 'Curso estratégico para empresários e gestores que querem implementar inteligência artificial em seus negócios de forma prática e rentável.',
-    applications: [
-      'Automação de atendimento ao cliente',
-      'Análise preditiva de vendas',
-      'Otimização de processos internos',
-      'Personalização de experiência do cliente',
-      'Análise de dados e relatórios inteligentes',
-      'Redução de custos operacionais'
-    ],
-    videos: [
-      {
-        id: '1',
-        title: 'IA nos negócios: visão geral',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      }
-    ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-  },
-  {
-    id: 'automacao-zapier',
-    name: 'Automação com Zapier + IA',
-    description: 'Automatize tarefas repetitivas combinando Zapier com ferramentas de IA',
-    image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=300&fit=crop',
-    url: 'https://example.com/zapier-course',
-    coverImage: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=400&fit=crop',
-    function: 'Aprenda a criar automações poderosas combinando Zapier com ferramentas de IA para eliminar tarefas repetitivas e aumentar sua eficiência.',
-    applications: [
-      'Automação de e-mail marketing',
-      'Integração entre diferentes plataformas',
-      'Processamento automático de dados',
-      'Geração automática de relatórios',
-      'Sincronização de informações',
-      'Workflows personalizados'
-    ],
-    videos: [
-      {
-        id: '1',
-        title: 'Introdução ao Zapier',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      }
-    ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-  },
-  {
-    id: 'renda-com-ia',
-    name: 'Renda Extra com IA',
-    description: 'Descubra como gerar renda usando ferramentas de inteligência artificial',
-    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=300&fit=crop',
-    url: 'https://example.com/renda-ia-course',
+    id: 'banco-comandos',
+    name: 'Banco de Comandos Lucrativos',
+    description: 'Prompts prontos para gerar resultados imediatos',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
+    url: 'https://example.com/banco-comandos',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&h=400&fit=crop',
-    function: 'Curso prático que ensina diferentes formas de monetizar o conhecimento em IA, desde freelances até criação de produtos digitais.',
+    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
+    function: 'Aqui você não perde tempo tentando “adivinhar o que escrever”. O Banco de Comandos Lucrativos entrega prompts testados e prontos para uso, criados para gerar respostas melhores, mais rápidas e mais inteligentes. É copiar, colar e executar.',
     applications: [
-      'Freelances em criação de conteúdo',
-      'Venda de artes e designs criados com IA',
-      'Consultoria em implementação de IA',
-      'Criação de cursos e infoprodutos',
-      'Automação de serviços para terceiros',
-      'Desenvolvimento de chatbots personalizados'
-    ],
-    videos: [
-      {
-        id: '1',
-        title: 'Oportunidades de renda com IA',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      }
-    ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+      'Prompts para criação de conteúdo',
+      'Comandos para produtividade',
+      'Automação de tarefas',
+      'Uso profissional do ChatGPT e similares'
+    ]
   },
   {
-    id: 'video-ia',
-    name: 'Criação de Vídeos com IA',
-    description: 'Produza vídeos profissionais usando ferramentas de inteligência artificial',
-    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop',
-    url: 'https://example.com/video-ia-course',
-    new: true,
-    coverImage: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop',
-    function: 'Aprenda a criar vídeos de alta qualidade usando ferramentas de IA para roteiro, edição, narração e efeitos visuais.',
+    id: 'codigo-desbloqueio',
+    name: 'Código de Desbloqueio das IAs Pagas',
+    description: 'Aprenda a acessar recursos premium das IAs',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
+    url: 'https://example.com/desbloqueio-ias',
+    featured: true,
+    coverImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop',
+    function: 'Este curso revela caminhos inteligentes para acessar recursos avançados de IAs que normalmente são pagos. Você entende como o jogo funciona, evita armadilhas e passa a usar ferramentas de alto nível com muito mais inteligência e economia.',
     applications: [
-      'Criação de conteúdo para YouTube',
-      'Vídeos promocionais para empresas',
-      'Conteúdo educacional e treinamentos',
-      'Vídeos para redes sociais',
-      'Animações e motion graphics',
-      'Dublagem e narração automática'
-    ],
-    videos: [
-      {
-        id: '1',
-        title: 'Ferramentas de vídeo com IA',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-      }
-    ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+      'Uso de IAs premium',
+      'Economia com ferramentas digitais',
+      'Acesso estratégico a recursos avançados'
+    ]
+  },
+  {
+    id: 'tarefas-premium',
+    name: 'Clube das Tarefas Premium',
+    description: 'Acesso a tarefas reais que pagam por trabalhos com IA',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop',
+    url: 'https://example.com/tarefas-premium',
+    featured: true,
+    coverImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop',
+    function: 'O Clube das Tarefas Premium conecta você a oportunidades reais de trabalho onde empresas estão pagando por tarefas executadas com IA. Aqui você não aprende teoria: você aprende onde estão as oportunidades e como aproveitá-las.',
+    applications: [
+      'Execução de tarefas com IA',
+      'Acesso a plataformas remuneradas',
+      'Geração de renda online'
+    ]
+  },
+  {
+    id: 'ias-pro',
+    name: 'Clube das IAs Pro',
+    description: 'As melhores IAs avançadas reunidas em um só lugar',
+    image: 'https://images.unsplash.com/photo-1581091870627-3a5f9c1c1b6b?w=400&h=300&fit=crop',
+    url: 'https://example.com/ias-pro',
+    featured: true,
+    coverImage: 'https://images.unsplash.com/photo-1581091870627-3a5f9c1c1b6b?w=800&h=400&fit=crop',
+    function: 'O Clube das IAs Pro é para quem quer jogar em outro nível. Aqui você acessa IAs mais poderosas, normalmente pagas, aprende como utilizá-las gratuitamente e descobre aplicações que poucos exploram.',
+    applications: [
+      'Uso de IAs avançadas',
+      'Criação de conteúdo profissional',
+      'Automação e produtividade extrema'
+    ]
+  },
+    {
+    id: 'gestor-ia-40',
+    name: 'Treinamento Gestor de IA 4.0',
+    description: 'Prepare-se para atuar profissionalmente com IA',
+    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop',
+    url: 'https://example.com/gestor-ia',
+    featured: true,
+    coverImage: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=400&fit=crop',
+    function: 'Este treinamento te posiciona como um Gestor de IA, alguém capaz de implementar, organizar e gerenciar soluções com inteligência artificial para empresas e projetos. É o caminho para sair do consumo e entrar no mercado.',
+    applications: [
+      'Gestão de projetos com IA',
+      'Prestação de serviços',
+      'Consultoria em IA'
+    ]
+  },
+
+  {
+    id: 'mestres-ia',
+    name: 'Treinamento Mestres em IA',
+    description: 'Domine a IA em nível avançado',
+    image: 'https://images.unsplash.com/photo-1534759846116-5799c33ce22a?w=400&h=300&fit=crop',
+    url: 'https://example.com/mestres-ia',
+    featured: true,
+    coverImage: 'https://images.unsplash.com/photo-1534759846116-5799c33ce22a?w=800&h=400&fit=crop',
+    function: 'O Treinamento Mestres em IA é para quem quer dominar a inteligência artificial com profundidade e visão estratégica. Aqui você deixa de ser usuário comum e passa a entender como extrair o máximo das ferramentas.',
+    applications: [
+      'Uso avançado de IA',
+      'Estratégias de automação',
+      'Criação de soluções inteligentes'
+    ]
+  },
+
+  {
+    id: 'ia-gratis',
+    name: 'Como Usar IA de Graça',
+    description: 'Aprenda a usar IA sem gastar dinheiro',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop',
+    url: 'https://example.com/ia-gratis',
+    featured: true,
+    coverImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop',
+    function: 'Este curso mostra que falta de dinheiro não é desculpa. Você aprende a acessar, combinar e usar ferramentas de IA gratuitas de forma inteligente para obter resultados reais.',
+    applications: [
+      'Uso de ferramentas gratuitas',
+      'Produtividade sem custo',
+      'Aprendizado acessível'
+    ]
   }
 ];
