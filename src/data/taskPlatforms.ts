@@ -63,10 +63,10 @@ export const taskPlatforms: TaskPlatform[] = [
     id: 'lionbridge',
     name: 'Lionbridge AI',
     description: 'Plataforma premium para trabalhos de IA e machine learning',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop',
+    image: 'https://www.lionbridge.com/content/lionbridge/en.thumb.800.480.png?ck=1765196621',
     url: 'https://www.lionbridge.com/ai-training-data',
     featured: true,
-    coverImage: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop',
+    coverImage: 'https://www.lionbridge.com/content/lionbridge/en.thumb.800.480.png?ck=1765196621',
     function: 'Lionbridge AI oferece oportunidades premium para profissionais que querem trabalhar com projetos de inteligência artificial de grandes empresas de tecnologia.',
     applications: [
       'Avaliação de resultados de busca e mapas',
