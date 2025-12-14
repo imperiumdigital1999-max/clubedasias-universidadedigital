@@ -21,15 +21,15 @@ export const taskPlatforms: TaskPlatform[] = [
     videos: [
       {
         id: '1',
-        title: 'Como começar no Clickworker',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
+        title: 'Como Ganhar dinheiro com TAREFAS DE UHRS',
+        thumbnail: 'https://www.youtube.com/watch?v=jRMqyi_xM5g',
         url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
       },
       {
         id: '2',
-        title: 'Melhores tarefas para iniciantes',
-        thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+        title: 'CLICKWORKERS - Tutorial Completo PASSO A PASSO',
+        thumbnail: 'https://img.youtube.com/vi/A1t_yMKA0AQ/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=A1t_yMKA0AQ'
       }
     ],
     freeAccessVideo: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
