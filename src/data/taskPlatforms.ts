@@ -38,7 +38,7 @@ export const taskPlatforms: TaskPlatform[] = [
     id: 'appen',
     name: 'Appen',
     description: 'Empresa global de dados e treinamento de inteligência artificial',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
+    image: 'https://images.g2crowd.com/uploads/product/image/867ac59026f8a07d10fde9ee225b51de/appen.png',
     url: 'https://www.appen.com',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop',
@@ -54,8 +54,8 @@ export const taskPlatforms: TaskPlatform[] = [
       {
         id: '1',
         title: 'Como trabalhar na Appen',
-        thumbnail: 'https://img.youtube.com/vi/5NV6Rdv1a3I/hqdefault.jpg',
-        url: 'https://www.youtube.com/watch?v=5NV6Rdv1a3I'
+        thumbnail: 'https://img.youtube.com/vi/Fq44M_qq9Lk/hqdefault.jpg',
+        url: 'https://www.youtube.com/watch?v=Fq44M_qq9Lk&list=PLBIhK1UNjCAVEbvkrUyG19HHrCLNeTAYD'
       }
     ],
     freeAccessVideo: 'https://www.youtube.com/watch?v=5NV6Rdv1a3I'
