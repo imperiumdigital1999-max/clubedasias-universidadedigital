@@ -11,6 +11,7 @@ import ToolDetailView from './components/ToolDetailView';
 import TasksView from './components/TasksView';
 import TaskDetailView from './components/TaskDetailView';
 import IAsProView from './components/IAsProView';
+import CursosView from './components/CursosView';
 import { ViewMode, AITool, TaskPlatform } from './types';
 
 function App() {
@@ -94,6 +95,8 @@ function App() {
         return <TasksView onPlatformSelect={handlePlatformSelect} />;
       case 'ias-pro':
         return <IAsProView onToolSelect={handleToolSelect} />;
+      case 'cursos':
+        return <CursosView />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }

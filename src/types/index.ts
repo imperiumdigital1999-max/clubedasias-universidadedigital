@@ -54,3 +54,4 @@ export interface Category {
 }
 
 export type ViewMode = 'dashboard' | 'category' | 'categories' | 'favorites' | 'recent' | 'tasks' | 'ias-pro' | 'tool-detail' | 'task-detail';
+export type ViewMode = 'dashboard' | 'category' | 'categories' | 'favorites' | 'recent' | 'tasks' | 'ias-pro' | 'cursos' | 'tool-detail' | 'task-detail';

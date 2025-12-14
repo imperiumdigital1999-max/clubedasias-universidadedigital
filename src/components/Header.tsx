@@ -88,6 +88,16 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
               >
                 IAs Pro
               </button>
+              <button
+                onClick={() => onViewChange('cursos')}
+                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
+                  currentView === 'cursos'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                }`}
+              >
+                Cursos
+              </button>
             </div>
           </div>
         </div>
