@@ -1676,7 +1676,7 @@ applications: [
   id: '47',
   name: 'Pictory AI PRO',
   description: 'IA para transformar texto em vídeo com narração e legendas',
-  image: 'https://media.cybernews.com/images/featured/2025/02/pictory-ai.jpg',
+  image: 'https://fahimai.com/wp-content/uploads/2024/07/24.png',
   url: 'https://pictory.ai',
   category: 'pro',
   function: 'Cria vídeos automáticos a partir de artigos, roteiros ou textos simples.',
