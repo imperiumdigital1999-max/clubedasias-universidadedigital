@@ -83,7 +83,7 @@ export const courses: Course[] = [
     id: 'ias-pro',
     name: 'Clube das IAs Pro',
     description: 'As melhores IAs avançadas reunidas em um só lugar',
-    image: 'https://images.unsplash.com/photo-1581091870627-3a5f9c1c1b6b?w=400&h=300&fit=crop',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXhc1z_krQzXQqqlXWTzDqRjIyteDSGAIsyw&s',
     url: 'https://example.com/ias-pro',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1581091870627-3a5f9c1c1b6b?w=800&h=400&fit=crop',
