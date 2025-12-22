@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export default function Header({ currentView, onViewChange, onMenuToggle }: HeaderProps) {
   return (
-    <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+    <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 md:hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-4">
@@ -25,91 +25,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
             </div>
           </div>
 
-          <div className="flex items-center space-x-2">
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-2">
-              <button
-                onClick={() => onViewChange('inicio')}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'inicio'
-                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                }`}
-              >
-                Início
-              </button>
-              <button
-                onClick={() => onViewChange('ferramentas-ia')}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'ferramentas-ia'
-                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                }`}
-              >
-                Ferramentas de IA
-              </button>
-              <button
-                onClick={() => onViewChange('favorites')}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'favorites'
-                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                }`}
-              >
-                Em Destaque
-              </button>
-              <button
-                onClick={() => onViewChange('prompts')}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'prompts'
-                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                }`}
-              >
-                Prompts
-              </button>
-              <button
-                onClick={() => onViewChange('tasks')}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'tasks'
-                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                }`}
-              >
-                Tarefas
-              </button>
-              <button
-                onClick={() => onViewChange('gpts-personalizados')}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'gpts-personalizados'
-                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                }`}
-              >
-                GPTs
-              </button>
-              <button
-                onClick={() => onViewChange('ias-pro')}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'ias-pro'
-                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                }`}
-              >
-                IAs Pro
-              </button>
-              <button
-                onClick={() => onViewChange('cursos')}
-                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'cursos'
-                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                }`}
-              >
-                Cursos
-              </button>
-            </div>
-          </div>
+          <div className="flex items-center space-x-2"></div>
         </div>
       </div>
     </header>

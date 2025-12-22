@@ -129,6 +129,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* Sidebar para Desktop */}
+      <Sidebar currentView={currentView} onViewChange={handleViewChange} />
+      
       {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
         <Header
           currentView={currentView}
@@ -137,7 +140,7 @@ function App() {
         />
       )}
       
-      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0' : ''}`}>
+      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64' : 'md:ml-64'}`}>
         {renderCurrentView()}
       </main>
       
