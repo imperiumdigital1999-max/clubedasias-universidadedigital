@@ -21,10 +21,10 @@ export const allGPTs: GPT[] = [
   {
     id: '2',
     tag: "GPT's Criação de Imagem",
-    name: 'Logo Designer AI',
-    description: 'Crie logos profissionais com descrições precisas e ajustes personalizados para sua marca ou empresa',
-    url: 'https://chat.openai.com/g/g-example2',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=100&h=100&fit=crop',
+    name: 'Mester dos Personagens',
+    description: 'Crio personagens carismáticos e cenas cinematográficas impactantes para suas animações.',
+    url: 'https://chatgpt.com/g/g-686808e1eaa88191864bcb625c66cc31-mestre-dos-personagens',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1754842132312-ChatGPT%20Image%209%20de%20jul.%20de%202025,%2010_55_40.png',
     rating: 4.7
   },
   {
