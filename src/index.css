@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @keyframes christmas-pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.92;
+      transform: scale(1.008);
+    }
+  }
+
+  .animate-christmas-pulse {
+    animation: christmas-pulse 3s ease-in-out infinite;
+  }
+}

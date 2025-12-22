@@ -94,8 +94,8 @@ Organize, descubra e turbine sua criatividade com recursos de IA selecionados e 
 
       {/* Banner de Natal */}
       <section>
-        <div 
-          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-green-600/20 to-red-600/20 border border-green-500/30"
+        <div
+          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-green-600/20 to-red-600/20 border border-green-500/30 animate-christmas-pulse"
           style={{
             backgroundImage: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%)',
           }}
