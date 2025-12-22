@@ -76,11 +76,11 @@ Organize, descubra e turbine sua criatividade com recursos de IA selecionados e 
         <div className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700">
           <div className="text-2xl font-bold text-white mb-1">100%</div>
           <div className="text-slate-400 text-sm">Gratuito</div>
-   <div className="bg-green-900/30 rounded-xl p-6 text-center border border-green-500/30">
-  <div className="text-2xl font-bold text-green-400 mb-1">24hrs</div>
-  <div className="text-green-300 text-sm">Disponível</div>
-</div>
-
+        </div>
+<div className="bg-purple-900/30 rounded-xl p-6 text-center border border-purple-500/30">
+  <div className="text-2xl font-bold text-purple-400 mb-1">24hrs</div>
+  <div className="text-purple-300 text-sm">Disponível</div>
+        </div>
       </div>
 
       {/* Banner de Natal */}
