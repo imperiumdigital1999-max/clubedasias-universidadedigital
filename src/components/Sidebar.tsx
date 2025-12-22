@@ -12,11 +12,11 @@ export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
     { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
     { id: 'ferramentas-ia' as ViewMode, label: 'Ferramentas de IA', icon: Wrench },
     { id: 'favorites' as ViewMode, label: 'Em Destaque', icon: Award },
+    { id: 'ias-pro' as ViewMode, label: 'IAs Pro', icon: Crown },
+    { id: 'cursos' as ViewMode, label: 'Cursos', icon: GraduationCap },
     { id: 'prompts' as ViewMode, label: 'Prompts', icon: MessageSquare },
     { id: 'tasks' as ViewMode, label: 'Tarefas', icon: CheckSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'GPTs', icon: Bot },
-    { id: 'ias-pro' as ViewMode, label: 'IAs Pro', icon: Crown },
-    { id: 'cursos' as ViewMode, label: 'Cursos', icon: GraduationCap },
   ];
 
   return (
