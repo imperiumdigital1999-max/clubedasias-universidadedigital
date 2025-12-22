@@ -75,8 +75,9 @@ export const allGPTs: GPT[] = [
   {
     id: '11',
     tag: "GPT's de Criação de Conteúdo",
-    name: 'Newsletter Creator',
-    description: 'Newsletters profissionais com conteúdo relevante e engajador para construir audiência',
+    name: 'Bianca',
+    description: 'Nicho da Agente: Maternidade (introdução alimentar) Ideia Central: Ajuda mães a fazerem a introdução alimentar do bebê com segurança, leveza e cardápios simples — tudo personalizado por fase. Promessa Principal: Cria cardápios personalizados e ideias práticas pra introduzir alimentos sólidos no tempo certo e sem estresse. 
+      🚨Valor mínimo para revenda: R$ 27,00',
     url: 'https://chat.openai.com/g/g-example11',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop',
     rating: 4.4
