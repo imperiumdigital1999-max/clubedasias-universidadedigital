@@ -45,7 +45,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
                 Clube das IAs
               </span>
                     <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
-                    Clube das IAs 2
+                    A maior plataforma de Prompts, Ferramentas de IA e GPTs do Brasil!
                   </span> 
             </h1>
             <p className="text-slate-200 text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed">
