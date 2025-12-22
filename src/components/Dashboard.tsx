@@ -49,14 +49,13 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
       {/* Subtítulo */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">
         <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
-          A maior plataforma de IA do Brasil
+        A maior plataforma de Prompts, Ferramentas de IA e GPTs do Brasil!
         </span>
       </h2>
 
       {/* Texto */}
       <p className="text-slate-200 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-        Prompts, Ferramentas de IA e GPTs organizados para você criar mais,
-        ganhar tempo e acelerar resultados com inteligência artificial.
+Organize, descubra e turbine sua criatividade com recursos de IA selecionados e atualizados.
       </p>
 
     </div>
