@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageSquare, ArrowLeft, Search, Heart, Copy, Eye, X } from 'lucide-react';
+import { MessageSquare, ArrowLeft, Search, Copy, Eye, X } from 'lucide-react';
 
 export default function PromptsView() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -162,12 +162,6 @@ export default function PromptsView() {
               <div key={prompt.id} className="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-slate-600 transition-all duration-300">
                 {/* Header do card */}
                 <div className="p-4 border-b border-slate-700">
-                  <div className="flex items-center justify-between mb-2">
-                    <div></div>
-                    <button className="text-slate-400 hover:text-white transition-colors">
-                      <Heart className="w-5 h-5" />
-                    </button>
-                  </div>
                   <h3 className="text-white font-semibold text-lg">{prompt.title}</h3>
                 </div>
 
