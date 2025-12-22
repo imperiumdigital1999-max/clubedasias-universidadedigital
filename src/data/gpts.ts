@@ -86,8 +86,8 @@ export const allGPTs: GPT[] = [
     tag: "GPT's de Revenda",
     name: 'Bianca',
     description: 'Nicho da Agente: Maternidade (introdução alimentar) Ideia Central: Ajuda mães a fazerem a introdução alimentar do bebê com segurança, leveza e cardápios simples — tudo personalizado por fase. Promessa Principal: Cria cardápios personalizados e ideias práticas pra introduzir alimentos sólidos no tempo certo e sem estresse. 🚨Valor mínimo para revenda: R$ 27,00',
-    url: 'https://chat.openai.com/g/g-example12',
-    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=100&h=100&fit=crop',
+    url: 'https://chatgpt.com/g/g-686495142bd8819198ec4666b1fda051-agente-bianca',
+    image: '',
     rating: 4.7
   },
   {
