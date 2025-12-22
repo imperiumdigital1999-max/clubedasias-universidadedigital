@@ -75,8 +75,8 @@ export const allGPTs: GPT[] = [
   {
     id: '11',
     tag: "GPT's de Criação de Conteúdo",
-    name: 'Bianca',
-    description: 'Nicho da Agente: Maternidade (introdução alimentar) Ideia Central: Ajuda mães a fazerem a introdução alimentar do bebê com segurança, leveza e cardápios simples — tudo personalizado por fase. Promessa Principal: Cria cardápios personalizados e ideias práticas pra introduzir alimentos sólidos no tempo certo e sem estresse. 🚨Valor mínimo para revenda: R$ 27,00',
+    name: 'Newsletter Creator',
+    description: 'Newsletters profissionais com conteúdo relevante e engajador para construir audiência',
     url: 'https://chat.openai.com/g/g-example11',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop',
     rating: 4.4
@@ -84,8 +84,8 @@ export const allGPTs: GPT[] = [
   {
     id: '12',
     tag: "GPT's de Revenda",
-    name: 'Product Description Master',
-    description: 'Descrições de produtos persuasivas para marketplaces e lojas online com técnicas de copywriting',
+    name: 'Bianca',
+    description: 'Nicho da Agente: Maternidade (introdução alimentar) Ideia Central: Ajuda mães a fazerem a introdução alimentar do bebê com segurança, leveza e cardápios simples — tudo personalizado por fase. Promessa Principal: Cria cardápios personalizados e ideias práticas pra introduzir alimentos sólidos no tempo certo e sem estresse. 🚨Valor mínimo para revenda: R$ 27,00',
     url: 'https://chat.openai.com/g/g-example12',
     image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=100&h=100&fit=crop',
     rating: 4.7
@@ -140,7 +140,7 @@ export const allGPTs: GPT[] = [
     tag: "GPT's de Ensino",
     name: 'Mark Browmer - Professor de Marketing Digital',
     description: 'Aprenda marketing digital com um Professor experiente, que ensina como numa sala de aula, com base nos principais livros da área. Explicações claras, humanas e profundas, evitando conteúdo raso, usando exemplos reais e metodologias consagradas.',
-    url: 'https://chatgpt.com/g/g-6897890ceb38819191324d043fb3f0c2-mark-browmer-professor-de-marketing-digital',
+    url: '',
     image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755020861783-ChatGPT%20Image%204%20de%20ago.%20de%202025,%2017_56_00.png',
     rating: 4.7
   }
