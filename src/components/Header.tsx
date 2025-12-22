@@ -29,24 +29,24 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-2">
               <button
-                onClick={() => onViewChange('dashboard')}
+                onClick={() => onViewChange('inicio')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'dashboard'
+                  currentView === 'inicio'
                     ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
-                Dashboard
+                Início
               </button>
               <button
-                onClick={() => onViewChange('categories')}
+                onClick={() => onViewChange('ferramentas-ia')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'categories'
+                  currentView === 'ferramentas-ia'
                     ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
-                Categorias
+                Ferramentas de IA
               </button>
               <button
                 onClick={() => onViewChange('favorites')}
@@ -59,14 +59,14 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 Em Destaque
               </button>
               <button
-                onClick={() => onViewChange('recent')}
+                onClick={() => onViewChange('prompts')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
-                  currentView === 'recent'
+                  currentView === 'prompts'
                     ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
-                Recentes
+                Prompts
               </button>
               <button
                 onClick={() => onViewChange('tasks')}
@@ -77,6 +77,16 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 }`}
               >
                 Tarefas
+              </button>
+              <button
+                onClick={() => onViewChange('gpts-personalizados')}
+                className={`px-4 py-2 rounded-lg transition-colors font-medium ${
+                  currentView === 'gpts-personalizados'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                }`}
+              >
+                GPTs
               </button>
               <button
                 onClick={() => onViewChange('ias-pro')}

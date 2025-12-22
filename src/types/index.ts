@@ -73,4 +73,4 @@ export interface Category {
   toolCount: number;
 }
 
-export type ViewMode = 'dashboard' | 'category' | 'categories' | 'favorites' | 'recent' | 'tasks' | 'ias-pro' | 'cursos' | 'tool-detail' | 'task-detail' | 'course-detail';
+export type ViewMode = 'inicio' | 'category' | 'ferramentas-ia' | 'favorites' | 'tasks' | 'ias-pro' | 'cursos' | 'prompts' | 'gpts-personalizados' | 'tool-detail' | 'task-detail' | 'course-detail';

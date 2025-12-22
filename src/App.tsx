@@ -13,10 +13,12 @@ import TaskDetailView from './components/TaskDetailView';
 import IAsProView from './components/IAsProView';
 import CursosView from './components/CursosView';
 import CourseDetailView from './components/CourseDetailView';
+import PromptsView from './components/PromptsView';
+import GPTsPersonalizadosView from './components/GPTsPersonalizadosView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
-  const [currentView, setCurrentView] = useState<ViewMode>('dashboard');
+  const [currentView, setCurrentView] = useState<ViewMode>('inicio');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
@@ -24,7 +26,7 @@ function App() {
 
   const handleViewChange = (view: ViewMode) => {
     setCurrentView(view);
-    if (view === 'dashboard') {
+    if (view === 'inicio') {
       setSelectedCategory('');
       setSelectedTool(null);
       setSelectedPlatform(null);
@@ -33,7 +35,7 @@ function App() {
   };
 
   const handleBackToDashboard = () => {
-    setCurrentView('dashboard');
+    setCurrentView('inicio');
     setSelectedCategory('');
     setSelectedTool(null);
     setSelectedPlatform(null);
@@ -61,7 +63,7 @@ function App() {
     if (selectedCategory) {
       setCurrentView('category');
     } else {
-      setCurrentView('dashboard');
+      setCurrentView('inicio');
     }
   };
 
@@ -98,7 +100,7 @@ function App() {
             onBack={handleBackFromCourse}
           />
         ) : null;
-      case 'categories':
+      case 'ferramentas-ia':
         return <CategoriesView onToolSelect={handleToolSelect} />;
       case 'category':
         return (
@@ -110,14 +112,16 @@ function App() {
         );
       case 'favorites':
         return <FavoritesView onToolSelect={handleToolSelect} />;
-      case 'recent':
-        return <RecentView onToolSelect={handleToolSelect} />;
       case 'tasks':
         return <TasksView onPlatformSelect={handlePlatformSelect} />;
       case 'ias-pro':
         return <IAsProView onToolSelect={handleToolSelect} />;
       case 'cursos':
         return <CursosView onCourseSelect={handleCourseSelect} />;
+      case 'prompts':
+        return <PromptsView />;
+      case 'gpts-personalizados':
+        return <GPTsPersonalizadosView />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }

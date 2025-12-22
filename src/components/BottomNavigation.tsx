@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Award, CheckSquare, MoreHorizontal, Folder, Clock, Crown, GraduationCap, X } from 'lucide-react';
+import { Home, Award, CheckSquare, MoreHorizontal, Wrench, MessageSquare, Crown, GraduationCap, X, Bot } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface BottomNavigationProps {
@@ -12,15 +12,16 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
 
   // Ícones principais da barra inferior
   const mainNavItems = [
-    { id: 'dashboard' as ViewMode, label: 'Dashboard', icon: Home },
+    { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
     { id: 'favorites' as ViewMode, label: 'Destaque', icon: Award },
     { id: 'tasks' as ViewMode, label: 'Tarefas', icon: CheckSquare },
   ];
 
   // Ícones que ficam no menu "Outros"
   const otherNavItems = [
-    { id: 'categories' as ViewMode, label: 'Categorias', icon: Folder },
-    { id: 'recent' as ViewMode, label: 'Recentes', icon: Clock },
+    { id: 'ferramentas-ia' as ViewMode, label: 'Ferramentas de IA', icon: Wrench },
+    { id: 'prompts' as ViewMode, label: 'Prompts', icon: MessageSquare },
+    { id: 'gpts-personalizados' as ViewMode, label: 'GPTs', icon: Bot },
     { id: 'ias-pro' as ViewMode, label: 'IAs Pro', icon: Crown },
     { id: 'cursos' as ViewMode, label: 'Cursos', icon: GraduationCap },
   ];

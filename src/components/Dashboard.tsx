@@ -19,7 +19,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
   const handleViewCategories = () => {
     if (onViewChange) {
-      onViewChange('categories');
+      onViewChange('ferramentas-ia');
     }
   };
 
