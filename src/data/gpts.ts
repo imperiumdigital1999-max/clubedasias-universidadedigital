@@ -129,10 +129,10 @@ export const allGPTs: GPT[] = [
   {
     id: '17',
     tag: "GPT's VEO 3",
-    name: 'VEO 3 Video Prompter',
-    description: 'Crie prompts otimizados para geração de vídeos com VEO 3 e máxima qualidade cinematográfica',
-    url: 'https://chat.openai.com/g/g-example17',
-    image: 'https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=100&h=100&fit=crop',
+    name: 'Severino Veo3',
+    description: 'Especialista em direção cinematográfica com IA e consistência de personagens',
+    url: 'https://chatgpt.com/g/g-684c96e0a94881919d0608727817ddaf-severino-veo3',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1754844890940-ChatGPT%20Image%208%20de%20ago.%20de%202025,%2016_04_32.png',
     rating: 4.9
   },
   {
