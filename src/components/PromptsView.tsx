@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { MessageSquare, ArrowLeft, Search, Heart, Copy, Eye } from 'lucide-react';
+import { MessageSquare, ArrowLeft, Search, Heart, Copy, Eye, X } from 'lucide-react';
 
 export default function PromptsView() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedPrompt, setSelectedPrompt] = useState<any | null>(null);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
 
   // TAGs exatamente como especificado
   const promptTags = [
@@ -92,13 +94,22 @@ export default function PromptsView() {
       )
     : [];
 
-  const handleCopyPrompt = async (prompt: string) => {
+  const handleCopyPrompt = async (prompt: string, promptId: string) => {
     try {
       await navigator.clipboard.writeText(prompt);
-      // Aqui você pode adicionar uma notificação de sucesso
+      setCopiedId(promptId);
+      setTimeout(() => setCopiedId(null), 2000);
     } catch (err) {
       console.error('Erro ao copiar prompt:', err);
     }
+  };
+
+  const handleViewFullPrompt = (prompt: any) => {
+    setSelectedPrompt(prompt);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedPrompt(null);
   };
 
   const handleTagClick = (tag: string) => {
@@ -152,7 +163,7 @@ export default function PromptsView() {
                 {/* Header do card */}
                 <div className="p-4 border-b border-slate-700">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-blue-400 text-sm font-medium">{prompt.category}</span>
+                    <div></div>
                     <button className="text-slate-400 hover:text-white transition-colors">
                       <Heart className="w-5 h-5" />
                     </button>
@@ -177,17 +188,22 @@ export default function PromptsView() {
 
                   {/* Botões de ação */}
                   <div className="space-y-3">
-                    <button className="w-full flex items-center justify-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors py-2">
+                    <button
+                      onClick={() => handleViewFullPrompt(prompt)}
+                      className="w-full flex items-center justify-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors py-2"
+                    >
                       <Eye className="w-4 h-4" />
                       <span className="text-sm font-medium">Ver prompt completo</span>
                     </button>
-                    
-                    <button 
-                      onClick={() => handleCopyPrompt(prompt.fullPrompt)}
+
+                    <button
+                      onClick={() => handleCopyPrompt(prompt.fullPrompt, prompt.id)}
                       className="w-full flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors"
                     >
                       <Copy className="w-4 h-4" />
-                      <span className="text-sm font-medium">Copiar Prompt</span>
+                      <span className="text-sm font-medium">
+                        {copiedId === prompt.id ? 'Copiado!' : 'Copiar Prompt'}
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -195,6 +211,54 @@ export default function PromptsView() {
             ))}
           </div>
         </div>
+
+        {/* Modal para exibir prompt completo */}
+        {selectedPrompt && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={handleCloseModal}>
+            <div className="bg-slate-900 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-hidden border border-slate-700" onClick={(e) => e.stopPropagation()}>
+              {/* Header do modal */}
+              <div className="flex items-center justify-between p-6 border-b border-slate-700">
+                <h2 className="text-2xl font-bold text-white">{selectedPrompt.title}</h2>
+                <button
+                  onClick={handleCloseModal}
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* Conteúdo do modal */}
+              <div className="p-6 overflow-y-auto max-h-[calc(90vh-160px)]">
+                <div className="mb-4">
+                  <img
+                    src={selectedPrompt.image}
+                    alt={selectedPrompt.title}
+                    className="w-full rounded-lg"
+                  />
+                </div>
+                <div className="bg-slate-800 rounded-lg p-4 mb-4">
+                  <h3 className="text-white font-semibold mb-2">Prompt Completo:</h3>
+                  <p className="text-slate-300 leading-relaxed whitespace-pre-wrap">
+                    {selectedPrompt.fullPrompt}
+                  </p>
+                </div>
+              </div>
+
+              {/* Footer do modal */}
+              <div className="p-6 border-t border-slate-700">
+                <button
+                  onClick={() => handleCopyPrompt(selectedPrompt.fullPrompt, selectedPrompt.id)}
+                  className="w-full flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition-colors"
+                >
+                  <Copy className="w-5 h-5" />
+                  <span className="font-medium">
+                    {copiedId === selectedPrompt.id ? 'Copiado!' : 'Copiar Prompt'}
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
