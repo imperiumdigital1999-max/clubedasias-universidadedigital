@@ -46,7 +46,7 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
     {
       numero: 1,
       titulo: 'Acesse o Google Labs',
-      descricao: 'Entre em: labs.google e procure pela ferramenta Flow.'
+      descricao: 'Entre no Google Labs e procure pela ferramenta Flow.'
     },
     {
       numero: 2,
