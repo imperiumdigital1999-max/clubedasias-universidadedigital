@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Gift, Zap, Play, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Gift, Zap, Play, CheckCircle, ExternalLink, Sparkles } from 'lucide-react';
 
 interface CreditosGratuitosViewProps {
   onBack?: () => void;
@@ -65,6 +65,14 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
     }
   ];
 
+  const handleGoogleFlowClick = () => {
+    window.open('https://labs.google/fx/tools/flow', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleVideoClick = (videoUrl: string) => {
+    window.open(videoUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -92,34 +100,34 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
           </p>
         </div>
 
-        <div className="mb-16 bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-2xl border border-yellow-500/30 p-8 md:p-12">
-          <div className="flex items-start space-x-4 mb-6">
-            <div className="flex-shrink-0">
+        <div className="mb-8 bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-2xl border border-yellow-500/30 p-6 md:p-12">
+          <div className="flex flex-col md:flex-row md:items-start md:space-x-4 mb-6">
+            <div className="flex-shrink-0 mb-4 md:mb-0">
               <Zap className="w-8 h-8 text-yellow-400" />
             </div>
-            <div>
+            <div className="flex-1">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Como Funciona o Sistema de Créditos?
               </h2>
-              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
                 O Clube das IAs em parceria com o VEO3 conseguiu garantir créditos gratuitos para novos usuários testarem a plataforma. Cada crédito pode ser usado para gerar vídeos com IA, aplicar efeitos especiais, ou acessar recursos premium. Siga os passos abaixo para começar:
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 {passos.map((passo) => (
                   <div
                     key={passo.numero}
-                    className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-yellow-500/50 transition-all duration-300"
+                    className="bg-slate-800/50 rounded-xl p-5 md:p-6 border border-slate-700 hover:border-yellow-500/50 transition-all duration-300"
                   >
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    <div className="flex items-start space-x-3 md:space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center font-bold text-base md:text-lg">
                         {passo.numero}
                       </div>
-                      <div>
-                        <h3 className="text-white font-semibold text-lg mb-2">
+                      <div className="flex-1">
+                        <h3 className="text-white font-semibold text-base md:text-lg mb-2 leading-snug">
                           {passo.titulo}
                         </h3>
-                        <p className="text-slate-400 text-sm">
+                        <p className="text-slate-400 text-sm md:text-base leading-relaxed">
                           {passo.descricao}
                         </p>
                       </div>
@@ -132,6 +140,38 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
         </div>
 
         <div className="mb-12">
+          <div
+            onClick={handleGoogleFlowClick}
+            className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 border-2 border-blue-500/50 hover:border-blue-400 p-8 md:p-10 cursor-pointer transition-all duration-300 hover:scale-[1.02] transform group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="relative z-10 text-center">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+              </div>
+
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
+                Acesse o Google Flow Agora
+              </h3>
+
+              <p className="text-slate-300 text-base md:text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
+                Clique aqui para acessar diretamente a plataforma Google Flow e começar a criar seus vídeos com créditos gratuitos
+              </p>
+
+              <div className="flex items-center justify-center space-x-2 text-blue-400 font-semibold text-lg group-hover:space-x-3 transition-all duration-300">
+                <span>Acessar Google Flow</span>
+                <ExternalLink className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+              </div>
+            </div>
+
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse" />
+          </div>
+        </div>
+
+        <div className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Vídeo Aulas - Passo a Passo
           </h2>
@@ -140,9 +180,10 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
             {videoAulas.map((video, index) => (
               <div
                 key={video.id}
-                className="bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700 hover:border-yellow-500/50 transition-all duration-300 hover:scale-[1.02] transform"
+                onClick={() => handleVideoClick(video.videoUrl)}
+                className="bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700 hover:border-yellow-500/50 transition-all duration-300 hover:scale-[1.02] transform cursor-pointer"
               >
-                <div className="relative group cursor-pointer">
+                <div className="relative group">
                   <img
                     src={video.thumbnail}
                     alt={video.titulo}
