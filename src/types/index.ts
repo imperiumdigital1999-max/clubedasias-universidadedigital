@@ -79,6 +79,8 @@ export interface GPT {
   name: string;
   description: string;
   url: string;
+  image: string;
+  rating?: number;
 }
 
 export type ViewMode = 'inicio' | 'category' | 'ferramentas-ia' | 'favorites' | 'tasks' | 'ias-pro' | 'cursos' | 'prompts' | 'gpts-personalizados' | 'tool-detail' | 'task-detail' | 'course-detail';
