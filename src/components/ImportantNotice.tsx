@@ -9,7 +9,7 @@ export default function ImportantNotice() {
           <div className="flex flex-col md:flex-row md:items-center md:space-x-8">
             <div className="flex-shrink-0 mb-6 md:mb-0 md:w-64">
               <img
-                src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://static-media.hotmart.com/rpcnJ1gXq6x2ZXYsMmsHNe-gMMI=/300x300/filters:quality(100)/hotmart/product_pictures/e20d0223-005f-4ee6-ab11-b223621d78d8/ChatGPTImage21dedezde202519_11_37.png"
                 alt="Viral Edit + VO3 AI"
                 className="w-full h-48 md:h-56 object-cover rounded-xl"
               />
