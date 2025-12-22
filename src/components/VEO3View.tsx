@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-import { Search, Copy, ArrowLeft, Eye, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Search, Copy, ArrowLeft, Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { veo3Prompts, veo3Categories, VEO3Prompt } from '../data/veo3Prompts';
 
 interface VEO3ViewProps {
   onBack: () => void;
 }
 
+const ITEMS_PER_PAGE = 12;
+
 export default function VEO3View({ onBack }: VEO3ViewProps) {
   const [selectedCategory, setSelectedCategory] = useState('Ver Todos');
   const [searchTerm, setSearchTerm] = useState('');
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [selectedPrompt, setSelectedPrompt] = useState<VEO3Prompt | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredPrompts = veo3Prompts.filter(prompt => {
     const matchesCategory = selectedCategory === 'Ver Todos' || prompt.category === selectedCategory;
@@ -21,6 +24,29 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
 
     return matchesCategory && matchesSearch;
   });
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchTerm]);
+
+  const totalPages = Math.ceil(filteredPrompts.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const paginatedPrompts = filteredPrompts.slice(startIndex, endIndex);
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const handleCopyPrompt = async (prompt: string, promptId: string) => {
     try {
@@ -85,12 +111,13 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
 
         <div className="mb-6 text-center">
           <p className="text-slate-500 text-sm">
-            Mostrando {filteredPrompts.length} de {veo3Prompts.length} prompts
+            Mostrando {startIndex + 1}-{Math.min(endIndex, filteredPrompts.length)} de {filteredPrompts.length} prompts
+            {filteredPrompts.length !== veo3Prompts.length && ` (filtrado de ${veo3Prompts.length})`}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPrompts.map((prompt) => (
+          {paginatedPrompts.map((prompt) => (
             <div
               key={prompt.id}
               className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10"
@@ -158,6 +185,48 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
             </div>
           ))}
         </div>
+
+        {filteredPrompts.length > 0 && totalPages > 1 && (
+          <div className="mt-12 flex items-center justify-center gap-6">
+            <button
+              onClick={handlePreviousPage}
+              disabled={currentPage === 1}
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                currentPage === 1
+                  ? 'bg-slate-800/50 text-slate-600 cursor-not-allowed border border-slate-700'
+                  : 'bg-slate-800 text-white hover:bg-slate-700 border border-slate-700 hover:border-purple-500/50'
+              }`}
+            >
+              <ChevronLeft className="w-5 h-5" />
+              <span>Anterior</span>
+            </button>
+
+            <div className="flex items-center gap-3">
+              <span className="text-slate-400 text-sm">
+                Página
+              </span>
+              <span className="bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold min-w-[3rem] text-center">
+                {currentPage}
+              </span>
+              <span className="text-slate-400 text-sm">
+                de {totalPages}
+              </span>
+            </div>
+
+            <button
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                currentPage === totalPages
+                  ? 'bg-slate-800/50 text-slate-600 cursor-not-allowed border border-slate-700'
+                  : 'bg-slate-800 text-white hover:bg-slate-700 border border-slate-700 hover:border-purple-500/50'
+              }`}
+            >
+              <span>Próxima</span>
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        )}
 
         {filteredPrompts.length === 0 && (
           <div className="text-center py-16">
