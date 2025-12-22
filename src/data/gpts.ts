@@ -90,44 +90,97 @@ export const allGPTs: GPT[] = [
     image: 'https://static.wixstatic.com/media/28c700_04522c097b404fc99b4e3795bf897c26~mv2.jpg/v1/fill/w_560,h_534,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg',
     rating: 4.7
   },
+ {
+  id: '13',
+  tag: "GPT's de Revenda",
+  name: 'Valentina',
+  description: 'Agente Valentina. Nicho: Consultoria de estilo e autoestima feminina usando o que você já tem no guarda-roupa — looks criativos, funcionais e personalizados, sem precisar gastar com roupas novas. Promessa principal: Te ajudar a se sentir linda, confiante e estilosa todos os dias, criando combinações certeiras com as peças que já estão no seu armário, sem depender de corpo padrão ou marcas caras. 🚨 Valor mínimo para revenda: R$ 27,00',
+  url: 'https://chatgpt.com/g/g-6864a1d0e49481919eb3ec400d32eb0b-agente-valentina',
+  image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&h=100&fit=crop',
+  rating: 4.6
+},
+
+{
+  id: '14',
+  tag: "GPT's de Revenda",
+  name: 'Chef Helena',
+  description: 'Agente Helena – Sua Chef Inteligente e Parceira de Cozinha. Nicho: Culinária saudável personalizada, com receitas práticas e criativas adaptadas ao que você tem em casa e ao seu objetivo nutricional. Promessa principal: Transformar ingredientes simples em refeições deliciosas, equilibradas e sem desperdício, ajudando você a comer bem todos os dias sem complicação. 🚨 Valor mínimo para revenda: R$ 27,00',
+  url: 'https://chatgpt.com/g/g-6864a154d4088191b0478be9c910fa43-agente-helena',
+  image: 'https://images.unsplash.com/photo-1543353071-087092ec393a?w=100&h=100&fit=crop',
+  rating: 4.6
+},
+
+{
+  id: '15',
+  tag: "GPT's de Revenda",
+  name: 'Emanuel',
+  description: 'Agente Emanuel. Nicho: Espiritualidade e fé cristã. Ideia central: O agente responde como se fosse Jesus, com base nos Evangelhos, oferecendo conselhos e ensinamentos bíblicos de forma simples, amorosa e acessível. Promessa principal: Acalmar o coração, fortalecer a fé e ajudar na tomada de decisões com base na Bíblia. 🚨 Valor mínimo para revenda: R$ 27,00',
+  url: 'https://chatgpt.com/g/g-686a0d54375881919a5a34587b304140-agente-emanuel',
+  image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=100&h=100&fit=crop',
+  rating: 4.6
+},
+
+{
+  id: '16',
+  tag: "GPT's de Revenda",
+  name: 'Sara',
+  description: 'Agente Sara – Sua tutora de bolso para o ENEM. Nicho: Preparação completa para o ENEM (todas as áreas + redação). Promessa principal: Ajudar você a alcançar alta pontuação com explicações claras, motivação constante e estratégias práticas, como estudar com uma professora particular sempre disponível. 🚨 Valor mínimo para revenda: R$ 27,00',
+  url: 'https://chatgpt.com/g/g-685dcde9ca908191a5a434b662210c3d-agente-sara',
+  image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=100&h=100&fit=crop',
+  rating: 4.6
+},
+
+{
+  id: '17',
+  tag: "GPT's de Revenda",
+  name: 'Íris',
+  description: 'Agente Íris. Nicho: Criação de roteiros virais para Reels e TikTok. Promessa principal: Transformar ideias em roteiros prontos para vídeos que geram engajamento, crescem seguidores e vendem — mesmo para quem nunca gravou antes. 🚨 Valor mínimo para revenda: R$ 27,00',
+  url: 'https://chatgpt.com/g/g-68649ea033488191b9bc5cd2100a4994-agente-iris',
+  image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=100&h=100&fit=crop',
+  rating: 4.6
+},
+
+{
+  id: '18',
+  tag: "GPT's de Revenda",
+  name: 'Marina',
+  description: 'Agente Marina – Sua consultora de sono acolhedora. Nicho: Sono infantil e rotina para bebês e crianças pequenas. Promessa principal: Ajudar famílias exaustas a conquistarem noites mais tranquilas com um plano de sono personalizado, simples e respeitoso, sem métodos agressivos. 🚨 Valor mínimo para revenda: R$ 27,00',
+  url: 'https://agente-marina/',
+  image: 'https://images.unsplash.com/photo-1546015720-b8b30df5aa27?w=100&h=100&fit=crop',
+  rating: 4.6
+},
+
+{
+  id: '19',
+  tag: "GPT's de Revenda",
+  name: 'Dom | Criador de Stories que Vendem',
+  description: 'Dom é o Criador de Stories que Vendem. Nicho: Marketing e vendas no Instagram. Promessa principal: Ajudar você a vender mais todos os dias com stories estratégicos, naturais e persuasivos, sem parecer propaganda chata ou forçada.',
+  url: 'https://chatgpt.com/g/g-6754fc110e2c8191ac217e56af2952cc-dom-criador-de-stories-que-vendem',
+  image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&h=100&fit=crop',
+  rating: 4.6
+},
+
+{
+  id: '20',
+  tag: "GPT's de Revenda",
+  name: 'Ana – Morango do Amor',
+  description: 'Agente Ana – Morango do Amor. Nicho: Vendas de doces gourmet. Promessa principal: Ensinar qualquer pessoa a lucrar com o doce que viralizou no Brasil, passando a receita perfeita, precificação correta e estratégias de divulgação para vender muito mesmo começando do zero. 🚨 Valor mínimo para revenda: R$ 27,00',
+  url: 'https://chatgpt.com/g/g-68824ac099288191b76af6ed938de3c8-agente-ana-morango-do-amor',
+  image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?w=100&h=100&fit=crop',
+  rating: 4.6
+},
+
+{
+  id: '21',
+  tag: "GPT's de Revenda",
+  name: 'Visionário dos Produtos Lucrativos',
+  description: 'Visionário dos Produtos Lucrativos. Nicho: Criação e validação de produtos digitais. Promessa principal: Entregar ideias de produtos fáceis de consumir, com alta demanda e grande potencial de escala, ideais para quem quer vender no digital com estratégia.',
+  url: 'https://chatgpt.com/g/g-675594d764288191ab47936d8442b979-visionario-dos-produtos-lucrativos',
+  image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=100&h=100&fit=crop',
+  rating: 4.6
+},
   {
-    id: '13',
-    tag: "GPT's de Revenda",
-    name: 'Dropshipping Advisor',
-    description: 'Análise de produtos e estratégias para dropshipping de sucesso com identificação de nichos lucrativos',
-    url: 'https://chat.openai.com/g/g-example13',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=100&h=100&fit=crop',
-    rating: 4.6
-  },
-  {
-    id: '14',
-    tag: "GPT's de Revenda",
-    name: 'Marketplace Optimizer',
-    description: 'Otimize seus anúncios para Mercado Livre, Amazon e outros marketplaces com SEO interno',
-    url: 'https://chat.openai.com/g/g-example14',
-    image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=100&h=100&fit=crop',
-    rating: 4.5
-  },
-  {
-    id: '15',
-    tag: "GPT's de Revenda",
-    name: 'Pricing Strategy Expert',
-    description: 'Defina preços competitivos e estratégias de precificação inteligentes baseadas em análise de mercado',
-    url: 'https://chat.openai.com/g/g-example15',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=100&h=100&fit=crop',
-    rating: 4.8
-  },
-  {
-    id: '16',
-    tag: "GPT's de Revenda",
-    name: 'Customer Service Bot',
-    description: 'Respostas automáticas para clientes com tom profissional e empático para e-commerce',
-    url: 'https://chat.openai.com/g/g-example16',
-    image: 'https://images.unsplash.com/photo-1553775927-cd6cdb2e7f14?w=100&h=100&fit=crop',
-    rating: 4.4
-  },
-  {
-    id: '17',
+    id: '22',
     tag: "GPT's VEO 3",
     name: 'Severino Veo3',
     description: 'Especialista em direção cinematográfica com IA e consistência de personagens',
@@ -136,7 +189,7 @@ export const allGPTs: GPT[] = [
     rating: 4.9
   },
   {
-    id: '21',
+    id: '23',
     tag: "GPT's de Ensino",
     name: 'Mark Browmer - Professor de Marketing Digital',
     description: 'Aprenda marketing digital com um Professor experiente, que ensina como numa sala de aula, com base nos principais livros da área. Explicações claras, humanas e profundas, evitando conteúdo raso, usando exemplos reais e metodologias consagradas.',
