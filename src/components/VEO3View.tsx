@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Copy, ArrowLeft } from 'lucide-react';
+import { Search, Copy, ArrowLeft, Eye, X } from 'lucide-react';
 import { veo3Prompts, veo3Categories, VEO3Prompt } from '../data/veo3Prompts';
 
 interface VEO3ViewProps {
@@ -10,6 +10,7 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
   const [selectedCategory, setSelectedCategory] = useState('Ver Todos');
   const [searchTerm, setSearchTerm] = useState('');
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [selectedPrompt, setSelectedPrompt] = useState<VEO3Prompt | null>(null);
 
   const filteredPrompts = veo3Prompts.filter(prompt => {
     const matchesCategory = selectedCategory === 'Ver Todos' || prompt.category === selectedCategory;
@@ -116,15 +117,25 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
                   {prompt.prompt.substring(0, 100)}...
                 </p>
 
-                <button
-                  onClick={() => handleCopyPrompt(prompt.prompt, prompt.id)}
-                  className="w-full flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg transition-all duration-200 font-semibold shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40"
-                >
-                  <Copy className="w-4 h-4" />
-                  <span>
-                    {copiedId === prompt.id ? 'Copiado!' : 'Copiar Prompt'}
-                  </span>
-                </button>
+                <div className="space-y-2">
+                  <button
+                    onClick={() => setSelectedPrompt(prompt)}
+                    className="w-full flex items-center justify-center space-x-2 text-purple-400 hover:text-purple-300 py-2 transition-colors"
+                  >
+                    <Eye className="w-4 h-4" />
+                    <span className="text-sm font-medium">Ver prompt completo</span>
+                  </button>
+
+                  <button
+                    onClick={() => handleCopyPrompt(prompt.prompt, prompt.id)}
+                    className="w-full flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg transition-all duration-200 font-semibold shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40"
+                  >
+                    <Copy className="w-4 h-4" />
+                    <span>
+                      {copiedId === prompt.id ? 'Copiado!' : 'Copiar Prompt'}
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -140,6 +151,66 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
               <p className="text-slate-400">
                 Tente ajustar sua pesquisa ou selecione outra categoria
               </p>
+            </div>
+          </div>
+        )}
+
+        {selectedPrompt && (
+          <div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedPrompt(null)}
+          >
+            <div
+              className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-slate-700 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between p-6 border-b border-slate-700">
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-1">
+                    {selectedPrompt.title}
+                  </h2>
+                  <span className="inline-block bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    {selectedPrompt.category}
+                  </span>
+                </div>
+                <button
+                  onClick={() => setSelectedPrompt(null)}
+                  className="text-slate-400 hover:text-white transition-colors p-2 hover:bg-slate-800 rounded-lg"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
+                <div className="mb-6">
+                  <img
+                    src={selectedPrompt.thumbnailUrl}
+                    alt={selectedPrompt.title}
+                    className="w-full rounded-lg"
+                  />
+                </div>
+
+                <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                  <h3 className="text-white font-semibold mb-3 flex items-center space-x-2">
+                    <span>Prompt Completo (JSON):</span>
+                  </h3>
+                  <pre className="text-slate-300 text-sm font-mono leading-relaxed whitespace-pre-wrap break-words bg-slate-900/50 p-4 rounded border border-slate-700 max-h-96 overflow-y-auto">
+                    {selectedPrompt.prompt}
+                  </pre>
+                </div>
+              </div>
+
+              <div className="p-6 border-t border-slate-700 bg-slate-900/50">
+                <button
+                  onClick={() => handleCopyPrompt(selectedPrompt.prompt, selectedPrompt.id)}
+                  className="w-full flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg transition-all duration-200 font-semibold shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40"
+                >
+                  <Copy className="w-5 h-5" />
+                  <span>
+                    {copiedId === selectedPrompt.id ? 'Copiado!' : 'Copiar Prompt'}
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         )}
