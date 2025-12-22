@@ -9,13 +9,16 @@ export const courses: Course[] = [
     url: 'https://hotmart.com/pt-br/club/universidade-digital-cursos',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop',
-    function: 'O Clube das IAs é o ponto de partida definitivo para quem quer parar de apenas “testar IA” e começar a usar essas ferramentas com clareza, estratégia e resultado. Aqui você tem acesso organizado às melhores IAs do mercado, aprende como usar cada uma no momento certo e constrói uma vantagem real enquanto a maioria ainda está perdida.',
+    function: 'O Clube das IAs é o ponto de partida definitivo para quem quer parar de apenas "testar IA" e começar a usar essas ferramentas com clareza, estratégia e resultado. Aqui você tem acesso organizado às melhores IAs do mercado, aprende como usar cada uma no momento certo e constrói uma vantagem real enquanto a maioria ainda está perdida.',
     applications: [
       'Uso prático das principais IAs do mercado',
       'Aumento de produtividade no dia a dia',
       'Criação de conteúdos com IA',
       'Exploração de oportunidades com inteligência artificial'
-    ]
+    ],
+    nivel: 'Iniciante',
+    cargaHoraria: '12 horas',
+    status: 'Disponível'
   },
   {
     id: 'empregado-digital',
@@ -31,7 +34,10 @@ export const courses: Course[] = [
       'Criação de textos e respostas',
       'Planejamento de rotina',
       'Produtividade pessoal e profissional'
-    ]
+    ],
+    nivel: 'Iniciante',
+    cargaHoraria: '8 horas',
+    status: 'Disponível'
   },
   {
     id: 'banco-comandos',
@@ -41,13 +47,16 @@ export const courses: Course[] = [
     url: 'https://hotmart.com/pt-br/club/universidade-digital-cursos',
     featured: true,
     coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
-    function: 'Aqui você não perde tempo tentando “adivinhar o que escrever”. O Banco de Comandos Lucrativos entrega prompts testados e prontos para uso, criados para gerar respostas melhores, mais rápidas e mais inteligentes. É copiar, colar e executar.',
+    function: 'Aqui você não perde tempo tentando "adivinhar o que escrever". O Banco de Comandos Lucrativos entrega prompts testados e prontos para uso, criados para gerar respostas melhores, mais rápidas e mais inteligentes. É copiar, colar e executar.',
     applications: [
       'Prompts para criação de conteúdo',
       'Comandos para produtividade',
       'Automação de tarefas',
       'Uso profissional do ChatGPT e similares'
-    ]
+    ],
+    nivel: 'Intermediário',
+    cargaHoraria: '6 horas',
+    status: 'Disponível'
   },
   {
     id: 'codigo-desbloqueio',
@@ -62,7 +71,10 @@ export const courses: Course[] = [
       'Uso de IAs premium',
       'Economia com ferramentas digitais',
       'Acesso estratégico a recursos avançados'
-    ]
+    ],
+    nivel: 'Intermediário',
+    cargaHoraria: '5 horas',
+    status: 'Disponível'
   },
   {
     id: 'tarefas-premium',
@@ -77,7 +89,10 @@ export const courses: Course[] = [
       'Execução de tarefas com IA',
       'Acesso a plataformas remuneradas',
       'Geração de renda online'
-    ]
+    ],
+    nivel: 'Intermediário',
+    cargaHoraria: '10 horas',
+    status: 'Disponível'
   },
   {
     id: 'ias-pro',
@@ -92,7 +107,10 @@ export const courses: Course[] = [
       'Uso de IAs avançadas',
       'Criação de conteúdo profissional',
       'Automação e produtividade extrema'
-    ]
+    ],
+    nivel: 'Avançado',
+    cargaHoraria: '15 horas',
+    status: 'Disponível'
   },
     {
     id: 'gestor-ia-40',
@@ -107,7 +125,10 @@ export const courses: Course[] = [
       'Gestão de projetos com IA',
       'Prestação de serviços',
       'Consultoria em IA'
-    ]
+    ],
+    nivel: 'Avançado',
+    cargaHoraria: '20 horas',
+    status: 'Disponível'
   },
 
   {
@@ -123,7 +144,10 @@ export const courses: Course[] = [
       'Uso avançado de IA',
       'Estratégias de automação',
       'Criação de soluções inteligentes'
-    ]
+    ],
+    nivel: 'Avançado',
+    cargaHoraria: '25 horas',
+    status: 'Disponível'
   },
 
   {
@@ -139,6 +163,9 @@ export const courses: Course[] = [
       'Uso de ferramentas gratuitas',
       'Produtividade sem custo',
       'Aprendizado acessível'
-    ]
+    ],
+    nivel: 'Iniciante',
+    cargaHoraria: '4 horas',
+    status: 'Disponível'
   }
 ];

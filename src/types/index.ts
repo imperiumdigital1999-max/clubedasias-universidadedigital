@@ -62,6 +62,9 @@ export interface Course {
     url: string;
   }[];
   freeAccessVideo?: string;
+  nivel?: 'Iniciante' | 'Intermediário' | 'Avançado';
+  cargaHoraria?: string;
+  status?: 'Disponível' | 'Em andamento' | 'Concluído';
 }
 
 export interface Category {
