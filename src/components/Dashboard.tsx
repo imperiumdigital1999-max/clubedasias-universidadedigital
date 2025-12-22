@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, ArrowRight, Users, Gift } from 'lucide-react';
 import AnnouncementBanner from './AnnouncementBanner';
+import ImportantNotice from './ImportantNotice';
 
 interface DashboardProps {
   onToolSelect?: (tool: any) => void;
@@ -91,6 +92,9 @@ Organize, descubra e turbine sua criatividade com recursos de IA selecionados e 
   </div>
 
 </div>
+
+      {/* Aviso Importante */}
+      <ImportantNotice />
 
       {/* Banner de Natal */}
       <section>
