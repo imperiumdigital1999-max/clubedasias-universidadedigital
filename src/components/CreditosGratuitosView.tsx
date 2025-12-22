@@ -1,0 +1,220 @@
+import React from 'react';
+import { ArrowLeft, Gift, Zap, Play, CheckCircle } from 'lucide-react';
+
+interface CreditosGratuitosViewProps {
+  onBack?: () => void;
+}
+
+interface VideoAula {
+  id: string;
+  titulo: string;
+  descricao: string;
+  duracao: string;
+  thumbnail: string;
+  videoUrl: string;
+}
+
+export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewProps) {
+  const videoAulas: VideoAula[] = [
+    {
+      id: '1',
+      titulo: 'Como Obter Créditos Gratuitos no VEO3',
+      descricao: 'Passo a passo completo para criar sua conta e receber créditos iniciais gratuitos',
+      duracao: '8:30',
+      thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=450&fit=crop',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: '2',
+      titulo: 'Maximizando Seus Créditos Gratuitos',
+      descricao: 'Dicas e estratégias para usar seus créditos de forma eficiente e criar mais vídeos',
+      duracao: '12:45',
+      thumbnail: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=450&fit=crop',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      id: '3',
+      titulo: 'Criando Seu Primeiro Vídeo Grátis',
+      descricao: 'Tutorial prático de como criar seu primeiro vídeo usando os créditos gratuitos',
+      duracao: '15:20',
+      thumbnail: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=450&fit=crop',
+      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    }
+  ];
+
+  const passos = [
+    {
+      numero: 1,
+      titulo: 'Crie sua conta',
+      descricao: 'Faça seu cadastro gratuitamente na plataforma VEO3 usando seu email'
+    },
+    {
+      numero: 2,
+      titulo: 'Ative sua conta',
+      descricao: 'Confirme seu email e complete seu perfil para liberar os créditos iniciais'
+    },
+    {
+      numero: 3,
+      titulo: 'Receba seus créditos',
+      descricao: 'Ganhe automaticamente créditos gratuitos para começar a criar seus vídeos'
+    },
+    {
+      numero: 4,
+      titulo: 'Comece a criar',
+      descricao: 'Use seus créditos para gerar vídeos profissionais com inteligência artificial'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-8">
+          <button
+            onClick={onBack}
+            className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-200 group"
+          >
+            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
+            <span>Voltar</span>
+          </button>
+        </div>
+
+        <div className="mb-12 text-center">
+          <div className="flex items-center justify-center mb-4">
+            <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+              <Gift className="w-10 h-10 text-white" />
+            </div>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Créditos Gratuitos para IA
+          </h1>
+          <p className="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto">
+            Aprenda como obter e usar créditos gratuitos no VEO3 para criar vídeos incríveis com IA
+          </p>
+        </div>
+
+        <div className="mb-16 bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-2xl border border-yellow-500/30 p-8 md:p-12">
+          <div className="flex items-start space-x-4 mb-6">
+            <div className="flex-shrink-0">
+              <Zap className="w-8 h-8 text-yellow-400" />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Como Funciona o Sistema de Créditos?
+              </h2>
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                O VEO3 oferece créditos gratuitos para novos usuários testarem a plataforma. Cada crédito pode ser usado para gerar vídeos com IA, aplicar efeitos especiais, ou acessar recursos premium. Siga os passos abaixo para começar:
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {passos.map((passo) => (
+                  <div
+                    key={passo.numero}
+                    className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-yellow-500/50 transition-all duration-300"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                        {passo.numero}
+                      </div>
+                      <div>
+                        <h3 className="text-white font-semibold text-lg mb-2">
+                          {passo.titulo}
+                        </h3>
+                        <p className="text-slate-400 text-sm">
+                          {passo.descricao}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
+            Vídeo Aulas - Passo a Passo
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {videoAulas.map((video, index) => (
+              <div
+                key={video.id}
+                className="bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700 hover:border-yellow-500/50 transition-all duration-300 hover:scale-[1.02] transform"
+              >
+                <div className="relative group cursor-pointer">
+                  <img
+                    src={video.thumbnail}
+                    alt={video.titulo}
+                    className="w-full h-56 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-300 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Play className="w-8 h-8 text-white ml-1" />
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4">
+                    <div className="bg-yellow-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                      Aula {index + 1}
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 right-4">
+                    <div className="bg-black/80 text-white px-3 py-1 rounded-lg text-sm font-semibold">
+                      {video.duracao}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {video.titulo}
+                  </h3>
+                  <p className="text-slate-400 text-base leading-relaxed">
+                    {video.descricao}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-2xl border border-green-500/30 p-8 md:p-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Benefícios dos Créditos Gratuitos
+            </h2>
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+              Com os créditos gratuitos você pode testar todas as funcionalidades da plataforma
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+              <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-6 h-6 text-green-400" />
+              </div>
+              <h3 className="text-white font-semibold mb-2">Sem Compromisso</h3>
+              <p className="text-slate-400 text-sm">Teste gratuitamente sem precisar de cartão de crédito</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-6 h-6 text-blue-400" />
+              </div>
+              <h3 className="text-white font-semibold mb-2">Acesso Completo</h3>
+              <p className="text-slate-400 text-sm">Use todos os recursos premium durante o período de teste</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+              <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Gift className="w-6 h-6 text-yellow-400" />
+              </div>
+              <h3 className="text-white font-semibold mb-2">Bônus Inicial</h3>
+              <p className="text-slate-400 text-sm">Receba créditos extras ao completar seu cadastro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

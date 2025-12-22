@@ -3,6 +3,7 @@ import { BookOpen, Terminal, Sliders, Zap, ArrowLeft } from 'lucide-react';
 
 interface ViralEditVO3ViewProps {
   onBack?: () => void;
+  onViewChange?: (view: string) => void;
 }
 
 interface Card {
@@ -15,7 +16,7 @@ interface Card {
   iconBg: string;
 }
 
-export default function ViralEditVO3View({ onBack }: ViralEditVO3ViewProps) {
+export default function ViralEditVO3View({ onBack, onViewChange }: ViralEditVO3ViewProps) {
   const cards: Card[] = [
     {
       id: 'acesso-guiado',
@@ -56,7 +57,24 @@ export default function ViralEditVO3View({ onBack }: ViralEditVO3ViewProps) {
   ];
 
   const handleCardClick = (cardId: string) => {
-    console.log('Card clicked:', cardId);
+    if (!onViewChange) return;
+
+    switch (cardId) {
+      case 'acesso-guiado':
+        onViewChange('aulas-viral-edit');
+        break;
+      case 'seus-prompts':
+        onViewChange('prompts');
+        break;
+      case 'creditos':
+        onViewChange('creditos-gratuitos');
+        break;
+      case 'personalizacao':
+        console.log('Personalização de prompt - Em breve');
+        break;
+      default:
+        break;
+    }
   };
 
   return (
