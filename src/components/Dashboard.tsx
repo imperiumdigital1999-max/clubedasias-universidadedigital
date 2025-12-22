@@ -14,7 +14,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
   };
 
   const handleQuizAccessClick = () => {
-    window.open('https://forms.gle/exemplo-pesquisa-oficial', '_blank', 'noopener,noreferrer');
+    window.open('https://inlead.digital/presente-de-natal-clube-das-ias', '_blank', 'noopener,noreferrer');
   };
 
   const handleViewCategories = () => {
