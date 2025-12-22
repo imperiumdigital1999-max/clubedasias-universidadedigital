@@ -29,7 +29,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 <div 
   className="relative mb-12 rounded-2xl overflow-hidden"
   style={{
-    backgroundImage: 'url(https://cibrius.com.br/wp-content/uploads/2024/07/Banner-pro-site-22.png)',
+    backgroundImage: 'url()',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
