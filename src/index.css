@@ -5,16 +5,21 @@
 @layer utilities {
   @keyframes christmas-pulse {
     0%, 100% {
-      opacity: 1;
       transform: scale(1);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.3),
+                  0 0 40px rgba(34, 197, 94, 0.1),
+                  inset 0 0 20px rgba(34, 197, 94, 0.05);
     }
     50% {
-      opacity: 0.92;
-      transform: scale(1.008);
+      transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(34, 197, 94, 0.6),
+                  0 0 80px rgba(239, 68, 68, 0.4),
+                  0 0 120px rgba(34, 197, 94, 0.2),
+                  inset 0 0 30px rgba(239, 68, 68, 0.1);
     }
   }
 
   .animate-christmas-pulse {
-    animation: christmas-pulse 3s ease-in-out infinite;
+    animation: christmas-pulse 3.5s ease-in-out infinite;
   }
 }
