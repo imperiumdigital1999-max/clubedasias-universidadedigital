@@ -46,7 +46,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
               </span>
             </h1>
             <p className="text-slate-200 text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed">
-              Descubra as melhores ferramentas de inteligência artificial organizadas por categoria. 
+              A maior plataforma de Prompts, Ferramentas de IA e GPTs do Brasil!
             </p>
           </div>
         </div>
