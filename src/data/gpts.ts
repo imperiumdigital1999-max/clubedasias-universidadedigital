@@ -138,10 +138,10 @@ export const allGPTs: GPT[] = [
   {
     id: '21',
     tag: "GPT's de Ensino",
-    name: 'Course Curriculum Designer',
-    description: 'Crie currículos completos e estruturados para cursos online com metodologias pedagógicas validadas',
-    url: 'https://chat.openai.com/g/g-example21',
-    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=100&h=100&fit=crop',
+    name: 'Mark Browmer - Professor de Marketing Digital',
+    description: 'Aprenda marketing digital com um Professor experiente, que ensina como numa sala de aula, com base nos principais livros da área. Explicações claras, humanas e profundas, evitando conteúdo raso, usando exemplos reais e metodologias consagradas.',
+    url: 'https://chatgpt.com/g/g-6897890ceb38819191324d043fb3f0c2-mark-browmer-professor-de-marketing-digital',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755020861783-ChatGPT%20Image%204%20de%20ago.%20de%202025,%2017_56_00.png',
     rating: 4.7
   }
 ];
