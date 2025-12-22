@@ -12,8 +12,8 @@ export const allGPTs: GPT[] = [
   {
     id: '1',
     tag: "GPT's Criação de Imagem",
-    name: 'Image Generator Pro',
-    description: 'GPT especializado em criar prompts detalhados para geração de imagens de alta qualidade com suporte a múltiplos modelos de IA generativa',
+    name: 'PromptVision',
+    description: 'PromptVision é o seu Editor Cinematográfico de Prompts Visuais, projetado para transformar qualquer imagem em uma descrição técnica ultra detalhada, pronta para uso em modelos generativos como DALL·E, MidJourney, Stable Diffusion, Flux e muitos outros.',
     url: 'https://chat.openai.com/g/g-example1',
     image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=100&h=100&fit=crop',
     rating: 4.5
