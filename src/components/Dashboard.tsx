@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, ArrowRight, Users } from 'lucide-react';
+import { ExternalLink, ArrowRight, Users, Gift } from 'lucide-react';
 import AnnouncementBanner from './AnnouncementBanner';
 
 interface DashboardProps {
@@ -11,6 +11,10 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
   const handleCommunityClick = () => {
     window.open('https://whatsapp.com/channel/0029Vb4Byv61noz5kQi01Y1Z', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleQuizAccessClick = () => {
+    window.open('https://forms.gle/exemplo-pesquisa-oficial', '_blank', 'noopener,noreferrer');
   };
 
   const handleViewCategories = () => {
@@ -70,6 +74,42 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
       {/* Announcement Banner */}
       <AnnouncementBanner onViewCategories={handleViewCategories} />
+
+      {/* Banner de Natal */}
+      <section>
+        <div 
+          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-green-600/20 to-red-600/20 border border-green-500/30"
+          style={{
+            backgroundImage: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%)',
+          }}
+        >
+          <div className="relative z-10 text-center py-12 px-6">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <Gift className="w-10 h-10 text-green-400" />
+              <h2 className="text-3xl font-bold text-white">🎄 Presente de Natal do Clube das IAs</h2>
+            </div>
+            <div className="mb-4">
+              <p className="text-green-300 text-lg font-semibold mb-2">
+                Liberação de uma nova IA poderosa para criação de vídeos
+              </p>
+              <p className="text-red-300 text-sm font-medium">
+                Acesso exclusivo • Vitalício • Limitado
+              </p>
+            </div>
+            <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
+              Responda a pesquisa oficial e libere o acesso à nova IA que cria vídeos profissionais em segundos.
+            </p>
+            <button
+              onClick={handleQuizAccessClick}
+              className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-green-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
+            >
+              <Gift className="w-6 h-6" />
+              <span>Responder Pesquisa e Liberar Acesso</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* Comunidade Banner */}
       <section>
