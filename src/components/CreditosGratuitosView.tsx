@@ -21,7 +21,7 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
       titulo: 'GOOGLE VEO 3 GRÁTIS: COMO CRIAR VÍDEOS ABSURDAMENTE REALISTAS SEM PAGAR NADA!',
       descricao: 'Passo a passo completo para criar sua conta e receber créditos iniciais gratuitos',
       duracao: '12:34',
-      thumbnail: 'https://img.youtube.com/vi/tjXdqoWamtc&t=156s/maxresdefault.jpg',
+      thumbnail: 'https://img.youtube.com/vi/tjXdqoWamtc/maxresdefault.jpg',
       videoUrl: 'https://www.youtube.com/watch?v=tjXdqoWamtc&t=156s'
     },
     {
