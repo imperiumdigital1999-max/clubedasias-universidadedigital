@@ -27,60 +27,66 @@ export const allGPTs: GPT[] = [
     image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1754842132312-ChatGPT%20Image%209%20de%20jul.%20de%202025,%2010_55_40.png',
     rating: 4.7
   },
-  {
-    id: '6',
-    tag: "GPT's de Criação de Conteúdo",
-    name: 'Blog Writer Pro',
-    description: 'Criação de artigos de blog otimizados para SEO com estrutura profissional e pesquisa de palavras-chave',
-    url: 'https://chat.openai.com/g/g-example6',
-    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=100&h=100&fit=crop',
-    rating: 4.6
-  },
-  {
-    id: '7',
-    tag: "GPT's de Criação de Conteúdo",
-    name: 'Social Media Caption Expert',
-    description: 'Gere legendas envolventes para Instagram, Facebook, LinkedIn e outras redes sociais com hashtags estratégicas',
-    url: 'https://chat.openai.com/g/g-example7',
-    image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=100&h=100&fit=crop',
-    rating: 4.7
-  },
-  {
-    id: '8',
-    tag: "GPT's de Criação de Conteúdo",
-    name: 'Script Writer AI',
-    description: 'Roteiros profissionais para vídeos do YouTube, TikTok e Reels com ganhos e CTAs eficientes',
-    url: 'https://chat.openai.com/g/g-example8',
-    image: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=100&h=100&fit=crop',
-    rating: 4.8
-  },
-  {
-    id: '9',
-    tag: "GPT's de Criação de Conteúdo",
-    name: 'Email Marketing Specialist',
-    description: 'Crie campanhas de email marketing persuasivas com alto poder de conversão e automação inteligente',
-    url: 'https://chat.openai.com/g/g-example9',
-    image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=100&h=100&fit=crop',
-    rating: 4.5
-  },
-  {
-    id: '10',
-    tag: "GPT's de Criação de Conteúdo",
-    name: 'Copywriting Genius',
-    description: 'Copies de vendas irresistíveis para landing pages e anúncios com técnicas de persuasão avançadas',
-    url: 'https://chat.openai.com/g/g-example10',
-    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=100&h=100&fit=crop',
-    rating: 4.9
-  },
-  {
-    id: '11',
-    tag: "GPT's de Criação de Conteúdo",
-    name: 'Newsletter Creator',
-    description: 'Newsletters profissionais com conteúdo relevante e engajador para construir audiência',
-    url: 'https://chat.openai.com/g/g-example11',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop',
-    rating: 4.4
-  },
+{
+  id: '10',
+  tag: "GPT's de Criação de Conteúdo",
+  name: 'Helena do Carrossel',
+  description: 'Agente Helena do Carrossel. Nicho: Criação de carrosséis virais para Instagram. Promessa principal: Criar carrosséis com temas atuais, ganchos poderosos e estrutura estratégica para aumentar alcance, engajamento e atrair clientes todos os dias.',
+  url: 'https://chatgpt.com/g/g-688a8cf9b13481918feb480173492819-agente-helena-carrosseis-virais',
+  image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=100&h=100&fit=crop',
+  rating: 4.9
+},
+
+{
+  id: '11',
+  tag: "GPT's de Criação de Conteúdo",
+  name: 'Marck | O Estrategista Digital Supremo',
+  description: 'Marck é o Estrategista Digital Supremo. Nicho: Estratégia de conteúdo para Instagram. Promessa principal: Criar estratégias personalizadas de alto impacto para crescer perfis, gerar autoridade e transformar seguidores em clientes.',
+  url: 'https://chatgpt.com/g/g-675707bb09a08191a33b3e63b2efa308-marck-o-estrategista-digital-supremo',
+  image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=100&h=100&fit=crop',
+  rating: 4.9
+},
+
+{
+  id: '12',
+  tag: "GPT's de Criação de Conteúdo",
+  name: 'Ana | Planejadora de Conteúdos Estratégicos',
+  description: 'Agente Ana. Nicho: Planejamento estratégico de conteúdo. Promessa principal: Planejar e organizar conteúdos criativos e estratégicos para transformar a presença digital, mantendo constância, clareza e posicionamento.',
+  url: 'https://chatgpt.com/g/g-67584bdcc9888191b70b1d306125fcb1-ana-a-planejadora-de-conteudos-estrategicos',
+  image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=100&h=100&fit=crop',
+  rating: 4.9
+},
+
+{
+  id: '13',
+  tag: "GPT's de Criação de Conteúdo",
+  name: 'João | Roteiros que Engajam',
+  description: 'João é o especialista em roteiros que engajam. Nicho: Criação de roteiros para vídeos curtos. Promessa principal: Transformar ideias simples em roteiros magnéticos, prontos para viralizar e prender a atenção do público do início ao fim.',
+  url: 'https://chatgpt.com/g/g-6754ebb9ca5c8191b5c8f6d09c64b6a3-joao-dos-roteiros-que-engajam',
+  image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=100&h=100&fit=crop',
+  rating: 4.9
+},
+
+{
+  id: '14',
+  tag: "GPT's de Criação de Conteúdo",
+  name: 'Marina | Ideias Virais',
+  description: 'Agente Marina das Ideias Virais. Nicho: Criatividade digital e ideação de conteúdo. Promessa principal: Transformar qualquer ideia em conteúdo altamente envolvente, feito para emocionar, divertir, gerar compartilhamentos e viralizar.',
+  url: 'https://chatgpt.com/g/g-67550868600c81919c463de4953013c2-marina-das-ideias-virais',
+  image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=100&h=100&fit=crop',
+  rating: 4.9
+},
+
+{
+  id: '15',
+  tag: "GPT's de Criação de Conteúdo",
+  name: 'Zé | Ganchos Virais',
+  description: 'Zé dos Ganchos Virais. Nicho: Criação de ganchos para vídeos, posts e anúncios. Promessa principal: Criar ganchos irresistíveis, impossíveis de ignorar, que fazem o público parar, prestar atenção e consumir o conteúdo até o final.',
+  url: 'https://chatgpt.com/g/g-67559aac56ec8191bc42bfea264f07e5-ze-dos-ganchos-virais',
+  image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=100&h=100&fit=crop',
+  rating: 4.9
+}
+,
   {
     id: '12',
     tag: "GPT's de Revenda",
