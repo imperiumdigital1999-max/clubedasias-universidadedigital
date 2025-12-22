@@ -1,143 +1,104 @@
 import React from 'react';
-import { ExternalLink, ArrowRight, Users, Gift } from 'lucide-react';
-import AnnouncementBanner from './AnnouncementBanner';
+import { ArrowLeft, Brain, Rocket, Play, ExternalLink, GraduationCap } from 'lucide-react';
+import { Course } from '../types';
 
-interface DashboardProps {
-  onToolSelect?: (tool: any) => void;
-  onViewChange?: (view: string) => void;
+interface CourseDetailViewProps {
+  course: Course;
+  onBack: () => void;
 }
 
-export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
-
-  const handleCommunityClick = () => {
-    window.open('https://whatsapp.com/channel/0029Vb4Byv61noz5kQi01Y1Z', '_blank', 'noopener,noreferrer');
+export default function CourseDetailView({ course, onBack }: CourseDetailViewProps) {
+  const handleVideoClick = (videoUrl: string) => {
+    window.open(videoUrl, '_blank', 'noopener,noreferrer');
   };
 
-  const handleQuizAccessClick = () => {
-    window.open('https://forms.gle/exemplo-pesquisa-oficial', '_blank', 'noopener,noreferrer');
+  const handleAccessCourse = () => {
+    window.open(course.url, '_blank', 'noopener,noreferrer');
   };
 
-  const handleViewCategories = () => {
-    if (onViewChange) {
-      onViewChange('categories');
+  const handleFreeAccessVideo = () => {
+    if (course.freeAccessVideo) {
+      window.open(course.freeAccessVideo, '_blank', 'noopener,noreferrer');
     }
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-      {/* Hero Banner */}
+    <div className="min-h-screen bg-slate-950">
+      {/* Header com botão voltar */}
+      <div className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center h-16">
+            <button
+              onClick={onBack}
+              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors mr-4"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </button>
+            <h1 className="text-lg font-semibold text-white">{course.name}</h1>
+          </div>
+        </div>
+      </div>
+
+      {/* Banner de Capa */}
       <div 
-        className="relative mb-12 rounded-2xl overflow-hidden"
+        className="relative h-64 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://cibrius.com.br/wp-content/uploads/2024/07/Banner-pro-site-22.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '300px'
+          backgroundImage: `url(${course.coverImage || course.image})`
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/80" />
-        <div className="relative z-10 flex items-center justify-center min-h-[300px] px-6 py-12 text-center">
-          <div className="max-w-4xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              Bem-vindo ao{' '}
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Clube das IAs
-              </span>
-            </h1>
-            <p className="text-slate-200 text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed">
-              Descubra as melhores ferramentas de inteligência artificial organizadas por categoria. 
-            </p>
-          </div>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <h1 className="text-4xl md:text-5xl font-bold text-white text-center px-4">
+            {course.name}
+          </h1>
         </div>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        <div className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700">
-          <div className="text-2xl font-bold text-white mb-1">150+</div>
-          <div className="text-slate-400 text-sm">Ferramentas</div>
-        </div>
-        <div className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700">
-          <div className="text-2xl font-bold text-white mb-1">20</div>
-          <div className="text-slate-400 text-sm">Categorias</div>
-        </div>
-        <div className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700">
-          <div className="text-2xl font-bold text-white mb-1">100%</div>
-          <div className="text-slate-400 text-sm">Gratuito</div>
-        </div>
-        <div className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700">
-          <div className="text-2xl font-bold text-white mb-1">24hrs</div>
-          <div className="text-slate-400 text-sm">Disponível</div>
-        </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+        {/* 1. Função */}
+        <section>
+          <div className="flex items-center space-x-3 mb-6">
+            <Brain className="w-6 h-6 text-orange-500" />
+            <h2 className="text-2xl font-bold text-white">Função</h2>
+          </div>
+          <p className="text-slate-300 text-lg leading-relaxed">
+            {course.function || course.description}
+          </p>
+        </section>
+
+        {/* 2. Principais Aplicações */}
+        <section>
+          <div className="flex items-center space-x-3 mb-6">
+            <Rocket className="w-6 h-6 text-cyan-500" />
+            <h2 className="text-2xl font-bold text-white">Principais Aplicações</h2>
+          </div>
+          <div className="grid gap-4">
+            {course.applications?.map((application, index) => (
+              <div key={index} className="flex items-start space-x-3 p-4 bg-slate-800 rounded-lg border border-slate-700">
+                <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-full mt-2 flex-shrink-0" />
+                <p className="text-slate-300">{application}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 4. Pronto para Começar */}
+        <section>
+          <div className="bg-gradient-to-r from-orange-500/10 to-cyan-500/10 rounded-2xl p-8 border border-orange-500/20 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Pronto para começar?</h2>
+            <p className="text-slate-300 mb-6">
+              Acesse o curso {course.name} agora e transforme seu conhecimento em resultados práticos
+            </p>
+            <button
+              onClick={handleAccessCourse}
+              className="bg-gradient-to-r from-orange-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-orange-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+            >
+              <span>Acessar Curso</span>
+              <ExternalLink className="w-5 h-5" />
+            </button>
+          </div>
+        </section>
       </div>
-
-      {/* Banner de Natal */}
-      <section>
-        <div 
-          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-green-600/20 to-red-600/20 border border-green-500/30"
-          style={{
-            backgroundImage: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%)',
-          }}
-        >
-          <div className="relative z-10 text-center py-12 px-6">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <Gift className="w-10 h-10 text-green-400" />
-              <h2 className="text-3xl font-bold text-white">🎄 Presente de Natal do Clube das IAs</h2>
-            </div>
-            <div className="mb-4">
-              <p className="text-green-300 text-lg font-semibold mb-2">
-                Liberação de uma nova IA poderosa para criação de vídeos
-              </p>
-              <p className="text-red-300 text-sm font-medium">
-                Acesso exclusivo • Vitalício • Limitado
-              </p>
-            </div>
-            <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
-              Responda a pesquisa oficial e libere o acesso à nova IA que cria vídeos profissionais em segundos.
-            </p>
-            <button
-              onClick={handleQuizAccessClick}
-              className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-green-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              <Gift className="w-6 h-6" />
-              <span>Responder Pesquisa e Liberar Acesso</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Announcement Banner */}
-      <AnnouncementBanner onViewCategories={handleViewCategories} />
-
-      {/* Comunidade Banner */}
-      <section>
-        <div 
-          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30"
-          style={{
-            backgroundImage: 'linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)',
-          }}
-        >
-          <div className="relative z-10 text-center py-12 px-6">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <Users className="w-10 h-10 text-purple-400" />
-              <h2 className="text-3xl font-bold text-white">Entre na Comunidade dos Gestores de IA</h2>
-            </div>
-            <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
-              Conecte-se com outros profissionais, compartilhe experiências e aprenda as melhores práticas em IA
-            </p>
-            <button
-              onClick={handleCommunityClick}
-              className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-purple-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              <Users className="w-6 h-6" />
-              <span>Entrar na Comunidade</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
