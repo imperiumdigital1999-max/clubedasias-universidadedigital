@@ -30,61 +30,131 @@ export default function PromptsView() {
     'VÍDEOS VEO 3'
   ];
 
-  // Prompts de exemplo para cada categoria
+  const allPrompts = [
+    {
+      id: '1',
+      tag: 'ENSAIO FOTOGRÁFICO',
+      title: 'Retrato Editorial 8K',
+      description: 'Crie um retrato fotográfico editorial em 8K ultra-realista, seguindo 100% o modelo da imagem de refe...',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
+      fullPrompt: 'Crie um retrato fotográfico editorial em 8K ultra-realista, seguindo 100% o modelo da imagem de referência. O modelo deve estar sentado em uma cadeira elegante, com iluminação profissional de estúdio, fundo neutro, pose confiante e expressão séria. Utilize equipamentos de iluminação visíveis no cenário, como softboxes e tripés. A composição deve ser centralizada, com foco nítido no modelo e ligeiro desfoque no fundo.'
+    },
+    {
+      id: '2',
+      tag: 'ENSAIO FOTOGRÁFICO',
+      title: 'Fotografia PB Studio',
+      description: 'Create an 8K ultra-realistic black-and-white studio photograph in 1080x1440 format, replicating 100%...',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop',
+      fullPrompt: 'Create an 8K ultra-realistic black-and-white studio photograph in 1080x1440 format, replicating 100% the model from the reference image. The model should be standing in a confident pose, wearing a dark suit, with professional studio lighting creating dramatic shadows. The background should be clean and minimalist, with the model positioned slightly off-center for dynamic composition.'
+    },
+    {
+      id: '3',
+      tag: 'ENSAIO FOTOGRÁFICO',
+      title: 'Editorial Cinematográfico',
+      description: 'Create an 8K ultra-realistic cinematic editorial photo, 1080x1440, replicating 100% the model from t...',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=300&fit=crop',
+      fullPrompt: 'Create an 8K ultra-realistic cinematic editorial photo, 1080x1440, replicating 100% the model from the reference image. The scene should feature the model in an urban environment at golden hour, with a majestic eagle perched on their arm. The composition should be dramatic and cinematic, with the city skyline in the background and warm, natural lighting.'
+    },
+    {
+      id: '4',
+      tag: 'IMAGENS GHIBLI',
+      title: 'Personagem Estilo Ghibli',
+      description: 'Crie uma ilustração no estilo Studio Ghibli com personagem em ambiente mágico e natureza exuberante...',
+      image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400&h=300&fit=crop',
+      fullPrompt: 'Create a Studio Ghibli style illustration featuring a young character in a magical forest setting. Use soft watercolor textures, warm lighting, and the characteristic Ghibli aesthetic with attention to natural elements, flowing movement, and emotional depth. Include detailed background with lush vegetation, floating particles of light, and a dreamlike atmosphere.'
+    },
+    {
+      id: '5',
+      tag: 'IMAGENS GHIBLI',
+      title: 'Paisagem Ghibli',
+      description: 'Paisagem no estilo Studio Ghibli com campos verdejantes, céu dramático e elementos fantásticos...',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop',
+      fullPrompt: 'Create a breathtaking Studio Ghibli-style landscape illustration featuring rolling green hills, a dramatic cloudy sky with rays of sunlight breaking through, and a small cottage in the distance. Use the characteristic Ghibli color palette with vibrant greens, soft blues, and warm golden tones. Include details like wildflowers, a winding path, and birds in the sky.'
+    },
+    {
+      id: '6',
+      tag: 'IMAGENS ESTILO PIXAR 3D',
+      title: 'Personagem Pixar 3D',
+      description: 'Crie um personagem 3D no estilo Pixar com expressões carismáticas e detalhes realistas...',
+      image: 'https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=300&fit=crop',
+      fullPrompt: 'Create a 3D character in Pixar animation style with exaggerated features, expressive eyes, and charming personality. Use vibrant colors, smooth textures, and proper lighting. The character should have appealing proportions, detailed clothing, and be positioned in a dynamic pose. Render in high quality with attention to subsurface scattering, realistic materials, and cinematic lighting.'
+    },
+    {
+      id: '7',
+      tag: 'IMAGENS ESTILO PIXAR 3D',
+      title: 'Cenário Pixar',
+      description: 'Ambiente 3D estilo Pixar com iluminação cinematográfica e detalhes ricos...',
+      image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400&h=300&fit=crop',
+      fullPrompt: 'Design a Pixar-style 3D environment with rich details, vibrant colors, and cinematic lighting. Include architectural elements, natural features, and atmospheric effects. Use the characteristic Pixar rendering style with global illumination, volumetric lighting, and photorealistic materials balanced with stylized forms.'
+    },
+    {
+      id: '8',
+      tag: 'IMAGENS ULTRA REALISMO',
+      title: 'Retrato Ultra Realista',
+      description: 'Fotografia hiper-realista com detalhes perfeitos de pele, iluminação e textura...',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=300&fit=crop',
+      fullPrompt: 'Create a hyper-realistic portrait photograph with perfect skin detail, natural lighting, and professional retouching. Capture every detail including pores, fine lines, hair texture, and eye reflections. Use 8K resolution, professional color grading, and cinematic composition. The lighting should be natural and flattering, with proper exposure and dynamic range.'
+    },
+    {
+      id: '9',
+      tag: 'IMAGENS ULTRA REALISMO',
+      title: 'Natureza Hiper-Realista',
+      description: 'Fotografia de natureza com detalhes microscópicos e cores vibrantes ultra-reais...',
+      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop',
+      fullPrompt: 'Capture an ultra-realistic nature photograph with microscopic details, vibrant colors, and perfect clarity. Include elements like water droplets, intricate textures, and natural lighting. Use macro photography techniques, high dynamic range, and professional post-processing to achieve hyper-realistic results.'
+    },
+    {
+      id: '10',
+      tag: 'COMANDOS GPT',
+      title: 'Assistente Especializado',
+      description: 'Comando para criar um assistente GPT especializado em uma área específica com contexto detalhado...',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop',
+      fullPrompt: 'Você é um assistente especializado em [ÁREA DE ESPECIALIZAÇÃO]. Seu papel é fornecer informações precisas, detalhadas e práticas sobre [TÓPICO]. Mantenha um tom profissional, seja didático e sempre forneça exemplos quando apropriado. Adapte suas respostas ao nível de conhecimento do usuário e faça perguntas esclarecedoras quando necessário.'
+    },
+    {
+      id: '11',
+      tag: 'COMANDOS GPT',
+      title: 'Análise e Feedback',
+      description: 'Prompt para análise crítica construtiva com sugestões de melhoria...',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
+      fullPrompt: 'Analise o seguinte conteúdo e forneça feedback detalhado e construtivo. Organize sua análise em: 1) Pontos fortes, 2) Áreas de melhoria, 3) Sugestões específicas, 4) Exemplos práticos de implementação. Seja objetivo, didático e mantenha um tom encorajador enquanto identifica oportunidades de aprimoramento.'
+    },
+    {
+      id: '12',
+      tag: 'VÍDEOS CURTOS',
+      title: 'Roteiro para Reels/TikTok',
+      description: 'Estrutura completa para criar vídeos curtos virais com gancho, desenvolvimento e CTA...',
+      image: 'https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=400&h=300&fit=crop',
+      fullPrompt: 'Crie um roteiro para vídeo curto (30-60 segundos) sobre [TEMA]. Estruture da seguinte forma: GANCHO (3s): Frase impactante para parar o scroll | DESENVOLVIMENTO (20-40s): 3-5 pontos principais com transições dinâmicas | CTA (5s): Chamada para ação clara. Inclua sugestões de enquadramento, transições e texto em tela.'
+    },
+    {
+      id: '13',
+      tag: 'VÍDEOS CURTOS',
+      title: 'Script para Stories',
+      description: 'Template para criar stories envolventes com storytelling e interação...',
+      image: 'https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=400&h=300&fit=crop',
+      fullPrompt: 'Desenvolva uma sequência de stories sobre [ASSUNTO] com 5-7 quadros. Inclua: Story 1: Gancho visual forte | Stories 2-5: Desenvolvimento com cards informativos | Story 6: Pergunta/Enquete para engajamento | Story 7: CTA e direcionamento. Sugira elementos visuais, stickers e música de fundo adequados.'
+    },
+    {
+      id: '14',
+      tag: 'IMAGENS DESENHO AQUARELA',
+      title: 'Retrato Aquarela Delicada',
+      description: 'Ilustração em aquarela com texturas suaves e cores fluidas...',
+      image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=300&fit=crop',
+      fullPrompt: 'Create a delicate watercolor portrait with soft, flowing colors and natural textures. Use traditional watercolor techniques with visible paper texture, color bleeding, and gradual transitions. Focus on light, airy composition with gentle brush strokes and a harmonious color palette of pastels and earth tones.'
+    },
+    {
+      id: '15',
+      tag: 'IMAGENS ESTILO CARTOON',
+      title: 'Personagem Cartoon',
+      description: 'Ilustração cartoon vibrante com linhas expressivas e cores saturadas...',
+      image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=300&fit=crop',
+      fullPrompt: 'Design a vibrant cartoon character with bold outlines, exaggerated features, and saturated colors. Use clean vector-style lines, dynamic poses, and expressive facial features. Include characteristic cartoon elements like highlights, shadows, and simplified shapes. Make it fun, energetic, and visually appealing.'
+    }
+  ];
+
   const getPromptsForTag = (tag: string) => {
-    // Dados de exemplo com imagens e descrições detalhadas
-    const promptsData = [
-      {
-        id: '1',
-        title: 'ENSAIO',
-        description: 'Crie um retrato fotográfico editorial em 8K ultra-realista, seguindo 100% o modelo da imagem de refe...',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
-        category: 'IMAGEM',
-        fullPrompt: 'Crie um retrato fotográfico editorial em 8K ultra-realista, seguindo 100% o modelo da imagem de referência. O modelo deve estar sentado em uma cadeira elegante, com iluminação profissional de estúdio, fundo neutro, pose confiante e expressão séria. Utilize equipamentos de iluminação visíveis no cenário, como softboxes e tripés. A composição deve ser centralizada, com foco nítido no modelo e ligeiro desfoque no fundo.'
-      },
-      {
-        id: '2',
-        title: 'ENSAIO',
-        description: 'Create an 8K ultra-realistic black-and-white studio photograph in 1080x1440 format, replicating 100%...',
-        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop',
-        category: 'IMAGEM',
-        fullPrompt: 'Create an 8K ultra-realistic black-and-white studio photograph in 1080x1440 format, replicating 100% the model from the reference image. The model should be standing in a confident pose, wearing a dark suit, with professional studio lighting creating dramatic shadows. The background should be clean and minimalist, with the model positioned slightly off-center for dynamic composition.'
-      },
-      {
-        id: '3',
-        title: 'ENSAIO',
-        description: 'Create an 8K ultra-realistic cinematic editorial photo, 1080x1440, replicating 100% the model from t...',
-        image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=300&fit=crop',
-        category: 'IMAGEM',
-        fullPrompt: 'Create an 8K ultra-realistic cinematic editorial photo, 1080x1440, replicating 100% the model from the reference image. The scene should feature the model in an urban environment at golden hour, with a majestic eagle perched on their arm. The composition should be dramatic and cinematic, with the city skyline in the background and warm, natural lighting.'
-      },
-      {
-        id: '4',
-        title: 'ENSAIO',
-        description: 'Fotografia profissional em estúdio com iluminação dramática e composição elegante...',
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=300&fit=crop',
-        category: 'IMAGEM',
-        fullPrompt: 'Fotografia profissional em estúdio com iluminação dramática e composição elegante. O modelo deve estar em pose relaxada, com expressão natural e confiante. Utilize iluminação lateral suave para criar profundidade e textura na imagem.'
-      },
-      {
-        id: '5',
-        title: 'ENSAIO',
-        description: 'Retrato cinematográfico em preto e branco com alta qualidade e detalhamento...',
-        image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=300&fit=crop',
-        category: 'IMAGEM',
-        fullPrompt: 'Retrato cinematográfico em preto e branco com alta qualidade e detalhamento. A composição deve ser minimalista, focando na expressão e personalidade do modelo. Utilize contraste alto para criar impacto visual.'
-      },
-      {
-        id: '6',
-        title: 'ENSAIO',
-        description: 'Fotografia editorial com elementos criativos e composição dinâmica em ambiente urbano...',
-        image: 'https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=300&fit=crop',
-        category: 'IMAGEM',
-        fullPrompt: 'Fotografia editorial com elementos criativos e composição dinâmica em ambiente urbano. O modelo deve interagir naturalmente com o ambiente, criando uma narrativa visual interessante e envolvente.'
-      }
-    ];
-    
-    return promptsData;
+    return allPrompts.filter(prompt => prompt.tag === tag);
   };
 
   const filteredPrompts = selectedTag 
