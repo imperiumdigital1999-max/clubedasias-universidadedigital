@@ -29,15 +29,15 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
       titulo: 'Maximizando Seus Créditos Gratuitos',
       descricao: 'Dicas e estratégias para usar seus créditos de forma eficiente e criar mais vídeos',
       duracao: '12:45',
-      thumbnail: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=450&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      thumbnail: 'https://img.youtube.com/vi/PQID2nE/maxresdefault.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=QaR-PQID2nE'
     },
     {
       id: '3',
       titulo: 'Criando Seu Primeiro Vídeo Grátis',
       descricao: 'Tutorial prático de como criar seu primeiro vídeo usando os créditos gratuitos',
       duracao: '15:20',
-      thumbnail: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=450&fit=crop',
+      thumbnail: 'https://img.youtube.com/vi/tjXdqoWamtc/maxresdefault.jpg',
       videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     }
   ];
