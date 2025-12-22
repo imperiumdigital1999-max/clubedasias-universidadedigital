@@ -14,7 +14,7 @@ export const allGPTs: GPT[] = [
     tag: "GPT's Criação de Imagem",
     name: 'PromptVision',
     description: 'PromptVision é o seu Editor Cinematográfico de Prompts Visuais, projetado para transformar qualquer imagem em uma descrição técnica ultra detalhada, pronta para uso em modelos generativos como DALL·E, MidJourney, Stable Diffusion, Flux e muitos outros.',
-    url: 'https://chat.openai.com/g/g-example1',
+    url: 'https://chatgpt.com/g/g-689fd2bf92a0819181f89c350d003d77-promptvision-de-imagens-para-prompts-tecnicos',
     image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=100&h=100&fit=crop',
     rating: 4.5
   },
