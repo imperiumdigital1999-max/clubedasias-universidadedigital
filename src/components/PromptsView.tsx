@@ -339,7 +339,7 @@ export default function PromptsView() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white mb-2">Prompts por TAG</h1>
         <p className="text-slate-400 text-lg">
-          Escolha um tópico principal (TAG) para ver os subtópicos e seus prompts.
+          Escolha um tópico principal (TAG) para ver os subtópicos e seus prompts. - PÁGINA EM ATUALIZAÇÃO!!!!
         </p>
       </div>
 
