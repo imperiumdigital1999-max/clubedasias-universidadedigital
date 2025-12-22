@@ -34,11 +34,11 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
     },
     {
       id: '3',
-      titulo: 'Criando Seu Primeiro Vídeo Grátis',
-      descricao: 'Tutorial prático de como criar seu primeiro vídeo usando os créditos gratuitos',
-      duracao: '15:20',
-      thumbnail: 'https://img.youtube.com/vi/tjXdqoWamtc/maxresdefault.jpg',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      titulo: 'Crie Vídeos LONGOS com VEO3 e SORA 2 GRÁTIS',
+      descricao: 'Aprenda como criar vídeos ilimitados com SORA 2 e o Google VEO 3.1, de graça, sem pagar nada! ',
+      duracao: '13:58',
+      thumbnail: 'https://img.youtube.com/vi/cEPzrM2bGzA/maxresdefault.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=cEPzrM2bGzA'
     }
   ];
 
