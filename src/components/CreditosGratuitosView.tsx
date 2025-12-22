@@ -18,11 +18,11 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
   const videoAulas: VideoAula[] = [
     {
       id: '1',
-      titulo: 'Como Obter Créditos Gratuitos no VEO3',
+      titulo: 'GOOGLE VEO 3 GRÁTIS: COMO CRIAR VÍDEOS ABSURDAMENTE REALISTAS SEM PAGAR NADA!',
       descricao: 'Passo a passo completo para criar sua conta e receber créditos iniciais gratuitos',
-      duracao: '8:30',
-      thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=450&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      duracao: '12:34',
+      thumbnail: 'https://img.youtube.com/vi/tjXdqoWamtc&t=156s/maxresdefault.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=tjXdqoWamtc&t=156s'
     },
     {
       id: '2',
