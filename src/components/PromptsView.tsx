@@ -104,6 +104,13 @@ export default function PromptsView() {
   const handleTagClick = (tag: string) => {
     setSelectedTag(tag);
     setSearchTerm('');
+  };
+
+  const handleBackToTags = () => {
+    setSelectedTag(null);
+    setSearchTerm('');
+  };
+
   if (selectedTag) {
     // Página da categoria da TAG
     return (
