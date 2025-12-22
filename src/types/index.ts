@@ -73,4 +73,12 @@ export interface Category {
   toolCount: number;
 }
 
+export interface GPT {
+  id: string;
+  tag: string;
+  name: string;
+  description: string;
+  url: string;
+}
+
 export type ViewMode = 'inicio' | 'category' | 'ferramentas-ia' | 'favorites' | 'tasks' | 'ias-pro' | 'cursos' | 'prompts' | 'gpts-personalizados' | 'tool-detail' | 'task-detail' | 'course-detail';

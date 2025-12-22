@@ -1,170 +1,137 @@
-import React from 'react';
-import { Bot, Star, Users, Zap, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { Bot, ArrowLeft, Search, ExternalLink } from 'lucide-react';
+import { gptTags, allGPTs } from '../data/gpts';
 
 export default function GPTsPersonalizadosView() {
-  // Dados de exemplo para GPTs
-  const gptCategories = [
-    {
-      id: 'produtividade',
-      name: 'Produtividade',
-      description: 'GPTs para otimizar seu trabalho diário',
-      count: 12,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'criativo',
-      name: 'Criativo',
-      description: 'GPTs para criação de conteúdo e arte',
-      count: 18,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'analise',
-      name: 'Análise',
-      description: 'GPTs para análise de dados e insights',
-      count: 8,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 'educacao',
-      name: 'Educação',
-      description: 'GPTs para ensino e aprendizado',
-      count: 15,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const featuredGPTs = [
-    {
-      id: '1',
-      name: 'Assistente de Marketing Digital',
-      description: 'GPT especializado em estratégias de marketing e criação de campanhas',
-      category: 'Produtividade',
-      users: 1234,
-      rating: 4.8,
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop'
-    },
-    {
-      id: '2',
-      name: 'Criador de Conteúdo Visual',
-      description: 'GPT para gerar ideias e conceitos para designs e artes visuais',
-      category: 'Criativo',
-      users: 892,
-      rating: 4.9,
-      image: 'https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=400&h=300&fit=crop'
-    },
-    {
-      id: '3',
-      name: 'Analista de Dados Inteligente',
-      description: 'GPT para análise avançada de dados e geração de relatórios',
-      category: 'Análise',
-      users: 567,
-      rating: 4.7,
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop'
-    }
-  ];
+  const getGPTsForTag = (tag: string) => {
+    return allGPTs.filter(gpt => gpt.tag === tag);
+  };
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex items-center space-x-3 mb-8">
-        <Bot className="w-8 h-8 text-purple-500" />
-        <div>
-          <h1 className="text-3xl font-bold text-white">GPTs Personalizados</h1>
-          <p className="text-slate-400 mt-1">Assistentes de IA especializados para suas necessidades específicas</p>
+  const filteredGPTs = selectedTag
+    ? getGPTsForTag(selectedTag).filter(gpt =>
+        gpt.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        gpt.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : [];
+
+  const handleTagClick = (tag: string) => {
+    setSelectedTag(tag);
+    setSearchTerm('');
+  };
+
+  const handleBackToTags = () => {
+    setSelectedTag(null);
+    setSearchTerm('');
+  };
+
+  const handleAccessGPT = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  if (selectedTag) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex items-center space-x-4 mb-8">
+          <button
+            onClick={handleBackToTags}
+            className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            <span>Voltar</span>
+          </button>
         </div>
-      </div>
 
-      {/* GPTs em Destaque */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-white mb-6 flex items-center space-x-2">
-          <Star className="w-6 h-6 text-yellow-500" />
-          <span>GPTs em Destaque</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredGPTs.map((gpt) => (
-            <div key={gpt.id} className="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 cursor-pointer">
-              <div className="relative overflow-hidden">
-                <img
-                  src={gpt.image}
-                  alt={gpt.name}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
-                <div className="absolute top-3 left-3 bg-purple-500/20 backdrop-blur-sm border border-purple-400/30 text-purple-400 px-2 py-1 rounded-full text-xs font-medium">
-                  ⭐ Destaque
+        <h1 className="text-4xl font-bold text-white mb-8">{selectedTag}</h1>
+
+        <div className="relative mb-8">
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+          <input
+            type="text"
+            placeholder="Buscar GPTs nesta categoria..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full bg-slate-800 border border-slate-700 rounded-xl pl-12 pr-4 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
+          />
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold text-white mb-6">Geral</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredGPTs.map((gpt) => (
+              <div key={gpt.id} className="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-slate-600 transition-all duration-300">
+                <div className="p-4 border-b border-slate-700">
+                  <h3 className="text-white font-semibold text-lg">{gpt.name}</h3>
                 </div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                  {gpt.name}
-                </h3>
-                
-                <p className="text-slate-400 text-sm mb-4 line-clamp-2">
-                  {gpt.description}
-                </p>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <span className="inline-block px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
-                    {gpt.category}
-                  </span>
-                  <div className="flex items-center space-x-1 text-yellow-400 text-sm">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span>{gpt.rating}</span>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-slate-400 text-sm">
-                    <Users className="w-4 h-4" />
-                    <span>{gpt.users.toLocaleString()} usuários</span>
-                  </div>
-                  <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
-                    <span className="text-sm font-medium">Usar</span>
+
+                <div className="p-4">
+                  <p className="text-slate-400 text-sm mb-4">
+                    {gpt.description}
+                  </p>
+
+                  <button
+                    onClick={() => handleAccessGPT(gpt.url)}
+                    className="w-full flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors"
+                  >
+                    <span className="text-sm font-medium">Acessar GPT</span>
                     <ExternalLink className="w-4 h-4" />
                   </button>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
 
-      {/* Categorias de GPTs */}
-      <section>
-        <h2 className="text-2xl font-bold text-white mb-6">Categorias</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {gptCategories.map((category) => (
-            <div key={category.id} className="group cursor-pointer bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4`}>
-                <Bot className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                {category.name}
+          {filteredGPTs.length === 0 && (
+            <div className="text-center py-12 text-slate-400">
+              Nenhum GPT encontrado nesta categoria.
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-white mb-2">GPTs por TAG</h1>
+        <p className="text-slate-400 text-lg">
+          Explore GPTs organizados por TAG e filtre por função.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {gptTags.map((tag) => (
+          <div
+            key={tag}
+            onClick={() => handleTagClick(tag)}
+            className="group cursor-pointer bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+
+            <div className="relative z-10">
+              <h3 className="text-white font-semibold text-sm leading-tight group-hover:text-blue-400 transition-colors">
+                {tag}
               </h3>
-              <p className="text-slate-400 text-sm mb-4">{category.description}</p>
-              <p className="text-slate-500 text-sm">
-                {category.count} GPTs
-              </p>
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* Call to Action */}
-      <section className="mt-12">
-        <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-purple-500/20 text-center">
-          <Bot className="w-16 h-16 text-purple-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-white mb-4">Crie seu próprio GPT</h2>
-          <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-            Desenvolva assistentes de IA personalizados para suas necessidades específicas e compartilhe com a comunidade
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-12 text-center">
+        <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+          <Bot className="w-12 h-12 text-purple-500 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-white mb-2">Biblioteca Completa de GPTs</h3>
+          <p className="text-slate-400">
+            GPTs personalizados organizados por categorias para acelerar seu trabalho com IA
           </p>
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
-            <Zap className="w-6 h-6" />
-            <span>Criar GPT Personalizado</span>
-          </button>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
