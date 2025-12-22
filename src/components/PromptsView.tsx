@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MessageSquare, ArrowLeft, Search, Copy, Eye, X } from 'lucide-react';
+import VEO3View from './VEO3View';
 
 export default function PromptsView() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -191,6 +192,10 @@ export default function PromptsView() {
     setSelectedTag(null);
     setSearchTerm('');
   };
+
+  if (selectedTag === 'VÍDEOS VEO 3') {
+    return <VEO3View onBack={handleBackToTags} />;
+  }
 
   if (selectedTag) {
     // Página da categoria da TAG
