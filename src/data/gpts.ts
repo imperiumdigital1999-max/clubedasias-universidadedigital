@@ -28,24 +28,6 @@ export const allGPTs: GPT[] = [
     rating: 4.7
   },
   {
-    id: '3',
-    tag: "GPT's Criação de Imagem",
-    name: 'Social Media Visual Creator',
-    description: 'Gerador de imagens otimizadas para redes sociais com diferentes formatos e estilos para maximizar engajamento',
-    url: 'https://chat.openai.com/g/g-example3',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=100&h=100&fit=crop',
-    rating: 4.6
-  },
-  {
-    id: '4',
-    tag: "GPT's Criação de Imagem",
-    name: 'Product Photo Enhancer',
-    description: 'Melhore fotos de produtos com prompts profissionais para e-commerce e marketplaces',
-    url: 'https://chat.openai.com/g/g-example4',
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop',
-    rating: 4.8
-  },
-  {
     id: '5',
     tag: "GPT's Criação de Imagem",
     name: 'Illustration Style Master',
