@@ -44,7 +44,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
               <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
                 Clube das IAs
               </span>
-            </h1>
+            </h3>
              <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
                     Clube das IAs 2
                   </span> 
