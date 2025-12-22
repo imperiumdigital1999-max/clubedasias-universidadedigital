@@ -24,6 +24,12 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
     }
   };
 
+  const handleViralEditClick = () => {
+    if (onViewChange) {
+      onViewChange('viral-edit-vo3');
+    }
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 {/* Hero Banner */}
@@ -94,7 +100,7 @@ Organize, descubra e turbine sua criatividade com recursos de IA selecionados e 
 </div>
 
       {/* Aviso Importante */}
-      <ImportantNotice />
+      <ImportantNotice onBannerClick={handleViralEditClick} />
 
       {/* Banner de Natal */}
       <section>

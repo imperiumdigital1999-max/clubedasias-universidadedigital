@@ -1,10 +1,17 @@
 import React from 'react';
 import { Info } from 'lucide-react';
 
-export default function ImportantNotice() {
+interface ImportantNoticeProps {
+  onBannerClick?: () => void;
+}
+
+export default function ImportantNotice({ onBannerClick }: ImportantNoticeProps) {
   return (
     <section className="mb-12">
-      <div className="relative rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-600/50 backdrop-blur-sm">
+      <div
+        onClick={onBannerClick}
+        className="relative rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-600/50 backdrop-blur-sm cursor-pointer transition-all duration-300 hover:bg-slate-800/70 hover:border-blue-500/50 hover:scale-[1.02] transform"
+      >
         <div className="relative z-10 p-6 md:p-8">
           <div className="flex flex-col md:flex-row md:items-center md:space-x-8">
             <div className="flex-shrink-0 mb-6 md:mb-0 md:w-64">

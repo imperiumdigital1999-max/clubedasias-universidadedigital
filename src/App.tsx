@@ -15,6 +15,7 @@ import CursosView from './components/CursosView';
 import CourseDetailView from './components/CourseDetailView';
 import PromptsView from './components/PromptsView';
 import GPTsPersonalizadosView from './components/GPTsPersonalizadosView';
+import ViralEditVO3View from './components/ViralEditVO3View';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -122,6 +123,8 @@ function App() {
         return <PromptsView />;
       case 'gpts-personalizados':
         return <GPTsPersonalizadosView />;
+      case 'viral-edit-vo3':
+        return <ViralEditVO3View onBack={handleBackToDashboard} />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
