@@ -28,15 +28,6 @@ export const allGPTs: GPT[] = [
     rating: 4.7
   },
   {
-    id: '5',
-    tag: "GPT's Criação de Imagem",
-    name: 'Illustration Style Master',
-    description: 'Especialista em criar ilustrações em diferentes estilos artísticos, de aquarela a cartoon',
-    url: 'https://chat.openai.com/g/g-example5',
-    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=100&h=100&fit=crop',
-    rating: 4.5
-  },
-  {
     id: '6',
     tag: "GPT's de Criação de Conteúdo",
     name: 'Blog Writer Pro',
