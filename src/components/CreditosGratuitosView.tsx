@@ -26,9 +26,9 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
     },
     {
       id: '2',
-      titulo: 'Maximizando Seus Créditos Gratuitos',
+      titulo: 'GOOGLE VEO 3 GRÁTIS e ILIMITADO',
       descricao: 'Dicas e estratégias para usar seus créditos de forma eficiente e criar mais vídeos',
-      duracao: '12:45',
+      duracao: '04:20',
       thumbnail: 'https://img.youtube.com/vi/QaR-PQID2nE/maxresdefault.jpg',
       videoUrl: 'https://www.youtube.com/watch?v=QaR-PQID2nE'
     },
