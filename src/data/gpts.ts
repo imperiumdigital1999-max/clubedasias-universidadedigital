@@ -87,7 +87,7 @@ export const allGPTs: GPT[] = [
     name: 'Bianca',
     description: 'Nicho da Agente: Maternidade (introdução alimentar) Ideia Central: Ajuda mães a fazerem a introdução alimentar do bebê com segurança, leveza e cardápios simples — tudo personalizado por fase. Promessa Principal: Cria cardápios personalizados e ideias práticas pra introduzir alimentos sólidos no tempo certo e sem estresse. 🚨Valor mínimo para revenda: R$ 27,00',
     url: 'https://chatgpt.com/g/g-686495142bd8819198ec4666b1fda051-agente-bianca',
-    image: '',
+    image: 'https://static.wixstatic.com/media/28c700_04522c097b404fc99b4e3795bf897c26~mv2.jpg/v1/fill/w_560,h_534,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.jpg',
     rating: 4.7
   },
   {
