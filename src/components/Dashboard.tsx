@@ -25,36 +25,44 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-      {/* Hero Banner */}
-      <div 
-        className="relative mb-12 rounded-2xl overflow-hidden"
-        style={{
-          backgroundImage: 'url(https://cibrius.com.br/wp-content/uploads/2024/07/Banner-pro-site-22.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '300px'
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/80" />
-        <div className="relative z-10 flex items-center justify-center min-h-[300px] px-6 py-12 text-center">
-          <div className="max-w-4xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              Bem-vindo ao{' '}
-              <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
-                Clube das IAs
-              </span>
-                    <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
-                    A maior plataforma de Prompts, Ferramentas de IA e GPTs do Brasil!
-                  </span> 
-            </h1>
-            <p className="text-slate-200 text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed">
-              A maior plataforma de Prompts, Ferramentas de IA e GPTs do Brasil!
-              Organize, descubra e turbine sua criatividade com recursos de IA selecionados e atualizados.
-            </p>
-          </div>
-        </div>
-      </div>
+{/* Hero Banner */}
+<div 
+  className="relative mb-12 rounded-2xl overflow-hidden"
+  style={{
+    backgroundImage: 'url(https://cibrius.com.br/wp-content/uploads/2024/07/Banner-pro-site-22.png)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    minHeight: '300px'
+  }}
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/80" />
+
+  <div className="relative z-10 flex items-center justify-center min-h-[300px] px-6 py-12 text-center">
+    <div className="max-w-4xl">
+
+      {/* Título */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">
+        Clube das IAs
+      </h1>
+
+      {/* Subtítulo */}
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">
+        <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
+          A maior plataforma de IA do Brasil
+        </span>
+      </h2>
+
+      {/* Texto */}
+      <p className="text-slate-200 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+        Prompts, Ferramentas de IA e GPTs organizados para você criar mais,
+        ganhar tempo e acelerar resultados com inteligência artificial.
+      </p>
+
+    </div>
+  </div>
+</div>
+
 
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
