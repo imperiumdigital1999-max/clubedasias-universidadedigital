@@ -45,23 +45,23 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
   const passos = [
     {
       numero: 1,
-      titulo: 'Crie sua conta',
-      descricao: 'Faça seu cadastro gratuitamente na plataforma VEO3 usando seu email'
+      titulo: 'Acesse o Google Labs',
+      descricao: 'Entre em: labs.google e procure pela ferramenta Flow.'
     },
     {
       numero: 2,
-      titulo: 'Ative sua conta',
-      descricao: 'Confirme seu email e complete seu perfil para liberar os créditos iniciais'
+      titulo: 'Clique em “Create with Flow”',
+      descricao: 'Ao entrar no Flow, clique no botão Create with Flow para iniciar.'
     },
     {
       numero: 3,
-      titulo: 'Receba seus créditos',
-      descricao: 'Ganhe automaticamente créditos gratuitos para começar a criar seus vídeos'
+      titulo: 'Faça login com sua conta Google (Gmail)',
+      descricao: 'Use sua conta Google normalmente (não precisa cadastrar cartão).'
     },
     {
       numero: 4,
-      titulo: 'Comece a criar',
-      descricao: 'Use seus créditos para gerar vídeos profissionais com inteligência artificial'
+      titulo: 'Receba seus créditos e Comece a criar',
+      descricao: 'Após o login, você já terá créditos gratuitos para gerar vídeos com o Veo 3 dentro do Flow. Use seus créditos para gerar vídeos profissionais com inteligência artificial'
     }
   ];
 
