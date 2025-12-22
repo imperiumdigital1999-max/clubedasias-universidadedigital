@@ -63,25 +63,34 @@ Organize, descubra e turbine sua criatividade com recursos de IA selecionados e 
 </div>
 
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        <div className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700">
-          <div className="text-2xl font-bold text-white mb-1">150+</div>
-          <div className="text-slate-400 text-sm">Ferramentas</div>
-        </div>
-        <div className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700">
-          <div className="text-2xl font-bold text-white mb-1">20</div>
-          <div className="text-slate-400 text-sm">Categorias</div>
-        </div>
-        <div className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700">
-          <div className="text-2xl font-bold text-white mb-1">100%</div>
-          <div className="text-slate-400 text-sm">Gratuito</div>
-        </div>
-<div className="bg-purple-900/30 rounded-xl p-6 text-center border border-purple-500/30">
-  <div className="text-2xl font-bold text-purple-400 mb-1">24hrs</div>
-  <div className="text-purple-300 text-sm">Disponível</div>
-        </div>
-      </div>
+{/* Stats */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+
+  {/* Ferramentas */}
+  <div className="bg-blue-900/30 rounded-xl p-6 text-center border border-blue-500/30">
+    <div className="text-2xl font-bold text-blue-400 mb-1">150+</div>
+    <div className="text-blue-300 text-sm">Ferramentas</div>
+  </div>
+
+  {/* Categorias */}
+  <div className="bg-cyan-900/30 rounded-xl p-6 text-center border border-cyan-500/30">
+    <div className="text-2xl font-bold text-cyan-400 mb-1">20</div>
+    <div className="text-cyan-300 text-sm">Categorias</div>
+  </div>
+
+  {/* Gratuito */}
+  <div className="bg-emerald-900/30 rounded-xl p-6 text-center border border-emerald-500/30">
+    <div className="text-2xl font-bold text-emerald-400 mb-1">100%</div>
+    <div className="text-emerald-300 text-sm">Gratuito</div>
+  </div>
+
+  {/* Disponível */}
+  <div className="bg-purple-900/30 rounded-xl p-6 text-center border border-purple-500/30">
+    <div className="text-2xl font-bold text-purple-400 mb-1">24hrs</div>
+    <div className="text-purple-300 text-sm">Disponível</div>
+  </div>
+
+</div>
 
       {/* Banner de Natal */}
       <section>
