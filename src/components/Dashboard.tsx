@@ -72,9 +72,6 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
         </div>
       </div>
 
-      {/* Announcement Banner */}
-      <AnnouncementBanner onViewCategories={handleViewCategories} />
-
       {/* Banner de Natal */}
       <section>
         <div 
@@ -110,6 +107,9 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           </div>
         </div>
       </section>
+
+      {/* Announcement Banner */}
+      <AnnouncementBanner onViewCategories={handleViewCategories} />
 
       {/* Comunidade Banner */}
       <section>
