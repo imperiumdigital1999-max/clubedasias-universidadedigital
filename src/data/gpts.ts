@@ -136,33 +136,6 @@ export const allGPTs: GPT[] = [
     rating: 4.9
   },
   {
-    id: '18',
-    tag: "GPT's VEO 3",
-    name: 'Scene Transition Expert',
-    description: 'Especialista em criar transições suaves e cinematográficas para VEO 3 com efeitos profissionais',
-    url: 'https://chat.openai.com/g/g-example18',
-    image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=100&h=100&fit=crop',
-    rating: 4.7
-  },
-  {
-    id: '19',
-    tag: "GPT's VEO 3",
-    name: 'Video Storyboard Creator',
-    description: 'Desenvolva storyboards detalhados para produção de vídeos com VEO 3 seguindo padrões da indústria',
-    url: 'https://chat.openai.com/g/g-example19',
-    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=100&h=100&fit=crop',
-    rating: 4.6
-  },
-  {
-    id: '20',
-    tag: "GPT's VEO 3",
-    name: 'Motion Graphics Specialist',
-    description: 'Prompts para criar motion graphics e animações com VEO 3 com estética moderna e dinâmica',
-    url: 'https://chat.openai.com/g/g-example20',
-    image: 'https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=100&h=100&fit=crop',
-    rating: 4.8
-  },
-  {
     id: '21',
     tag: "GPT's de Ensino",
     name: 'Course Curriculum Designer',
