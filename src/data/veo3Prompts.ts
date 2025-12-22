@@ -22,14 +22,14 @@ export const veo3Categories = [
 ];
 
 export const veo3Prompts: VEO3Prompt[] = [
-  {
-    id: 'v1',
-    category: 'Comercial',
-    title: 'VENDEDORA PRODUTOS ZERO LACTOSE',
-    prompt: '{"scene": "4K cinematic tasting table in a natural store. A small wooden counter displays lactose-free products - milk cartons, yogurt cups, and cheese blocks with clear "Zero Lactose" labels. Soft window light. A blonde woman in casual earth tones stands behind the counter, gesturing naturally at products while speaking to camera. Warm, inviting commercial style."',
-    video_exemplo_url: 'https://videos.pexels.com/video-files/7543960/7543960-uhd_2560_1440_25fps.mp4',
-    thumbnail_url: 'https://images.pexels.com/photos/7620842/pexels-photo-7620842.jpeg?auto=compress&cs=tinysrgb&w=600'
-  },
+ {
+  id: 'f5f59405-b01f-4581-ba31-67aee723cf77',
+  category: 'Comercial',
+  title: 'VENDEDORA PRODUTOS ZERO LACTOSE',
+  prompt: '{ "scene": "4K cinematic tasting table in a natural store. A small wooden counter displays zero-lactose cheeses and yogurts. The lighting is warm and inviting with clean product placement.", "characters": [ { "name": "Natural Foods Specialist", "description": "Brazilian woman in her early 30s, friendly, wearing a light-beige apron.", "actions": [ "Slices a piece of zero-lactose cheese and offers it forward.", "Shows packaging details emphasizing benefits.", "Laughs lightly as she interacts with a customer off-frame.", "Faces the camera to deliver her line with sincerity." ], "speech": "Quem tem intolerância sabe o sofrimento. Por isso escolhemos produtos zero lactose que realmente entregam sabor e leveza.", "voice": "Brazilian Portuguese voice, empathic, soft and genuine." } ], "environment": { "location": "Tasting corner of a natural products store.", "details": "Cheese board, samples, eco packaging, small plants, rustic wood textures." }, "camera": { "angle": "Close-up on the cheese being served, then tilt up to the seller’s face.", "movement": "Soft push-in toward the tasting table for a welcoming feel.", "focus": "Sharp on product, soft on background shelves." }, "audio": { "dialogue": "Quem tem intolerância sabe o sofrimento. Por isso escolhemos produtos zero lactose que realmente entregam sabor e leveza.", "ambient": "Light acoustic music, soft talking in background, utensil sounds." }, "technical": { "resolution": "4K", "model": "Veo 3", "style": "Cinematic zero-lactose tasting scene", "frame_rate": "24fps", "duration": "10–11 seconds" }, "negative_prompts": [ "no exaggerated mess", "no harsh shadows", "no dirty table", "no subtitles" ], "mood": "Calm, warm, healthy." }',
+  video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764369016159-_scene_4k_202511281929_g20wk.mp4',
+  thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764369018585.jpg'
+},
   {
     id: 'v2',
     category: 'Comercial',
