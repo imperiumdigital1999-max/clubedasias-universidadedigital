@@ -55,38 +55,40 @@ export default function GPTsPersonalizadosView() {
           {filteredGPTs.map((gpt) => (
             <div
               key={gpt.id}
-              className="bg-slate-900/50 rounded-xl p-6 border border-slate-800 hover:border-slate-700 transition-all duration-300 relative group"
+              className="bg-slate-900/50 rounded-xl p-4 sm:p-6 border border-slate-800 hover:border-slate-700 transition-all duration-300 relative group"
             >
-              <div className="flex items-start gap-4">
-                <img
-                  src={gpt.image}
-                  alt={gpt.name}
-                  className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-                />
+              <div className="flex flex-col md:flex-row md:items-start gap-4">
+                <div className="flex items-start gap-3 md:gap-4 flex-1 min-w-0">
+                  <img
+                    src={gpt.image}
+                    alt={gpt.name}
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover flex-shrink-0"
+                  />
 
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-white font-semibold text-lg">{gpt.name}</h3>
-                    <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded uppercase">
-                      GPT
-                    </span>
-                  </div>
-
-                  <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                    {gpt.description}
-                  </p>
-
-                  {gpt.rating && (
-                    <div className="flex items-center gap-1 text-yellow-500">
-                      <span className="text-lg">⭐</span>
-                      <span className="text-white font-semibold">{gpt.rating}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
+                      <h3 className="text-white font-semibold text-base sm:text-lg">{gpt.name}</h3>
+                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded uppercase">
+                        GPT
+                      </span>
                     </div>
-                  )}
+
+                    <p className="text-slate-400 text-sm leading-relaxed mb-3">
+                      {gpt.description}
+                    </p>
+
+                    {gpt.rating && (
+                      <div className="flex items-center gap-1 text-yellow-500 mb-3 md:mb-0">
+                        <span className="text-base sm:text-lg">⭐</span>
+                        <span className="text-white font-semibold text-sm">{gpt.rating}</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 <button
                   onClick={() => handleAccessGPT(gpt.url)}
-                  className="flex items-center gap-2 px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors flex-shrink-0"
+                  className="flex items-center justify-center gap-2 px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors w-full md:w-auto md:flex-shrink-0 md:self-start"
                 >
                   <span className="text-sm font-medium">Visitar</span>
                   <ExternalLink className="w-4 h-4" />
