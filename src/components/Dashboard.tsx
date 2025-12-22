@@ -41,7 +41,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           <div className="max-w-4xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
               Bem-vindo ao{' '}
-              <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Clube das IAs
               </span>
             </h1>
@@ -98,7 +98,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
             </p>
             <button
               onClick={handleQuizAccessClick}
-              className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-green-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-green-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Gift className="w-6 h-6" />
               <span>Responder Pesquisa e Liberar Acesso</span>
@@ -114,14 +114,14 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
       {/* Comunidade Banner */}
       <section>
         <div 
-          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30"
+          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30"
           style={{
-            backgroundImage: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%)',
+            backgroundImage: 'linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)',
           }}
         >
           <div className="relative z-10 text-center py-12 px-6">
             <div className="flex items-center justify-center space-x-3 mb-4">
-              <Users className="w-10 h-10 text-blue-400" />
+              <Users className="w-10 h-10 text-purple-400" />
               <h2 className="text-3xl font-bold text-white">Entre na Comunidade dos Gestores de IA</h2>
             </div>
             <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
@@ -129,7 +129,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
             </p>
             <button
               onClick={handleCommunityClick}
-              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-purple-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <Users className="w-6 h-6" />
               <span>Entrar na Comunidade</span>

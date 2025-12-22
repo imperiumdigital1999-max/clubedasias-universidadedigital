@@ -73,7 +73,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
                   onClick={() => handleOtherItemClick(item.id)}
                   className={`w-full flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 ${
                     isActive
-                      ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'
                       : 'text-slate-300 hover:text-white hover:bg-slate-700'
                   }`}
                 >
@@ -100,12 +100,12 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
                 onClick={() => onViewChange(item.id)}
                 className={`flex flex-col items-center justify-center py-2 px-3 rounded-lg transition-all duration-300 min-w-0 flex-1 ${
                   isActive
-                    ? 'text-orange-500 transform scale-105'
+                    ? 'text-purple-500 transform scale-105'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                <Icon className={`w-5 h-5 mb-1 transition-colors ${isActive ? 'text-orange-500' : ''}`} />
-                <span className={`text-xs font-medium transition-colors truncate ${isActive ? 'text-orange-500' : ''}`}>
+                <Icon className={`w-5 h-5 mb-1 transition-colors ${isActive ? 'text-purple-500' : ''}`} />
+                <span className={`text-xs font-medium transition-colors truncate ${isActive ? 'text-purple-500' : ''}`}>
                   {item.label}
                 </span>
               </button>
@@ -117,12 +117,12 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
             onClick={handleOthersClick}
             className={`flex flex-col items-center justify-center py-2 px-3 rounded-lg transition-all duration-300 min-w-0 flex-1 ${
               isOtherViewActive || showOthersMenu
-                ? 'text-orange-500 transform scale-105'
+                ? 'text-purple-500 transform scale-105'
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            <MoreHorizontal className={`w-5 h-5 mb-1 transition-colors ${isOtherViewActive || showOthersMenu ? 'text-orange-500' : ''}`} />
-            <span className={`text-xs font-medium transition-colors truncate ${isOtherViewActive || showOthersMenu ? 'text-orange-500' : ''}`}>
+            <MoreHorizontal className={`w-5 h-5 mb-1 transition-colors ${isOtherViewActive || showOthersMenu ? 'text-purple-500' : ''}`} />
+            <span className={`text-xs font-medium transition-colors truncate ${isOtherViewActive || showOthersMenu ? 'text-purple-500' : ''}`}>
               Outros
             </span>
           </button>
