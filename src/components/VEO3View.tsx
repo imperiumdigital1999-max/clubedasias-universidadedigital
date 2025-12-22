@@ -96,11 +96,29 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
               className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10"
             >
               <div className="relative">
-                <img
-                  src={prompt.thumbnailUrl}
-                  alt={prompt.title}
-                  className="w-full h-56 object-cover"
-                />
+                {prompt.video_exemplo_url ? (
+                  <video
+                    src={prompt.video_exemplo_url}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-56 object-cover"
+                  />
+                ) : prompt.gif_url ? (
+                  <img
+                    src={prompt.gif_url}
+                    alt={prompt.title}
+                    className="w-full h-56 object-cover"
+                  />
+                ) : (
+                  <img
+                    src={prompt.thumbnail_url}
+                    alt={prompt.title}
+                    className="w-full h-56 object-cover"
+                  />
+                )}
                 <div className="absolute top-3 left-3">
                   <span className="inline-block bg-purple-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
                     {prompt.category}
@@ -183,11 +201,29 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
 
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
                 <div className="mb-6">
-                  <img
-                    src={selectedPrompt.thumbnailUrl}
-                    alt={selectedPrompt.title}
-                    className="w-full rounded-lg"
-                  />
+                  {selectedPrompt.video_exemplo_url ? (
+                    <video
+                      src={selectedPrompt.video_exemplo_url}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                      className="w-full rounded-lg"
+                    />
+                  ) : selectedPrompt.gif_url ? (
+                    <img
+                      src={selectedPrompt.gif_url}
+                      alt={selectedPrompt.title}
+                      className="w-full rounded-lg"
+                    />
+                  ) : (
+                    <img
+                      src={selectedPrompt.thumbnail_url}
+                      alt={selectedPrompt.title}
+                      className="w-full rounded-lg"
+                    />
+                  )}
                 </div>
 
                 <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
