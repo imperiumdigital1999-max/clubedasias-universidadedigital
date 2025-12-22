@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { CheckSquare, Target, Briefcase, ArrowRight } from 'lucide-react';
 import { TaskPlatform } from '../types';
 
 interface TaskCardProps {
@@ -15,48 +15,58 @@ export default function TaskCard({ platform, onPlatformClick }: TaskCardProps) {
   };
 
   return (
-    <div 
+    <div
       onClick={handleCardClick}
-      className="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-orange-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+      className="group bg-slate-800/60 rounded-lg border-2 border-slate-700 hover:border-blue-500 transition-all duration-300 cursor-pointer overflow-hidden"
     >
-      <div className="relative overflow-hidden">
-        <img
-          src={platform.image}
-          alt={platform.name}
-          className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
-        
-        {platform.featured && (
-          <div className="absolute top-3 left-3 bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-            ⭐ Destaque
+      <div className="flex flex-col sm:flex-row">
+        <div className="relative w-full sm:w-40 h-32 sm:h-auto flex-shrink-0 bg-slate-700/50">
+          <img
+            src={platform.image}
+            alt={platform.name}
+            className="w-full h-full object-cover opacity-90"
+          />
+          <div className="absolute inset-0 bg-slate-900/40" />
+        </div>
+
+        <div className="flex-1 p-5">
+          <div className="flex items-start justify-between mb-3">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-2">
+                <Briefcase className="w-5 h-5 text-blue-400" />
+                <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                  {platform.name}
+                </h3>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-3">
+                {platform.featured && (
+                  <span className="inline-flex items-center gap-1 bg-blue-500/20 border border-blue-500/30 text-blue-300 px-2 py-0.5 rounded text-xs font-medium">
+                    <Target className="w-3 h-3" />
+                    Recomendado
+                  </span>
+                )}
+
+                {platform.new && (
+                  <span className="inline-flex items-center gap-1 bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 px-2 py-0.5 rounded text-xs font-medium">
+                    <CheckSquare className="w-3 h-3" />
+                    Novo
+                  </span>
+                )}
+              </div>
+            </div>
           </div>
-        )}
-        
-        {platform.new && (
-          <div className="absolute top-3 right-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-            🆕 Novo
-          </div>
-        )}
-      </div>
-      
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">
-          {platform.name}
-        </h3>
-        
-        <p className="text-slate-400 text-sm mb-4 line-clamp-2">
-          {platform.description}
-        </p>
-        
-        <div className="flex items-center justify-between">
-          <div></div>
+
+          <p className="text-slate-300 text-sm mb-4 line-clamp-2">
+            {platform.description}
+          </p>
+
           <button
             onClick={handleCardClick}
-            className="bg-gradient-to-r from-orange-500 to-cyan-500 text-white px-4 py-2 rounded-lg flex items-center space-x-2 hover:from-orange-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium text-sm transition-colors"
           >
-            <span className="text-sm font-medium">Acessar</span>
-            <ExternalLink className="w-4 h-4" />
+            <span>Acessar Plataforma</span>
+            <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </div>
