@@ -143,50 +143,5 @@ export const allGPTs: GPT[] = [
     url: 'https://chat.openai.com/g/g-example21',
     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=100&h=100&fit=crop',
     rating: 4.7
-  },
-  {
-    id: '22',
-    tag: "GPT's de Ensino",
-    name: 'Quiz Generator Pro',
-    description: 'Gere questões e avaliações personalizadas para qualquer conteúdo com níveis de dificuldade variados',
-    url: 'https://chat.openai.com/g/g-example22',
-    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=100&h=100&fit=crop',
-    rating: 4.5
-  },
-  {
-    id: '23',
-    tag: "GPT's de Ensino",
-    name: 'Lesson Plan Creator',
-    description: 'Planos de aula detalhados com objetivos, atividades e avaliações alinhados à BNCC',
-    url: 'https://chat.openai.com/g/g-example23',
-    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=100&h=100&fit=crop',
-    rating: 4.6
-  },
-  {
-    id: '24',
-    tag: "GPT's de Ensino",
-    name: 'Educational Content Simplifier',
-    description: 'Simplifique conteúdos complexos para diferentes níveis de aprendizado de forma didática e acessível',
-    url: 'https://chat.openai.com/g/g-example24',
-    image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=100&h=100&fit=crop',
-    rating: 4.8
-  },
-  {
-    id: '25',
-    tag: "GPT's de Ensino",
-    name: 'Student Engagement Booster',
-    description: 'Estratégias e atividades para aumentar o engajamento de alunos com gamificação e metodologias ativas',
-    url: 'https://chat.openai.com/g/g-example25',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=100&h=100&fit=crop',
-    rating: 4.4
-  },
-  {
-    id: '26',
-    tag: "GPT's de Ensino",
-    name: 'Tutorial Video Scripter',
-    description: 'Roteiros didáticos para vídeos educacionais e tutoriais com estrutura clara e objetiva',
-    url: 'https://chat.openai.com/g/g-example26',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&h=100&fit=crop',
-    rating: 4.7
   }
 ];
