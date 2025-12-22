@@ -102,7 +102,7 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
                 Como Funciona o Sistema de Créditos?
               </h2>
               <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                O VEO3 oferece créditos gratuitos para novos usuários testarem a plataforma. Cada crédito pode ser usado para gerar vídeos com IA, aplicar efeitos especiais, ou acessar recursos premium. Siga os passos abaixo para começar:
+                O Clube das IAs em parceria com o VEO3 conseguiu garantir créditos gratuitos para novos usuários testarem a plataforma. Cada crédito pode ser usado para gerar vídeos com IA, aplicar efeitos especiais, ou acessar recursos premium. Siga os passos abaixo para começar:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
