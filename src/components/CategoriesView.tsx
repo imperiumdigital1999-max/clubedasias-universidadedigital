@@ -136,14 +136,14 @@ export default function CategoriesView({ onToolSelect }: CategoriesViewProps) {
                 <div
                   key={category.id}
                   onClick={() => handleCategoryClick(category.id)}
-                  className="group cursor-pointer relative bg-slate-800 rounded-xl p-6 border border-transparent hover:border-purple-500/70 hover:shadow-xl hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300"
+                  className="group cursor-pointer relative bg-slate-800 rounded-xl p-6 border border-transparent hover:border-orange-500/70 hover:shadow-xl hover:scale-105 transition-all duration-300"
                 >
                   {/* Ícone da categoria no canto superior esquerdo */}
                   <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-4`}>
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">
                     {category.name}
                   </h3>
                   
@@ -156,7 +156,7 @@ export default function CategoriesView({ onToolSelect }: CategoriesViewProps) {
                   </p>
 
                   {/* Botão com seta no canto inferior direito - só aparece no hover */}
-                  <div className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-blue-500 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-cyan-500 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRight className="w-4 h-4 text-white" />
                   </div>
                 </div>
@@ -203,7 +203,7 @@ export default function CategoriesView({ onToolSelect }: CategoriesViewProps) {
               </div>
               <button
                 onClick={handleBackToCategories}
-                className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-orange-500 to-cyan-500 text-white px-6 py-2 rounded-lg hover:from-orange-600 hover:to-cyan-600 transition-all duration-300"
               >
                 Voltar às Categorias
               </button>

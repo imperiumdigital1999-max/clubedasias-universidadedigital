@@ -87,7 +87,7 @@ export default function ToolDetailView({ tool, onBack }: ToolDetailViewProps) {
           <div className="grid gap-4">
             {tool.applications?.map((application, index) => (
               <div key={index} className="flex items-start space-x-3 p-4 bg-slate-800 rounded-lg border border-slate-700">
-                <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full mt-2 flex-shrink-0" />
+                <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-full mt-2 flex-shrink-0" />
                 <p className="text-slate-300">{application}</p>
               </div>
             ))}
@@ -171,14 +171,14 @@ export default function ToolDetailView({ tool, onBack }: ToolDetailViewProps) {
 
         {/* 5. Acesso à Ferramenta */}
         <section>
-          <div className="bg-gradient-to-r from-purple-600/10 to-blue-500/10 rounded-2xl p-8 border border-purple-500/20 text-center">
+          <div className="bg-gradient-to-r from-orange-500/10 to-cyan-500/10 rounded-2xl p-8 border border-orange-500/20 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">Pronto para começar?</h2>
             <p className="text-slate-300 mb-6">
               Acesse {tool.name} agora e coloque em prática tudo que você aprendeu
             </p>
             <button
               onClick={handleAccessTool}
-              className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-purple-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-orange-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-orange-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
               <span>Testar {tool.name} agora</span>
               <ExternalLink className="w-5 h-5" />
@@ -188,9 +188,9 @@ export default function ToolDetailView({ tool, onBack }: ToolDetailViewProps) {
 
         {/* 6. Como Usar de Graça */}
         <section>
-          <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-600/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
+          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-purple-500/20 text-center">
             <div className="flex items-center justify-center space-x-3 mb-4">
-              <GraduationCap className="w-8 h-8 text-fuchsia-500" />
+              <GraduationCap className="w-8 h-8 text-purple-500" />
               <h2 className="text-2xl font-bold text-white">Como Usar de Graça</h2>
             </div>
             <p className="text-slate-300 mb-6">
@@ -198,7 +198,7 @@ export default function ToolDetailView({ tool, onBack }: ToolDetailViewProps) {
             </p>
             <button
               onClick={handleFreeAccessVideo}
-              className="bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center space-x-2 mx-auto hover:from-fuchsia-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold flex items-center space-x-2 mx-auto hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
             >
               <Play className="w-5 h-5" />
               <span>Ver vídeo explicativo</span>

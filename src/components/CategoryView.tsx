@@ -47,7 +47,7 @@ export default function CategoryView({ categoryId, onBack, onToolSelect }: Categ
           </div>
           <button
             onClick={onBack}
-            className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="bg-gradient-to-r from-orange-500 to-cyan-500 text-white px-6 py-2 rounded-lg hover:from-orange-600 hover:to-cyan-600 transition-all duration-300"
           >
             Voltar ao Dashboard
           </button>

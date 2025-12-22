@@ -15,7 +15,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">CI</span>
               </div>
               <div>
@@ -32,7 +32,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 onClick={() => onViewChange('dashboard')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
                   currentView === 'dashboard'
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
@@ -42,7 +42,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 onClick={() => onViewChange('categories')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
                   currentView === 'categories'
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
@@ -52,7 +52,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 onClick={() => onViewChange('favorites')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
                   currentView === 'favorites'
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
@@ -62,7 +62,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 onClick={() => onViewChange('recent')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
                   currentView === 'recent'
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
@@ -72,7 +72,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 onClick={() => onViewChange('tasks')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
                   currentView === 'tasks'
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
@@ -82,7 +82,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 onClick={() => onViewChange('ias-pro')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
                   currentView === 'ias-pro'
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
@@ -92,7 +92,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
                 onClick={() => onViewChange('cursos')}
                 className={`px-4 py-2 rounded-lg transition-colors font-medium ${
                   currentView === 'cursos'
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'
+                    ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
                     : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
