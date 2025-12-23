@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Upload, Image as ImageIcon, MessageSquare, Download, Sparkles, Camera, FileCheck, AlertTriangle } from 'lucide-react';
+import { Upload, Image as ImageIcon, MessageSquare, Download, Sparkles, Camera, FileCheck, AlertTriangle, ArrowLeft } from 'lucide-react';
 
 interface VEO3ImageGeneratorViewProps {
   onBack?: () => void;
@@ -136,6 +136,18 @@ export default function VEO3ImageGeneratorView({ onBack }: VEO3ImageGeneratorVie
   return (
     <div className="min-h-screen bg-black py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
+        {onBack && (
+          <div className="mb-8">
+            <button
+              onClick={onBack}
+              className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-200 group"
+            >
+              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
+              <span>Voltar</span>
+            </button>
+          </div>
+        )}
+
         <div className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
             Gerador VEO3 com Imagem

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BookOpen, Terminal, Sliders, Zap, ArrowLeft } from 'lucide-react';
+import VEO3ImageGeneratorView from './VEO3ImageGeneratorView';
 
 interface ViralEditVO3ViewProps {
   onBack?: () => void;
@@ -17,6 +18,7 @@ interface Card {
 }
 
 export default function ViralEditVO3View({ onBack, onViewChange }: ViralEditVO3ViewProps) {
+  const [showGenerator, setShowGenerator] = useState(false);
   const cards: Card[] = [
     {
       id: 'acesso-guiado',
@@ -57,25 +59,31 @@ export default function ViralEditVO3View({ onBack, onViewChange }: ViralEditVO3V
   ];
 
   const handleCardClick = (cardId: string) => {
-    if (!onViewChange) return;
-
     switch (cardId) {
       case 'acesso-guiado':
-        onViewChange('aulas-viral-edit');
+        if (onViewChange) onViewChange('aulas-viral-edit');
         break;
       case 'seus-prompts':
-        onViewChange('prompts');
+        if (onViewChange) onViewChange('prompts');
         break;
       case 'creditos':
-        onViewChange('creditos-gratuitos');
+        if (onViewChange) onViewChange('creditos-gratuitos');
         break;
       case 'personalizacao':
-        console.log('Personalização de prompt - Em breve');
+        setShowGenerator(true);
         break;
       default:
         break;
     }
   };
+
+  const handleBackToCards = () => {
+    setShowGenerator(false);
+  };
+
+  if (showGenerator) {
+    return <VEO3ImageGeneratorView onBack={handleBackToCards} />;
+  }
 
   return (
     <div className="min-h-screen bg-slate-950 py-8 px-4 sm:px-6 lg:px-8">
