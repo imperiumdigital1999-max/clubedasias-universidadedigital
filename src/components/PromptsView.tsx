@@ -95,7 +95,87 @@ export default function PromptsView() {
     description: 'Retrato cinematográfico de alta tensão focado em estratégia e domínio mental.',
     image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1762569717143-generated-image-november-07-2025---11_41pm-1.png',
     fullPrompt: 'Create an 8K ultra-realistic cinematic editorial portrait, 1080×1440, replicating 100% the model from the reference image — identical face, hair, beard stubble, expression, sunglasses shape, outfit and proportions.\n\nComposition: medium-close shot from a slightly elevated angle (3/4 top), camera pointing slightly downward toward a chessboard. The subject’s face is centered in the upper half, while the chessboard occupies the lower third.\n\nExpression & Pose: intense, focused stare with furrowed brows and closed lips, leaning forward slightly, as if analyzing a decisive move.\n\nLook & Outfit: dark textured hair with volume, short groomed beard. Round dark sunglasses with thin frame. Thick black knit sweater under a dark blazer.\n\nLighting: low-key cinematic black and white. Soft top-left key light creates gentle shadow modeling on the face and chess pieces. Deep black background.\n\nTechnical: 85 mm (50–85), f/2.0–f/2.8, selective focus on face and central chess pieces; shallow depth of field blurs nearby and background pieces.'
-  },{
+  }, {
+
+    id: 'ae3ca5db-9fac-4e4f-b69f-712ea6533674',
+
+    tag: 'ENSAIO FOTOGRÁFICO',
+
+    title: 'Retrato Editorial Minimalista',
+
+    description: 'Retrato 8K ultra-realista em estúdio minimalista com iluminação suave e tons monocromáticos.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1762569894868-generated-image-november-07-2025---11_44pm.png',
+
+    fullPrompt: 'Crie um retrato fotográfico editorial em 8K ultra-realista, seguindo 100% o modelo da imagem de referência enviada — preservando fielmente rosto, cabelo, tom de pele, expressão e proporções corporais.\n\nComposição e pose: homem jovem sentado de forma descontraída em uma poltrona de design minimalista, pernas cruzadas com o tornozelo direito apoiado sobre o joelho esquerdo. Braço esquerdo apoiado no braço da poltrona, mão direita repousando na coxa, ombros relaxados. Olhar direto para a câmera com expressão firme, confiante e levemente desafiadora.\n\nVestuário e estilo: suéter de malha grossa com zíper em tom cinza-escuro, camiseta preta simples por baixo, calça preta de corte reto e sapatos sociais pretos com acabamento fosco.\n\nIluminação: esquema de iluminação de estúdio com dois refletores profissionais visíveis em cada lateral. A luz principal é suave e neutra, criando um efeito de preto e branco natural, com contrastes sutis e sombreamento elegante. Um leve halo de luz difusa no fundo reforça a profundidade e destaca a silhueta.\n\nCenário e atmosfera: estúdio minimalista com piso e paredes cinza claro, propositalmente vazio, exceto pelos dois refletores de tripé visíveis e cabos discretos. No alto, linhas sutis do teto industrial, trazendo sensação de espaço amplo e clean.\n\nSensação transmitida: elegância moderna, confiança urbana e estilo fashion editorial, com um toque de rebeldia minimalista.\n\nDetalhes técnicos: lente 85 mm f/1.4, profundidade de campo média, foco absoluto no modelo, textura realista de pele e tecido, gradação suave entre luz e sombra, acabamento em tons monocromáticos.\n\nEstilo final: fotografia editorial em preto e branco, estética de revista de alta moda, com clima contemporâneo e atemporal.'
+
+  },
+
+  {
+
+    id: 'c3c3bcd0-37b0-43d0-80a1-ed4d4126436b',
+
+    tag: 'ENSAIO FOTOGRÁFICO',
+
+    title: 'Perfil Editorial de Luxo',
+
+    description: 'Fotografia P&B em estúdio de alta moda, capturando elegância clássica em perfil total.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1762569828627-generated-image-november-07-2025---11_43pm.png',
+
+    fullPrompt: 'Create an 8K ultra-realistic black-and-white studio photograph in 1080×1440 format, replicating 100% the model from the provided reference photo — keeping identical facial features, hairstyle, skin tone (converted to monochrome), body proportions and expression.\n\nComposition & Pose: adult man standing in full profile, both hands in his suit pockets, right leg slightly lifted back as if taking a smooth step. Calm and confident facial expression, gazing straight ahead.\n\nClothing & Style: slim-cut black suit, crisp white dress shirt, polished black dress shoes. Classic and formal high-end fashion.\n\nScene & Lighting: minimalist studio with a seamless light-gray background. Large softbox positioned at the upper right, clearly visible in the frame, casting soft side lighting on the subject. Gentle and precise shadows create elegant contrast. A partial studio divider appears on the left edge, adding authentic studio context.\n\nMood: understated elegance, quiet introspection and professional refinement with a clean artistic touch.\n\nTechnical Details: 85 mm lens f/1.4, medium depth of field, extreme sharpness, natural skin and fabric microtextures, high dynamic range black-and-white with cinematic contrast.\n\nFinal Style: modern minimalist editorial photography, suitable for luxury magazine portraits.'
+
+  },
+
+  {
+
+    id: '6773c3ec-5770-43ba-8f28-1cb879e6485f',
+
+    tag: 'ENSAIO FOTOGRÁFICO',
+
+    title: 'Editorial Skyscraper & Eagle',
+
+    description: 'Cena épica em cobertura de arranha-céu com águia real, transmitindo poder e liderança.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1762569788462-generated-image-november-07-2025---11_42pm-1.png',
+
+    fullPrompt: 'Create an 8K ultra-realistic cinematic editorial photo, 1080×1440, replicating 100% the model from the reference (identical face, hair, beard, expression, proportions).\n\nComposition & Pose: man standing on top of a skyscraper, facing the camera with a slight 3/4 angle. His left arm is raised, wearing a black falconry glove, holding a large golden eagle perched firmly on his forearm. The bird is calm and alert, wings slightly open, staring forward. His right arm rests naturally by his side.\n\nExpression: intense and serious, slightly furrowed brows, strong jawline — conveys power and control.\n\nOutfit: all-black attire — dark shirt, black tailored pants, black boots, and a long black overcoat flowing dynamically in the wind, creating dramatic shapes. Minimalist and powerful look.\n\nEnvironment: rooftop of a skyscraper in a modern city. Urban skyline stretching into the distance, partially covered in soft morning/evening haze. Sun low on the horizon, creating warm cinematic light. Contrails in the sky add compositional depth.\n\nLighting: natural golden-hour backlight, forming a glowing rim around the man and the eagle. Soft reflected fill light illuminates the face. Warm sunlight contrasts beautifully with the dark outfit and the bird\'s feathers.\n\nColors: warm golden and orange sky tones mixed with neutral cool blacks of clothing and cityscape. Cinematic balanced contrast, deep blacks, rich golden light.\n\nMood: conveys power, leadership, freedom, strategic vision. The eagle symbolizes dominance and far-reaching sight. Wind adds movement to the coat and feathers.\n\nTechnical: 35–50 mm lens, f/2.8, medium depth of field, sharp focus on man and eagle, slightly blurred background. High detail on fabric, beard, and feathers. Low ISO, fast shutter (~1/1000 s) to freeze wind motion.\n\nFinal Style: high-end cinematic fashion/hero editorial, vertical format, epic presence, powerful human–nature symbolism.'
+
+  },
+
+  {
+
+    id: '5bd46ead-e449-44d5-845e-c5551c8fa31b',
+
+    tag: 'ENSAIO FOTOGRÁFICO',
+
+    title: 'Ilusionista Editorial P&B',
+
+    description: 'Retrato dramático focado em mistério e presença, com cartas suspensas e iluminação Rembrandt.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1762569744169-generated-image-november-07-2025---11_42pm.png',
+
+    fullPrompt: 'Create an 8K ultra-realistic cinematic editorial portrait, vertical 1080×1440, replicating 100% the model from the reference image — identical face, haircut, thin mustache, skin tone (converted to B&W), expression, hands and body proportions.\n\nFraming & Composition: chest-up vertical portrait, subject slightly right of center, looking straight at camera. Deep black background with a soft vignette.\n\nPose & Hands: right hand holding an Ace of Spades at sternum level; left hand performing a flourish/snap gesture with separated fingers. Subtle veins/tendons visible on hands.\n\nLook & Wardrobe: black turtleneck under a dark blazer with very fine plaid/tweed pattern; hair slicked back with a slight sheen; neat, thin mustache.\n\nFlying Cards (dynamic elements): multiple playing cards suspended around the subject in different depth planes — foreground cards out of focus, mid-plane cards partly sharp, background cards softly blurred.\n\nLighting (high-impact B&W): dramatic low-key setup. Soft key light from camera-right at ~45°, creating a short-lighting/Rembrandt feel. Strong blacks preserved without crushing blazer texture.\n\nTechnical: 85 mm (50–85 mm), f/2.0–f/2.8, critical focus on the eyes and the Ace of Spades; shallow DoF to layer the cards.'
+
+  },
+
+  {
+
+    id: 'bfc68df8-37c2-48e1-b781-e49c8bd66cd5',
+
+    tag: 'ENSAIO FOTOGRÁFICO',
+
+    title: 'Mestre do Xadrez Editorial',
+
+    description: 'Retrato cinematográfico de alta tensão focado em estratégia e domínio mental.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1762569717143-generated-image-november-07-2025---11_41pm-1.png',
+
+    fullPrompt: 'Create an 8K ultra-realistic cinematic editorial portrait, 1080×1440, replicating 100% the model from the reference image — identical face, hair, beard stubble, expression, sunglasses shape, outfit and proportions.\n\nComposition: medium-close shot from a slightly elevated angle (3/4 top), camera pointing slightly downward toward a chessboard. The subject’s face is centered in the upper half, while the chessboard occupies the lower third.\n\nExpression & Pose: intense, focused stare with furrowed brows and closed lips, leaning forward slightly, as if analyzing a decisive move.\n\nLook & Outfit: dark textured hair with volume, short groomed beard. Round dark sunglasses with thin frame. Thick black knit sweater under a dark blazer.\n\nLighting: low-key cinematic black and white. Soft top-left key light creates gentle shadow modeling on the face and chess pieces. Deep black background.\n\nTechnical: 85 mm (50–85), f/2.0–f/2.8, selective focus on face and central chess pieces; shallow depth of field blurs nearby and background pieces.'
+
+  },
+    
+    {
       id: '4',
       tag: 'IMAGENS GHIBLI',
       title: 'Personagem Estilo Ghibli',
