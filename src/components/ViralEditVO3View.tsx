@@ -151,20 +151,6 @@ export default function ViralEditVO3View({ onBack, onViewChange }: ViralEditVO3V
             </div>
           ))}
         </div>
-
-        <div className="mt-12 text-center">
-          <div className="bg-slate-800/50 border border-slate-600/50 rounded-2xl p-8 backdrop-blur-sm">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Precisa de ajuda?
-            </h2>
-            <p className="text-slate-300 text-lg mb-6">
-              Entre em contato com nossa equipe de suporte para qualquer dúvida sobre o acesso
-            </p>
-            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
-              Falar com Suporte
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
