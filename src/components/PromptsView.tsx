@@ -1693,16 +1693,6 @@ export default function PromptsView() {
   }
 
 
-
-
-
-
-
-
-    
-
-
-
   ];
 
   const getPromptsForTag = (tag: string) => {
