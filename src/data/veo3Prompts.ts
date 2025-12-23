@@ -882,7 +882,105 @@ export const veo3Prompts: VEO3Prompt[] = [
 
     thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760925596775.jpg'
 
+  },
+  {
+
+    id: 'b6b01395-20a5-48a8-b364-99c483e989dc',
+
+    category: 'Vlog',
+
+    title: 'INFLUENCER NO SUPERMERCADO',
+
+    prompt: '{"title": "Supermarket Influencer Vlog", "description": "26-year-old stylish woman pushing a cart in a large Brazilian supermarket, filming a selfie-style vlog.", "character": {"name": "Model Shopper", "speech": "Gente, olha isso aqui! Promocao de tres pacotes de biscoito pelo preco de dois... Eu amo esse supermercado!"}, "technical": "Veo 3, 4K realistic vlog, duration 12s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1759540552608-_scene_realistic_202510032215_zydp2.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt_null_1759540557995.jpg'
+
+  },
+
+  {
+
+    id: '7aceccfe-d4f3-4e09-9e9c-5e95c7830129',
+
+    category: 'Comercial',
+
+    title: 'VENDEDOR DE MERCADINHO',
+
+    prompt: '{"title": "Neighborhood Grocery Vendor", "description": "45-year-old man in a red apron at a storefront with fruit crates, using a megaphone to call customers.", "character": {"name": "Vendor", "speech": "Olha a promocao, minha gente! Banana ta quase de graca hoje, e pra levar de balde!"}, "technical": "Veo 3, handheld commercial style, duration 12s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1759540508955-_scene_realistic_202510032214_880jt.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt_null_1759540513934.jpg'
+
+  },
+
+  {
+
+    id: '04ab74bc-3eb7-41af-adbe-119d4a02b458',
+
+    category: 'Vlog',
+
+    title: 'INFLUENCER NA ESTÉTICA',
+
+    prompt: '{"title": "Aesthetic Clinic Vlog", "description": "Charismatic blonde woman walking through a chic minimalist beauty clinic in Sao Paulo filming a selfie video.", "character": {"name": "Vlogger", "speech": "Meninas, eu to apaixonada por essa clinica de estetica! O lugar e lindo e o atendimento e impecavel."}, "technical": "Veo 3, fresh and inviting mood, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1759251510212-_scene_realistic_202509301358_efepc.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt_null_1759251514901.jpg'
+
+  },
+
+  {
+
+    id: '840ada84-c116-4339-bbaf-616bb25db910',
+
+    category: 'Comédia',
+
+    title: 'GORILA VLOG JUNGLE',
+
+    prompt: '{"title": "Gorilla Jungle Panic", "description": "Anthropomorphic gorilla running through a dense forest holding a smartphone in selfie mode, looking panicked.", "character": {"name": "Gorilla", "speech": "Mano, tinha uma cascavel logo no lugar daquele cipo, quase que eu fui pro saco agora!"}, "technical": "Veo 3, shaky handheld motion, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1759250955527-_scene_realistic_202509301349_08o2g.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt_null_1759250963203.jpg'
+
+  },
+
+  {
+
+    id: '2f7fbe92-a833-4adb-86d4-1a9953ee4be8',
+
+    category: 'Comercial',
+
+    title: 'VENDEDORA PORSCHE',
+
+    prompt: '{"title": "Porsche Showroom Presenter", "description": "Elegant woman in a black blazer presenting luxury cars inside a modern dealership in Sao Paulo.", "character": {"name": "Presenter", "speech": "Bem-vindos a Porsche Sao Paulo! Aqui voce encontra tecnologia, design e performance."}, "technical": "Veo 3, premium corporate style, duration 12s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1759250853336-_scene_realistic_202509301347_a9wpd.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt_null_1759250857211.jpg'
+
+  },
+
+  {
+
+    id: 'c33e8643-ce72-4c59-8261-5440e84d54a1',
+
+    category: 'Comédia',
+
+    title: 'HOMEM-ARANHA NO TOPO',
+
+    prompt: '{"title": "Spider-Man NYC Rooftop", "description": "Spider-Man in classic suit crouching on a skyscraper ledge in NYC during a dramatic sunset.", "character": {"name": "Spider-Man", "speech": "As vezes a cidade parece tranquila daqui de cima... mas sempre tem alguem precisando do Homem-Aranha."}, "technical": "Veo 3, epic cinematic shot, duration 12s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1759250796190-_scene_realistic_202509301346_cu3hk.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt_null_1759250801296.jpg'
+
   }
+
+
+  
 
 
 
