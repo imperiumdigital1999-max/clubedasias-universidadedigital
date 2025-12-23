@@ -63,8 +63,7 @@ export default function ImportantNotice({ onBannerClick }: ImportantNoticeProps)
                       </>
                     ) : (
                       <>
-                        Estamos reestabelecendo o acesso dos alunos individualmente.<br />
-                        Caso não consiga acessar ainda, aguarde até nossa equipe chegar na sua vez!
+                       Clique aqui e verifique se seu acesso foi liberado.<br />
                       </>
                     )}
                   </p>
