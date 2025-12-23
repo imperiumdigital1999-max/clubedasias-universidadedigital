@@ -784,7 +784,88 @@ export default function PromptsView() {
 
     fullPrompt: 'Homem 38 anos em terno azul marinho. Cenário Times Square 2150 com hologramas, carros voadores e chuva de luz dourada. Render PBR ultra detalhado estilo Pixar 3D.'
 
+  },
+  {
+
+    id: '5c0149ef-0031-4330-be58-f161b5140d9d',
+
+    tag: 'IMAGENS GHIBLI',
+
+    title: 'Supergirl Samus',
+
+    description: 'Fotografia editorial cinematográfica da Supergirl reimaginada com a armadura de Samus Aran ao pôr do sol.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755029763479-assets_task_01k2fv01ejeyj8pg9ywccztq1n_1755025885_img_1.webp',
+
+    fullPrompt: 'High-resolution cinematic editorial photograph of Supergirl reimagined as Samus Aran, standing in a heroic full-body pose on a windswept plateau at sunset. She has long, flowing blonde hair, model-like face. Sunlight catches on the textures of her power suit, highlighting her powerful, athletic, slim build. Her gun-arm is slightly raised with a slight afterglow.'
+
+  },
+
+  {
+
+    id: '89eeaee3-494c-483a-acef-82e01f18f733',
+
+    tag: 'IMAGENS GHIBLI',
+
+    title: 'Mapa Diorama Romênia',
+
+    description: 'Miniatura detalhada em 3D da Romênia emergindo de um mapa real com castelos e paisagens icônicas.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755029105688-assets_task_01k2f5q6zxfnw8bs23jfrbb91k_1755003601_img_0.webp',
+
+    fullPrompt: 'A realistic map of Romania lying on a surface, country name "ROMANIA" clearly visible. Emerging from the map is a highly detailed miniature landscape with Castle Peles, Transfăgărășan and cultural elements as a 3D diorama. Soft studio lighting, cinematic composition. Square 1:1 format.'
+
+  },
+
+  {
+
+    id: 'c1b16a6b-8651-4039-b257-56df74dcd6c8',
+
+    tag: 'IMAGENS GHIBLI',
+
+    title: 'Noite de Verão Obon',
+
+    description: 'Ilustração em estilo anime japonês de uma jovem em um ambiente sofisticado com vista para Hakodate.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755029064698-assets_task_01k2fqgfm6fa3r8z13212dvenq_1755022236_img_0.webp',
+
+    fullPrompt: 'A beautiful young woman with long golden hair and blue eyes, drawn in Japanese anime style. Sitting gracefully at a desk with a glowing "mukaebi" fire. Hakodate night view through the window. Warm summer evening tones, blending lantern light with cool city illumination, 7000K temperature.'
+
+  },
+
+  {
+
+    id: 'd2cf2db7-7173-4da4-b2fd-4945d11be712',
+
+    tag: 'IMAGENS GHIBLI',
+
+    title: 'Bar de Rua Japonês',
+
+    description: 'Cena noturna em estilo anime de um bar de rua com luzes quentes, pavimento molhado e atmosfera acolhedora.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027869244-assets_task_01k2be5hnefdpabvfbfefc6gcv_1754878210_img_0.webp',
+
+    fullPrompt: 'Estilo anime de un bar callejero Japones al aire libre por la noche, carpa de vinilo naranja, luz cálida sobre pavimento mojado. Meiko y Mengurine Luka charlando felices, letreros de neón reflejados en la calle por la lluvia, fondo de callejón con bicicletas y scooters.'
+
+  },
+
+  {
+
+    id: '98e42096-7389-48f9-9d5c-01d49c43a1c2',
+
+    tag: 'IMAGENS GHIBLI',
+
+    title: 'Sonho em Anime',
+
+    description: 'Ilustração artística e onírica com iluminação cinematográfica e detalhes ultra-definidos.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027842478-assets_task_01k2cfzczmfj5srkk5g0gga32z_1754913745_img_1.webp',
+
+    fullPrompt: 'A beautiful and dreamy anime-style illustration. Dynamic composition, ultra-high definition, delicate details, and cinematic lighting stand out.'
+
   }
+
+
 
   ];
 
