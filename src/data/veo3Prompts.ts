@@ -483,7 +483,169 @@ export const veo3Prompts: VEO3Prompt[] = [
 
     thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761101073522.jpg'
 
+  },
+  {
+
+    id: '3b4a191c-0850-4f79-8b18-8c5f7a5a294d',
+
+    category: 'Influencer',
+
+    title: 'INFLUENCER LOJA DE ÓCULOS',
+
+    prompt: '{"title": "Eyewear Influencer", "description": "Brazilian street scene, young woman in stylish sunglasses holding phone in selfie mode.", "character": {"name": "Bruna", "speech": "Olha esse estilo, gente! Esses modelos tao bombando aqui na Otica Visao Popular!"}, "technical": "Veo 3, handheld selfie, duration 6s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761074861684-video-veta-ia_-_2025-10-21T162714.217.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761074864702.jpg'
+
+  },
+
+  {
+
+    id: 'ddfc498d-e526-45fe-aee2-04644abc69dc',
+
+    category: 'Comercial',
+
+    title: 'PROPAGANDA ÓTICA PROMO',
+
+    prompt: '{"title": "Flash Sale Optical", "description": "Store interior with salesman holding a microphone. Flashing lights and colorful banners.", "character": {"name": "Carlos", "speech": "Ta valendo hoje so! Lente fotossensivel com 50% off na Otica Real! Corre, Brasil!"}, "technical": "Veo 3, sales announcer style, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761074656563-video-veta-ia_-_2025-10-21T162350.770.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761074659702.jpg'
+
+  },
+
+  {
+
+    id: '585c3336-ca2d-4c99-86f4-09b542706626',
+
+    category: 'Comercial',
+
+    title: 'TESTE DE VISÃO ÓTICA',
+
+    prompt: '{"title": "Optical Test Challenge", "description": "Sidewalk storefront. Saleswoman playfully approaches camera holding a Free Vision Test sign.", "character": {"name": "Camila", "speech": "Sera que voce ta enxergando bem mesmo? Vem fazer o teste e ganhar armacao gratis!"}, "technical": "Veo 3, inviting vibe, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761074451537-video-veta-ia_-_2025-10-21T162004.269.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761074456171.jpg'
+
+  },
+
+  {
+
+    id: '2cd292ba-be1f-4480-8108-ebfced489b0b',
+
+    category: 'Comercial',
+
+    title: 'BALCÃO DE ÓTICA',
+
+    prompt: '{"title": "Optical Counter Deal", "description": "Store counter with mirrors. Charismatic vendor leans forward gesturing toward the showcase.", "character": {"name": "Marcos", "speech": "Ta esperando o que? Aqui na Otica Nacional tem lente e armacao com desconto de verdade!"}, "technical": "Veo 3, realistic retail, duration 6s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761074245779-video-veta-ia_-_2025-10-21T161642.431.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761074249481.jpg'
+
+  },
+
+  {
+
+    id: '1f66000f-30eb-43c5-8c66-89e3280660ee',
+
+    category: 'Comercial',
+
+    title: 'SELFIE NA ÓTICA',
+
+    prompt: '{"title": "Optical Store Selfie", "description": "Saleswoman walks through aisles full of frames in selfie-style greeting the viewers.", "character": {"name": "Vanessa", "speech": "Aqui na Otica do Povo o atendimento e nota dez e o preco e de amigo! Vem conferir!"}, "technical": "Veo 3, casual reel style, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761074052362-video-veta-ia_-_2025-10-21T161342.242.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761074057814.jpg'
+
+  },
+
+  {
+
+    id: '572555c0-ca3f-4606-b017-e494bd85343b',
+
+    category: 'Comercial',
+
+    title: 'PROMOÇÃO FACHADA ÓTICA',
+
+    prompt: '{"title": "Street Promo Salesman", "description": "Busy sidewalk storefront with banners. Lively salesman shouts excitedly to the camera.", "character": {"name": "Joao", "speech": "Promocao ta pegando fogo! Armacoes a partir de 99 reais, corre que e so hoje!"}, "technical": "Veo 3, dynamic handheld, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761073846652-video-veta-ia_-_2025-10-21T161001.981.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761073851127.jpg'
+
+  },
+
+  {
+
+    id: '261c12f1-db34-43a2-a273-1414875df33b',
+
+    category: 'Comercial',
+
+    title: 'ÓTICA MODERNA',
+
+    prompt: '{"title": "Elegant Optical Store", "description": "Modern store with glass shelves. Saleswoman in white blouse gestures toward designer frames.", "character": {"name": "Carla", "speech": "Aqui voce sai enxergando melhor e ainda mais estiloso. Vem escolher o seu!"}, "technical": "Veo 3, cinematic lighting, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761072890603-video-veta-ia_-_2025-10-21T155407.997.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761072895039.jpg'
+
+  },
+
+  {
+
+    id: '980b66a4-5797-498d-a923-8d71de792b2a',
+
+    category: 'Bebê',
+
+    title: 'BEBÊ CEO',
+
+    prompt: '{"title": "Baby Mini CEO", "description": "Baby in oversized suit in a modern office. Serious focus contrasting with adorable voice.", "character": {"name": "Pequeno Empresario", "speech": "Eu so copiei o prompt, colei no VEO3 e em menos de 1 minuto o video tava pronto."}, "technical": "Veo 3, humorous cinematic, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761011730679-video-veta-ia_-_2025-10-20T225521.389.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761011734551.jpg'
+
+  },
+
+  {
+
+    id: '0debb3ef-9a1c-44c2-b635-77d2f8bfdb67',
+
+    category: 'Bebê',
+
+    title: 'CRIANÇA NO PÔNEI',
+
+    prompt: '{"title": "Baby on Pony Expert", "description": "Baby sitting on a small pony in a sunny backyard. Confident and playful posture.", "character": {"name": "Pequeno Genio", "speech": "No Prompt Viral tem mais de 800 prompts assim, tudo testado pra funcionar."}, "technical": "Veo 3, warm natural light, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761011493048-video-veta-ia_-_2025-10-20T225100.292.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761011496052.jpg'
+
+  },
+
+  {
+
+    id: '87b83704-622f-4308-8b2c-111e78f9b205',
+
+    category: 'Influencer',
+
+    title: 'REPÓRTER SUPER-HEROÍNA',
+
+    prompt: '{"title": "Superhero Reporter", "description": "Busy city street. Reporter dressed as Wonder Woman holding a microphone and gesturing.", "character": {"name": "Reporter Camila", "speech": "Esse e o aplicativo de prompts mais poderoso que eu ja testei pro VEO 3."}, "technical": "Veo 3, urban energetic, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761011295668-video-veta-ia_-_2025-10-20T224752.342.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761011467771.jpg'
+
   }
+
+
+  
 
 
 
