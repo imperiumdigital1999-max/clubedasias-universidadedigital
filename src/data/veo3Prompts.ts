@@ -355,7 +355,137 @@ export const veo3Prompts: VEO3Prompt[] = [
 
     thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761792453672.jpg'
 
+  },
+  
+  {
+
+    id: '6c718da2-ffe2-46c6-8a6a-569b3316a01f',
+
+    category: 'Comédia',
+
+    title: 'GORILA PODCAST',
+
+    prompt: '{"title": "Street Gorilla – Popular Podcast", "description": "Casual podcast set with graffiti walls. Gorilla sits relaxed with humor.", "character": {"species": "gorilla", "clothing": "white t-shirt, flat cap", "speech": "Os caras so falam besteira por ai... eu quero saber e de dinheiro no meu bolso."}, "technical": "Veo 3, urban style, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761103543396-video-veta-ia_-_2025-10-22T002516.330.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761103546593.jpg'
+
+  },
+
+  {
+
+    id: '4981285a-10c3-4f5e-8090-628133e6826e',
+
+    category: 'Comédia',
+
+    title: 'GORILA MOTIVACIONAL',
+
+    prompt: '{"title": "Motivational Gorilla", "description": "Minimalist studio with neon sign SELVA CAST. Gorilla leans toward mic with intense expression.", "character": {"species": "gorilla", "clothing": "black t-shirt", "speech": "Voce nao precisa ser o rei da selva... so precisa acordar antes do leao."}, "technical": "Veo 3, inspirational, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761102929921-video-veta-ia_-_2025-10-22T001446.257.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761102932529.jpg'
+
+  },
+
+  {
+
+    id: '6f035ab6-c5ea-4f16-8798-714ba228ee9b',
+
+    category: 'Comédia',
+
+    title: 'GORILA TRAP',
+
+    prompt: '{"title": "Trap Gorilla", "description": "Neon-lit studio with golden microphone. Gorilla with gold chains leans back in chair.", "character": {"species": "gorilla", "clothing": "leather jacket, gold chains", "speech": "Os humanos fogem da selva do boleto todo mes. Chorando igual crianca mimada."}, "technical": "Veo 3, urban trap, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761102723298-video-veta-ia_-_2025-10-22T001133.017.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761102727067.jpg'
+
+  },
+
+  {
+
+    id: '665c5721-31fe-4b52-999e-4ccb8a0902ea',
+
+    category: 'Comédia',
+
+    title: 'GORILA CEO',
+
+    prompt: '{"title": "Gorilla CEO", "description": "Corporate podcast studio, warm lighting. Gorilla in suit and tie speaks with conviction.", "character": {"species": "gorilla", "clothing": "gray suit, blue tie", "speech": "Eu comecei vendendo bananas na feira... hoje sou dono da floresta."}, "technical": "Veo 3, cinematic business, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761102529990-video-veta-ia_-_2025-10-22T000825.654.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761102535619.jpg'
+
+  },
+
+  {
+
+    id: 'd4577c79-9e5e-4967-8384-dcd99ac446d5',
+
+    category: 'Comercial',
+
+    title: 'CORRETOR QUINTAL',
+
+    prompt: '{"title": "Realtor Backyard Tour", "description": "Realtor in a small backyard with plants. Enthusiastic presentation of the barbecue area.", "character": {"gender": "male", "speech": "Pra quem gosta de espaco, esse quintal aqui e perfeito - cabe churrasqueira e ate rede."}, "technical": "Veo 3, handheld daylight, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761102034461-video-veta-ia_-_2025-10-22T000018.939.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761102043451.jpg'
+
+  },
+
+  {
+
+    id: 'e8b137cd-0dc9-46ad-b18b-1475b574ff78',
+
+    category: 'Comercial',
+
+    title: 'CORRETOR INTERIOR',
+
+    prompt: '{"title": "Cozy House Interior", "description": "Realtor walks through a warm living room, showing homely details and natural light.", "character": {"gender": "male", "clothing": "checkered shirt", "speech": "Essa e aquela casa gostosa, sabe? Bem iluminada e com espaco pra reunir a familia."}, "technical": "Veo 3, tracking shot, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761101904352-video-veta-ia_-_2025-10-21T235805.522.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761101907232.jpg'
+
+  },
+
+  {
+
+    id: 'd19d06a0-0d64-4611-bed9-1a072318c20d',
+
+    category: 'Comercial',
+
+    title: 'CORRETORA APARTAMENTO',
+
+    prompt: '{"title": "Affordable Apartment", "description": "Female realtor in vlog style in front of an apartment complex, smiling and energetic.", "character": {"gender": "female", "speech": "Gente, olha que oportunidade! Apartamento com lazer e financiamento facilitado."}, "technical": "Veo 3, vlog style, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761101703398-video-veta-ia_-_2025-10-21T235436.103.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761101706173.jpg'
+
+  },
+
+  {
+
+    id: '8bed31ca-734a-4be2-9910-6edd8fbb804c',
+
+    category: 'Comercial',
+
+    title: 'CORRETOR LUXO',
+
+    prompt: '{"title": "Luxury Detail Review", "description": "Influencer realtor inside a decorated suite showing high-end finishes and marble details.", "character": {"gender": "male", "speech": "Olha esse acabamento, esses detalhes... e o tipo de imovel que vende sozinho."}, "technical": "Veo 3, dynamic close-up, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761101070293-video-veta-ia_-_2025-10-21T234409.124.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761101073522.jpg'
+
   }
+
+
 
 
   
