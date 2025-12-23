@@ -2019,7 +2019,16 @@ export default function PromptsView() {
     "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764366116318-_scene_4k_202511281841_3f68r.gif",
     "thumbnail_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764366119787.jpg",
     "sub_topico": "Comercial"
-  }
+  },
+        {
+        "id": "e4441155-26e7-4fed-98e7-453813d703bc",
+        "titulo": "BEBÊ ENTREVISTA",
+        "prompt_texto": "{ \"title\": \"Baby Interview – Funny Talk Show Scene\", \"description\": \"A baby sits in a tiny armchair with a toy microphone, acting like a celebrity being interviewed.\", \"character\": { \"name\": \"Sofia\", \"age\": 2, \"gender\": \"female\", \"appearance\": \"baby with curly hair and pink dress holding a toy microphone\", \"expression\": \"funny and confident\", \"speech\": \"Olha, eu dormi só 12 horas hoje… porque a vida de bebê não é fácil, né gente?\", \"voice\": \"baby Brazilian Portuguese voice, humorous and sassy tone\" }, \"environment\": { \"location\": \"living room designed like a talk show set\", \"lighting\": \"soft studio lighting with colored background\", \"atmosphere\": \"TV show and playful\" }, \"camera\": { \"angle\": \"medium close-up frontal\", \"movement\": \"gentle handheld zoom-in\", \"focus\": \"on baby’s expression and toy mic\" }, \"audio\": { \"ambient\": \"studio audience laughter track\", \"music\": \"light talk-show jazz\" }, \"duration\": \"9 seconds\" }",
+        "video_exemplo_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1762145050715-_title_baby_202511030143_79bc9.mp4",
+        "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1762145050715-_title_baby_202511030143_79bc9.gif",
+        "thumbnail_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1762145054615.jpg",
+        "sub_topico": "Bebê"
+    },
 
 
 
