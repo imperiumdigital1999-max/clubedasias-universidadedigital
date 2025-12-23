@@ -1680,7 +1680,7 @@ export default function PromptsView() {
 
     "id": "b70a2b27-ff29-4b39-b629-e334021fb30d",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "STRAWBERRY DEER",
 
