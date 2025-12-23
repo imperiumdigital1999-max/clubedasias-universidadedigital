@@ -863,7 +863,96 @@ export default function PromptsView() {
 
     fullPrompt: 'A beautiful and dreamy anime-style illustration. Dynamic composition, ultra-high definition, delicate details, and cinematic lighting stand out.'
 
+  },[
+  {
+    id: "a7611f8d-36c7-4484-a292-7ee9d694b807",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "LOGOTIPO FLUFFY 3D",
+    description: "Transformação de imagem em objeto 3D coberto por pelo denso e macio com iluminação cinematográfica.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755023535710-4920315724459782152.jpg",
+    fullPrompt: "Transform the uploaded image into a soft, 3D object fully covered in thick, fluffy fur. Preserve exact shape and proportions. Cinematic lighting from behind, glowing edges, black background. Render in ultra high-resolution."
+  },
+  {
+    id: "a51005e0-7730-496a-8424-bec2bb86e8df",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "ROAR & FLY LOGO",
+    description: "Design moderno de logotipo com cabeça de leoa estilizada e silhueta de avião em moldura circular.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755042765531-a-modern-logo-design-featuring-a-stylize_k2Y_y9o0Sgq2xL-vpCKruA_2TWLShMvSP6gii9HB1Tk_g.jpeg",
+    fullPrompt: "Modern logo design featuring a stylized lioness's head in a circular frame. Amber eyes, flowing mane in gold/brown. Sleek silver airplane silhouette integrated. Bold sans-serif font 'Roar & Fly' below."
+  },
+  {
+    id: "f357466c-f1cd-4a30-8ea7-b64882364c64",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "COMUNIDADE TURBOGPT",
+    description: "Logo 3D futurista e impactante com texturas premium (metal/vidro) e iluminação de estúdio.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027449934-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_37_02.png",
+    fullPrompt: "Crie uma logo 3D futurista, elegante e clean para COMUNIDADE TURBOGPT. Elementos tridimensionais, profundidade realista, texturas de metal polido e vidro fosco. Paleta de tons vibrantes com contraste profissional."
+  },
+  {
+    id: "96ac43c9-62ef-4653-bbf7-3d0195656d63",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "SPLASH LETTER S",
+    description: "Wallpaper dinâmico com a letra 'S' formada por respingos de água e gotas refletindo tons de azul.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755039883564-a-vibrant-and-dynamic-wallpaper-design-s_M4zQbJ2pTWKSzHf-numF9Q_LVL_gb1zSZCrIvl7wZB9KA.jpeg",
+    fullPrompt: "Vibrant wallpaper design showcasing the letter 'S' formed by a dramatic water splash. Fluid art style, droplets reflecting spectrum of blues and greens. Gradient background from ocean blue to turquoise."
+  },
+  {
+    id: "5a0c0a40-f54f-4f40-b37f-784d75e8f63c",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "ZALAND FLAME",
+    description: "Logo com tipografia inspirada em chamas e gradiente arco-íris sobre fundo preto.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755040016685-a-modern-logo-design-featuring-the-styli_v6DPo0blTcKDffNsijUf2w_QIHWohjZSGKq7URJ3xZJEA.jpeg",
+    fullPrompt: "Modern logo design with 'Zaland' in flame-inspired font. Rainbow gradient letters against black backdrop. Encapsulated within a glowing turquoise circle with subtle blue outer glow."
+  },
+  {
+    id: "24e17d72-cc8e-4236-8b4c-d169a39d59fe",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "TRUTH RETRO 90S",
+    description: "Ilustração retrô dos anos 90 com a palavra 'TRUTH' em letras bolha neon e elementos de circuito.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755040167993-a-vibrant-90s-retro-style-illustration-s_Tt4XIT9ySImbaLcIh7H0HA_V6zTjLcAQ6K07fz40u65xA.jpeg",
+    fullPrompt: "90s retro-style illustration of the word 'TRUTH' in red bubble letters within electric blue frame. Technological theme with circuit board elements, neon colors on deep space black background."
+  },
+  {
+    id: "53e6d23e-f519-4f18-a942-c5f8840d4b7b",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "ALEXA QUILLING ART",
+    description: "Arte detalhada em papel enrolado (quilling) do nome Alexa com flores e corações coloridos.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755041110284-a-stunning-and-intricate-quilled-paper-a_4xUHWdCOQJu78RiflypLZg_c9NSEIltRu2Fd6nGV826nA%20(1).jpeg",
+    fullPrompt: "Intricate quilled paper art of 'Alexa' from multicolored strips. Script arrangement with swirling lines and tiny paper flowers. Soft clear background, diffused lighting highlighting textures."
+  },
+  {
+    id: "27e2bec2-4cf4-40ab-967e-95f287f844c6",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "PETER COSMIC NEBULA",
+    description: "Retrato artístico surreal do nome Peter com cores fluidas de nebulosa e poeira estelar.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755042198295-a-surreal-digital-art-portrait-showcases__AzwdH4WTAGF5gHzpuH2yA_qqwcaxrcRHu3tppbOvmM8A.jpeg",
+    fullPrompt: "Surreal digital art of 'Peter' in nebula colors (crimson, gold, azure). Letters refract light with ethereal movement against an indigo space backdrop with constellations."
+  },
+  {
+    id: "ce4fbe22-4a7e-4e44-80d0-b1c78a238b43",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "AVI RAMB NEON TYPO",
+    description: "Arte vanguardista com tipografia estilo jornal empilhado e cores neon pulsantes.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755098974273-a-captivating-digital-art-piece-showcase_ZYVzqyvuRXyakCApzR6_kg_fUTuw6M_TK2WZUv1JSDzlg.jpeg",
+    fullPrompt: "Avant-garde typographic style for 'Avi Ramb'. Letters crafted from horizontal newspaper-like lines with luminous neon palette. Floating effect against black background with silver grains."
+  },
+  {
+    id: "3eac71b7-58b9-4fe8-ba03-c0a55664a19c",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "ALANIE FLORAL 3D",
+    description: "Render 3D do nome Alanie entrelaçado em design floral com letras iridescentes e rosa de cristal.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755099170235-a-stunning-3d-render-showcasing-the-eleg_pQB2pyxfTUGI9R4AJ8iWfQ_AbeaSVYiSS2TnUelUZcuyg.jpeg",
+    fullPrompt: "3D render of 'Alanie' within vibrant floral design. Iridescent letters in blue/pink/gold with delicate crowns and vines. Luminous crystal rose to the right, dreamy bokeh background."
+  },
+  {
+    id: "aa7bebab-3701-4e7f-8b87-14d135960a4d",
+    tag: "IMAGENS LOGOS / NOMES",
+    title: "JOSYE ALVES GLASS",
+    description: "Tipografia 3D em vidro/resina com gradiente de cores e efeito de partículas brilhantes internas.",
+    image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755310616718-7B32B4F2-F772-41AB-91D6-9E88D7364928.png",
+    fullPrompt: "3D typographic render of 'Josye Alves' in elaborate cursive. Translucent glass material with embedded colorful particles. Multi-directional studio lighting, high saturation gradient."
   }
+]
 
 
 
