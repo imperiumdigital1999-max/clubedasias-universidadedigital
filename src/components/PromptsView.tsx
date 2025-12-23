@@ -1150,7 +1150,41 @@ export default function PromptsView() {
 
     "fullPrompt": "Perfume bottle labeled 'ESSENTIA'. Clear glass, golden liquid, water droplets, beam of warm light, minimalist luxury setting."
 
+  },
+  {
+
+    "id": "7e5dcac2-7128-4dec-9c77-8f1fd466b031",
+
+    "tag": "IMAGENS MINIATURAS",
+
+    "title": "BATULA COLLECTIBLE",
+
+    "description": "Figura colecionável de vinil detalhada de um gato morcego em um diorama de beco com iluminação neon.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757001126096-assets_task_01k4ajw1xweg7rjmhtx8s9scsr_1756997054_img_0.webp",
+
+    "fullPrompt": "Uma figura colecionável de vinil altamente detalhada, design arrojado e realista. Aparência de vinil de veludo. Batula — paródia de gato preto com olhos amarelos e pequenas asas. Foto de ação com capa esvoaçante saltando para a frente. Diorama de beco com lixeira e poste de luz, iluminação de estúdio realista e barras de luz neon ao fundo."
+
+  },
+
+  {
+
+    "id": "22dc27fe-81ca-41c1-a8cf-c5670016b147",
+
+    "tag": "IMAGENS MINIATURAS",
+
+    "title": "HORTIFRUTTI DIORAMA",
+
+    "description": "Trabalhadores em miniatura processando frutas gigantes com ferramentas de construção em uma cozinha hiper-realista.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755254422264-IMG_6575.jpeg",
+
+    "fullPrompt": "Top-down view of miniature workers cutting and processing enormous fruits with construction tools. Giant oranges, watermelons, and strawberries with rich saturated colors. Workers wearing safety helmets using saws, chisels, and cranes. Hyperrealistic style, high-end product photography, crisp sharp details."
+
   }
+
+
+    
 
 
 
