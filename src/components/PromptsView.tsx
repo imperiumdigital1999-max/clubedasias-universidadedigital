@@ -386,7 +386,7 @@ export default function PromptsView() {
   tag: 'IMAGENS EM VIDRO',
   title: 'Maçã Translúcida',
   description: 'Arte em vidro de caramelo translúcido com iluminação cinematográfica e detalhes macro ultra-realistas.',
-  image: 'https://images.unsplash.com/photo-1576489441115-4603a115869d?w=400&h=300&fit=crop',
+  image: 'https://img.freepik.com/fotos-premium/uma-maca-de-vidro-com-uma-folha_853177-1211.jpg',
   fullPrompt: 'High-detail candy apple made from translucent caramel glass with subtle golden undertones, soft backlight creating glowing edges that accentuate the delicate ripples and ridges on its surface, cinematic realism with deep shadows and luminous highlights, ultra HD resolution, macro photography capturing the intricate texture and sheen of the caramel glass, with a blurred background that emphasizes the subject\'s centrality and isolation, inviting the viewer to focus on the mesmerizing play of light and color on the candy apple\'s surface.'
 }
   ];
