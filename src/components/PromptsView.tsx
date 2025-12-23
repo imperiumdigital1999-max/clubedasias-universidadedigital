@@ -1690,6 +1690,14 @@ export default function PromptsView() {
 
     "fullPrompt": "Magical baby deer made of strawberry texture. Antlers as fresh leaves, red skin with seeds. Pixar 3D style, field of glowing oversized strawberries, fairytale lighting."
 
+  },
+    {
+    "id": "0f0c7c19-cb4f-4595-9472-2acac39ea8f5",
+    "tag": "IMAGENS TIRINHAS",
+    "title": "TIRINHA PERSONALIZADA",
+    "description": "Estrutura de tirinha com 4 quadros para narrativas sequenciais, adaptável a diferentes estilos como Comics ou Anime.",
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755023091483-IMG_7307.jpeg",
+    "fullPrompt": "Uma tirinha com 4 quadros no estilo cartoon vintage/comics, com contornos grossos e textura de papel. Personagem consistente baseado em foto de referência. Quadro 1: Personagem estressado no notebook. Quadro 2: Sorrindo e explicando algo. Quadro 3: Confiante dando uma dica. Quadro 4: Apontando para o leitor. Inclui balões de fala personalizáveis e estilo visual consistente em todos os painéis."
   }
 
 
