@@ -36,9 +36,9 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
     {
       id: 'v2',
       titulo: 'Técnicas Avançadas de Edição',
-      descricao: 'Descubra técnicas avançadas para criar vídeos virais que engajam sua audiência',
-      videoUrl: 'https://www.youtube.com/watch?v=exemplo2',
-      thumbnail: 'https://img.youtube.com/vi/ABC123XYZ/maxresdefault.jpg',
+      descricao: 'VEO 3 Grátis para Criar Vídeos com IA Absurdos',
+      videoUrl: 'https://www.youtube.com/watch?v=PEQzy-BFjy8',
+      thumbnail: 'https://img.youtube.com/vi/PEQzy-BFjy8/maxresdefault.jpg',
       duracao: '22:15'
     },
     {
