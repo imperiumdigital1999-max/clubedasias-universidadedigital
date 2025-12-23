@@ -952,7 +952,6 @@ export default function PromptsView() {
     image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755310616718-7B32B4F2-F772-41AB-91D6-9E88D7364928.png",
     fullPrompt: "3D typographic render of 'Josye Alves' in elaborate cursive. Translucent glass material with embedded colorful particles. Multi-directional studio lighting, high saturation gradient."
   }
-]
 
 
 
