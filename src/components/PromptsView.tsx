@@ -1858,7 +1858,56 @@ export default function PromptsView() {
 
     "fullPrompt": "Extremely realistic scene of a fluffy cat and child side by side at a table with a smartphone. Detailed fur, skin pores, natural eye reflections. Medium close-up, cinematic color grading, 4K."
 
+  },
+  {
+
+    "id": "94f05cf4-9eb5-4f8a-8d31-04de3f8e6b25",
+
+    "tag": "NANO AI STUDIO",
+
+    "title": "PERFIL URBAN REFLECTION",
+
+    "description": "Retrato close-up fotorrealista com reflexos detalhados de uma metrópole tecnológica nas lentes dos óculos.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1758885380254-IMG_7686.png",
+
+    "fullPrompt": "Ultra high quality 8K photorealistic close-up portrait. Subject wearing thick-framed black sunglasses in profile view. Lenses reflect a dynamic urban landscape with glowing yellow and orange lights. Natural skin textures, freckles, cinematic volumetric lighting, and soft bokeh background. Dark knitted beanie for texture."
+
+  },
+
+  {
+
+    "id": "6492545f-96f8-4dd1-82e1-e3a9b95e4b76",
+
+    "tag": "NANO AI STUDIO",
+
+    "title": "PREMIUM OFFICE LOGO",
+
+    "description": "Transforma sua logo em um letreiro metálico 3D premium em uma parede de recepção moderna.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1758623469509-IMG_7650.png",
+
+    "fullPrompt": "Ultra-realistic 3D render of the uploaded logo on an indoor office wall. Metallic silver finish with brushed texture, sharp clean edges, and realistic depth. Soft warm spotlights, modern wooden reception desk, professional office atmosphere, cinematic lighting, 3:4 ratio."
+
+  },
+
+  {
+
+    "id": "ba8b64e5-3167-4a84-a595-30207a78b10f",
+
+    "tag": "NANO AI STUDIO",
+
+    "title": "LOGO CORPORATIVO 3D",
+
+    "description": "Renderização realista de logomarca aplicada em ambiente de lobby com iluminação de estúdio.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1758623293531-IMG_7650.png",
+
+    "fullPrompt": "Ultra-realistic 3D render of the uploaded logo. Premium silver metallic finish on lobby wall. Perfect proportions, no distortion, realistic depth. Background features a well-lit office space with plants and subtle furniture. Extreme texture detail and shallow depth of field."
+
   }
+
+
 
 
 
