@@ -1921,7 +1921,6 @@ export default function PromptsView() {
     "fullPrompt": "A green caterpillar, inching across a vibrant squash plant's branch, crawls towards a plump, ripe orange squash. Handheld camera follows its slow, deliberate movement, showcasing the plant's detailed textures and the caterpillar's tiny legs. Focus shifts between the caterpillar and the squash as it nears its destination. Bright, natural lighting."
 
   },
-[
   {
     "id": "f5f59405-b01f-4581-ba31-67aee723cf77",
     "titulo": "VENDEDORA PRODUTOS ZERO LACTOSE",
@@ -2021,7 +2020,6 @@ export default function PromptsView() {
     "thumbnail_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764366119787.jpg",
     "sub_topico": "Comercial"
   }
-]
 
 
 
