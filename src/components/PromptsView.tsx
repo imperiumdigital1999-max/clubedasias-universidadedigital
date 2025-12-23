@@ -230,7 +230,83 @@ export default function PromptsView() {
       image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=300&fit=crop',
       fullPrompt: 'Create a delicate watercolor portrait with soft, flowing colors and natural textures. Use traditional watercolor techniques with visible paper texture, color bleeding, and gradual transitions. Focus on light, airy composition with gentle brush strokes and a harmonious color palette of pastels and earth tones.'
     },
-    {
+Entendido. Aqui estão os códigos convertidos para o seu padrão, utilizando a tag IMAGENS DESENHO AQUARELA e mapeando as URLs de imagem corretamente para o campo image:
+
+JavaScript
+
+[
+  {
+    id: '0d42f6bd-e0fa-4c6b-b2bc-7e4ccb074637',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Mario Graffiti Londres',
+    description: 'Ilustração estilo street art do Mario fazendo graffiti em um muro de Londres com Bowser e Toad.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757000721299-assets_task_01k4amch2eftsvwdvdj13srmg7_1756998680_img_0.webp',
+    fullPrompt: 'Mario fez um graffiti em um muro de Londres em seu gráfico. Foi escrito "Quando você quiser, Bo\'!". No gráfico na voit des Toad et Bowser no modo "de la rue". Mario a la casquete à l\'envers, un pantalon un peu large. Des bombas de pintura treinam um pouco. O grafite é magnífico. A coté de lui il ya bébé bowser que o considera justo com um ar de défi'
+  },
+  {
+    id: '9b81e727-079e-44dd-802b-6c15c5d6f0bb',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Pesca Milagrosa Pixar Style',
+    description: 'Cena vibrante de Pedro e André pescando ao amanhecer, com estilo de animação 3D Disney Pixar.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755038995157-assets_task_01k2g1hek4f33r697c852he85j_1755032740_img_0.webp',
+    fullPrompt: 'Crie uma imagem com um Mar calmo ao amanhecer, com um barco de madeira simples balançando suavemente. Pedro e André, de roupa simples de pescadores, puxam uma rede cheia de peixes brilhantes e coloridos, enquanto o barco quase se inclina pelo peso. Ao fundo, a luz dourada do sol reflete na água. O rosto dos pescadores mostra surpresa e alegria. No estilo Disney pixar 3D.'
+  },
+  {
+    id: '1dde7f3e-03fb-4041-af03-3ad91caaf60a',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Gatos do Basquete Streetwear',
+    description: 'Cena urbana noturna com gatos estilosos usando hoodies em uma quadra de basquete.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755038858686-assets_task_01k2b27xq4eq89qrxavgpd410b_1754865707_img_0.webp',
+    fullPrompt: 'Ultra-realistic, hyper-detailed extreme low-angle super-wide fisheye lens shot — camera placed almost on the ground, starting from the cats’ sneakers and shooting upward for maximum imposing effect. Scene set at night on an urban basketball court surrounded by rusty chain-link fences, graffiti-covered walls. Three scruffy, streetwise alley cats dressed in oversized premium Loomcore hoodies. Harsh, bright camera flash combined with warm firelight. Vintage VHS camcorder aesthetic.'
+  },
+  {
+    id: '17d8a4fa-8b1e-469a-9867-e44f790ce3df',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Jesus e a Ovelha Perdida',
+    description: 'Pintura em aquarela com vista aérea de Jesus e ovelhas negras caminhando pela praia.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755038822743-assets_task_01k2b6ptpze6e8cca992x7saqx_1754870372_img_1.webp',
+    fullPrompt: 'create an image of Jesus and black sheep following behind him on the beach, watercolor style, birds eye view'
+  },
+  {
+    id: '57ac5c25-e7c2-4c5d-8363-560f4d556c98',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Caricatura Digital CR7',
+    description: 'Ilustração digital detalhada e humorística de Cristiano Ronaldo comemorando no estádio.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755038388986-assets_task_01k2fpfkszfe3te3rye9bzs8ve_1755021142_img_1.webp',
+    fullPrompt: 'Hyper-realistic digital caricature illustration of Cristiano Ronaldo celebrating a goal, with exaggerated facial features and proportions, humorous yet highly detailed, vibrant colors, wearing his football uniform, in the middle of a football stadium full of cheering fans.'
+  },
+  {
+    id: 'a6915664-d2ba-40b6-804d-03fa85a947b3',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Casa de Campo Encantada',
+    description: 'Pintura de uma casa costeira atemporal cercada por jardins selvagens e floresta.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755029252958-assets_task_01k2d7a5taex1b7sgqqw4xeswr_1754938106_img_1.webp',
+    fullPrompt: 'My dream house: a mix of the sea, the Baltic Sea, a thatched-roof house, and coastal architecture. Timeless. A beautiful, yet somewhat wild garden. Plenty of herbs, lavender, and fruit trees. Surrounded by forest, but with a lake. Somehow enchanted.'
+  },
+  {
+    id: '0de0453e-6167-4b02-8617-eb014f8c6a15',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Raposa Mística Anime',
+    description: 'Ilustração estilo anime de uma raposa com pelos iridescentes em um penhasco sob o luar.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755028732058-assets_task_01k2ddrqbhe0ztpch9t35rcrdf_1754944878_img_0.webp',
+    fullPrompt: 'fox, with a necklace around it\'s neck with a charm that is a yellow circle that looks like it\'s glowing. the fox is anime style and it\'s fur has iridescent streaks. sitting on a cliff, with the moon, stars and a forrest in the background.'
+  },
+  {
+    id: 'e419c35a-dfa7-4de4-9add-24ca6a06e900',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Oceano Cósmico',
+    description: 'Pintura artística de uma garota na praia observando ondas oceânicas cósmicas.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755028522412-assets_task_01k2f52ec0ehtrdam2fk2ec5zn_1755002842_img_1.webp',
+    fullPrompt: 'create an image of one beautiful girl nearby beach with beer glass and enjoying cosmic ocean waves'
+  },
+  {
+    id: 'f6f38d3a-6942-4e5c-8b95-b64e05414c5e',
+    tag: 'IMAGENS DESENHO AQUARELA',
+    title: 'Pequenos Chefs e o Croissant',
+    description: 'Ilustração lúdica de chefs minúsculos preparando um croissant gigante.',
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027964682-assets_task_01k2drce68eh9by2t8enad2ky5_1754955999_img_0.webp',
+    fullPrompt: 'whimsical illustration, a group of tiny chefs working together on a giant croissant. Each chef is dressed in a classic white chef\'s uniform. The croissant, golden and flaky, is placed on a wooden surface with a warm, cozy atmosphere.'
+  },{
       id: '15',
       tag: 'IMAGENS ESTILO CARTOON',
       title: 'Personagem Cartoon',
