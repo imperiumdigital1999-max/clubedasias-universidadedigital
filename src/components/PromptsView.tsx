@@ -1324,7 +1324,168 @@ export default function PromptsView() {
 
     "fullPrompt": "Ilustração estilo Pixar/cartoon vibrante. Personagem sorridente apontando para tela com animações saindo dela. Texto integrado: 'Você Não Precisa Pagar por Ferramenta pra criar Animações de Alta Qualidade'. Ambiente criativo digital."
 
+  },
+  {
+
+    "id": "bbbc38a8-5a58-4c90-9fe4-2b90d1047bb9",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "COCA-COLA REFRESH",
+
+    "description": "Arte digital dinâmica de lata de Coca-Cola em segmentos flutuantes com gelo e respingos realistas.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1758248987691-assets_task_01k5bngxetf43azh31btfrxx24_1758107125_img_3.webp",
+
+    "fullPrompt": "Arte digital dinâmica de uma lata de Coca-Cola cortada em segmentos flutuantes. Cubos de gelo realistas, respingos e condensação. Fundo gradiente vermelho vibrante, estilo publicitário hiper-realista e comercial."
+
+  },
+
+  {
+
+    "id": "32a0a3b8-a480-4ba0-ad3e-c695bb7b9f47",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "M. ROSA CHAMPAGNE",
+
+    "description": "Garrafa de champagne premium em areia branca tropical com flores de hibisco e luz dourada.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755564128280-a-luxurious-product-shot-advertisement-s_Vvc-E9SvTWSzRax7hDreGw_XUEuMouETtSvpFf0qmcQGA.jpeg",
+
+    "fullPrompt": "Luxurious product shot of 'M. ROSA' champagne on white sand. Radiant tropical sun, condensation droplets, hibiscus and plumeria flowers. Pink champagne hue, shallow depth of field, exotic elegance."
+
+  },
+
+  {
+
+    "id": "8b31b7a6-fc13-48b1-a61f-e37c2f2ba48f",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "LACTAOTEA TROPICAL",
+
+    "description": "Lata de chá gelado em areia de praia tropical com cubos de gelo e clima de verão.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755568649208-a-vibrant-sun-drenched-photograph-showca_-REjHqyTSi21T6mTmOJrHQ_VASq_uqkTsO9t9uonmPB1w.jpeg",
+
+    "fullPrompt": "Vibrant photograph of 'LACTAOTEA' can in golden sand. Moss green and white label, ice cubes, blurred beach umbrella and towel. Late afternoon sun, tranquil summery atmosphere."
+
+  },
+
+  {
+
+    "id": "5141d2f1-12e3-4269-b92b-ea7464aefe17",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "ESSENTIA PERFUME",
+
+    "description": "Frasco de perfume luxuoso sobre superfície preta reflexiva com gotas d'água em cascata.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755563831772-a-photograph-of-a-perfume-bottle-labeled_XXYjMHRERX6lbqP0bQ06Kg_S-8jbInQQ722DLfnjM2lfw.jpeg",
+
+    "fullPrompt": "Perfume bottle 'ESSENTIA' on reflective black surface. Golden liquid, water droplets cascading down glass. Single beam of warm yellow light, charcoal gray background, minimalist luxury."
+
+  },
+
+  {
+
+    "id": "15faec03-64d4-495f-8116-e3b3bda2b865",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "JBL TUNE BLACK",
+
+    "description": "Fones de ouvido JBL pretos em superfície de concreto polido com design minimalista.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755563797917-a-photograph-of-a-sleek-black-jbl-tune-5_qhjem6RMSIaFUqFMrjSvfg_S2UkGOWaSFO1-V6lNe2oiA.jpeg",
+
+    "fullPrompt": "Black JBL Tune 520BT headphones on polished concrete. Minimalist design, silver accents, soft diffused light. Subtle succulent plant in bokeh background."
+
+  },
+
+  {
+
+    "id": "a18887be-4a7c-4e01-a5bf-477c1feedc89",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "COCA-COLA CHERRIES",
+
+    "description": "Lata de Coca-Cola personalizada com cerejas sobre musgo e fundo de montanhas ao pôr do sol.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755103462504-a-photograph-of-a-vibrant-red-coca-cola-_CIwNxnc_Q-awSVH1WVPvEQ_wdRnT5wmSKKGtx2vQInZpw.jpeg",
+
+    "fullPrompt": "Coca-Cola can 'Angela & Paco' on emerald green moss. Five red cherries at base, snow-capped mountain backdrop, pastel sunset sky, diffused lighting."
+
+  },
+
+  {
+
+    "id": "355ce52c-affe-4c7d-b36c-eb82c25ea626",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "SKINCARE SAKURA",
+
+    "description": "Conjunto de cosméticos minimalistas com flores de sakura sobre lenço de seda.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755103408199-a-close-up-photograph-of-an-iconic-luxur_-QARcGscRnG_OZ_YKPZ5EA_sQTEvsyiTw2qHeONXPJobA.jpeg",
+
+    "fullPrompt": "Luxury skincare set, minimalist bottles without labels. Delicate sakura blossoms, colorful silk scarf background. Soft natural light, high-end cosmetic photography."
+
+  },
+
+  {
+
+    "id": "ccdcb6e2-40a4-43c3-93a8-b0c0f0e4427b",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "FOREST BLOOM HAIR",
+
+    "description": "Elixir capilar em frasco de vidro sobre musgo em uma selva tropical com luz filtrada.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755103344554-a-photograph-showcasing-a-bottle-of-fore_a7sdTZp-SRqX5GIeD6J0iw_qzezg0XqSLq7mC148W_IYg.jpeg",
+
+    "fullPrompt": "Bottle of 'Forest Bloom Hair Elixir' on green moss in a jungle. Mango illustration on label, vibrant orchids and ferns around. Dappled sunlight through canopy."
+
+  },
+
+  {
+
+    "id": "d2a2e8c3-c3a6-41f6-ba27-efa60c61d668",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "NECLAR SKIN MIST",
+
+    "description": "Spray facial de Aloe Vera sobre folhas frescas com estética de beleza clean.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755103075152-a-photograph-of-a-neclar-cica-aloe-boost_GHf3URW_TnGcqF_nb7znRw_fvwjxYrQRviS62Rqvx-2HQ.jpeg",
+
+    "fullPrompt": "NECLAR Skin Mist bottle on aloe vera and centella leaves. Translucent green bottle, white sans-serif font. Diffused studio lighting, wellness and clean beauty aesthetic."
+
+  },
+
+  {
+
+    "id": "31719ee4-7d6a-4999-9e79-874158b18da7",
+
+    "tag": "IMAGENS PRODUTOS",
+
+    "title": "JARRAH HONEY",
+
+    "description": "Pote de mel premium sobre pedra vulcânica em cenário de dunas de areia.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755102964574-a-photograph-of-a-500g-jarrah-honey-jar-_g-tOtZawSjK31_DarcVgxg_dHMWsiHdRu-7Kj7Qr85EIg.jpeg",
+
+    "fullPrompt": "Jarrah Honey jar on black volcanic stone. Wooden dipper with dripping honey, desert sand dunes background, luxury amber gradient, cinematic studio lighting."
+
   }
+
+
 
 
 
