@@ -770,7 +770,121 @@ export const veo3Prompts: VEO3Prompt[] = [
 
     thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760466551544.jpg'
 
+  },
+  
+  {
+
+    id: 'ca20e7d7-d80d-46b6-8c43-7092d9dbd6cd',
+
+    category: 'Animação',
+
+    title: 'ANIMAÇÃO PIXAR TESOURO',
+
+    prompt: '{"title": "Pixar Adventure Treasure", "description": "3D animated character in Pixar style standing in a lush jungle opening a glowing treasure chest.", "character": {"name": "Explorer", "speech": "Achei o ouro, agora sei como ganhar dinheiro com esses videos"}, "technical": "Veo 3, Pixar 3D style, 4K resolution"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1757095297148-ouo0391kn8p.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-ca20e7d7-d80d-46b6-8c43-7092d9dbd6cd.jpg'
+
+  },
+
+  {
+
+    id: '2a78010b-5d1e-43af-a801-e262ad2cd3df',
+
+    category: 'Comédia',
+
+    title: 'BEBÊ ROBÔ SARCÁSTICO',
+
+    prompt: '{"title": "Mischievous Baby Robot Pajamas", "description": "Realistic newborn lying in a crib with robot pajamas delivering a sarcastic line with lip-sync.", "character": {"name": "Baby", "speech": "Eu gosto de chorar a noite toda so pra minha mamae ficar acordada aqui comigo"}, "technical": "Veo 3, precise lip-sync, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1757095139811-iy7g2myw8yr.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-2a78010b-5d1e-43af-a801-e262ad2cd3df.jpg'
+
+  },
+
+  {
+
+    id: '58321f8c-ef87-47ea-abdd-16fca159fb4c',
+
+    category: 'Animação',
+
+    title: 'ANIMAÇÃO PIXAR ROOFTOP',
+
+    prompt: '{"title": "Lucas Pixar Rooftop", "description": "Pixar-style man on a realistic rooftop at sunset. Modern city skyline in the background.", "character": {"name": "Lucas", "speech": "Hoje eu vou conversar com alguem que largou tudo pra viver de animacoes 3D!"}, "technical": "Veo 3, golden hour lighting, duration 8s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1757095026872-kg8tiv8vda.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-58321f8c-ef87-47ea-abdd-16fca159fb4c.jpg'
+
+  },
+
+  {
+
+    id: '9957865e-57da-4f85-b4b2-df7fac7cdcee',
+
+    category: 'Tutorial',
+
+    title: 'NATAL PAPAI NOEL CORREDOR',
+
+    prompt: '{"title": "Santa Quiet Delivery", "description": "Apartment hallway at night. Santa kneels to place a red gift by a door and whispers to camera.", "character": {"name": "Papai Noel", "speech": "O melhor presente e aquele que vem com carinho, nao com preco."}, "technical": "Veo 3, warm cinematic whisper, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760967882916-video-veta-ia_-_2025-10-20T104404.313.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760967885658.jpg'
+
+  },
+
+  {
+
+    id: 'd1a19852-065d-433d-975a-9bc9626d7510',
+
+    category: 'Tutorial',
+
+    title: 'NATAL PAPAI NOEL POLTRONA',
+
+    prompt: '{"title": "Santa at Home", "description": "Santa sitting in a large armchair near a fireplace reading letters and speaking warmly.", "character": {"name": "Papai Noel", "speech": "Todo ano eu recebo milhoes de pedidos... mas o mais bonito e o desejo de estar junto."}, "technical": "Veo 3, cozy fireplace lighting, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760926040294-video-veta-ia_-_2025-10-19T230632.936.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760926043360.jpg'
+
+  },
+
+  {
+
+    id: 'aa6d0d8a-9a5b-4a2b-a70d-da6c957a0c99',
+
+    category: 'Tutorial',
+
+    title: 'NATAL PAPAI NOEL RUA',
+
+    prompt: '{"title": "Urban Santa Christmas", "description": "Busy city street with Christmas lights. Santa rings a bell and talks to the camera with joy.", "character": {"name": "Papai Noel", "speech": "Olha ao redor... o Natal ta por toda parte! O melhor presente e o sorriso das pessoas."}, "technical": "Veo 3, authentic urban festive, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760925760219-video-veta-ia_-_2025-10-19T230221.850.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760925763740.jpg'
+
+  },
+
+  {
+
+    id: '68944552-e5aa-4d80-ab0c-c64edc939a1c',
+
+    category: 'Tutorial',
+
+    title: 'NATAL PAPAI NOEL SHOPPING',
+
+    prompt: '{"title": "Mall Santa Cheer", "description": "Bright shopping mall with large tree. Santa waves and speaks happily to families.", "character": {"name": "Papai Noel", "speech": "O Natal ta chegando! Que tal espalhar um pouquinho de alegria por ai tambem?"}, "technical": "Veo 3, smooth lateral tracking, duration 7s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760925592261-video-veta-ia_-_2025-10-19T225940.499.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760925596775.jpg'
+
   }
+
+
 
 
 
