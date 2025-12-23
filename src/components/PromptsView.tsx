@@ -1947,7 +1947,16 @@ export default function PromptsView() {
     "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764366643221-_scene_4k_202511281850_4f97n.gif",
     "thumbnail_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764366656306.jpg",
     "sub_topico": "Comercial"
-  }
+  },
+    {
+        "id": "a00fa2e9-31c9-4c7b-b4de-f1d314b5f644",
+        "titulo": "PADARIA ",
+        "prompt_texto": "{\n  \"scene\": \"Cinematic 4K indoor scene at the bakery section of a supermarket. Golden breads, croissants, and cakes are neatly displayed. A friendly employee stands behind the counter holding a tray of warm cheese bread.\",\n  \"characters\": [\n    {\n      \"name\": \"Luciana\",\n      \"gender\": \"female\",\n      \"appearance\": \"Brazilian woman in her 30s, brown hair tied in bun, white apron, smiling confidently.\",\n      \"expression\": \"warm and genuine.\",\n      \"speech\": \"Acabou de sair do forno, olha só que delícia! Pão de queijo quentinho e bolos caseiros, tudo feito aqui.\",\n      \"voice\": \"female Brazilian Portuguese voice, simpática e acolhedora.\"\n    }\n  ],\n  \"camera\": {\n    \"angle\": \"close-up of tray, then tilt-up to her face.\",\n    \"movement\": \"smooth handheld movement for realism.\",\n    \"focus\": \"transition between bread and her smile.\"\n  },\n  \"lighting\": \"warm golden bakery light, cozy tone.\",\n  \"audio\": {\n    \"ambient\": \"light chatter, oven sounds, faint acoustic music.\",\n    \"music\": \"gentle upbeat tune matching the cozy vibe.\"\n  },\n  \"duration\": \"10 seconds\"\n}\n",
+        "video_exemplo_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1762391607423-video-veta-fast-1762391586558.mp4",
+        "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1762391607423-video-veta-fast-1762391586558.gif",
+        "thumbnail_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1762391732762.jpg",
+        "sub_topico": "Comercial"
+    }
 
 
 
