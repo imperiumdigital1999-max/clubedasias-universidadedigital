@@ -50,7 +50,7 @@ export default function ImportantNotice({ onBannerClick }: ImportantNoticeProps)
                       ? 'text-green-400 drop-shadow-[0_0_10px_rgba(74,222,128,0.5)]'
                       : 'text-white'
                   }`}>
-                    {isActivated ? 'AI LIBERADA!' : 'AVISO IMPORTANTE'}
+                    {isActivated ? 'AI LIBERADA!'}
                   </h3>
                   <h4 className="text-lg md:text-xl font-semibold text-blue-400 mb-3">
                     Acesso Viral Edit + VO3 AI
