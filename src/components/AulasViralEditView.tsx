@@ -20,8 +20,8 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
       id: '1',
       titulo: 'Introdução ao Viral Edit + VO3 AI',
       descricao: 'Aprenda os fundamentos da plataforma e como começar a criar vídeos profissionais com IA',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      ebookUrl: '#',
+      videoUrl: '#',
+      ebookUrl: 'https://drive.google.com/file/d/138YpAsEjzISoVHemiHn8TwippKHjdMdy/view?usp=sharing',
       thumbnail: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop'
     },
     {
