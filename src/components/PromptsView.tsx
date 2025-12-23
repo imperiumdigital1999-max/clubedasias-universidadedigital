@@ -1920,7 +1920,109 @@ export default function PromptsView() {
 
     "fullPrompt": "A green caterpillar, inching across a vibrant squash plant's branch, crawls towards a plump, ripe orange squash. Handheld camera follows its slow, deliberate movement, showcasing the plant's detailed textures and the caterpillar's tiny legs. Focus shifts between the caterpillar and the squash as it nears its destination. Bright, natural lighting."
 
+  },
+    
+  {
+
+    "id": "f5f59405-b01f-4581-ba31-67aee723cf77",
+
+    "tag": "VÍDEOS VEO 3",
+
+    "sub_topico": "Comercial",
+
+    "title": "VENDEDORA PRODUTOS ZERO LACTOSE",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764369018585.jpg",
+
+    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764369016159-_scene_4k_202511281929_g20wk.mp4",
+
+    "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764369016159-_scene_4k_202511281929_g20wk.gif",
+
+    "fullPrompt": "{ \"scene\": \"4K cinematic tasting table in a natural store...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–11 seconds\" } }"
+
+  },
+
+  {
+
+    "id": "2779c513-e909-4f94-a120-b8b05b81a960",
+
+    "tag": "VÍDEOS VEO 3",
+
+    "sub_topico": "Comercial",
+
+    "title": "LOJA DE NATURAIS SEM AÇUCAR",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764368979524.jpg",
+
+    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764368976806-_scene_4k_202511281929_2w63y.mp4",
+
+    "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764368976806-_scene_4k_202511281929_2w63y.gif",
+
+    "fullPrompt": "{ \"scene\": \"4K cinematic scene inside a modern natural products store...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–12 seconds\" } }"
+
+  },
+
+  {
+
+    "id": "3369058f-1742-4b91-a046-836d9357913a",
+
+    "tag": "VÍDEOS VEO 3",
+
+    "sub_topico": "Comercial",
+
+    "title": "LOJA DE PRODUTOS NATURAIS",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764368956556.jpg",
+
+    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764368930051-_scene_4k_202511281928_e5y58.mp4",
+
+    "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764368930051-_scene_4k_202511281928_e5y58.gif",
+
+    "fullPrompt": "{ \"scene\": \"4K cinematic scene showing a natural products counter...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–12 seconds\" } }"
+
+  },
+
+  {
+
+    "id": "5828f182-6171-41e0-866b-619a79ef73af",
+
+    "tag": "VÍDEOS VEO 3",
+
+    "sub_topico": "Comercial",
+
+    "title": "HIGIENIZAÇÃO CORTINA",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764367912629.jpg",
+
+    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764367909216-_scene_4k_202511281911_48lhm.mp4",
+
+    "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764367909216-_scene_4k_202511281911_48lhm.gif",
+
+    "fullPrompt": "{ \"scene\": \"4K cinematic cleaning scene in a cozy living room...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–12 seconds\" } }"
+
+  },
+
+  {
+
+    "id": "ee855d47-9b30-4899-a54d-7607100d85cd",
+
+    "tag": "VÍDEOS VEO 3",
+
+    "sub_topico": "Comercial",
+
+    "title": "CURSO ROBOTICA",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764366656306.jpg",
+
+    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764366643221-_scene_4k_202511281850_4f97n.mp4",
+
+    "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764366643221-_scene_4k_202511281850_4f97n.gif",
+
+    "fullPrompt": "{ \"scene\": \"4K cinematic scene inside a modern robotics classroom...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–12 seconds\" } }"
+
   }
+
+
 
 
 
