@@ -124,7 +124,7 @@ export default function PromptsView() {
     tag: 'COMANDOS GPT',
     title: 'Otimização de Campanhas de PPC',
     description: 'Atue como um especialista em marketing digital focado',
-    image: 'https://images.unsplash.com/photo-1551288049-bbbda546697a?w=400&h=300&fit=crop',
+    image: 'https://www.valuehost.com.br/blog/wp-content/uploads/2024/03/pay-per-click.jpeg.webp',
     fullPrompt: 'Atue como um especialista em marketing digital focado em campanhas de PPC (pay-per-click). Seu desafio é estruturar e otimizar campanhas pagas para promoção de produtos ou serviços, levando em consideração orçamentos e segmentações específicas. Siga os passos abaixo:\n1. Defina qual é o objetivo da campanha, baseando-se na informação de {{objetivo_campanha}}.\n2. Identifique e segmente o público-alvo detalhadamente utilizando os dados fornecidos em {{segmento_publico}}.\n3. Elabore uma proposta de orçamento e distribuição de lances, conforme explicado em {{orcamento_disponivel}}.\n4. Utilize técnicas de few-shot learning e chain-of-thought para prever o comportamento dos cliques e otimizar as taxas de conversão.\n5. Estabeleça critérios de qualidade e métricas de sucesso, como CTR, CPC e ROI, e descreva os ajustes necessários caso os resultados não sejam satisfatórios.\nInclua exemplos práticos e considere possíveis exceções no processo, como sazonalidade e comportamentos atípicos. Garanta que a resposta siga um formato estruturado e claro, demonstrando todas as etapas do processo.'
   },
   {
