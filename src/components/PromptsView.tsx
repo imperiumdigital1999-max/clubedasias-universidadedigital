@@ -1196,7 +1196,137 @@ export default function PromptsView() {
 
     "fullPrompt": "Female panda baby with crooked tuft and disheveled hair, one eye half-closed and her mouth twisted in a funny grimace, looking like she just got out of a funny nightmare. Acrylic oil painting style, capricious, light background, with total focus on the animal."
 
+  },
+    
+  {
+
+    "id": "5da7a8e2-5254-435e-82ac-88ac6726468d",
+
+    "tag": "IMAGENS PARA CRIATIVOS DE ANÚNCIOS",
+
+    "title": "AL SHAIBANI RESTAURANT",
+
+    "description": "Anúncio vibrante de fachada de restaurante do Oriente Médio com ilustrações de pratos e estilo vintage.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755563610339-a-vibrant-exterior-product-advertisement_jLlmOZqgTxabZ-YTjQXSYw_LTOUOCspQgG7YfYylweGtQ.jpeg",
+
+    "fullPrompt": "Vibrant exterior product advertisement for 'Al-Shaibani Super Deluxe Restaurant'. Hand-painted signs with whimsical illustrations of grilled meats and salads. Golden late afternoon light, textured stucco walls, nostalgic and appetizing aesthetic."
+
+  },
+
+  {
+
+    "id": "61e303fd-8848-47d8-9b1c-67706ff16e61",
+
+    "tag": "IMAGENS PARA CRIATIVOS DE ANÚNCIOS",
+
+    "title": "SOCIAL LISTENING INSIGHTS",
+
+    "description": "Ilustração digital de post carrossel para Instagram em um smartphone comparando marcas famosas de café.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755563545943-a-vibrant-digital-illustration-depicting_JDQDm5u5RUu56K2ejeCZtA_K2imareeSkWd3I8Q_WYA9g.jpeg",
+
+    "fullPrompt": "Vibrant digital illustration of an Instagram carousel post on a smartphone screen. Slides comparing Starbucks vs Tim Hortons with data icons, sentiment analysis charts, and minimalist design."
+
+  },
+
+  {
+
+    "id": "19a25c32-4c7d-4b56-a2b8-6bf6cd1247d1",
+
+    "tag": "IMAGENS PARA CRIATIVOS DE ANÚNCIOS",
+
+    "title": "CAMPANHA HYUNDAI 5%",
+
+    "description": "Visão aérea criativa de estacionamento onde os carros formam o número '5' com símbolo de porcentagem no asfalto.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755265587972-6D17B6CC-C08E-4767-8F18-75762E97188D.png",
+
+    "fullPrompt": "Creative advertising top-down view of a parking lot. Silver cars parked forming the number '5'. White '%' symbol painted on asphalt. Hyundai logo and text 'Ative sua viagem com 5%'. Realistic photographic style."
+
+  },
+
+  {
+
+    "id": "13b73b02-c145-423f-92f6-9a88d57d1285",
+
+    "tag": "IMAGENS PARA CRIATIVOS DE ANÚNCIOS",
+
+    "title": "SALE LOVELY CALÇADOS",
+
+    "description": "Anúncio minimalista de moda com tiras de sapato vermelho formando a palavra 'SALE'.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755264813949-1272AB1E-E7F7-4BBB-A2D6-5838BD8132E5.png",
+
+    "fullPrompt": "Minimalist advertising of red high heels where straps form the word 'SALE'. Beige background, sophisticated style. Text 'Descontaço 50%' and 'LOVELY CALÇADOS & BOLSAS' at the bottom."
+
+  },
+
+  {
+
+    "id": "7a7260a6-8aeb-4a89-bc75-195591c986af",
+
+    "tag": "IMAGENS PARA CRIATIVOS DE ANÚNCIOS",
+
+    "title": "CLARISSE LUXURY GIFT",
+
+    "description": "Render 3D de caixa de presente luxuosa rosa com dourado para lojas de presentes personalizados.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755102890798-a-3d-render-showcases-a-luxurious-gift-b_GnDKLtFiSPCAE1K3lMXWKg_a0w6cbOUSHCD4RMrRwyQQg.jpeg",
+
+    "fullPrompt": "3D render of a luxurious blush pink gift box with gold filigree and satin ribbon. Initials 'C' in golden crest. Polished marble surface, studio lighting, refined luxury aesthetic."
+
+  },
+
+  {
+
+    "id": "0f556b87-901c-45de-a98c-034100893198",
+
+    "tag": "IMAGENS PARA CRIATIVOS DE ANÚNCIOS",
+
+    "title": "CAPRICCIO PIZZARIA",
+
+    "description": "Anúncio de pizzaria com foco em pizza artesanal e ambiente aconchegante ao fundo.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755099080387-a-vibrant-product-shot-advertisement-for_WKc3yvm7SNmJaHdUK3O9jQ_tIMS9BXjQHaAmg0ae-4qjA.jpeg",
+
+    "fullPrompt": "Vibrant product shot for Capriccio Pizzaria. Wood-fired pizza with mozzarella and basil on checkered tablecloth. Rustic brick wall, blurred restaurant interior with bokeh lights."
+
+  },
+
+  {
+
+    "id": "66d85da2-72d0-4d3f-bbce-c0c911601a7e",
+
+    "tag": "IMAGENS PARA CRIATIVOS DE ANÚNCIOS",
+
+    "title": "MYSTERIOUS RIDDLES",
+
+    "description": "Design de embalagem em pixel art estilo retrô para jogos de cartas com temática misteriosa.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755039772112-a-detailed-pixel-art-design-for-a-playin_vmWi5R7BRsGjmcGo-zg1-w_JbmXprh8Tk6zxXzVWn5W3A.jpeg",
+
+    "fullPrompt": "Detailed pixel art design for playing card box. 'THE MYSTERIOUS RIDDLES' text, large red question mark, 8-bit calathea leaves. Black background, SNES graphics aesthetic."
+
+  },
+
+  {
+
+    "id": "f6cf91d0-b85d-4181-bea1-6e8b8fa0763f",
+
+    "tag": "IMAGENS PARA CRIATIVOS DE ANÚNCIOS",
+
+    "title": "CURSO DE ANIMAÇÃO IA",
+
+    "description": "Criativo estilo Pixar/Disney para anúncio de ferramentas gratuitas de animação digital.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027128054-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_31_26.png",
+
+    "fullPrompt": "Ilustração estilo Pixar/cartoon vibrante. Personagem sorridente apontando para tela com animações saindo dela. Texto integrado: 'Você Não Precisa Pagar por Ferramenta pra criar Animações de Alta Qualidade'. Ambiente criativo digital."
+
   }
+
+
 
 
     
