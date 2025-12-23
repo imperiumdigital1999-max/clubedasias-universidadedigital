@@ -381,7 +381,85 @@ export default function PromptsView() {
       image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=300&fit=crop',
       fullPrompt: 'Design a vibrant cartoon character with bold outlines, exaggerated features, and saturated colors. Use clean vector-style lines, dynamic poses, and expressive facial features. Include characteristic cartoon elements like highlights, shadows, and simplified shapes. Make it fun, energetic, and visually appealing.'
     },
-    {
+  {
+
+    id: '6925bde7-d18a-4f6f-afa9-1d11fae0fb86',
+
+    tag: 'IMAGENS ESTILO CARTOON',
+
+    title: 'Instagram 3D Boy',
+
+    description: 'Personagem estilo Disney saindo de uma moldura do Instagram com detalhes personalizados e ícones sociais.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757111565982-assets_task_01k4cb2697ej1vedstznedfnjf_1757055985_img_0.webp',
+
+    fullPrompt: 'Crie uma imagem 3D em estilo realista. A imagem mostra uma moldura branca de uma publicação do Instagram, da qual aparece um menino, estilo desenho animado da Disney, sentado na barra inferior da moldura, com as pernas penduradas. O menino na imagem é visível em toda a sua altura. A aparência do menino é a mesma da foto: - cabelo castanho curto e espetado, - shorts Nike pretos, - olhos azuis, - camisa de futebol do Messi. O fundo é branco. Na parte superior da moldura, estão o avatar e o nome do perfil do menino: HarryDaGoat. Adicione os ícones: - ícone vermelho de "curtir", - "comentário" e "enviar", no estilo do Instagram. Na parte inferior, sinal: 67 milhões de curtidas. Formato 9:16'
+
+  },
+
+  {
+
+    id: 'e03c7548-0e44-42c7-9dda-57ff3a988dbd',
+
+    tag: 'IMAGENS ESTILO CARTOON',
+
+    title: 'Gatinho Chef 3D',
+
+    description: 'Ilustração ultra-realista de um gatinho fofo cozinhando em uma cozinha moderna com luz cinematográfica.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755038720096-assets_task_01k2f8t2qvf1g9ks1sr3p1qnrd_1755006817_img_0.webp',
+
+    fullPrompt: 'Create an ultra-realistic, adorable fluffy kitten in a cozy modern kitchen, standing on a small stool at the counter, cooking a traditional pilaf in a large cast-iron pot. The kitten wears a tiny chef’s hat and a white apron, carefully stirring rice with carrots, onions, and pieces of meat. Fresh herbs, garlic, and spices are on the counter nearby. Warm cinematic sunlight streams through the window, steam rising from the pot. 8K photorealistic quality.'
+
+  },
+
+  {
+
+    id: '57aaeb20-3d6e-4044-85b2-dde91e15b833',
+
+    tag: 'IMAGENS ESTILO CARTOON',
+
+    title: 'Squad de Memes 3D',
+
+    description: 'Panda, Tubarão, Pepe the Frog e Doge em pose de ataque épica com iluminação cinematográfica.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755028254592-assets_task_01k2f874pbewyby7kwh8kacg60_1755006336_img_0.webp',
+
+    fullPrompt: 'An epic, cartoonish 3D Panda bear, a shark, Pepe the frog, and Doge the dog, in attack pose on a shattering rock, unleashing power-ups. Surrounded by a glowing energy aura, each is surrounded by dramatic, cinematic lighting. The background is black for contrast. Highly detailed textures. Dynamic perspective.'
+
+  },
+
+  {
+
+    id: 'edc0acb3-d047-4c05-a08f-1c16e8a2d7db',
+
+    tag: 'IMAGENS ESTILO CARTOON',
+
+    title: 'Minion Peaky Blinder',
+
+    description: 'Conceito artístico de um Minion reimaginado como membro da gangue Peaky Blinders em Birmingham.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755028203416-assets_task_01k2fbvvmce8jsfnf5gmhpg2jx_1755010122_img_0.webp',
+
+    fullPrompt: 'Photorealistic character concept of a Minion reimagined as a gritty member of the Peaky Blinders. The Minion wears a meticulously tailored 1920s tweed suit and a flat cap, with a serious expression. He is walking down a wet, grimy cobblestone street in industrial Birmingham, fog and smoke filling the air. Cinematic, anamorphic shot, desaturated color palette.'
+
+  },
+
+  {
+
+    id: '10a04666-1cc0-4105-ae1b-1f6ab22d9c6a',
+
+    tag: 'IMAGENS ESTILO CARTOON',
+
+    title: 'DreamWorks Girl Instagram',
+
+    description: 'Personagem feminina estilo DreamWorks saindo de um post do Instagram em formato 9:16.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755024646530-5116128974316089141.jpg',
+
+    fullPrompt: 'Crie uma ilustração 3D em estilo cartoon de DreamWorks, saindo de uma moldura de post do Instagram. Ela usa roupa cor de rosa e deve estar sentada na barra inferior da moldura, com as pernas penduradas para baixo. A expressão dela deve ser alegre, fofa, com olhos grandes e um sorriso. Dentro da moldura, insira o nome do perfil @crissantos.aoficial. adicione também os ícones de "curtir", "comentar" e "enviar". Formato 9:16.'
+
+  },{
   id: 'a75eb24e-df35-4a5c-9dd2-6f1f7d46056e',
   tag: 'IMAGENS EM VIDRO',
   title: 'Maçã Translúcida',
