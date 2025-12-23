@@ -180,7 +180,185 @@ export const veo3Prompts: VEO3Prompt[] = [
 
     thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764366119787.jpg'
 
+  },
+  {
+
+    id: 'cf49ce17-4ffc-495b-b99a-bd4584ebf09e',
+
+    category: 'Entrevista',
+
+    title: 'PODCAST MÉDICO',
+
+    prompt: '{"title": "Podcast Interview – Doctor", "description": "A professional doctor sits in a brightly lit talk show-style studio. Logo behind says Health in Focus. Gestures while explaining prevention.", "character": {"name": "Dr. Gustavo Lima", "speech": "Prevencao e o melhor remedio. A gente precisa comecar a cuidar do corpo todos os dias."}, "technical": "4K, medical tones, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761796290939-video-veta-fast-1761796267090.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761796441423.jpg'
+
+  },
+
+  {
+
+    id: 'd66cecff-156f-44b0-9072-77c6b524dbd1',
+
+    category: 'Entrevista',
+
+    title: 'PODCAST PSICOLOGIA',
+
+    prompt: '{"title": "Podcast Interview – Psychologist", "description": "Minimalist studio with purple LED lights. Psychologist sits with good posture, smiling gently and speaking with empathy.", "character": {"name": "Dra. Helena Monteiro", "speech": "Saude mental nao e sobre eliminar emocoes ruins. E sobre aprender a lidar com elas."}, "technical": "4K, neon wall sign, duration 11s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761796095227-video-veta-fast-1761796074990.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761796097681.jpg'
+
+  },
+
+  {
+
+    id: '2227e032-b6c2-49cc-8951-fe92480637f8',
+
+    category: 'Entrevista',
+
+    title: 'PODCAST FISIOTERAPEUTA',
+
+    prompt: '{"title": "Podcast Interview – Physical Therapist", "description": "Interview set up inside a physical therapy clinic. Exercise equipment in background. Doctor speaks with clarity and authority.", "character": {"name": "Dr. Rodrigo Paes", "speech": "A dor nao e o inimigo, ela e o sinal de que algo precisa de atencao."}, "technical": "4K, clinical realism, duration 9s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761795316463-video-veta-fast-1761795290602.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761796080578.jpg'
+
+  },
+
+  {
+
+    id: 'b74ba124-737a-4183-9e73-601fc8dfdc16',
+
+    category: 'Entrevista',
+
+    title: 'PODCAST NUTRICIONISTA',
+
+    prompt: '{"title": "Podcast Interview – Nutrition Expert", "description": "Modern studio with wooden panels and green plants. Nutritionist sits at a round wooden table speaking calmly.", "character": {"name": "Dra. Camila Andrade", "speech": "Se alimentar bem e sobre equilibrio. Comer se torna um ato de autocuidado."}, "technical": "4K, acoustic walls, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761795103833-video-veta-fast-1761795061661.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761795106343.jpg'
+
+  },
+
+  {
+
+    id: '6bb39ab6-fd98-425c-b655-c6777d6f3fb0',
+
+    category: 'Influencer',
+
+    title: 'INFLUENCER FITNESS',
+
+    prompt: '{"title": "UGC Influencer – Gym Mirror", "description": "Dimly lit gym with colored LED strips. Influencer holds supplement container near lens, flexing arm and speaking directly to camera.", "character": {"name": "Felipe", "speech": "Quer treinar com mais foco e energia? Clica aqui e garante o teu agora."}, "technical": "4K, motivational trap beat, duration 8s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761794129251-video-veta-fast-1761794106863.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761794132265.jpg'
+
+  },
+
+  {
+
+    id: '161d7531-fe01-4f7d-bbfe-fc30e814102a',
+
+    category: 'Produto',
+
+    title: 'INFLUENCER FITNESS SUPLEMENTO',
+
+    prompt: '{"title": "UGC Influencer – Product Education", "description": "Modern apartment kitchen. Influencer sits at wooden table with supplement tub beside laptop, explaining product benefits.", "character": {"name": "Andre", "speech": "Esse aqui tem absorcao rapida e ingredientes limpos. Nao e todo suplemento que e igual."}, "technical": "4K, natural light, duration 11s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761793952898-video-veta-fast-1761793921216.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761794113285.jpg'
+
+  },
+
+  {
+
+    id: 'bf8f6f8c-d984-4495-b753-8e8e2d48e91f',
+
+    category: 'Influencer',
+
+    title: 'INFLUENCER FITNESS',
+
+    prompt: '{"title": "UGC Influencer – Outdoor Energy", "description": "Fit man jogging in a sunny park. Stops holding a bottle of supplement capsules, talking while cooling down.", "character": {"name": "Thiago", "speech": "Galera, esse suplemento virou meu parceiro de treino. Me da energia e concentracao."}, "technical": "4K, natural daylight, duration 9s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761793757704-video-veta-fast-1761793722845.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761793763565.jpg'
+
+  },
+
+  {
+
+    id: '76018a1a-f4b5-4dbf-99db-bbdb6b17147e',
+
+    category: 'Produto',
+
+    title: 'INFLUENCER FITNESS PRÉ TREINO',
+
+    prompt: '{"title": "UGC Influencer – Gym Routine", "description": "Gym locker room with neon-blue lighting. Man holding shaker and pre-workout tub, filming in selfie mode.", "character": {"name": "Rafael", "speech": "Antes de treinar nao pode faltar meu pre treino. Esse aqui me da uma energia absurda!"}, "technical": "4K, vlogging style, duration 9s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761793399315-video-veta-fast-1761793372412.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761793402102.jpg'
+
+  },
+
+  {
+
+    id: '5349f907-3968-483e-b048-ee7d43cf7803',
+
+    category: 'Produto',
+
+    title: 'INFLUENCER FURADEIRA',
+
+    prompt: '{"title": "UGC Influencer – Power Screwdriver", "description": "Outdoor demonstration beside hardware store. Customer tests cordless screwdriver on wooden board.", "character": {"name": "Rogerio", "speech": "Rapaz, que potencia! Bateria leve, pratica e carregador rapido. Pode confiar!"}, "technical": "4K, natural daylight, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761792902208-video-veta-fast-1761792879122.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761792906607.jpg'
+
+  },
+
+  {
+
+    id: '21f540e4-b15e-454d-9e06-26dbf29807ae',
+
+    category: 'Produto',
+
+    title: 'INFLUENCER CAIXA FERRAMENTA',
+
+    prompt: '{"title": "UGC Influencer – Toolbox", "description": "Home workshop with wooden walls. Influencer opens red toolbox showing wrenches and screwdrivers.", "character": {"name": "Carlos", "speech": "Boa ferramenta faz toda a diferenca. Essa caixa aqui tem tudo o que voce precisa."}, "technical": "4K, home workshop, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761792471748-_title_ugc_202510292347_lstbb.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761792476243.jpg'
+
+  },
+
+  {
+
+    id: '65b6611d-0082-4411-be0b-78dade358e0a',
+
+    category: 'Produto',
+
+    title: 'INFLUENCER FURADEIRA 2',
+
+    prompt: '{"title": "UGC Influencer – Power Drill", "description": "Construction store aisle. Female influencer holds yellow cordless power drill, demonstrating quality.", "character": {"name": "Leticia", "speech": "Essa furadeira e um espetaculo! Leve, potente e a bateria dura muito."}, "technical": "4K, hardware store vibe, duration 9s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1761792243507-_title_ugc_202510292343_suiyk.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761792453672.jpg'
+
   }
+
+
+  
 
 
   
