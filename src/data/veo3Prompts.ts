@@ -642,7 +642,137 @@ export const veo3Prompts: VEO3Prompt[] = [
 
     thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1761011467771.jpg'
 
+  },
+  
+  {
+
+    id: '3eec5b43-cde1-4290-b122-45caf82ae347',
+
+    category: 'Bebê',
+
+    title: 'BEBÊ NO PORSCHE',
+
+    prompt: '{"title": "Baby Test Drives Porsche", "description": "Baby in oversized sunglasses sitting in the driver seat of a luxury Porsche.", "character": {"name": "Enzo", "speech": "Rapaz, carrinho aqui e rapido mesmo em, pode comprar pra mim papai que eu vou voar!"}, "technical": "Veo 3, internal car shot, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760469033656-_title_baby_202510141610_6du7l.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760469036463.jpg'
+
+  },
+
+  {
+
+    id: 'c1245c42-e18f-4654-87e7-3b1dbc9f2030',
+
+    category: 'Bebê',
+
+    title: 'BEBÊ EM REUNIÃO',
+
+    prompt: '{"title": "Baby on Serious Call", "description": "Baby lying on a playmat with sunglasses holding a toy phone to his ear.", "character": {"name": "Caio", "speech": "Alo? Num posso agora, to em reuniao! Manda uma mensagem no zap que eu retorno."}, "technical": "Veo 3, playful low angle, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760468319932-_title_baby_202510141558_vft7n.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760468321954.jpg'
+
+  },
+
+  {
+
+    id: '07b6f25d-e94a-4763-b48b-917bb1c26298',
+
+    category: 'Bebê',
+
+    title: 'BEBÊ JUIZ',
+
+    prompt: '{"title": "Baby Judge Courtroom", "description": "Cardboard courtroom scene. Baby in a towel robe slams a plastic gavel.", "character": {"name": "Juiz Theo", "speech": "Ta preso! O papai nao deixou eu comer doce no almoco, agora vai ficar preso!"}, "technical": "Veo 3, dramatic zoom-in, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760468289645-_title_baby_202510141557_wt18x.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760468293358.jpg'
+
+  },
+
+  {
+
+    id: 'ab5060ee-a2c3-407d-ba54-6842556b9596',
+
+    category: 'Comédia',
+
+    title: 'SENHORA NO SUPERMERCADO',
+
+    prompt: '{"title": "Grocery Store Complaint", "description": "Elderly woman in a supermarket line shaking her head at light shopping bags.", "character": {"name": "Dona Neide", "speech": "Com 100 reais na minha epoca eu levava o mercado inteiro, hoje so duas sacolinha."}, "technical": "Veo 3, relatable humor, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760467134752-_title_grocery_202510141538_1d7cc.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760467138279.jpg'
+
+  },
+
+  {
+
+    id: '61668500-deb9-4fcb-9323-47fc908bb0d9',
+
+    category: 'Influencer',
+
+    title: 'SENHORA NO FOGÃO A LENHA',
+
+    prompt: '{"title": "Mineira Wood Stove", "description": "Rustic kitchen in Minas Gerais. Elderly woman stirring a pot on a wood-burning stove.", "character": {"name": "Dona Geralda", "speech": "Aqui e tudo feito no tempo certo, com lenha, fe e muito amor. Comida de verdade!"}, "technical": "Veo 3, warm nostalgic lighting, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760467092121-_title_mineira_202510141537_kl5sb.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760467095669.jpg'
+
+  },
+
+  {
+
+    id: 'ccbb1cea-5a52-4e77-bff6-e3120c999821',
+
+    category: 'Comédia',
+
+    title: 'SENHORA LIMPANDO CHÃO',
+
+    prompt: '{"title": "Dona Cida Cleaning", "description": "Cozy living room. Woman energetically mopping the floor and pausing to talk.", "character": {"name": "Dona Cida", "speech": "Aqui e forca no braco e fe no coracao! Pra limpar essa sujeira so tendo forca!"}, "technical": "Veo 3, spirited forro rhythm, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760467047021-_title_dona_202510141537_umgs2.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760467052409.jpg'
+
+  },
+
+  {
+
+    id: '84a9b277-88b1-46f4-9286-ebd94bf1252d',
+
+    category: 'Comédia',
+
+    title: 'SENHORA CONSELHEIRA',
+
+    prompt: '{"title": "Homemaker Advice", "description": "Clean cozy kitchen. Cheerful woman in a colorful apron with hands on her waist.", "character": {"name": "Dona Cida", "speech": "Se a vida da limao, a gente tempera o feijao e segue em frente, ne meu filho?"}, "technical": "Veo 3, authentic homey vibe, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760466714521-_title_everyday_202510141531_3hh0v.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760466717887.jpg'
+
+  },
+
+  {
+
+    id: 'e5b66cac-5dd9-405f-99f0-aedf89176777',
+
+    category: 'Comercial',
+
+    title: 'MENSAGEM PROFESSORA',
+
+    prompt: '{"title": "Elementary Teacher", "description": "Colorful classroom. Passionate teacher stands in front of smiling students.", "character": {"name": "Professora Camila", "speech": "Ensinar e mais que falar, e conectar, inspirar e transformar a vida desses pequenos."}, "technical": "Veo 3, inspiring atmosphere, duration 10s"}',
+
+    video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1760466548288-_title_elementary_202510141528_akxqx.mp4',
+
+    thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1760466551544.jpg'
+
   }
+
+
 
 
   
