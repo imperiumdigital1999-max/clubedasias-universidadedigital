@@ -31,7 +31,7 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
       descricao: 'Aprenda os fundamentos da plataforma e como começar a criar vídeos profissionais com IA',
       videoUrl: 'https://www.youtube.com/watch?v=Mbhdi9VdsiU',
       thumbnail: 'https://img.youtube.com/vi/Mbhdi9VdsiU/maxresdefault.jpg',
-      duracao: '15:30'
+      duracao: '20:08'
     },
     {
       id: 'v2',
@@ -39,7 +39,7 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
       descricao: 'VEO 3 Grátis para Criar Vídeos com IA Absurdos',
       videoUrl: 'https://www.youtube.com/watch?v=PEQzy-BFjy8',
       thumbnail: 'https://img.youtube.com/vi/PEQzy-BFjy8/maxresdefault.jpg',
-      duracao: '22:15'
+      duracao: '07:58'
     },
     {
       id: 'v3',
@@ -47,7 +47,7 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
       descricao: 'Aprenda a otimizar seus vídeos para diferentes plataformas e maximizar o alcance',
       videoUrl: 'https://www.youtube.com/watch?v=CT-UWAhhxBc',
       thumbnail: 'https://img.youtube.com/vi/CT-UWAhhxBc/maxresdefault.jpg',
-      duracao: '18:45'
+      duracao: '09:12'
     }
   ];
 
