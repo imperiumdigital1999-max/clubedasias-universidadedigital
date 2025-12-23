@@ -30,7 +30,7 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
       titulo: 'Como usar o VEO3 GRÁTIS e criar vídeos SEM LIMITE!',
       descricao: 'Aprenda os fundamentos da plataforma e como começar a criar vídeos profissionais com IA',
       videoUrl: 'https://www.youtube.com/watch?v=Mbhdi9VdsiU',
-      thumbnail: 'https://img.youtube.com/vi/ABC123XYZ/maxresdefault.jpg',
+      thumbnail: 'https://img.youtube.com/vi/Mbhdi9VdsiU/maxresdefault.jpg',
       duracao: '15:30'
     },
     {
