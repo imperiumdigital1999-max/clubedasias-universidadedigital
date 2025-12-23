@@ -62,9 +62,9 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
     },
     {
       id: 'e2',
-      titulo: 'Estratégias de Viral Edit',
+      titulo: 'Técnicas Avançadas de Edição com Veo 3',
       descricao: 'Aprenda as estratégias usadas por criadores profissionais para viralizar conteúdo',
-      ebookUrl: '#',
+      ebookUrl: 'https://drive.google.com/file/d/1xgZMOrLNdQ8teXx-VWQbUqVMReZlpCGP/view?usp=sharing',
       thumbnail: 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=800&h=450&fit=crop',
       paginas: '32 páginas'
     },
