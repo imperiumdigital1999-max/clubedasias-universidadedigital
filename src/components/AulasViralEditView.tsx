@@ -43,10 +43,10 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
     },
     {
       id: 'v3',
-      titulo: 'Otimização e Publicação',
+      titulo: 'VEO 3 de Forma Gratuita e Ilimitada: Tutorial Completo!',
       descricao: 'Aprenda a otimizar seus vídeos para diferentes plataformas e maximizar o alcance',
-      videoUrl: 'https://www.youtube.com/watch?v=exemplo3',
-      thumbnail: 'https://img.youtube.com/vi/ABC123XYZ/maxresdefault.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=CT-UWAhhxBc',
+      thumbnail: 'https://img.youtube.com/vi/CT-UWAhhxBc/maxresdefault.jpg',
       duracao: '18:45'
     }
   ];
