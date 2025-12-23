@@ -946,7 +946,7 @@ export default function PromptsView() {
   },
   {
     id: "aa7bebab-3701-4e7f-8b87-14d135960a4d",
-    tag: "IMAGENS LOGOS / NOMES",
+    tag: "IMAGENS LOGOS/NOMES",
     title: "JOSYE ALVES GLASS",
     description: "Tipografia 3D em vidro/resina com gradiente de cores e efeito de partículas brilhantes internas.",
     image: "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755310616718-7B32B4F2-F772-41AB-91D6-9E88D7364928.png",
