@@ -197,5 +197,13 @@ export const veo3Prompts: VEO3Prompt[] = [
     prompt: '{"scene": "4K split-screen comedy format. Left side: glamorous, perfectly lit version with smooth movements and professional setup. Right side: messy, chaotic reality with bad lighting and comedy mishaps. Same action performed differently. Quick cuts between sides emphasize the contrast. Relatable, self-aware humor. Social media comedy aesthetic."',
     video_exemplo_url: 'https://videos.pexels.com/video-files/5699463/5699463-uhd_2560_1440_25fps.mp4',
     thumbnail_url: 'https://images.pexels.com/photos/6931815/pexels-photo-6931815.jpeg?auto=compress&cs=tinysrgb&w=600'
-  }
+  },
+  {
+  id: 'e4441155-26e7-4fed-98e7-453813d703bc',
+  category: 'Bebê',
+  title: 'BEBÊ ENTREVISTA',
+  prompt: '{ "title": "Baby Interview – Funny Talk Show Scene", "description": "A baby sits in a tiny armchair with a toy microphone, acting like a celebrity being interviewed.", "character": { "name": "Sofia", "age": 2, "gender": "female", "appearance": "baby with curly hair and pink dress holding a toy microphone", "expression": "funny and confident", "speech": "Olha, eu dormi só 12 horas hoje… porque a vida de bebê não é fácil, né gente?", "voice": "baby Brazilian Portuguese voice, humorous and sassy tone" }, "environment": { "location": "living room designed like a talk show set", "lighting": "soft studio lighting with colored background", "atmosphere": "TV show and playful" }, "camera": { "angle": "medium close-up frontal", "movement": "gentle handheld zoom-in", "focus": "on baby’s expression and toy mic" }, "audio": { "ambient": "studio audience laughter track", "music": "light talk-show jazz" }, "duration": "9 seconds" }',
+  video_exemplo_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1762145050715-_title_baby_202511030143_79bc9.mp4',
+  thumbnail_url: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1762145054615.jpg'
+}
 ];
