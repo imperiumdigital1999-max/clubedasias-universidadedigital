@@ -1181,6 +1181,21 @@ export default function PromptsView() {
 
     "fullPrompt": "Top-down view of miniature workers cutting and processing enormous fruits with construction tools. Giant oranges, watermelons, and strawberries with rich saturated colors. Workers wearing safety helmets using saws, chisels, and cranes. Hyperrealistic style, high-end product photography, crisp sharp details."
 
+  },
+      {
+
+    "id": "a703c460-12c8-4ec6-b7fe-7949cb4271be",
+
+    "tag": "IMAGENS ÓLEO ACRÍLICO",
+
+    "title": "Panda Despenteado",
+
+    "description": "Pintura em estilo óleo acrílico de um bebê panda com cabelo bagunçado e uma careta engraçada.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755036057845-5033299782688419612.jpg",
+
+    "fullPrompt": "Female panda baby with crooked tuft and disheveled hair, one eye half-closed and her mouth twisted in a funny grimace, looking like she just got out of a funny nightmare. Acrylic oil painting style, capricious, light background, with total focus on the animal."
+
   }
 
 
