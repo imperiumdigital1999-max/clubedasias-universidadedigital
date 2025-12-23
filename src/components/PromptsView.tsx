@@ -466,7 +466,326 @@ export default function PromptsView() {
   description: 'Arte em vidro de caramelo translúcido com iluminação cinematográfica e detalhes macro ultra-realistas.',
   image: 'https://img.freepik.com/fotos-premium/uma-maca-de-vidro-com-uma-folha_853177-1211.jpg',
   fullPrompt: 'High-detail candy apple made from translucent caramel glass with subtle golden undertones, soft backlight creating glowing edges that accentuate the delicate ripples and ridges on its surface, cinematic realism with deep shadows and luminous highlights, ultra HD resolution, macro photography capturing the intricate texture and sheen of the caramel glass, with a blurred background that emphasizes the subject\'s centrality and isolation, inviting the viewer to focus on the mesmerizing play of light and color on the candy apple\'s surface.'
-}
+},  {
+
+    id: 'bc158839-a32e-4987-8d3d-ea2cc3e0437f',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Magia Cinematográfica',
+
+    description: 'Cena emocional de alto impacto com iluminação vibrante e estilo de blockbuster 3D.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757330629519-assets_task_01k4mb3a62f1dbsf9nvnd77gd7_1757324483_img_1.webp',
+
+    fullPrompt: 'Crie uma imagem cinematográfica hiper-realista que evoque fortes emoções. Assunto principal: Um humano com quem se identifica ou animal fofo em situação emocionante. Cores brilhantes, alto contraste, iluminação cinematográfica e profundidade de campo. Estilo Pixar vibrante com apelo global.'
+
+  },
+
+  {
+
+    id: '66e702c2-8017-4eef-8659-1bdddb71f57b',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'O Avô e o Sanduíche Gigante',
+
+    description: 'Contraste de escala surreal entre um avô em miniatura e um sanduíche colossal em um parque.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757330528583-assets_task_01k4f7q74nfmgb26et9dytesf7_1757153159_img_1.webp',
+
+    fullPrompt: 'Pequeno avô em miniatura diante de um sanduíche gigante que parece um prédio. Iluminação fria e cinematográfica, sombras nítidas enfatizando o contraste de escala absurdo e o realismo surreal estilo Pixar.'
+
+  },
+
+  {
+
+    id: '3c32462b-b48a-4b98-aa8a-538fac4b9b5d',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Gatinha na Cozinha',
+
+    description: 'Personagem fofa inspirada em Masha em uma cozinha aconchegante prestes a usar um liquidificador.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757000665541-assets_task_01k49f6wt6ewwrzd4h60rr63bs_1756959684_img_0.webp',
+
+    fullPrompt: 'Gatinha antropomórfica, estilo Pixar/Netflix, olhos grandes e expressivos, usando vestido listrado em uma cozinha aconchegante. Iluminação de janela criando atmosfera cinematográfica.'
+
+  },
+
+  {
+
+    id: '30c63b45-c4c3-4390-8797-c1d7a2bdcd9f',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'O Fazendeiro',
+
+    description: 'Cena rústica de um fazendeiro idoso em seu celeiro cercado por animais sob luz dourada.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755558989898-a-3d-pixar-style-illustration-of-an-elde_BhqZ7v2ZSGShvPWvOXXf-Q_F_e1rTkJSMSg7Edwde0dqA.jpeg',
+
+    fullPrompt: 'A 3D Pixar-style illustration of an elderly farmer standing at a wooden barn. Kind face, white beard, tipping his hat while chickens and cows graze in the golden morning light.'
+
+  },
+
+  {
+
+    id: '8298dcc9-f38f-4345-9d7e-b2ca11f65a06',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Cartão de Aniversário 3D',
+
+    description: 'Ursinho de pelúcia fofo com bolo de chocolate e corações dourados flutuantes.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755558951924-a-charming-3d-birthday-greeting-card-fea_fJoiDtqfQ9K_FdxLNK9TTQ_EuKABqWySS-YWWOLf041hA.jpeg',
+
+    fullPrompt: '3D greeting card with a fluffy teddy bear holding a three-tiered chocolate cake. Gold hearts and "Feliz Cumpleaños" in rounded 3D typography. Warm beige bokeh background.'
+
+  },
+
+  {
+
+    id: '07bff554-b64e-4bd6-a95b-c60018ac6202',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Gratidão Estilizada',
+
+    description: 'Estilo pop art 3D anime de uma jovem mulher em um cenário etéreo e detalhado.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755098794195-at-the-top-of-the-image-a-bright-clear-c_RNA1CuGvTc2NYp28QEJ4Mw_H4NztbMTS4elUr-9VVtBkw.jpeg',
+
+    fullPrompt: 'Pop art 3D manga style image of a stunning woman with dark wavy hair and pink meshes. Standing next to a tree, highly detailed 8k quality with watercolor painting effects.'
+
+  },
+
+  {
+
+    id: '42f90f63-0975-4244-b386-619572fbf57f',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Pesca Milagrosa 3D',
+
+    description: 'Pedro e André em um barco de madeira puxando redes cheias de peixes ao amanhecer.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755038940471-assets_task_01k2g20wfvfmxv7nmhby7exjhz_1755033240_img_0.webp',
+
+    fullPrompt: 'Mar calmo ao amanhecer, barco de madeira. Pedro e André puxam rede cheia de peixes coloridos. Luz dourada e estilo Disney Pixar 3D.'
+
+  },
+
+  {
+
+    id: 'faa2c01e-b57f-4e78-96ea-54f81e9f4164',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Super Students',
+
+    description: 'Equipe de crianças heróis relaxando no sofá da base secreta assistindo filme.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755038465613-assets_task_01k2ffsh58fzeaphk7dzjp9y4n_1755014182_img_0.webp',
+
+    fullPrompt: '3D Pixar-style illustration of Brooklyn, Sean and Justin sitting on a big couch in their high-tech lair. Vibrant lighting, watching TV with popcorn. Warm atmosphere of friendship.'
+
+  },
+
+  {
+
+    id: '929ecef7-691c-489d-8ddf-c1f063c986d4',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Jesus sobre as Águas',
+
+    description: 'Cena sagrada impactante de Jesus caminhando sobre o mar agitado com iluminação divina.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027317560-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_35_01.png',
+
+    fullPrompt: 'Jesus andando sobre águas agitadas com expressão serena. Estilo Pixar 3D hiper realista. Ondas com reflexos dourados e luz divina atravessando as nuvens dramáticas.'
+
+  },
+
+  {
+
+    id: 'a09b10f7-ccde-4a20-b937-789829809516',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'O Tablet Mágico',
+
+    description: 'Criança ruiva empolgada vendo personagens 3D saltarem da tela de um tablet.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027271638-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_34_13.png',
+
+    fullPrompt: 'Criança de 8 anos segurando tablet de onde um personagem Pixar salta para fora com luzes e brilho. Ambiente de quarto infantil criativo e iluminação vibrante.'
+
+  },
+
+  {
+
+    id: '27bfca33-ad44-47a1-b327-9ebf4082047c',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Bloqueio Criativo',
+
+    description: 'Expressão de exaustão e frustração de um designer em frente ao computador em um quarto escuro.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027195270-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_32_49.png',
+
+    fullPrompt: 'Male character 35yo, Pixar 3D style, expressive tired eyes. Sitting at a cluttered desk with a glowing monitor. Dramatic lighting, cold color palette, showing burnout and isolation.'
+
+  },
+
+  {
+
+    id: 'b4b4e5f9-2c3a-440b-8cfd-45d6c48d7eca',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'O Criador IA',
+
+    description: 'Jovem negro empolgado criando animações com inteligência artificial em seu estúdio futurista.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755026983116-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_29_20.png',
+
+    fullPrompt: 'Jovem de 28 anos com dreadlocks usando notebook holográfico. Estilo Pixar 3D ultra realista. Ambiente tecnológico com luzes azul e laranja, transmitindo futuro e acessibilidade.'
+
+  },
+
+  {
+
+    id: 'e3bda772-80b2-435b-afc3-16b08e0ba199',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Motion Design Show',
+
+    description: 'Mulher negra profissional apresentando uma plataforma holográfica de animação em miniatura.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755026944898-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_28_47.png',
+
+    fullPrompt: 'Mulher negra 38 anos, cabelo black power, segurando plataforma holográfica. Cenário clean e sofisticado. Iluminação mágica dourada e azul refletindo no rosto, estilo Pixar 3D.'
+
+  },
+
+  {
+
+    id: 'f2faea5c-a516-40f4-88b9-480f1bd6177a',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'O Baú do Tesouro Digital',
+
+    description: 'Holograma de um baú de tesouro luxuoso saindo de um celular em um estúdio moderno.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755026818964-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_26_32.png',
+
+    fullPrompt: 'Jovem com cabelo castanho curto segurando celular de onde emerge holograma de baú com ouro e pedras preciosas. Iluminação cinematográfica ouro e roxa, estilo Pixar 3D.'
+
+  },
+
+  {
+
+    id: '61a3b7fe-c0d6-4789-bcd3-70d9f1e188c0',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Faturamento em Casa',
+
+    description: 'Dona de casa alegre recebendo lucros digitais representados por uma moeda dourada holográfica.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755026779740-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_25_56.png',
+
+    fullPrompt: 'Mulher 45 anos na cozinha segurando celular com holograma de moeda gigante. Ambiente familiar e acolhedor, iluminação solar e estilo Pixar 3D realista.'
+
+  },
+
+  {
+
+    id: '4834aaaf-55cf-4378-a9e7-17101c1ce742',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Dois Mundos',
+
+    description: 'Contraste entre desânimo financeiro e a vitória da primeira venda digital no mesmo personagem.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755026608603-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_23_11.png',
+
+    fullPrompt: 'Ilustração dividida: esquerda azul frio/desânimo, direita vibrante/comemoração de venda no notebook. Personagem masculino 35 anos, estilo Pixar 3D ultra realista.'
+
+  },
+
+  {
+
+    id: '78237fbd-69a0-4e35-b98d-b22806a063f8',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Universo Revelado',
+
+    description: 'Personagem Pixar emergindo como holograma do celular de uma jovem em um ambiente neon.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755026584263-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_22_35.png',
+
+    fullPrompt: 'Mulher entre 28-35 anos segurando smartphone com holograma 3D impactante. Tons roxo, rosa e azul vibrantes. Sensação de descoberta mágica estilo Pixar 3D.'
+
+  },
+
+  {
+
+    id: '28e54147-9864-40d0-ad79-a59755a71e0b',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Facilidade Digital',
+
+    description: 'Mulher confiante demonstrando ferramentas de IA flutuantes em um escritório moderno.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755026538803-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_21_52.png',
+
+    fullPrompt: 'Mulher jovem com hologramas de ferramentas de IA flutuando. Gesto de explicação amigável. Estilo Pixar 3D vibrante, cores azul e lilás, atmosfera de empoderamento.'
+
+  },
+
+  {
+
+    id: '16ba4a80-3e3b-4406-bf4b-31542d9abc63',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Empreendedora no Lar',
+
+    description: 'Mulher radiante em sala de estar moderna mostrando o sucesso do seu trabalho digital.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755025912522-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_11_05.png',
+
+    fullPrompt: 'Personagem feminina 34 anos em vestido vinho acetinado. Sala de estar nítida com notebook e pagamentos sobre a mesa. Renderização cinematográfica 8K estilo Pixar 3D.'
+
+  },
+
+  {
+
+    id: '01127ee8-1e4c-46d7-a26a-0b456892203a',
+
+    tag: 'IMAGENS ESTILO PIXAR 3D',
+
+    title: 'Times Square Futurista',
+
+    description: 'Homem carismático em terno de luxo em uma Times Square do futuro com carros voadores.',
+
+    image: 'https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755027195270-ChatGPT%20Image%2012%20de%20ago.%20de%202025,%2016_32_49.png',
+
+    fullPrompt: 'Homem 38 anos em terno azul marinho. Cenário Times Square 2150 com hologramas, carros voadores e chuva de luz dourada. Render PBR ultra detalhado estilo Pixar 3D.'
+
+  }
+
   ];
 
   const getPromptsForTag = (tag: string) => {
