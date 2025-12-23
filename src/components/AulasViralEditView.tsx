@@ -27,10 +27,10 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
   const videoAulas: VideoAula[] = [
     {
       id: 'v1',
-      titulo: 'Introdução ao Viral Edit + VO3 AI',
+      titulo: 'Como usar o VEO3 GRÁTIS e criar vídeos SEM LIMITE!',
       descricao: 'Aprenda os fundamentos da plataforma e como começar a criar vídeos profissionais com IA',
-      videoUrl: 'https://www.youtube.com/watch?v=exemplo1',
-      thumbnail: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop',
+      videoUrl: 'https://www.youtube.com/watch?v=Mbhdi9VdsiU',
+      thumbnail: 'https://img.youtube.com/vi/ABC123XYZ/maxresdefault.jpg',
       duracao: '15:30'
     },
     {
@@ -38,7 +38,7 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
       titulo: 'Técnicas Avançadas de Edição',
       descricao: 'Descubra técnicas avançadas para criar vídeos virais que engajam sua audiência',
       videoUrl: 'https://www.youtube.com/watch?v=exemplo2',
-      thumbnail: 'https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&h=450&fit=crop',
+      thumbnail: 'https://img.youtube.com/vi/ABC123XYZ/maxresdefault.jpg',
       duracao: '22:15'
     },
     {
@@ -46,7 +46,7 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
       titulo: 'Otimização e Publicação',
       descricao: 'Aprenda a otimizar seus vídeos para diferentes plataformas e maximizar o alcance',
       videoUrl: 'https://www.youtube.com/watch?v=exemplo3',
-      thumbnail: 'https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=800&h=450&fit=crop',
+      thumbnail: 'https://img.youtube.com/vi/ABC123XYZ/maxresdefault.jpg',
       duracao: '18:45'
     }
   ];
