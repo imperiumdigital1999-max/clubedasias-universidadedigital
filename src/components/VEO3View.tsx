@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Copy, ArrowLeft, Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, Copy, ArrowLeft, Eye, X, ChevronLeft, ChevronRight, Library, ImagePlus } from 'lucide-react';
 import { veo3Prompts, veo3Categories, VEO3Prompt } from '../data/veo3Prompts';
+import VEO3ImageGeneratorView from './VEO3ImageGeneratorView';
 
 interface VEO3ViewProps {
   onBack: () => void;
@@ -8,7 +9,10 @@ interface VEO3ViewProps {
 
 const ITEMS_PER_PAGE = 12;
 
+type TabType = 'prompts' | 'generator';
+
 export default function VEO3View({ onBack }: VEO3ViewProps) {
+  const [activeTab, setActiveTab] = useState<TabType>('prompts');
   const [selectedCategory, setSelectedCategory] = useState('Ver Todos');
   const [searchTerm, setSearchTerm] = useState('');
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -58,6 +62,43 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
     }
   };
 
+  if (activeTab === 'generator') {
+    return (
+      <div className="min-h-screen bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center space-x-4 mb-8">
+            <button
+              onClick={onBack}
+              className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              <span>Voltar para VEO3</span>
+            </button>
+          </div>
+
+          <div className="flex items-center justify-center space-x-4 mb-8">
+            <button
+              onClick={() => setActiveTab('prompts')}
+              className="flex items-center space-x-2 px-6 py-3 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700 transition-all duration-200"
+            >
+              <Library className="w-5 h-5" />
+              <span>Biblioteca de Prompts</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('generator')}
+              className="flex items-center space-x-2 px-6 py-3 rounded-xl bg-purple-600 text-white shadow-lg shadow-purple-500/30"
+            >
+              <ImagePlus className="w-5 h-5" />
+              <span>Gerador com Imagem</span>
+            </button>
+          </div>
+
+          <VEO3ImageGeneratorView />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -78,6 +119,23 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
           <p className="text-slate-400 text-lg">
             Biblioteca completa de prompts para geração de vídeos com exemplos práticos
           </p>
+        </div>
+
+        <div className="flex items-center justify-center space-x-4 mb-8">
+          <button
+            onClick={() => setActiveTab('prompts')}
+            className="flex items-center space-x-2 px-6 py-3 rounded-xl bg-purple-600 text-white shadow-lg shadow-purple-500/30"
+          >
+            <Library className="w-5 h-5" />
+            <span>Biblioteca de Prompts</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('generator')}
+            className="flex items-center space-x-2 px-6 py-3 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700 transition-all duration-200"
+          >
+            <ImagePlus className="w-5 h-5" />
+            <span>Gerador com Imagem</span>
+          </button>
         </div>
 
         <div className="mb-8">
