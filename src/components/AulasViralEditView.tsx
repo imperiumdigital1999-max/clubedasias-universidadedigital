@@ -70,9 +70,9 @@ export default function AulasViralEditView({ onBack }: AulasViralEditViewProps) 
     },
     {
       id: 'e3',
-      titulo: 'Checklist de Publicação',
-      descricao: 'Lista completa de verificação antes de publicar seus vídeos nas plataformas',
-      ebookUrl: '#',
+      titulo: 'Veo 3 Expert Mode',
+      descricao: 'Direção, edição invisível e controle total de vídeos com IA',
+      ebookUrl: 'https://drive.google.com/file/d/1ZzkgH55Hy4Ls_VCvE-1zZYQTMLk-sGKz/view?usp=sharing',
       thumbnail: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=450&fit=crop',
       paginas: '12 páginas'
     }
