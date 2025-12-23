@@ -1905,7 +1905,24 @@ export default function PromptsView() {
 
     "fullPrompt": "Ultra-realistic 3D render of the uploaded logo. Premium silver metallic finish on lobby wall. Perfect proportions, no distortion, realistic depth. Background features a well-lit office space with plants and subtle furniture. Extreme texture detail and shallow depth of field."
 
+  },
+  {
+
+    "id": "36146c29-bee4-4a3c-b2c8-2956be6ff3b7",
+
+    "tag": "VÍDEOS CURTOS",
+
+    "title": "LAGARTA DE LÃ",
+
+    "description": "Movimento macro detalhado de uma lagarta verde rastejando em uma planta de abóbora.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755253855913-IMG_6573.jpeg",
+
+    "fullPrompt": "A green caterpillar, inching across a vibrant squash plant's branch, crawls towards a plump, ripe orange squash. Handheld camera follows its slow, deliberate movement, showcasing the plant's detailed textures and the caterpillar's tiny legs. Focus shifts between the caterpillar and the squash as it nears its destination. Bright, natural lighting."
+
   }
+
+
 
 
 
