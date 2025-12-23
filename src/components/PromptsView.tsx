@@ -1921,108 +1921,33 @@ export default function PromptsView() {
     "fullPrompt": "A green caterpillar, inching across a vibrant squash plant's branch, crawls towards a plump, ripe orange squash. Handheld camera follows its slow, deliberate movement, showcasing the plant's detailed textures and the caterpillar's tiny legs. Focus shifts between the caterpillar and the squash as it nears its destination. Bright, natural lighting."
 
   },
-    
-  {
-
+    {
     "id": "f5f59405-b01f-4581-ba31-67aee723cf77",
-
-    "tag": "VÍDEOS VEO 3",
-
-    "sub_topico": "Comercial",
-
-    "title": "VENDEDORA PRODUTOS ZERO LACTOSE",
-
-    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764369018585.jpg",
-
-    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764369016159-_scene_4k_202511281929_g20wk.mp4",
-
+    "titulo": "VENDEDORA PRODUTOS ZERO LACTOSE",
+    "prompt_texto": "{ \"scene\": \"4K cinematic tasting table in a natural store. A small wooden counter displays zero-lactose cheeses and yogurts. The lighting is warm and inviting with clean product placement.\", \"characters\": [ { \"name\": \"Natural Foods Specialist\", \"description\": \"Brazilian woman in her early 30s, friendly, wearing a light-beige apron.\", \"actions\": [ \"Slices a piece of zero-lactose cheese and offers it forward.\", \"Shows packaging details emphasizing benefits.\", \"Laughs lightly as she interacts with a customer off-frame.\", \"Faces the camera to deliver her line with sincerity.\" ], \"speech\": \"Quem tem intolerância sabe o sofrimento. Por isso escolhemos produtos zero lactose que realmente entregam sabor e leveza.\", \"voice\": \"Brazilian Portuguese voice, empathic, soft and genuine.\" } ], \"environment\": { \"location\": \"Tasting corner of a natural products store.\", \"details\": \"Cheese board, samples, eco packaging, small plants, rustic wood textures.\" }, \"camera\": { \"angle\": \"Close-up on the cheese being served, then tilt up to the seller’s face.\", \"movement\": \"Soft push-in toward the tasting table for a welcoming feel.\", \"focus\": \"Sharp on product, soft on background shelves.\" }, \"audio\": { \"dialogue\": \"Quem tem intolerância sabe o sofrimento. Por isso escolhemos produtos zero lactose que realmente entregam sabor e leveza.\", \"ambient\": \"Light acoustic music, soft talking in background, utensil sounds.\" }, \"technical\": { \"resolution\": \"4K\", \"model\": \"Veo 3\", \"style\": \"Cinematic zero-lactose tasting scene\", \"frame_rate\": \"24fps\", \"duration\": \"10–11 seconds\" }, \"negative_prompts\": [ \"no exaggerated mess\", \"no harsh shadows\", \"no dirty table\", \"no subtitles\" ], \"mood\": \"Calm, warm, healthy.\" }",
+    "video_exemplo_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764369016159-_scene_4k_202511281929_g20wk.mp4",
     "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764369016159-_scene_4k_202511281929_g20wk.gif",
-
-    "fullPrompt": "{ \"scene\": \"4K cinematic tasting table in a natural store...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–11 seconds\" } }"
-
+    "thumbnail_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764369018585.jpg",
+    "sub_topico": "Comercial"
   },
-
   {
-
     "id": "2779c513-e909-4f94-a120-b8b05b81a960",
-
-    "tag": "VÍDEOS VEO 3",
-
-    "sub_topico": "Comercial",
-
-    "title": "LOJA DE NATURAIS SEM AÇUCAR",
-
-    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764368979524.jpg",
-
-    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764368976806-_scene_4k_202511281929_2w63y.mp4",
-
+    "titulo": "LOJA DE NATURAIS SEM AÇUCAR",
+    "prompt_texto": "{ \"scene\": \"4K cinematic scene inside a modern natural products store. Shelves with colorful healthy snacks, bright labels and clean organization. A wooden counter displays zero-sugar items with a soft, natural lighting environment.\", \"characters\": [ { \"name\": \"Natural Products Seller\", \"description\": \"Brazilian woman in her late 20s, wearing a green apron, friendly and confident.\", \"actions\": [ \"Holds a jar of zero sugar jam and shows the label to the camera.\", \"Opens the lid and displays the texture with a small wooden spoon.\", \"Points to the ‘Zero Açúcar’ seal while smiling.\", \"Makes a confident gesture with her hand as she speaks.\" ], \"speech\": \"Cliente vem atrás de saúde, e aqui ele encontra opções gostosas, leves e totalmente sem açúcar.\", \"voice\": \"Brazilian Portuguese voice, natural, happy and persuasive.\" } ], \"environment\": { \"location\": \"Modern natural products store.\", \"details\": \"Glass shelves, wooden counter, eco-friendly packaging, green plants, warm ambient lighting.\" }, \"camera\": { \"angle\": \"Medium close-up focused on the seller and the jar she is presenting.\", \"movement\": \"Smooth dolly-in as she reveals the texture, then subtle tilt up to her face.\", \"focus\": \"Sharp on product and hand gestures, soft blur on the background.\" }, \"audio\": { \"dialogue\": \"Cliente vem atrás de saúde, e aqui ele encontra opções gostosas, leves e totalmente sem açúcar.\", \"ambient\": \"Soft store ambience, faint background music, slight rustling of packaging.\" }, \"technical\": { \"resolution\": \"4K\", \"model\": \"Veo 3\", \"style\": \"Cinematic healthy-products advertisement\", \"frame_rate\": \"24fps\", \"duration\": \"10–12 seconds\" }, \"negative_prompts\": [ \"no cluttered shelves\", \"no harsh neon lighting\", \"no unrealistic colors\", \"no subtitles\" ], \"mood\": \"Fresh, clean, healthy, persuasive.\" }",
+    "video_exemplo_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764368976806-_scene_4k_202511281929_2w63y.mp4",
     "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764368976806-_scene_4k_202511281929_2w63y.gif",
-
-    "fullPrompt": "{ \"scene\": \"4K cinematic scene inside a modern natural products store...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–12 seconds\" } }"
-
+    "thumbnail_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764368979524.jpg",
+    "sub_topico": "Comercial"
   },
-
   {
-
-    "id": "3369058f-1742-4b91-a046-836d9357913a",
-
-    "tag": "VÍDEOS VEO 3",
-
-    "sub_topico": "Comercial",
-
-    "title": "LOJA DE PRODUTOS NATURAIS",
-
-    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764368956556.jpg",
-
-    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764368930051-_scene_4k_202511281928_e5y58.mp4",
-
-    "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764368930051-_scene_4k_202511281928_e5y58.gif",
-
-    "fullPrompt": "{ \"scene\": \"4K cinematic scene showing a natural products counter...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–12 seconds\" } }"
-
-  },
-
-  {
-
-    "id": "5828f182-6171-41e0-866b-619a79ef73af",
-
-    "tag": "VÍDEOS VEO 3",
-
-    "sub_topico": "Comercial",
-
-    "title": "HIGIENIZAÇÃO CORTINA",
-
-    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764367912629.jpg",
-
-    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764367909216-_scene_4k_202511281911_48lhm.mp4",
-
-    "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764367909216-_scene_4k_202511281911_48lhm.gif",
-
-    "fullPrompt": "{ \"scene\": \"4K cinematic cleaning scene in a cozy living room...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–12 seconds\" } }"
-
-  },
-
-  {
-
     "id": "ee855d47-9b30-4899-a54d-7607100d85cd",
-
-    "tag": "VÍDEOS VEO 3",
-
-    "sub_topico": "Comercial",
-
-    "title": "CURSO ROBOTICA",
-
-    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764366656306.jpg",
-
-    "video_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764366643221-_scene_4k_202511281850_4f97n.mp4",
-
+    "titulo": "CURSO ROBOTICA",
+    "prompt_texto": "{ \"scene\": \"4K cinematic scene inside a modern robotics and technology classroom equipped with MacBooks, programmable robots, LED lighting and collaborative worktables. The atmosphere feels futuristic, educational and hands-on.\", \"characters\": [ { \"name\": \"Robotics Instructor\", \"description\": \"Brazilian woman in her early 30s, energetic and knowledgeable, wearing a tech-lab jacket with a friendly smile.\", \"actions\": [ \"Demonstrates how to assemble a robot arm while students follow along.\", \"Shows code running on a MacBook controlling a small robot car.\", \"Encourages students as they test movements and sensors.\", \"Looks at the camera with excitement, proud of the progress happening in the class.\" ], \"speech\": \"Quando o aluno vê o robô que ele montou ganhando vida, é ali que nasce o interesse real pela tecnologia.\", \"voice\": \"Brazilian Portuguese voice, energetic, inspiring and passionate.\" } ], \"environment\": { \"location\": \"Modern robotics and programming classroom.\", \"details\": \"MacBooks open running coding software, LED strip lights, 3D printed pieces on the table, small robot cars, servo motors, sensors and laptops connected via USB cables.\" }, \"camera\": { \"angle\": \"Medium-wide shot capturing the instructor, students, and several robots on the table.\", \"movement\": \"Smooth dolly move toward the robot as it starts moving, then pans up to the instructor.\", \"focus\": \"Sharp focus on the robot assembly, with background softly blurred for depth.\" }, \"audio\": { \"dialogue\": \"Quando o aluno vê o robô que ele montou ganhando vida, é ali que nasce o interesse real pela tecnologia.\", \"ambient\": \"Soft clinking of tools, servo motor sounds, light chatter from students, subtle classroom ambience.\" }, \"technical\": { \"resolution\": \"4K\", \"model\": \"Veo 3\", \"style\": \"Cinematic STEM-education promotional scene\", \"frame_rate\": \"24fps\", \"duration\": \"10–12 seconds\" }, \"negative_prompts\": [ \"no outdated robotics kits\", \"no broken parts\", \"no chaotic or messy environment\", \"no harsh fluorescent lighting\", \"no subtitles\" ], \"mood\": \"Innovative, inspiring, futuristic, educational.\" }",
+    "video_exemplo_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-videos/1764366643221-_scene_4k_202511281850_4f97n.mp4",
     "gif_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/veo3-gifs/1764366643221-_scene_4k_202511281850_4f97n.gif",
-
-    "fullPrompt": "{ \"scene\": \"4K cinematic scene inside a modern robotics classroom...\", \"characters\": [...], \"technical\": { \"model\": \"Veo 3\", \"duration\": \"10–12 seconds\" } }"
-
+    "thumbnail_url": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/thumbnails/prompt-1764366656306.jpg",
+    "sub_topico": "Comercial"
   }
-
-
 
 
 
