@@ -1488,7 +1488,7 @@ export default function PromptsView() {
 
     "id": "470cb6e3-f106-4884-85db-57c256cb4996",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "DESIGNER DIORAMA",
 
@@ -1504,7 +1504,7 @@ export default function PromptsView() {
 
     "id": "7501b024-765f-421c-8eec-ce27e057669d",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "MINECRAFT DREAD",
 
@@ -1520,7 +1520,7 @@ export default function PromptsView() {
 
     "id": "daa636e8-958e-4fe8-9a87-e6a4f9c9f7f6",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "COSMIC DOG MOUNTAIN",
 
@@ -1536,7 +1536,7 @@ export default function PromptsView() {
 
     "id": "969ec09e-32f5-464a-aece-1ae0e498049a",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "VALE DA LUA VERMELHA",
 
@@ -1552,7 +1552,7 @@ export default function PromptsView() {
 
     "id": "5334abc4-3090-4c30-a836-9ef83ad7819b",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "JAPANESE ZEN PANORAMA",
 
@@ -1568,7 +1568,7 @@ export default function PromptsView() {
 
     "id": "0da6f274-8fd5-4cca-8f0c-66130d30038c",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "CLOCKWORK FAIRY",
 
@@ -1584,7 +1584,7 @@ export default function PromptsView() {
 
     "id": "affc242a-eb00-4dff-9dd4-fb50d2835be4",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "CLOUD FACE OCEAN",
 
@@ -1600,7 +1600,7 @@ export default function PromptsView() {
 
     "id": "b5ee9f99-3f31-4316-844f-0100c622325a",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "ÁRVORE DO CONHECIMENTO",
 
@@ -1616,7 +1616,7 @@ export default function PromptsView() {
 
     "id": "cd02ea95-21af-42bf-a239-6a67684f1516",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "LEÃO DE FUMAÇA",
 
@@ -1632,7 +1632,7 @@ export default function PromptsView() {
 
     "id": "0097ef44-9b71-40a0-b36f-bb9e1ee9f333",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "GALAXY COFFEE CUP",
 
@@ -1648,7 +1648,7 @@ export default function PromptsView() {
 
     "id": "479c15c3-6a1d-4f84-8d2e-8212a302ef1a",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "ZEN TEA GARDEN",
 
@@ -1664,7 +1664,7 @@ export default function PromptsView() {
 
     "id": "3d7308f5-b19d-4d2e-8b3b-ca54a1d7c6ef",
 
-    "tag": "IMAGENS SURREALISMO/FANTASIA",
+    "tag": "IMAGENS SURREALISMO / FANTASIA",
 
     "title": "BUTTERFLY STEAM",
 
