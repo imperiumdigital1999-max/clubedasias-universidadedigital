@@ -115,15 +115,15 @@ export default function PromptsView() {
       id: '11',
       tag: 'COMANDOS GPT',
       title: 'Análise e Feedback',
-      description: 'Prompt para análise crítica construtiva com sugestões de melhoria...',
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop',
+      description: 'Analise o seguinte conteúdo e forneça feedback detalhado e construtivo....',
+      image: 'https://clubpromptturbo.lovable.app/assets/example-portrait-B15RP1sB.jpg',
       fullPrompt: 'Analise o seguinte conteúdo e forneça feedback detalhado e construtivo. Organize sua análise em: 1) Pontos fortes, 2) Áreas de melhoria, 3) Sugestões específicas, 4) Exemplos práticos de implementação. Seja objetivo, didático e mantenha um tom encorajador enquanto identifica oportunidades de aprimoramento.'
     },
 {
     id: '34bcf023-0f28-4f08-84eb-4fe77f6c435b',
     tag: 'COMANDOS GPT',
     title: 'Otimização de Campanhas de PPC',
-    description: 'Especialista em tráfego pago focado em estruturação de lances, segmentação de público e ROI.',
+    description: 'Atue como um especialista em marketing digital focado',
     image: 'https://images.unsplash.com/photo-1551288049-bbbda546697a?w=400&h=300&fit=crop',
     fullPrompt: 'Atue como um especialista em marketing digital focado em campanhas de PPC (pay-per-click). Seu desafio é estruturar e otimizar campanhas pagas para promoção de produtos ou serviços, levando em consideração orçamentos e segmentações específicas. Siga os passos abaixo:\n1. Defina qual é o objetivo da campanha, baseando-se na informação de {{objetivo_campanha}}.\n2. Identifique e segmente o público-alvo detalhadamente utilizando os dados fornecidos em {{segmento_publico}}.\n3. Elabore uma proposta de orçamento e distribuição de lances, conforme explicado em {{orcamento_disponivel}}.\n4. Utilize técnicas de few-shot learning e chain-of-thought para prever o comportamento dos cliques e otimizar as taxas de conversão.\n5. Estabeleça critérios de qualidade e métricas de sucesso, como CTR, CPC e ROI, e descreva os ajustes necessários caso os resultados não sejam satisfatórios.\nInclua exemplos práticos e considere possíveis exceções no processo, como sazonalidade e comportamentos atípicos. Garanta que a resposta siga um formato estruturado e claro, demonstrando todas as etapas do processo.'
   },
@@ -131,7 +131,7 @@ export default function PromptsView() {
     id: '12ff71e4-b4ed-4f03-bad5-e62790bd9bc2',
     tag: 'COMANDOS GPT',
     title: 'Definição de Persona e Segmentação de Público',
-    description: 'Estrategista focado em análise de mercado e criação de perfis psicológicos detalhados para marcas.',
+    description: 'Você assume o papel de um estrategista de marketing com foco',
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop',
     fullPrompt: 'Você assume o papel de um estrategista de marketing com foco em análise de público e definição de personas. Seu desafio é desenvolver uma segmentação de público detalhada e criar personas para a empresa {{empresa}}, visando a campanha de {{tipo_campanha}}. Siga os passos abaixo para elaborar uma estratégia robusta:\n1. Realize uma análise minuciosa do mercado e identifique segmentos com alto potencial para {{tipo_campanha}}.\n2. Utilize técnicas avançadas de contextualização de persona e few-shot learning para descrever perfis detalhados, incluindo comportamentos, interesses e necessidades de {{publico}}.\n3. Estruture cada persona com críticas específicas, utilizando bullet points para destacar atributos principais.\n4. Forneça exemplos de personas bem definidas e indique contraexemplos que possam prejudicar a segmentação.\n5. Estabeleça métricas de avaliação, como taxa de conversão e engajamento, e inclua um plano de ação para casos de exceções, como segmentação falha. O texto deve apresentar um mínimo de 150 palavras, demonstrando clareza, objetividade e robustez analítica.'
   },
@@ -139,7 +139,7 @@ export default function PromptsView() {
     id: 'c23d074e-db92-4d84-8a75-5a6cc44bb4bb',
     tag: 'COMANDOS GPT',
     title: 'Conteúdo para Redes Sociais',
-    description: 'Criação de calendários estratégicos, storytelling e técnicas de engajamento para marcas digitais.',
+    description: 'Você é um criador de conteúdo e estrategista de redes sociais com profundo conhecimento',
     image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop',
     fullPrompt: 'Você é um criador de conteúdo e estrategista de redes sociais com profundo conhecimento em storytelling e engajamento digital. Sua missão é desenvolver um calendário de conteúdo para as redes sociais da marca {{marca}}, abordando temas relevantes para o público-alvo de {{publico}}. Inicie seu trabalho com os seguintes passos:\n1. Defina a persona detalhadamente, orientando a criação de conteúdo que ressoe com as necessidades e aspirações de {{publico}}.\n2. Estruture o calendário de publicações considerando datas estratégicas, eventos e tendências do setor.\n3. Utilize técnicas de priming cognitivo no início de cada postagem para capturar a atenção do leitor.\n4. Apresente exemplos de postagens bem-sucedidas e contraexemplos para evitar erros comuns, reforçando a aplicação de técnicas de few-shot learning.\n5. Estabeleça critérios anatômicos como engajamento, compartilhamentos e feedback qualitativo. Descreva soluções para exceções, como baixa performance de posts, em um texto com no mínimo 150 palavras.'
   },
@@ -147,7 +147,7 @@ export default function PromptsView() {
     id: 'd8e68326-12dc-4d14-b6f1-de748afeaeb1',
     tag: 'COMANDOS GPT',
     title: 'Plano Avançado de Conteúdo para Blogs e SEO',
-    description: 'Estrategista Sênior focado em autoridade de domínio, lacunas de conteúdo e ranking orgânico.',
+    description: 'Atue como Estrategista Sênior de Marketing de Conteúdo, especialista em blogs.',
     image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop',
     fullPrompt: 'Atue como Estrategista Sênior de Marketing de Conteúdo, especialista em blogs, SEO e fortalecimento de autoridade de marca. Desenvolva um plano estratégico de conteúdo orientado a performance, seguindo as diretrizes abaixo:\n\nMapeamento de Temas e Tópicos-Chave – Identifique assuntos prioritários com base em {{temas_relevantes}} e análise de mercado, contemplando tendências, lacunas de conteúdo e oportunidades de posicionamento orgânico.\n\nPlanejamento Editorial Estratégico – Construa um calendário editorial estruturado, aplicando priming cognitivo para assegurar consistência narrativa, relevância e qualidade em cada publicação.\n\nDesenvolvimento de Conteúdo Premium – Defina um processo robusto de pesquisa e produção, utilizando cadeia de pensamento (chain-of-thought) para articular ideias de forma lógica e persuasiva, além de few-shot learning para gerar exemplos concretos e aplicáveis.\n\nFormatos e Canais de Distribuição – Estabeleça quais formatos (artigos longos, guias, estudos de caso, infográficos, vídeos) serão utilizados e determine os canais de distribuição, detalhando as otimizações de SEO e as estratégias de promoção em cada um.\n\nMétricas e Monitoramento de Performance – Defina indicadores claros como {{engajamento}}, {{autoridade_dominio}} e outros KPIs críticos. Explique protocolos de ajuste rápido para cenários em que os resultados fiquem abaixo do esperado.\n\nFormato final exigido:\n\nIntrodução – Contextualização e objetivo do plano.\n\nEstratégia – Abordagem macro e alinhamento com o posicionamento de marca.\n\nTáticas – Ações específicas, calendário e formatos.\n\nMétricas de Sucesso – Indicadores, métodos de acompanhamento e plano de ajustes.\n\nO relatório deve ser objetivo, orientado a dados e totalmente aplicável, com foco na escalabilidade e no ganho progressivo de autoridade.'
   },
@@ -155,7 +155,7 @@ export default function PromptsView() {
     id: '85cc168c-83ac-4b85-b68c-f728afd50037',
     tag: 'COMANDOS GPT',
     title: 'Planejamento e Execução de Conteúdo de Alto Impacto',
-    description: 'Plano estratégico baseado em Metas SMART e análise SWOT para maximizar o ROI de conteúdo.',
+    description: 'tue como Estrategista Sênior de Marketing Digital, especialista em planejamento',
     image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=300&fit=crop',
     fullPrompt: 'Atue como Estrategista Sênior de Marketing Digital, especialista em planejamento e execução de conteúdo de alto valor. Desenvolva um plano estratégico de conteúdo totalmente alinhado às demandas de {{empresa}} e capaz de gerar engajamento qualificado junto ao {{público_alvo}}.\n\nDiretrizes de execução:\n\nAnálise de Cenário – Conduza uma avaliação detalhada do mercado e das particularidades do setor de atuação, utilizando matriz SWOT para identificar oportunidades, ameaças, forças e fraquezas.\n\nDefinição de Metas SMART – Estabeleça objetivos claros, mensuráveis e temporalmente definidos (ex.: aumento de visitas em {{percentual_melhoria}}%, crescimento da taxa de conversão de leads, ampliação do tempo médio de permanência).\n\nCalendário Editorial Estratégico – Estruture um plano temático com tópicos de alto impacto, aplicando Few-Shot Learning para gerar ideias originais baseadas em padrões de sucesso, contemplando datas-chave e gatilhos sazonais.\n\nNarrativa Persuasiva – Utilize técnicas de cadeia de pensamento (chain-of-thought) para conectar ideias de forma lógica e criar narrativas que conduzam o público da conscientização à ação.\n\nIncorporação de Benchmarks e Exemplos Práticos – Ilustre recomendações com estudos de caso, boas práticas e contraexemplos que evidenciem erros a evitar.\n\nMétricas e Monitoramento – Defina indicadores de sucesso claros (ex.: tráfego orgânico, engajamento social, CTR, conversão) e crie instruções de revisão periódica para ajustes táticos.\n\nFormato final exigido:\n\nEstrutura em cláusulas numeradas.\n\nLinguagem clara, objetiva e livre de termos vagos.\n\nInclusão de insights de tendências atuais e movimentos emergentes no mercado.\n\nRecomendação de ferramentas e canais ideais para execução.\n\nO resultado final deve ser implementável, mensurável e orientado a maximizar ROI.'
   },
@@ -163,7 +163,7 @@ export default function PromptsView() {
     id: '232bc338-1960-4544-b13a-77703a15da95',
     tag: 'COMANDOS GPT',
     title: 'Arquitetura e Otimização de Funis de E-mail Marketing',
-    description: 'Consultoria para criação de sequências persuasivas, CTAs e protocolos de contingência em e-mail.',
+    description: 'Assuma o papel de Consultor Sênior em Marketing Digital, especialista em E-mail ',
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop',
     fullPrompt: 'Assuma o papel de Consultor Sênior em Marketing Digital, especialista em E-mail Marketing de Alta Conversão. Aplique técnicas avançadas de chain-of-thought e contextualização estratégica para desenvolver um plano tático-operacional que maximize a conversão de leads.\n\nInstruções de execução:\n\nDefinir o perfil do público-alvo e a segmentação estratégica: {{segmento_email}}.\n\nArquitetar uma sequência de e-mails persuasiva, iniciando com boas-vindas impactante e evoluindo até oferta final de alto valor, incorporando conteúdo personalizado, gatilhos mentais e CTAs otimizados.\n\nReferenciar benchmarks de campanhas bem-sucedidas e apresentar contraexemplos que evidenciem erros críticos a serem evitados.\n\nEstabelecer KPIs e métricas de performance: {{métricas_email}}, incluindo taxa de abertura, CTR, conversão e engajamento. Definir sistema de monitoramento contínuo com checkpoints claros.\n\nIncluir protocolos de contingência para cenários de baixa entregabilidade ou interação insuficiente, detalhando ações corretivas de alto impacto.\n\nFormato final da resposta:\n\nAnálise e Segmentação – Mapeamento do público e critérios de filtragem.\n\nSequência Estratégica de E-mails – Estrutura, copywriting e cronograma.\n\nBenchmarks e Anti-Modelos – Lições de sucesso e falhas a evitar.\n\nKPIs e Monitoramento – Metodologia de mensuração e acompanhamento.\n\nPlano de Contingência – Resposta a problemas críticos e ajustes rápidos.\n\nA resposta deve ser detalhada, implementável e validada, garantindo consistência, escalabilidade e maximização do ROI.'
   },  
