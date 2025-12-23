@@ -380,7 +380,15 @@ export default function PromptsView() {
       description: 'Ilustração cartoon vibrante com linhas expressivas e cores saturadas...',
       image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=300&fit=crop',
       fullPrompt: 'Design a vibrant cartoon character with bold outlines, exaggerated features, and saturated colors. Use clean vector-style lines, dynamic poses, and expressive facial features. Include characteristic cartoon elements like highlights, shadows, and simplified shapes. Make it fun, energetic, and visually appealing.'
-    }
+    },
+    {
+  id: 'a75eb24e-df35-4a5c-9dd2-6f1f7d46056e',
+  tag: 'IMAGENS EM VIDRO',
+  title: 'Maçã Translúcida',
+  description: 'Arte em vidro de caramelo translúcido com iluminação cinematográfica e detalhes macro ultra-realistas.',
+  image: 'https://images.unsplash.com/photo-1576489441115-4603a115869d?w=400&h=300&fit=crop',
+  fullPrompt: 'High-detail candy apple made from translucent caramel glass with subtle golden undertones, soft backlight creating glowing edges that accentuate the delicate ripples and ridges on its surface, cinematic realism with deep shadows and luminous highlights, ultra HD resolution, macro photography capturing the intricate texture and sheen of the caramel glass, with a blurred background that emphasizes the subject\'s centrality and isolation, inviting the viewer to focus on the mesmerizing play of light and color on the candy apple\'s surface.'
+}
   ];
 
   const getPromptsForTag = (tag: string) => {
