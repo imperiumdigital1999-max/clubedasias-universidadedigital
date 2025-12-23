@@ -1483,7 +1483,216 @@ export default function PromptsView() {
 
     "fullPrompt": "Jarrah Honey jar on black volcanic stone. Wooden dipper with dripping honey, desert sand dunes background, luxury amber gradient, cinematic studio lighting."
 
+  },
+  {
+
+    "id": "470cb6e3-f106-4884-85db-57c256cb4996",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "DESIGNER DIORAMA",
+
+    "description": "Miniatura colecionável 3D hiper-detalhada de um workspace de designer com iluminação Octane.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757508741168-assets_task_01k4ssmkn1f4rakz3edn1s8nt2_1757507482_img_1.webp",
+
+    "fullPrompt": "Diorama colecionável modelado em 3D, estilo isométrico, espaço de trabalho de designer em base de acrílico preto. Inclui MacBook, letreiro neon 'Malshan Graphics', AirPods e café. Renderizado em Octane/Blender, iluminação cinematográfica e texturas hiper-realistas."
+
+  },
+
+  {
+
+    "id": "7501b024-765f-421c-8eec-ce27e057669d",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "MINECRAFT DREAD",
+
+    "description": "Cena atmosférica de Minecraft em uma caverna sombria com a figura lendária de Herobrine.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755564294122-a-photograph-of-a-lone-player-character-_ExiiOqn1Q0GTwP-N6hPyIA_ZOmKO-ISQiiI8fSGh8tQQA.jpeg",
+
+    "fullPrompt": "Photograph of a lone player in a dimly lit Minecraft cave. Worn leather armor, fearing the shadowy figure of Herobrine. Stalactites, flickering torchlight, and eerie shadows on blocky stone walls."
+
+  },
+
+  {
+
+    "id": "daa636e8-958e-4fe8-9a87-e6a4f9c9f7f6",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "COSMIC DOG MOUNTAIN",
+
+    "description": "Pintura surrealista de um cão translúcido em uma montanha mística multicolorida.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755564091204-a-captivating-surrealistic-painting-feat_zmqSI1RrQG6_jNBR4I3Plw_W9t4KadiQEKv0nk0_zhaBQ.jpeg",
+
+    "fullPrompt": "Surrealistic painting of a graceful dog atop a fantastical mountain with purple, blue, and green hues. Translucent fur shimmering with otherworldly light, mystical aura, dreamlike world."
+
+  },
+
+  {
+
+    "id": "969ec09e-32f5-464a-aece-1ae0e498049a",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "VALE DA LUA VERMELHA",
+
+    "description": "Paisagem de fantasia sombria com uma lua carmesim gigante e rio brilhante.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755253427855-IMG_6570.jpeg",
+
+    "fullPrompt": "Ultra-detailed dark fantasy landscape at night. Massive glowing crimson moon, jagged mountain peaks, glowing river reflecting red light. Deep mist, silhouettes of birds, 8K cinematic composition."
+
+  },
+
+  {
+
+    "id": "5334abc4-3090-4c30-a836-9ef83ad7819b",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "JAPANESE ZEN PANORAMA",
+
+    "description": "Panorama onírico unindo oceano, neve, deserto e uma árvore de bordo japonesa central.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755103240707-a-photograph-of-a-solitary-ancient-japan_xee_2EOkT4CZi_sniVHdug_gqETDybBSsWyQUI6UN3bVg.jpeg",
+
+    "fullPrompt": "Ancient Japanese maple tree in a dreamlike panorama. Blend of turquoise ocean, snow mountains, aurora sky, and golden desert dunes. Wide-angle lens, meditative calm, ethereal lighting."
+
+  },
+
+  {
+
+    "id": "0da6f274-8fd5-4cca-8f0c-66130d30038c",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "CLOCKWORK FAIRY",
+
+    "description": "Fada mecânica construída com engrenagens de prata dançando sobre uma moeda de bronze.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755099332659-a-captivating-analog-vintage-photograph-_Z7q833KbS3CRw14baNzggA_NGt9HXspSx6jbpmclVlYEw.jpeg",
+
+    "fullPrompt": "Analog vintage photograph of a minuscule fairy made of silver gears and springs. Dancing on a bronze coin, wings made of aged book pages. Steampunk aesthetic, dreamlike diffused light."
+
+  },
+
+  {
+
+    "id": "affc242a-eb00-4dff-9dd4-fb50d2835be4",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "CLOUD FACE OCEAN",
+
+    "description": "Perspectiva Fisheye de um rosto gigante nas nuvens soprando ondas no mar cristalino.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755038292923-assets_task_01k2g2v3vqfb09pnxb3sn4nze5_1755034030_img_2.webp",
+
+    "fullPrompt": "PHOTO FISHEYE huge face from clouds blowing and making big waves crystal clear sea. Surreal fantasy perspective."
+
+  },
+
+  {
+
+    "id": "b5ee9f99-3f31-4316-844f-0100c622325a",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "ÁRVORE DO CONHECIMENTO",
+
+    "description": "Floresta futurista onde figuras humanas absorvem palavras holográficas das raízes das árvores.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755037266311-5024267354795781727.jpg",
+
+    "fullPrompt": "Futuristic forest with bioluminescent plants. Human figure absorbing holographic words from tree roots in soft golden light. Sci-fi fantasy atmosphere."
+
+  },
+
+  {
+
+    "id": "cd02ea95-21af-42bf-a239-6a67684f1516",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "LEÃO DE FUMAÇA",
+
+    "description": "Depreciação abstrata de uma cabeça de leão feita de fumaça e fluidos coloridos.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755037072566-5026018236868701873.jpg",
+
+    "fullPrompt": "Abstract smoke ripple of a lion’s head statue. Wispy strokes, fluid forms, soft blue, purple, and orange tones on a white background."
+
+  },
+
+  {
+
+    "id": "0097ef44-9b71-40a0-b36f-bb9e1ee9f333",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "GALAXY COFFEE CUP",
+
+    "description": "Xícara de café transbordando para uma galáxia com fumaça formando constelações.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755036988881-5024141026922704802.jpg",
+
+    "fullPrompt": "A cup of coffee overflowing into a surreal galaxy. Liquid becomes a starry night sky, steam as glowing constellations. Magical realism, cinematic lighting, 8K."
+
+  },
+
+  {
+
+    "id": "479c15c3-6a1d-4f84-8d2e-8212a302ef1a",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "ZEN TEA GARDEN",
+
+    "description": "Xícara de chá verde que abriga um jardim japonês com pontes e bonsais em miniatura.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755036936809-5024141026922704788.jpg",
+
+    "fullPrompt": "Teacup forming a tranquil Japanese garden. Green tea as a river, tiny bridges and bonsai trees. Misty atmosphere, zen composition, soft lighting."
+
+  },
+
+  {
+
+    "id": "3d7308f5-b19d-4d2e-8b3b-ca54a1d7c6ef",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "BUTTERFLY STEAM",
+
+    "description": "Xícara de café onde o vapor se transforma em borboletas de luz em um amanhecer onírico.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755036829645-5024141026922704766.jpg",
+
+    "fullPrompt": "Coffee cup on a saucer with steam rising and forming butterflies made of light. Sunrise sky background, fantasy realism, elegant 8K composition."
+
+  },
+
+  {
+
+    "id": "b70a2b27-ff29-4b39-b629-e334021fb30d",
+
+    "tag": "IMAGENS SURREALISMO/FANTASIA",
+
+    "title": "STRAWBERRY DEER",
+
+    "description": "Cervo bebê feito inteiramente de morango em um campo mágico de frutas gigantes.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755036696822-5028270036682387166.jpg",
+
+    "fullPrompt": "Magical baby deer made of strawberry texture. Antlers as fresh leaves, red skin with seeds. Pixar 3D style, field of glowing oversized strawberries, fairytale lighting."
+
   }
+
+
 
 
 
