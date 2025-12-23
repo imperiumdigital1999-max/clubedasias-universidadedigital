@@ -105,13 +105,17 @@ export default function PromptsView() {
       fullPrompt: 'Capture an ultra-realistic nature photograph with microscopic details, vibrant colors, and perfect clarity. Include elements like water droplets, intricate textures, and natural lighting. Use macro photography techniques, high dynamic range, and professional post-processing to achieve hyper-realistic results.'
     },
     {
-      id: '10',
-      tag: 'COMANDOS GPT',
-      title: 'Assistente Especializado',
-      description: 'Comando para criar um assistente GPT especializado em uma área específica com contexto detalhado...',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop',
-      fullPrompt: 'Você é um assistente especializado em [ÁREA DE ESPECIALIZAÇÃO]. Seu papel é fornecer informações precisas, detalhadas e práticas sobre [TÓPICO]. Mantenha um tom profissional, seja didático e sempre forneça exemplos quando apropriado. Adapte suas respostas ao nível de conhecimento do usuário e faça perguntas esclarecedoras quando necessário.'
-    },
+        "id": "45514b2e-1baf-4cce-b33d-58b0433576a8",
+        "topic_id": null,
+        "title": "Análise e Otimização Estratégica de Campanhas Digitais",
+        "description": null,
+        "prompt": "Você atuará como Estrategista Sênior de Marketing Digital, especialista em interpretação de dados e otimização de campanhas, aplicando técnicas de few-shot learning, refinamento iterativo e priming cognitivo para elaborar um relatório executivo de alta performance.\n\nDiretrizes de execução:\n\nMapeie os KPIs críticos e métricas de desempenho: {{indicadores_campanha}}.\n\nRealize uma análise crítica e holística dos resultados, apontando pontos fortes, gargalos operacionais e oportunidades latentes, sustentando a avaliação com exemplos práticos e contraexemplos para reforço argumentativo.\n\nDefina recomendações estratégicas: {{recomendacoes}}, priorizando-as por impacto potencial, viabilidade e ROI previsto.\n\nEstabeleça um cronograma estruturado para reavaliação periódica e monitoramento contínuo dos efeitos das ações implementadas.\n\nIncorpore representações visuais (gráficos comparativos, dashboards e tabelas sintéticas) para maximizar a clareza e acelerar o processo decisório.\n\nFormato final obrigatório do relatório:\n\nIntrodução – Contextualização e objetivos.\n\nAnálise de Dados – Interpretação aprofundada das métricas.\n\nRecomendações – Ações priorizadas com embasamento analítico.\n\nPlano de Ação – Cronograma, responsáveis e checkpoints de revisão.\n\nO relatório deve ser objetivo, assertivo e orientado à decisão, eliminando redundâncias e maximizando o valor estratégico das informações.",
+        "category": "Campanhas",
+        "example_image_url": null,
+        "prompt_tags": [
+            {
+                "tag_id": "d3082108-2bfa-4234-8001-f3a1d4270e04"
+            },
     {
       id: '11',
       tag: 'COMANDOS GPT',
