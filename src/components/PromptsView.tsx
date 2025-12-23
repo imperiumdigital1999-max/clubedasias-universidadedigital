@@ -1698,7 +1698,169 @@ export default function PromptsView() {
     "description": "Estrutura de tirinha com 4 quadros para narrativas sequenciais, adaptável a diferentes estilos como Comics ou Anime.",
     "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755023091483-IMG_7307.jpeg",
     "fullPrompt": "Uma tirinha com 4 quadros no estilo cartoon vintage/comics, com contornos grossos e textura de papel. Personagem consistente baseado em foto de referência. Quadro 1: Personagem estressado no notebook. Quadro 2: Sorrindo e explicando algo. Quadro 3: Confiante dando uma dica. Quadro 4: Apontando para o leitor. Inclui balões de fala personalizáveis e estilo visual consistente em todos os painéis."
+  },
+    
+  {
+
+    "id": "cc390bac-622c-4b10-b332-c456ceb0e2f8",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "RIO EM UMA MALA",
+
+    "description": "Mundo em miniatura do Rio de Janeiro transbordando de uma mala de viagem moderna.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757766814928-assets_task_01k513gdq7fzqrkhyn303bx4ne_1757752667_img_0.webp",
+
+    "fullPrompt": "Create a hyper-realistic poster depicting a miniature world representing Rio de Janeiro, Brazil, inside an open modern rolling suitcase. Iconic landmarks like Christ the Redeemer, Sugarloaf, and Maracanã. Photorealistic, ultra-detailed textures of stone, sand, and water. 2:3 ratio, portrait."
+
+  },
+
+  {
+
+    "id": "42344b51-5d08-4799-9271-3ece847ebb67",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "CONSTRUÇÃO DIGITAL",
+
+    "description": "Homem sendo construído por engenheiros em miniatura com estrutura holográfica.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757330482814-assets_task_01k4m561t3evfsfndmpdk3we2x_1757318276_img_1.webp",
+
+    "fullPrompt": "Ilustração 3D hiper-realista. Homem metade humano e metade estrutura holográfica azul. Trabalhadores em miniatura com coletes e capacetes construindo o corpo. Fundo com monitor exibindo software 3D. Iluminação cinematográfica."
+
+  },
+
+  {
+
+    "id": "aa624e0f-e5b0-48cf-af38-0ced7f6b65c8",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "NEYMAR DOUBLE EXPOSURE",
+
+    "description": "Obra-prima de dupla exposição com Neymar Jr e cenas de jogo em estádio moderno.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757111174884-assets_task_01k4cdmsfsf1ctwcp0awzrwk66_1757058675_img_0.webp",
+
+    "fullPrompt": "Double Exposure Cinematic Artwork. Silhouette of Neymar Jr. inside which a dramatic football match unfolds. Rain, stadium lights, motion blur. Hyper-realistic, IMAX 4K style, tropical green and neon blue tones."
+
+  },
+
+  {
+
+    "id": "21edafef-c0e3-4012-995e-6eb5e6c1f494",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "ACTION FIGURE MESSI",
+
+    "description": "Figura de ação realista em escala 1/7 sobre mesa de trabalho profissional.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757110914414-assets_task_01k4djwearfz7tgj70sk1wrq4p_1757097787_img_1.webp",
+
+    "fullPrompt": "Hyper-detailed 1/7 scale action figure on a computer desk. Monitor showing ZBrush 3D model. Bandai style window box in the background. Premium lighting, extreme attention to detail, cinematic depth of field."
+
+  },
+
+  {
+
+    "id": "5668a8e8-2bd8-4de9-b608-7f2ec65a7366",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "STATUE OF LIBERTY SELFIE",
+
+    "description": "Estátua da Liberdade com óculos de sol e smartphone tirando uma selfie.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757000997038-assets_task_01k4a9p1n4eghs7bwzwwpap5x2_1756987426_img_0.webp",
+
+    "fullPrompt": "Hiper-realista, Estátua da Liberdade tirando selfie. Detalhes modernos: óculos refletindo Manhattan, batom vermelho, smartphone. Skyline de Nova York ao fundo, cores vibrantes, ângulo grande angular."
+
+  },
+
+  {
+
+    "id": "3899d4a4-5cd2-4d20-aff6-7663cf1607f3",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "FOX BOXER",
+
+    "description": "Retrato cinematográfico de uma raposa lutadora de boxe em um ringue profissional.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757000942077-assets_task_01k4a70kekf7ht6w6sqqre2zs0_1756984640_img_0.webp",
+
+    "fullPrompt": "Ultrarrealistic portrait of an anthropomorphic fox as a professional boxer. Satin shorts, red gloves, sweat on fur. Arena with crowd and spotlights. Intense, dynamic mood, 8K resolution."
+
+  },
+
+  {
+
+    "id": "cf37e29d-201c-4c46-b465-3c068be4391a",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "TRUMP PENGUIN",
+
+    "description": "Donald Trump estilizado como o vilão Pinguim em uma Gotham City caótica.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1757000550803-assets_task_01k49s14dxejab0m43fvjyv512_1756969985_img_0.webp",
+
+    "fullPrompt": "Double Exposure Artwork. Donald Trump as The Penguin (tuxedo, monocle, hat). Overlay of Gotham City at night in chaos. High contrast, film noir vibe, photorealistic cinematic sharpness."
+
+  },
+
+  {
+
+    "id": "0e2d349d-3dea-4bfd-9927-33ae54712c3a",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "SELFIE ESPONTÂNEA",
+
+    "description": "Selfie noturna casual com aparência de foto real de iPhone.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1756899375575-20250903_113326_result_b1209597-0523-4d0c-ad37-ef406a3d1dbc.jpeg",
+
+    "fullPrompt": "Extremamente comum e banal selfie de iPhone. Iluminação irregular de postes, ângulo estranho, vibe autêntica. Momento noturno espontâneo capturando rostos com realismo cru."
+
+  },
+
+  {
+
+    "id": "ad83caee-4dc5-49a8-96e3-e5f76bd053da",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "EXPLODED BURGER",
+
+    "description": "Visão explodida hiper-realista de um hambúrguer gourmet flutuando no ar.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/89979645-37b3-4681-971e-c0b77a3bf2a9/1755571427188-a_hyper-realistic_mid-air_exploded_view_of_a_towering_veggie_burger_with_multigrain_bun_sharp_chedd_bq1wc47ic8orpmqp2ebs_0.png",
+
+    "fullPrompt": "Hyper-realistic mid-air exploded view of a veggie burger. Ingredients floating in dynamic suspension. Warm directional lighting, extreme depth of field, vibrant organic colors."
+
+  },
+
+  {
+
+    "id": "e7afbc15-89f3-477a-9207-d9f5b7cea35b",
+
+    "tag": "IMAGENS ULTRA REALISMO",
+
+    "title": "VIDEO CALL CAT",
+
+    "description": "Gato e criança participando de uma videochamada com texturas fotorrealistas.",
+
+    "image": "https://zxhpvxjtxtjydexjnfjj.supabase.co/storage/v1/object/public/media/195a276e-af54-4c20-b5ce-e34c157372ed/1755039082680-assets_task_01k2fs97wsfjrrgdms1dj6n41y_1755024080_img_1.webp",
+
+    "fullPrompt": "Extremely realistic scene of a fluffy cat and child side by side at a table with a smartphone. Detailed fur, skin pores, natural eye reflections. Medium close-up, cinematic color grading, 4K."
+
   }
+
+
 
 
   ];
