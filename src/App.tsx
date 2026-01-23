@@ -18,6 +18,7 @@ import GPTsPersonalizadosView from './components/GPTsPersonalizadosView';
 import ViralEditVO3View from './components/ViralEditVO3View';
 import AulasViralEditView from './components/AulasViralEditView';
 import CreditosGratuitosView from './components/CreditosGratuitosView';
+import VEO3View from './components/VEO3View';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -131,6 +132,8 @@ function App() {
         return <AulasViralEditView onBack={handleBackToDashboard} />;
       case 'creditos-gratuitos':
         return <CreditosGratuitosView onBack={handleBackToDashboard} />;
+      case 'veo3':
+        return <VEO3View onBack={handleBackToDashboard} />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }

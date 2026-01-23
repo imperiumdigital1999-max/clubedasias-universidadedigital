@@ -2,6 +2,7 @@ import React from 'react';
 import { ExternalLink, ArrowRight, Users, Gift } from 'lucide-react';
 import AnnouncementBanner from './AnnouncementBanner';
 import ImportantNotice from './ImportantNotice';
+import VEO3PromptsBanner from './VEO3PromptsBanner';
 
 interface DashboardProps {
   onToolSelect?: (tool: any) => void;
@@ -27,6 +28,12 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
   const handleViralEditClick = () => {
     if (onViewChange) {
       onViewChange('viral-edit-vo3');
+    }
+  };
+
+  const handleVEO3PromptsClick = () => {
+    if (onViewChange) {
+      onViewChange('veo3');
     }
   };
 
@@ -101,6 +108,9 @@ Organize, descubra e turbine sua criatividade com recursos de IA selecionados e 
 
       {/* Aviso Importante */}
       <ImportantNotice onBannerClick={handleViralEditClick} />
+
+      {/* VEO 3 Prompts Banner */}
+      <VEO3PromptsBanner onClick={handleVEO3PromptsClick} />
 
       {/* Banner de Natal */}
       <section>
