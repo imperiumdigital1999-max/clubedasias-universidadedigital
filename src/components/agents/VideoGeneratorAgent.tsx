@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Copy, Video, Sparkles, Zap } from 'lucide-react';
+import { VideoGeneratorService } from '../../utils/aiAgentServices';
 
 interface VideoGeneratorAgentProps {
   onBack: () => void;
@@ -18,7 +19,15 @@ export default function VideoGeneratorAgent({ onBack }: VideoGeneratorAgentProps
   const [selectedType, setSelectedType] = useState('explainer');
   const [prompt, setPrompt] = useState('');
   const [duration, setDuration] = useState('30');
+  const [generatedScript, setGeneratedScript] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  const handleCopyText = (text: string, id: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
 
   const handleGenerateVideo = () => {
     if (!prompt.trim()) return;
@@ -26,8 +35,10 @@ export default function VideoGeneratorAgent({ onBack }: VideoGeneratorAgentProps
     setIsLoading(true);
 
     setTimeout(() => {
+      const script = VideoGeneratorService.generateVideoScript(prompt, selectedType);
+      setGeneratedScript(script);
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
   };
 
   return (
@@ -118,27 +129,29 @@ export default function VideoGeneratorAgent({ onBack }: VideoGeneratorAgentProps
             </div>
           </div>
 
-          {/* Video Preview Area */}
-          <div>
-            <label className="block text-white font-semibold mb-4">Visualização</label>
-            <div className="w-full aspect-video bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-dashed border-slate-700 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              {isLoading ? (
-                <div className="text-center space-y-4">
-                  <div className="animate-spin">
-                    <Sparkles className="w-12 h-12 text-red-500 mx-auto" />
-                  </div>
-                  <p className="text-slate-400">Gerando vídeo...</p>
-                  <p className="text-xs text-slate-600">Isso pode levar alguns minutos</p>
-                </div>
-              ) : (
-                <div className="text-center">
-                  <Video className="w-16 h-16 text-slate-600 mx-auto mb-3" />
-                  <p className="text-slate-500">O vídeo será exibido aqui</p>
-                  <p className="text-xs text-slate-600 mt-2">Formato: MP4 • Resolução: até 1080p</p>
-                </div>
-              )}
+          {/* Generated Script */}
+          {generatedScript && (
+            <div>
+              <label className="block text-white font-semibold mb-4">Roteiro do Vídeo</label>
+              <div className="relative">
+                <textarea
+                  value={generatedScript}
+                  readOnly
+                  className="w-full h-80 bg-slate-800/50 border border-slate-700 rounded-xl px-6 py-4 text-white placeholder-slate-400 resize-none focus:outline-none whitespace-pre-wrap overflow-y-auto text-sm leading-relaxed"
+                />
+                <button
+                  onClick={() => handleCopyText(generatedScript, 'script')}
+                  className="absolute top-3 right-3 p-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-slate-400 hover:text-white transition-colors"
+                  title="Copiar roteiro"
+                >
+                  <Copy className="w-5 h-5" />
+                </button>
+              </div>
+              <p className="text-sm text-green-400 font-semibold mt-2">
+                {copiedId === 'script' ? '✓ Roteiro copiado!' : '✓ Roteiro pronto para produção'}
+              </p>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Tips Section */}

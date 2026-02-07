@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Send, MessageCircle } from 'lucide-react';
+import { ChatAIService } from '../../utils/aiAgentServices';
 
 interface ChatAIAgentProps {
   onBack: () => void;
@@ -23,6 +24,15 @@ export default function ChatAIAgent({ onBack }: ChatAIAgentProps) {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const handleSendMessage = () => {
     if (!input.trim()) return;
@@ -39,15 +49,16 @@ export default function ChatAIAgent({ onBack }: ChatAIAgentProps) {
     setIsLoading(true);
 
     setTimeout(() => {
+      const responseText = ChatAIService.generateResponse(input);
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: 'Esta é uma demonstração do Chat de IA. A funcionalidade completa será implementada em breve com integração a um modelo de linguagem real.',
+        content: responseText,
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, assistantMessage]);
       setIsLoading(false);
-    }, 1000);
+    }, 800);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -98,7 +109,7 @@ export default function ChatAIAgent({ onBack }: ChatAIAgentProps) {
                     : 'bg-slate-800 text-slate-200 rounded-bl-none border border-slate-700'
                 }`}
               >
-                <p className="leading-relaxed">{message.content}</p>
+                <p className="leading-relaxed whitespace-pre-wrap">{message.content}</p>
               </div>
             </div>
           ))}
@@ -113,6 +124,7 @@ export default function ChatAIAgent({ onBack }: ChatAIAgentProps) {
               </div>
             </div>
           )}
+          <div ref={messagesEndRef} />
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Copy, PenTool, Sparkles, Zap } from 'lucide-react';
+import { AutomaticWritingService } from '../../utils/aiAgentServices';
 
 interface AutomaticWritingAgentProps {
   onBack: () => void;
@@ -27,9 +28,8 @@ export default function AutomaticWritingAgent({ onBack }: AutomaticWritingAgentP
     setIsLoading(true);
 
     setTimeout(() => {
-      setGeneratedText(
-        'Este é um texto demonstrativo gerado pelo Agente de Escrita Automática. A funcionalidade completa será implementada em breve com modelos avançados de geração de linguagem natural. O texto gerado será otimizado para o tipo selecionado e seguirá as melhores práticas de escrita.'
-      );
+      const text = AutomaticWritingService.generateText(prompt, selectedType);
+      setGeneratedText(text);
       setIsLoading(false);
     }, 1500);
   };
@@ -119,7 +119,7 @@ export default function AutomaticWritingAgent({ onBack }: AutomaticWritingAgentP
                 value={generatedText}
                 readOnly
                 placeholder="O texto será exibido aqui..."
-                className="w-full h-64 bg-slate-800/50 border border-slate-700 rounded-xl px-6 py-4 text-white placeholder-slate-400 resize-none focus:outline-none"
+                className="w-full h-64 bg-slate-800/50 border border-slate-700 rounded-xl px-6 py-4 text-white placeholder-slate-400 resize-none focus:outline-none whitespace-pre-wrap overflow-y-auto"
               />
               {generatedText && (
                 <button

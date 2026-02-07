@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Copy, Image, Sparkles, Zap } from 'lucide-react';
+import { ArrowLeft, Copy, Image, Sparkles, Zap, Download } from 'lucide-react';
+import { ImageGeneratorService } from '../../utils/aiAgentServices';
 
 interface ImageGeneratorAgentProps {
   onBack: () => void;
@@ -17,7 +18,15 @@ const styles = [
 export default function ImageGeneratorAgent({ onBack }: ImageGeneratorAgentProps) {
   const [selectedStyle, setSelectedStyle] = useState('realistic');
   const [prompt, setPrompt] = useState('');
+  const [generatedPrompt, setGeneratedPrompt] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  const handleCopyText = (text: string, id: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
 
   const handleGenerateImage = () => {
     if (!prompt.trim()) return;
@@ -25,8 +34,10 @@ export default function ImageGeneratorAgent({ onBack }: ImageGeneratorAgentProps
     setIsLoading(true);
 
     setTimeout(() => {
+      const generated = ImageGeneratorService.generateVisualPrompt(prompt, selectedStyle);
+      setGeneratedPrompt(generated);
       setIsLoading(false);
-    }, 2000);
+    }, 1800);
   };
 
   return (
@@ -100,26 +111,29 @@ export default function ImageGeneratorAgent({ onBack }: ImageGeneratorAgentProps
             </button>
           </div>
 
-          {/* Image Preview Area */}
-          <div>
-            <label className="block text-white font-semibold mb-4">Visualização</label>
-            <div className="w-full aspect-square bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-dashed border-slate-700 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              {isLoading ? (
-                <div className="text-center space-y-4">
-                  <div className="animate-spin">
-                    <Sparkles className="w-12 h-12 text-orange-500 mx-auto" />
-                  </div>
-                  <p className="text-slate-400">Gerando imagem...</p>
-                </div>
-              ) : (
-                <div className="text-center">
-                  <Image className="w-16 h-16 text-slate-600 mx-auto mb-3" />
-                  <p className="text-slate-500">A imagem será exibida aqui</p>
-                  <p className="text-xs text-slate-600 mt-2">Máximo: 1024x1024px</p>
-                </div>
-              )}
+          {/* Generated Prompt */}
+          {generatedPrompt && (
+            <div>
+              <label className="block text-white font-semibold mb-4">Prompt Estruturado para a Imagem</label>
+              <div className="relative">
+                <textarea
+                  value={generatedPrompt}
+                  readOnly
+                  className="w-full h-48 bg-slate-800/50 border border-slate-700 rounded-xl px-6 py-4 text-white placeholder-slate-400 resize-none focus:outline-none whitespace-pre-wrap overflow-y-auto"
+                />
+                <button
+                  onClick={() => handleCopyText(generatedPrompt, 'prompt')}
+                  className="absolute top-3 right-3 p-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-slate-400 hover:text-white transition-colors"
+                  title="Copiar prompt"
+                >
+                  <Copy className="w-5 h-5" />
+                </button>
+              </div>
+              <p className="text-sm text-green-400 font-semibold mt-2">
+                {copiedId === 'prompt' ? '✓ Copiado para área de transferência!' : '✓ Prompt pronto para usar em ferramentas de geração'}
+              </p>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Tips Section */}

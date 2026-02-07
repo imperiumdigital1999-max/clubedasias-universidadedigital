@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Copy, FileText, Sparkles } from 'lucide-react';
+import { TextSummaryService } from '../../utils/aiAgentServices';
 
 interface TextSummaryAgentProps {
   onBack: () => void;
@@ -17,11 +18,10 @@ export default function TextSummaryAgent({ onBack }: TextSummaryAgentProps) {
     setIsLoading(true);
 
     setTimeout(() => {
-      setSummary(
-        'Este é um resumo demonstrativo. A funcionalidade completa de resumo de texto será implementada em breve com algoritmos avançados de processamento de linguagem natural.'
-      );
+      const generatedSummary = TextSummaryService.generateSummary(inputText);
+      setSummary(generatedSummary);
       setIsLoading(false);
-    }, 1500);
+    }, 1200);
   };
 
   const handleCopyText = (text: string, id: string) => {
