@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Award, CheckSquare, MoreHorizontal, Wrench, MessageSquare, Crown, GraduationCap, X, Bot } from 'lucide-react';
+import { Home, Award, CheckSquare, MoreHorizontal, Wrench, MessageSquare, Crown, GraduationCap, X, Bot, Brain } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface BottomNavigationProps {
@@ -19,6 +19,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
 
   // Ícones que ficam no menu "Outros"
   const otherNavItems = [
+    { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
     { id: 'ferramentas-ia' as ViewMode, label: 'Ferramentas de IA', icon: Wrench },
     { id: 'prompts' as ViewMode, label: 'Prompts', icon: MessageSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'GPTs', icon: Bot },

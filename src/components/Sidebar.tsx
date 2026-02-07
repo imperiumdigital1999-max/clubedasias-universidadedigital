@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Wrench, Award, MessageSquare, CheckSquare, Bot, Crown, GraduationCap } from 'lucide-react';
+import { Home, Wrench, Award, MessageSquare, CheckSquare, Bot, Crown, GraduationCap, Brain } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface SidebarProps {
@@ -10,6 +10,7 @@ interface SidebarProps {
 export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
   const navigationItems = [
     { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
+    { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
     { id: 'ferramentas-ia' as ViewMode, label: 'Ferramentas de IA', icon: Wrench },
     { id: 'favorites' as ViewMode, label: 'Em Destaque', icon: Award },
     { id: 'ias-pro' as ViewMode, label: 'IAs Pro', icon: Crown },

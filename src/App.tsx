@@ -19,6 +19,12 @@ import ViralEditVO3View from './components/ViralEditVO3View';
 import AulasViralEditView from './components/AulasViralEditView';
 import CreditosGratuitosView from './components/CreditosGratuitosView';
 import VEO3View from './components/VEO3View';
+import AiAgentsView from './components/AiAgentsView';
+import ChatAIAgent from './components/agents/ChatAIAgent';
+import TextSummaryAgent from './components/agents/TextSummaryAgent';
+import AutomaticWritingAgent from './components/agents/AutomaticWritingAgent';
+import ImageGeneratorAgent from './components/agents/ImageGeneratorAgent';
+import VideoGeneratorAgent from './components/agents/VideoGeneratorAgent';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -81,6 +87,10 @@ function App() {
     setCurrentView('cursos');
   };
 
+  const handleAgentSelect = (agentId: string) => {
+    setCurrentView(agentId as ViewMode);
+  };
+
   const renderCurrentView = () => {
     switch (currentView) {
       case 'tool-detail':
@@ -134,6 +144,18 @@ function App() {
         return <CreditosGratuitosView onBack={handleBackToDashboard} />;
       case 'veo3':
         return <VEO3View onBack={handleBackToDashboard} />;
+      case 'agentes-ia':
+        return <AiAgentsView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
+      case 'chat-ia':
+        return <ChatAIAgent onBack={handleBackToDashboard} />;
+      case 'resumo-texto':
+        return <TextSummaryAgent onBack={handleBackToDashboard} />;
+      case 'escrita-automatica':
+        return <AutomaticWritingAgent onBack={handleBackToDashboard} />;
+      case 'gerador-imagens':
+        return <ImageGeneratorAgent onBack={handleBackToDashboard} />;
+      case 'gerador-videos':
+        return <VideoGeneratorAgent onBack={handleBackToDashboard} />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
