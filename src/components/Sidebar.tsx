@@ -24,13 +24,14 @@ export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
   return (
     <aside className="hidden md:flex md:flex-col md:w-64 md:bg-slate-950/95 md:backdrop-blur-lg md:border-r md:border-slate-800/50 md:fixed md:left-0 md:top-0 md:h-full md:z-40">
       <div className="p-6 border-b border-slate-800/50">
-        <div className="flex flex-col items-center space-y-2">
-          <img
-            src="/chatgpt_image_8_de_fev._de_2026,_02_01_19.png"
-            alt="Clube das IAs"
-            className="h-16 w-auto"
-          />
-          <p className="text-xs text-slate-500">Centro de Operações</p>
+        <div className="flex items-center space-x-3">
+          <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/20">
+            <Sparkles className="w-5 h-5 text-white" />
+          </div>
+          <div>
+            <h1 className="text-lg font-semibold text-white tracking-tight">Clube das IAs</h1>
+            <p className="text-xs text-slate-500">Centro de Operações</p>
+          </div>
         </div>
       </div>
 
