@@ -12,12 +12,12 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
 
   const mainNavItems = [
     { id: 'inicio' as ViewMode, label: 'Comando', icon: Home },
-    { id: 'favorites' as ViewMode, label: 'Destaque', icon: Award },
     { id: 'tasks' as ViewMode, label: 'Tarefas Premium', icon: CheckSquare },
+    { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
   ];
 
   const otherNavItems = [
-    { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
+    { id: 'favorites' as ViewMode, label: 'Destaque', icon: Award },
     { id: 'ferramentas-ia' as ViewMode, label: 'Recursos de IA', icon: Wrench },
     { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
     { id: 'prompts' as ViewMode, label: 'Biblioteca', icon: MessageSquare },
