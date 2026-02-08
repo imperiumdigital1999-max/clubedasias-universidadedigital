@@ -11,6 +11,53 @@ interface ResourceMapping {
   description: string;
 }
 
+const aiAccessKeywords = [
+  'chatgpt', 'chat gpt', 'gpt', 'claude', 'gemini', 'lovable',
+  'midjourney', 'dalle', 'dall-e', 'copilot', 'perplexity',
+  'deepseek', 'llama', 'mistral', 'bard', 'bing', 'notion ai'
+];
+
+const accessVerbs = [
+  'acessar', 'usar', 'abrir', 'entrar', 'ir para', 'quero usar',
+  'quero acessar', 'quero abrir', 'quero entrar', 'utilizar'
+];
+
+const genericAIPatterns = [
+  'qual ia', 'alguma ia', 'uma ia', 'usar ia', 'acessar ia',
+  'qual inteligencia', 'alguma inteligencia', 'usar inteligencia'
+];
+
+function detectAIAccessIntent(query: string): boolean {
+  const lowerQuery = query.toLowerCase();
+
+  for (const pattern of genericAIPatterns) {
+    if (lowerQuery.includes(pattern)) {
+      return true;
+    }
+  }
+
+  for (const verb of accessVerbs) {
+    if (lowerQuery.includes(verb)) {
+      for (const aiName of aiAccessKeywords) {
+        if (lowerQuery.includes(aiName)) {
+          return true;
+        }
+      }
+    }
+  }
+
+  for (const aiName of aiAccessKeywords) {
+    const hasAIName = lowerQuery.includes(aiName);
+    const hasAccessIntent = accessVerbs.some(verb => lowerQuery.includes(verb));
+
+    if (hasAIName && hasAccessIntent) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 const resourceMappings: ResourceMapping[] = [
   {
     keywords: ['vídeo', 'video', 'criar vídeo', 'gerar vídeo', 'vídeos', 'videos', 'veo', 'veo3'],
@@ -80,6 +127,14 @@ export function processUserQuery(query: string): AssistantResponse {
   if (!lowerQuery || lowerQuery.length < 3) {
     return {
       message: 'Por favor, descreva o que você gostaria de fazer. Exemplo: "criar um vídeo", "escrever um artigo", "gerar uma imagem".'
+    };
+  }
+
+  if (detectAIAccessIntent(lowerQuery)) {
+    return {
+      message: 'Para acessar essa IA, vá até a aba **Recursos de IA**.\n\nLá você encontra as inteligências disponíveis dentro do Clube.',
+      suggestedView: 'ferramentas-ia',
+      suggestedAction: 'Acessar Recursos de IA'
     };
   }
 
