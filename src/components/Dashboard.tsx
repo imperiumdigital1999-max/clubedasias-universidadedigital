@@ -3,6 +3,7 @@ import {
   Plus, Sparkles, Cpu, BookOpen, Layers, Crown, ArrowRight, Bot
 } from 'lucide-react';
 import { processUserQuery } from '../utils/clubeAssistant';
+import FloatingChat from './FloatingChat';
 
 interface DashboardProps {
   onToolSelect?: (tool: any) => void;
@@ -196,6 +197,8 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
         </section>
 
       </div>
+
+      <FloatingChat />
     </div>
   );
 }
