@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, Briefcase, MapPin, Home, Building2, Target, Star } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, Briefcase, MapPin, Home, Building2, Target, Star, Loader2, Sparkles } from 'lucide-react';
 
 interface OpportunitiesModalProps {
   onClose: () => void;
@@ -20,28 +20,55 @@ const allPlatforms: Platform[] = [
   { name: 'Remotasks', description: 'Anotação e classificação' },
 ];
 
+const loadingMessages = [
+  'Analisando oportunidades…',
+  'Buscando vagas disponíveis…',
+  'Conectando plataformas…',
+  'Processando resultados…',
+];
+
 const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onViewPlatforms }) => {
   const [city, setCity] = useState('');
   const [jobType, setJobType] = useState('');
   const [area, setArea] = useState('');
   const [showResult, setShowResult] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState(loadingMessages[0]);
   const [opportunitiesCount, setOpportunitiesCount] = useState(0);
   const [recommendedPlatforms, setRecommendedPlatforms] = useState<Platform[]>([]);
   const [otherPlatforms, setOtherPlatforms] = useState<Platform[]>([]);
 
+  useEffect(() => {
+    if (!isLoading) return;
+
+    const messageInterval = setInterval(() => {
+      setLoadingMessage(loadingMessages[Math.floor(Math.random() * loadingMessages.length)]);
+    }, 2000);
+
+    return () => clearInterval(messageInterval);
+  }, [isLoading]);
+
   const handleSearch = () => {
-    const minCount = 5;
-    const maxCount = 28;
-    const total = Math.floor(Math.random() * (maxCount - minCount + 1)) + minCount;
+    setIsLoading(true);
+    setShowResult(false);
 
-    const shuffled = [...allPlatforms].sort(() => Math.random() - 0.5);
-    const recommended = shuffled.slice(0, 3);
-    const others = shuffled.slice(3);
+    const loadingDuration = Math.floor(Math.random() * (12000 - 8000 + 1)) + 8000;
 
-    setOpportunitiesCount(total);
-    setRecommendedPlatforms(recommended);
-    setOtherPlatforms(others);
-    setShowResult(true);
+    setTimeout(() => {
+      const minCount = 5;
+      const maxCount = 28;
+      const total = Math.floor(Math.random() * (maxCount - minCount + 1)) + minCount;
+
+      const shuffled = [...allPlatforms].sort(() => Math.random() - 0.5);
+      const recommended = shuffled.slice(0, 3);
+      const others = shuffled.slice(3);
+
+      setOpportunitiesCount(total);
+      setRecommendedPlatforms(recommended);
+      setOtherPlatforms(others);
+      setIsLoading(false);
+      setShowResult(true);
+    }, loadingDuration);
   };
 
   const handleViewPlatforms = () => {
@@ -110,7 +137,8 @@ const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onView
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 placeholder="Digite sua cidade"
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                disabled={isLoading}
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
 
@@ -122,7 +150,8 @@ const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onView
               <select
                 value={jobType}
                 onChange={(e) => setJobType(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all appearance-none cursor-pointer"
+                disabled={isLoading}
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <option value="">Selecione uma opção</option>
                 <option value="home-office">Home office</option>
@@ -140,10 +169,42 @@ const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onView
                 value={area}
                 onChange={(e) => setArea(e.target.value)}
                 placeholder="ex: Marketing, IA, Conteúdo, Atendimento, Tecnologia"
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                disabled={isLoading}
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               />
             </div>
           </div>
+
+          {isLoading && (
+            <div className="mb-6 p-8 rounded-lg bg-gradient-to-br from-blue-500/5 to-cyan-500/5 border border-blue-500/20 animate-fade-in">
+              <div className="flex flex-col items-center justify-center space-y-6">
+                <div className="relative">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
+                    <Loader2 className="w-8 h-8 text-blue-400 animate-spin" />
+                  </div>
+                  <div className="absolute -top-1 -right-1">
+                    <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
+                  </div>
+                </div>
+
+                <div className="text-center space-y-2">
+                  <p className="text-white font-semibold text-lg">
+                    {loadingMessage}
+                  </p>
+                  <p className="text-gray-400 text-sm">
+                    Estamos processando sua busca
+                  </p>
+                </div>
+
+                <div className="w-full max-w-xs">
+                  <div className="h-1.5 bg-gray-800/50 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full animate-pulse"
+                         style={{ width: '70%', transition: 'width 0.5s ease-in-out' }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {showResult && (
             <div className="mb-6 space-y-4 animate-fade-in">
@@ -203,13 +264,20 @@ const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onView
           )}
 
           <div className="space-y-3">
-            {!showResult ? (
+            {!showResult && !isLoading ? (
               <button
                 onClick={handleSearch}
                 disabled={!city && !jobType}
                 className="w-full py-3.5 px-6 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 disabled:from-gray-700 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/20"
               >
                 Buscar oportunidades
+              </button>
+            ) : isLoading ? (
+              <button
+                disabled
+                className="w-full py-3.5 px-6 bg-gradient-to-r from-blue-600/50 to-cyan-600/50 text-white font-semibold rounded-lg cursor-not-allowed opacity-75"
+              >
+                Processando...
               </button>
             ) : (
               <button
@@ -222,7 +290,8 @@ const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onView
 
             <button
               onClick={onClose}
-              className="w-full py-3 px-6 bg-gray-800/50 hover:bg-gray-700/50 text-gray-300 font-medium rounded-lg transition-all"
+              disabled={isLoading}
+              className="w-full py-3 px-6 bg-gray-800/50 hover:bg-gray-700/50 disabled:opacity-50 disabled:cursor-not-allowed text-gray-300 font-medium rounded-lg transition-all"
             >
               Fechar
             </button>
