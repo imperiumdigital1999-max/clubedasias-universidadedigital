@@ -31,7 +31,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
   const handleGPTsClick = () => {
     if (onViewChange) {
-      onViewChange('gpts');
+      onViewChange('gpts-personalizados');
     }
   };
 
