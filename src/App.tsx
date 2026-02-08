@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import BottomNavigation from './components/BottomNavigation';
@@ -25,14 +25,25 @@ import TextSummaryAgent from './components/agents/TextSummaryAgent';
 import AutomaticWritingAgent from './components/agents/AutomaticWritingAgent';
 import ImageGeneratorAgent from './components/agents/ImageGeneratorAgent';
 import VideoGeneratorAgent from './components/agents/VideoGeneratorAgent';
+import LoginView from './components/LoginView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentView, setCurrentView] = useState<ViewMode>('inicio');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem('clube_ias_logged_in') === 'true';
+    setIsLoggedIn(loggedIn);
+  }, []);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
 
   const handleViewChange = (view: ViewMode) => {
     setCurrentView(view);
@@ -161,11 +172,15 @@ function App() {
     }
   };
 
+  if (!isLoggedIn) {
+    return <LoginView onLogin={handleLogin} />;
+  }
+
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Sidebar para Desktop */}
       <Sidebar currentView={currentView} onViewChange={handleViewChange} />
-      
+
       {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
         <Header
           currentView={currentView}
@@ -173,11 +188,11 @@ function App() {
           onMenuToggle={() => {}}
         />
       )}
-      
+
       <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64' : 'md:ml-64'}`}>
         {renderCurrentView()}
       </main>
-      
+
       {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
         <BottomNavigation
           currentView={currentView}
