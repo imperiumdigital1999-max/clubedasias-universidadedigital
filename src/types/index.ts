@@ -86,4 +86,4 @@ export interface GPT {
   rating?: number;
 }
 
-export type ViewMode = 'inicio' | 'category' | 'ferramentas-ia' | 'favorites' | 'tasks' | 'ias-pro' | 'cursos' | 'prompts' | 'gpts-personalizados' | 'tool-detail' | 'task-detail' | 'course-detail' | 'viral-edit-vo3' | 'aulas-viral-edit' | 'creditos-gratuitos' | 'veo3' | 'agentes-ia' | 'chat-ia' | 'resumo-texto' | 'escrita-automatica' | 'gerador-imagens' | 'gerador-videos';
+export type ViewMode = 'inicio' | 'category' | 'ferramentas-ia' | 'favorites' | 'tasks' | 'ias-pro' | 'cursos' | 'prompts' | 'gpts-personalizados' | 'tool-detail' | 'task-detail' | 'course-detail' | 'viral-edit-vo3' | 'aulas-viral-edit' | 'creditos-gratuitos' | 'veo3' | 'agentes-ia' | 'chat-ia' | 'resumo-texto' | 'escrita-automatica' | 'gerador-imagens' | 'gerador-videos' | 'destaques-da-semana';

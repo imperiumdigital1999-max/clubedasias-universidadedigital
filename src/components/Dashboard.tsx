@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import {
   Sparkles, Wand2, MessageSquare, FileText, Megaphone,
-  BarChart3, Lightbulb, Cpu, Video, Image, Gift, Users,
-  ArrowRight, ChevronRight, Zap, BookOpen, Layers, Crown
+  Lightbulb, Cpu, Video, Image, ChevronRight, Zap, BookOpen, Layers, Crown
 } from 'lucide-react';
-import AnnouncementBanner from './AnnouncementBanner';
-import ImportantNotice from './ImportantNotice';
-import VEO3PromptsBanner from './VEO3PromptsBanner';
 
 interface DashboardProps {
   onToolSelect?: (tool: any) => void;
@@ -15,32 +11,6 @@ interface DashboardProps {
 
 export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
   const [aiInput, setAiInput] = useState('');
-
-  const handleCommunityClick = () => {
-    window.open('https://whatsapp.com/channel/0029Vb4Byv61noz5kQi01Y1Z', '_blank', 'noopener,noreferrer');
-  };
-
-  const handleQuizAccessClick = () => {
-    window.open('https://inlead.digital/presente-de-natal-clube-das-ias', '_blank', 'noopener,noreferrer');
-  };
-
-  const handleViewCategories = () => {
-    if (onViewChange) {
-      onViewChange('ferramentas-ia');
-    }
-  };
-
-  const handleViralEditClick = () => {
-    if (onViewChange) {
-      onViewChange('viral-edit-vo3');
-    }
-  };
-
-  const handleVEO3PromptsClick = () => {
-    if (onViewChange) {
-      onViewChange('veo3');
-    }
-  };
 
   const handleAIAgentsClick = () => {
     if (onViewChange) {
@@ -257,62 +227,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           ))}
         </section>
 
-        <div className="space-y-6">
-          <ImportantNotice onBannerClick={handleViralEditClick} />
-          <VEO3PromptsBanner onClick={handleVEO3PromptsClick} />
-        </div>
-
-        <section>
-          <div
-            className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-green-600/10 to-red-600/10 border border-green-500/20"
-          >
-            <div className="relative z-10 text-center py-10 px-6">
-              <div className="flex items-center justify-center space-x-3 mb-4">
-                <Gift className="w-9 h-9 text-green-400" />
-                <h2 className="text-2xl md:text-3xl font-bold text-white">Presente de Natal do Clube das IAs</h2>
-              </div>
-              <p className="text-slate-300 text-base md:text-lg mb-6 max-w-2xl mx-auto">
-                Responda a pesquisa oficial e libere o acesso à nova IA que cria vídeos profissionais
-              </p>
-              <button
-                onClick={handleQuizAccessClick}
-                className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-3 rounded-xl font-semibold flex items-center space-x-2 mx-auto hover:from-green-600 hover:to-red-600 transition-all duration-300 hover:scale-105"
-              >
-                <Gift className="w-5 h-5" />
-                <span>Responder e Liberar Acesso</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <AnnouncementBanner onViewCategories={handleViewCategories} />
-
-        <section>
-          <div
-            className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20"
-          >
-            <div className="relative z-10 text-center py-10 px-6">
-              <div className="flex items-center justify-center space-x-3 mb-4">
-                <Users className="w-9 h-9 text-blue-400" />
-                <h2 className="text-2xl md:text-3xl font-bold text-white">Comunidade dos Gestores de IA</h2>
-              </div>
-              <p className="text-slate-300 text-base md:text-lg mb-6 max-w-2xl mx-auto">
-                Conecte-se com outros profissionais e compartilhe experiências
-              </p>
-              <button
-                onClick={handleCommunityClick}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-xl font-semibold flex items-center space-x-2 mx-auto hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:scale-105"
-              >
-                <Users className="w-5 h-5" />
-                <span>Entrar na Comunidade</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8">
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8 mt-8">
           <div className="bg-slate-900/30 border border-blue-500/20 rounded-xl p-6 text-center">
             <div className="text-3xl font-bold text-blue-400 mb-2">150+</div>
             <div className="text-slate-400 text-sm">Recursos</div>

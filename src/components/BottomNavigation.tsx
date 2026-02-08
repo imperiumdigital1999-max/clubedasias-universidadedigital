@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Award, CheckSquare, MoreHorizontal, Wrench, MessageSquare, Crown, GraduationCap, X, Bot, Brain } from 'lucide-react';
+import { Home, Award, CheckSquare, MoreHorizontal, Wrench, MessageSquare, Crown, GraduationCap, X, Bot, Brain, Star } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface BottomNavigationProps {
@@ -19,6 +19,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
   const otherNavItems = [
     { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
     { id: 'ferramentas-ia' as ViewMode, label: 'Recursos de IA', icon: Wrench },
+    { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
     { id: 'prompts' as ViewMode, label: 'Biblioteca', icon: MessageSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'GPTs', icon: Bot },
     { id: 'ias-pro' as ViewMode, label: 'Ferramentas Pro', icon: Crown },

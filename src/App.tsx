@@ -25,6 +25,7 @@ import TextSummaryAgent from './components/agents/TextSummaryAgent';
 import AutomaticWritingAgent from './components/agents/AutomaticWritingAgent';
 import ImageGeneratorAgent from './components/agents/ImageGeneratorAgent';
 import VideoGeneratorAgent from './components/agents/VideoGeneratorAgent';
+import DestaquesDaSemanaView from './components/DestaquesDaSemanaView';
 import LoginView from './components/LoginView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
@@ -137,6 +138,8 @@ function App() {
         );
       case 'favorites':
         return <FavoritesView onToolSelect={handleToolSelect} />;
+      case 'destaques-da-semana':
+        return <DestaquesDaSemanaView onViewChange={handleViewChange} />;
       case 'tasks':
         return <TasksView onPlatformSelect={handlePlatformSelect} />;
       case 'ias-pro':
