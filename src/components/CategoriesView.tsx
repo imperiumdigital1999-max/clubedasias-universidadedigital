@@ -145,14 +145,9 @@ export default function CategoriesView({ onToolSelect }: CategoriesViewProps) {
                 </span>
               </h2>
 
-              <p className="text-slate-300 text-lg mb-8 leading-relaxed max-w-2xl">
+              <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
                 Utilize diferentes inteligências artificiais em um único ambiente, sem precisar contratar várias ferramentas.
               </p>
-
-              <button className="inline-flex items-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-6 py-3 rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all">
-                <span>Explorar Recursos</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
             </div>
 
             <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex items-center space-x-4 opacity-20">
