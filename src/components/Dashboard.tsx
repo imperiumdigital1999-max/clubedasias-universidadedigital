@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Sparkles, Cpu, BookOpen, Layers, Crown
+  Plus, Sparkles, Cpu, BookOpen, Layers, Crown
 } from 'lucide-react';
 
 interface DashboardProps {
@@ -40,28 +40,24 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
       icon: Cpu,
       title: 'Agentes de IA',
       description: 'Assistentes especializados',
-      count: '5 agentes',
       onClick: handleAIAgentsClick
     },
     {
       icon: Layers,
       title: 'Ferramentas',
       description: 'Explore 150+ recursos',
-      count: '20 categorias',
       onClick: handleViewCategories
     },
     {
       icon: BookOpen,
       title: 'Biblioteca de Prompts',
       description: 'Templates prontos para uso',
-      count: '100+ prompts',
       onClick: handlePromptsClick
     },
     {
       icon: Crown,
       title: 'GPTs Personalizados',
       description: 'Assistentes customizados',
-      count: '30+ GPTs',
       onClick: handleGPTsClick
     }
   ];
@@ -74,64 +70,74 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
   };
 
   return (
-    <div className="min-h-screen bg-slate-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
 
-        <section className="text-center pt-8 pb-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            O que você quer executar agora?
+        <section className="text-center pt-12 pb-8 space-y-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+            Centro de Comando de IA
           </h1>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Escolha uma função abaixo ou utilize a IA diretamente
+          <p className="text-slate-400 text-base max-w-2xl mx-auto leading-relaxed">
+            Execute tarefas com inteligência artificial em um único lugar. Crie, transforme e automatize com as melhores ferramentas de IA.
           </p>
         </section>
 
-        <section className="bg-gradient-to-br from-slate-900/80 to-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 md:p-10">
-          <div className="flex items-center space-x-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center">
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
-            <h2 className="text-2xl font-bold text-white">Assistente de IA</h2>
-          </div>
+        <section className="max-w-4xl mx-auto">
+          <form onSubmit={handleAIExecute}>
+            <div className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-8 shadow-2xl">
+              <div className="flex items-start space-x-4 mb-6">
+                <div className="w-12 h-12 bg-slate-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Plus className="w-6 h-6 text-slate-400" />
+                </div>
+                <textarea
+                  value={aiInput}
+                  onChange={(e) => setAiInput(e.target.value)}
+                  placeholder="Descreva o que você quer criar ou resolver..."
+                  rows={3}
+                  className="flex-1 bg-transparent border-none text-white text-lg placeholder-slate-500 focus:outline-none resize-none"
+                />
+              </div>
 
-          <form onSubmit={handleAIExecute} className="space-y-4">
-            <div className="relative">
-              <textarea
-                value={aiInput}
-                onChange={(e) => setAiInput(e.target.value)}
-                placeholder="Descreva o que você quer executar com a IA..."
-                rows={4}
-                className="w-full px-6 py-4 bg-slate-950/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 transition-all resize-none"
-              />
-            </div>
-
-            <div className="flex items-center justify-between">
-              <p className="text-xs text-slate-500 max-w-2xl leading-relaxed">
-                Este ambiente utiliza modelos de IA integrados para execução prática de tarefas. Limites podem ser aplicados para manter a estabilidade do sistema.
-              </p>
-              <button
-                type="submit"
-                disabled={!aiInput.trim()}
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 whitespace-nowrap"
-              >
-                <span>Executar com IA</span>
-                <Sparkles className="w-5 h-5" />
-              </button>
+              <div className="flex items-center justify-between pt-4 border-t border-slate-800/50">
+                <div className="flex items-center space-x-3">
+                  <button
+                    type="button"
+                    className="px-4 py-2 bg-slate-800/50 hover:bg-slate-800 text-slate-300 text-sm rounded-lg transition-all"
+                  >
+                    Modo IA
+                  </button>
+                  <button
+                    type="button"
+                    className="px-4 py-2 bg-slate-800/50 hover:bg-slate-800 text-slate-300 text-sm rounded-lg transition-all"
+                  >
+                    Configurações
+                  </button>
+                </div>
+                <button
+                  type="submit"
+                  disabled={!aiInput.trim()}
+                  className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                >
+                  <Sparkles className="w-5 h-5" />
+                  <span>Executar</span>
+                </button>
+              </div>
             </div>
           </form>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto pt-8">
           {quickAccessCards.map((card, index) => (
             <button
               key={index}
               onClick={card.onClick}
-              className="bg-slate-900/30 border border-slate-800 rounded-xl p-6 text-left hover:border-slate-700 hover:bg-slate-900/50 transition-all group"
+              className="bg-slate-900/30 backdrop-blur-sm border border-slate-800/50 rounded-xl p-6 text-left hover:border-slate-700/50 hover:bg-slate-900/50 transition-all group"
             >
-              <card.icon className="w-8 h-8 text-blue-400 mb-3 group-hover:scale-110 transition-transform" />
-              <h3 className="text-white font-semibold mb-1">{card.title}</h3>
-              <p className="text-slate-400 text-sm mb-2">{card.description}</p>
-              <span className="text-xs text-blue-400 font-medium">{card.count}</span>
+              <div className="w-12 h-12 bg-slate-800/50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-slate-800 transition-all">
+                <card.icon className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform" />
+              </div>
+              <h3 className="text-white font-semibold mb-2 text-base">{card.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">{card.description}</p>
             </button>
           ))}
         </section>
