@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Folder, FileText, Image, Mic, Video, Zap, Code, ArrowLeft, ArrowRight, Trophy, Star, ShieldCheck, Crown, Gem } from 'lucide-react';
+import { Folder, FileText, Image, Mic, Video, Zap, Code, ArrowLeft, ArrowRight, Trophy, Star, ShieldCheck, Crown, Gem, Sparkles, Brain, Cpu } from 'lucide-react';
 import { aiTools } from '../data/tools';
 import ToolCard from './ToolCard';
 import { AITool } from '../types';
@@ -124,6 +124,47 @@ export default function CategoriesView({ onToolSelect }: CategoriesViewProps) {
             <div>
               <h1 className="text-3xl font-bold text-white">Categorias</h1>
               <p className="text-slate-400 mt-1">Escolha uma categoria para explorar as ferramentas</p>
+            </div>
+          </div>
+
+          <div className="relative bg-gradient-to-br from-slate-900/80 via-slate-800/60 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 md:p-12 mb-12 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5"></div>
+
+            <div className="relative z-10 max-w-4xl">
+              <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
+                <Sparkles className="w-4 h-4 text-cyan-400" />
+                <span className="text-cyan-300 text-xs font-medium tracking-wider uppercase">
+                  Acesso Gratuito às IAs
+                </span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                Tenha acesso às IAs{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+                  gratuitamente
+                </span>
+              </h2>
+
+              <p className="text-slate-300 text-lg mb-8 leading-relaxed max-w-2xl">
+                Utilize diferentes inteligências artificiais em um único ambiente, sem precisar contratar várias ferramentas.
+              </p>
+
+              <button className="inline-flex items-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-6 py-3 rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all">
+                <span>Explorar Recursos</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex items-center space-x-4 opacity-20">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center transform rotate-12">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center transform -rotate-6">
+                <Cpu className="w-8 h-8 text-white" />
+              </div>
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform rotate-12">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
             </div>
           </div>
 
