@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CheckSquare, Sparkles, TrendingUp } from 'lucide-react';
 import { taskPlatforms } from '../data/taskPlatforms';
 import TaskCard from './TaskCard';
@@ -11,6 +11,10 @@ interface TasksViewProps {
 
 export default function TasksView({ onPlatformSelect }: TasksViewProps) {
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    setShowModal(true);
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

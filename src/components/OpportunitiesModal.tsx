@@ -1,10 +1,24 @@
 import React, { useState } from 'react';
-import { X, Briefcase, MapPin, Home, Building2, Target } from 'lucide-react';
+import { X, Briefcase, MapPin, Home, Building2, Target, Star } from 'lucide-react';
 
 interface OpportunitiesModalProps {
   onClose: () => void;
   onViewPlatforms: () => void;
 }
+
+interface Platform {
+  name: string;
+  description: string;
+}
+
+const allPlatforms: Platform[] = [
+  { name: 'Clickworker', description: 'Microtarefas e validação de dados' },
+  { name: 'Appen', description: 'Treinamento de IA e dados' },
+  { name: 'Lionbridge AI', description: 'Avaliação de conteúdo' },
+  { name: 'Workana', description: 'Projetos freelance' },
+  { name: 'Vintepila', description: 'Tarefas e pesquisas' },
+  { name: 'Remotasks', description: 'Anotação e classificação' },
+];
 
 const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onViewPlatforms }) => {
   const [city, setCity] = useState('');
@@ -12,15 +26,21 @@ const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onView
   const [area, setArea] = useState('');
   const [showResult, setShowResult] = useState(false);
   const [opportunitiesCount, setOpportunitiesCount] = useState(0);
+  const [recommendedPlatforms, setRecommendedPlatforms] = useState<Platform[]>([]);
+  const [otherPlatforms, setOtherPlatforms] = useState<Platform[]>([]);
 
   const handleSearch = () => {
-    const baseCount = Math.floor(Math.random() * 15) + 8;
-    const cityBonus = city ? 3 : 0;
-    const typeBonus = jobType ? 2 : 0;
-    const areaBonus = area ? 4 : 0;
+    const minCount = 5;
+    const maxCount = 28;
+    const total = Math.floor(Math.random() * (maxCount - minCount + 1)) + minCount;
 
-    const total = baseCount + cityBonus + typeBonus + areaBonus;
+    const shuffled = [...allPlatforms].sort(() => Math.random() - 0.5);
+    const recommended = shuffled.slice(0, 3);
+    const others = shuffled.slice(3);
+
     setOpportunitiesCount(total);
+    setRecommendedPlatforms(recommended);
+    setOtherPlatforms(others);
     setShowResult(true);
   };
 
@@ -36,7 +56,7 @@ const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onView
         onClick={onClose}
       />
 
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700/50 max-w-lg w-full overflow-hidden">
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-gray-700/50 max-w-lg w-full max-h-[90vh] overflow-y-auto">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500" />
 
         <div className="p-6 sm:p-8">
@@ -126,16 +146,58 @@ const OpportunitiesModal: React.FC<OpportunitiesModalProps> = ({ onClose, onView
           </div>
 
           {showResult && (
-            <div className="mb-6 p-4 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 animate-fade-in">
-              <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-blue-500/20">
-                  <Briefcase className="w-5 h-5 text-blue-400" />
+            <div className="mb-6 space-y-4 animate-fade-in">
+              <div className="p-4 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-blue-500/20">
+                    <Briefcase className="w-5 h-5 text-blue-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">
+                      Encontramos {opportunitiesCount} oportunidades gratuitas disponíveis para seu perfil.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-white font-semibold">
-                    Encontramos {opportunitiesCount} oportunidades gratuitas disponíveis para seu perfil.
-                  </p>
-                </div>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-white font-semibold text-sm flex items-center gap-2">
+                  <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                  Plataformas Recomendadas
+                </h3>
+                {recommendedPlatforms.map((platform, index) => (
+                  <div
+                    key={index}
+                    className="p-3 rounded-lg bg-gray-800/40 border border-blue-500/20 hover:border-blue-500/40 transition-all"
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="w-2 h-2 rounded-full bg-blue-400" />
+                      <p className="text-white font-medium text-sm">{platform.name}</p>
+                    </div>
+                    <p className="text-gray-400 text-xs ml-4">{platform.description}</p>
+                  </div>
+                ))}
+
+                {otherPlatforms.length > 0 && (
+                  <>
+                    <h3 className="text-white font-semibold text-sm mt-4">Outras opções disponíveis</h3>
+                    <div className="space-y-2">
+                      {otherPlatforms.map((platform, index) => (
+                        <div
+                          key={index}
+                          className="p-2.5 rounded-lg bg-gray-800/30 border border-gray-700/30"
+                        >
+                          <p className="text-gray-300 text-sm">{platform.name}</p>
+                          <p className="text-gray-500 text-xs">{platform.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                <p className="text-xs text-gray-500 leading-relaxed pt-2">
+                  As plataformas recomendadas podem variar conforme disponibilidade e perfil.
+                </p>
               </div>
             </div>
           )}

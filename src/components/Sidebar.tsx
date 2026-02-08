@@ -17,7 +17,7 @@ export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
     { id: 'ias-pro' as ViewMode, label: 'Ferramentas Pro', icon: Crown },
     { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: Layers },
     { id: 'prompts' as ViewMode, label: 'Biblioteca', icon: MessageSquare },
-    { id: 'tasks' as ViewMode, label: 'Execução', icon: CheckSquare },
+    { id: 'tasks' as ViewMode, label: 'Clube das Tarefas Premium', icon: CheckSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'GPTs', icon: Bot },
   ];
 

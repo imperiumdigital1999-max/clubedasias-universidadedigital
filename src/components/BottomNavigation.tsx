@@ -13,7 +13,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
   const mainNavItems = [
     { id: 'inicio' as ViewMode, label: 'Comando', icon: Home },
     { id: 'favorites' as ViewMode, label: 'Destaque', icon: Award },
-    { id: 'tasks' as ViewMode, label: 'Execução', icon: CheckSquare },
+    { id: 'tasks' as ViewMode, label: 'Tarefas Premium', icon: CheckSquare },
   ];
 
   const otherNavItems = [
