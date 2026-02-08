@@ -93,7 +93,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
         <section className="text-center pt-12 pb-8 space-y-4">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
-            Centro de Comando de IA
+            Clube das IAs
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto leading-relaxed">
             Execute tarefas com inteligência artificial em um único lugar. Crie, transforme e automatize com as melhores ferramentas de IA.
