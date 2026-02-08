@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Sparkles, Wand2, MessageSquare, FileText, Megaphone,
-  Lightbulb, Cpu, Video, Image, ChevronRight, Zap, BookOpen, Layers, Crown
+  Sparkles, Cpu, BookOpen, Layers, Crown
 } from 'lucide-react';
 
 interface DashboardProps {
@@ -24,24 +23,6 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
     }
   };
 
-  const handleVEO3PromptsClick = () => {
-    if (onViewChange) {
-      onViewChange('veo3');
-    }
-  };
-
-  const handleTasksClick = () => {
-    if (onViewChange) {
-      onViewChange('tarefas');
-    }
-  };
-
-  const handleCoursesClick = () => {
-    if (onViewChange) {
-      onViewChange('cursos');
-    }
-  };
-
   const handlePromptsClick = () => {
     if (onViewChange) {
       onViewChange('prompts');
@@ -53,71 +34,6 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
       onViewChange('gpts');
     }
   };
-
-  const handleIAsProClick = () => {
-    if (onViewChange) {
-      onViewChange('ias-pro');
-    }
-  };
-
-  const functionCards = [
-    {
-      icon: Wand2,
-      title: 'Criar Texto',
-      description: 'Gere conteúdo, artigos e textos profissionais',
-      color: 'from-orange-500 to-red-500',
-      onClick: handleAIAgentsClick
-    },
-    {
-      icon: Megaphone,
-      title: 'Copy & Anúncios',
-      description: 'Crie anúncios persuasivos e campanhas',
-      color: 'from-blue-500 to-cyan-500',
-      onClick: handlePromptsClick
-    },
-    {
-      icon: FileText,
-      title: 'Analisar Conteúdo',
-      description: 'Resuma e analise documentos rapidamente',
-      color: 'from-purple-500 to-pink-500',
-      onClick: handleAIAgentsClick
-    },
-    {
-      icon: MessageSquare,
-      title: 'Melhorar Mensagens',
-      description: 'Otimize comunicação e textos',
-      color: 'from-emerald-500 to-green-500',
-      onClick: handlePromptsClick
-    },
-    {
-      icon: Zap,
-      title: 'Automação',
-      description: 'Configure fluxos automatizados',
-      color: 'from-yellow-500 to-orange-500',
-      onClick: handleViewCategories
-    },
-    {
-      icon: Lightbulb,
-      title: 'Ideias & Estratégia',
-      description: 'Brainstorming e planejamento',
-      color: 'from-indigo-500 to-purple-500',
-      onClick: handlePromptsClick
-    },
-    {
-      icon: Image,
-      title: 'Criar Imagens',
-      description: 'Gere imagens e designs com IA',
-      color: 'from-cyan-500 to-blue-500',
-      onClick: handleAIAgentsClick
-    },
-    {
-      icon: Video,
-      title: 'Criar Vídeos',
-      description: 'Produza vídeos profissionais',
-      color: 'from-pink-500 to-rose-500',
-      onClick: handleVEO3PromptsClick
-    }
-  ];
 
   const quickAccessCards = [
     {
@@ -168,25 +84,6 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Escolha uma função abaixo ou utilize a IA diretamente
           </p>
-        </section>
-
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {functionCards.map((card, index) => (
-            <button
-              key={index}
-              onClick={card.onClick}
-              className="group relative bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 text-left hover:border-slate-700 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className={`w-12 h-12 bg-gradient-to-br ${card.color} rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg transition-shadow`}>
-                <card.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2 text-lg">{card.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{card.description}</p>
-              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ChevronRight className="w-5 h-5 text-slate-400" />
-              </div>
-            </button>
-          ))}
         </section>
 
         <section className="bg-gradient-to-br from-slate-900/80 to-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 md:p-10">
