@@ -18,6 +18,18 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
     }
   };
 
+  const handleViewCategories = () => {
+    if (onViewChange) {
+      onViewChange('ferramentas-ia');
+    }
+  };
+
+  const handleVEO3PromptsClick = () => {
+    if (onViewChange) {
+      onViewChange('veo3');
+    }
+  };
+
   const handleTasksClick = () => {
     if (onViewChange) {
       onViewChange('tarefas');
