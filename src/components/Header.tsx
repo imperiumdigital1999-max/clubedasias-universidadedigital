@@ -1,5 +1,5 @@
-import React from 'react';
-import { Menu, Star, Clock, Folder, CheckSquare, Crown } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Sparkles } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface HeaderProps {
@@ -9,23 +9,55 @@ interface HeaderProps {
 }
 
 export default function Header({ currentView, onViewChange, onMenuToggle }: HeaderProps) {
+  const [userEmail, setUserEmail] = useState<string>('');
+
+  useEffect(() => {
+    const email = localStorage.getItem('clube_ias_email') || '';
+    setUserEmail(email);
+  }, []);
+
+  const getInitials = (email: string) => {
+    if (!email) return 'U';
+    const name = email.split('@')[0];
+    return name.substring(0, 2).toUpperCase();
+  };
+
   return (
-    <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 md:hidden">
+    <header className="bg-slate-950/95 backdrop-blur-lg border-b border-slate-800/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CI</span>
+              <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/20">
+                <Sparkles className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-white">Clube das IAs</h1>
-                <p className="text-xs text-slate-400 hidden sm:block">Hub Premium de Ferramentas</p>
+                <h1 className="text-lg font-semibold text-white tracking-tight">Clube das IAs</h1>
               </div>
+            </div>
+
+            <div className="hidden md:flex items-center space-x-2 px-3 py-1.5 bg-slate-900/50 border border-slate-700/50 rounded-lg">
+              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+              <span className="text-xs text-slate-400 font-medium">Sistema operacional</span>
+            </div>
+
+            <div className="hidden md:flex items-center">
+              <span className="px-2.5 py-1 bg-blue-500/10 border border-blue-500/30 rounded-md text-xs font-semibold text-blue-400 uppercase tracking-wider">
+                Beta
+              </span>
             </div>
           </div>
 
-          <div className="flex items-center space-x-2"></div>
+          <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-3 px-3 py-2 bg-slate-900/50 border border-slate-700/50 rounded-lg hover:border-slate-600/50 transition-colors cursor-pointer">
+              <div className="w-7 h-7 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center">
+                <span className="text-xs font-semibold text-white">{getInitials(userEmail)}</span>
+              </div>
+              <div className="hidden sm:block">
+                <p className="text-xs text-slate-400 leading-tight max-w-[150px] truncate">{userEmail || 'Usuário'}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>

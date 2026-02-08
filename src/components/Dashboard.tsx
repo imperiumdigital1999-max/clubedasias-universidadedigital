@@ -1,5 +1,9 @@
-import React from 'react';
-import { ExternalLink, ArrowRight, Users, Gift } from 'lucide-react';
+import React, { useState } from 'react';
+import {
+  Sparkles, Wand2, MessageSquare, FileText, Megaphone,
+  BarChart3, Lightbulb, Cpu, Video, Image, Gift, Users,
+  ArrowRight, ChevronRight, Zap, BookOpen, Layers, Crown
+} from 'lucide-react';
 import AnnouncementBanner from './AnnouncementBanner';
 import ImportantNotice from './ImportantNotice';
 import VEO3PromptsBanner from './VEO3PromptsBanner';
@@ -10,6 +14,7 @@ interface DashboardProps {
 }
 
 export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
+  const [aiInput, setAiInput] = useState('');
 
   const handleCommunityClick = () => {
     window.open('https://whatsapp.com/channel/0029Vb4Byv61noz5kQi01Y1Z', '_blank', 'noopener,noreferrer');
@@ -37,147 +42,296 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
     }
   };
 
+  const handleAIAgentsClick = () => {
+    if (onViewChange) {
+      onViewChange('agentes-ia');
+    }
+  };
+
+  const handleTasksClick = () => {
+    if (onViewChange) {
+      onViewChange('tarefas');
+    }
+  };
+
+  const handleCoursesClick = () => {
+    if (onViewChange) {
+      onViewChange('cursos');
+    }
+  };
+
+  const handlePromptsClick = () => {
+    if (onViewChange) {
+      onViewChange('prompts');
+    }
+  };
+
+  const handleGPTsClick = () => {
+    if (onViewChange) {
+      onViewChange('gpts');
+    }
+  };
+
+  const handleIAsProClick = () => {
+    if (onViewChange) {
+      onViewChange('ias-pro');
+    }
+  };
+
+  const functionCards = [
+    {
+      icon: Wand2,
+      title: 'Criar Texto',
+      description: 'Gere conteúdo, artigos e textos profissionais',
+      color: 'from-orange-500 to-red-500',
+      onClick: handleAIAgentsClick
+    },
+    {
+      icon: Megaphone,
+      title: 'Copy & Anúncios',
+      description: 'Crie anúncios persuasivos e campanhas',
+      color: 'from-blue-500 to-cyan-500',
+      onClick: handlePromptsClick
+    },
+    {
+      icon: FileText,
+      title: 'Analisar Conteúdo',
+      description: 'Resuma e analise documentos rapidamente',
+      color: 'from-purple-500 to-pink-500',
+      onClick: handleAIAgentsClick
+    },
+    {
+      icon: MessageSquare,
+      title: 'Melhorar Mensagens',
+      description: 'Otimize comunicação e textos',
+      color: 'from-emerald-500 to-green-500',
+      onClick: handlePromptsClick
+    },
+    {
+      icon: Zap,
+      title: 'Automação',
+      description: 'Configure fluxos automatizados',
+      color: 'from-yellow-500 to-orange-500',
+      onClick: handleViewCategories
+    },
+    {
+      icon: Lightbulb,
+      title: 'Ideias & Estratégia',
+      description: 'Brainstorming e planejamento',
+      color: 'from-indigo-500 to-purple-500',
+      onClick: handlePromptsClick
+    },
+    {
+      icon: Image,
+      title: 'Criar Imagens',
+      description: 'Gere imagens e designs com IA',
+      color: 'from-cyan-500 to-blue-500',
+      onClick: handleAIAgentsClick
+    },
+    {
+      icon: Video,
+      title: 'Criar Vídeos',
+      description: 'Produza vídeos profissionais',
+      color: 'from-pink-500 to-rose-500',
+      onClick: handleVEO3PromptsClick
+    }
+  ];
+
+  const quickAccessCards = [
+    {
+      icon: Cpu,
+      title: 'Agentes de IA',
+      description: 'Assistentes especializados',
+      count: '5 agentes',
+      onClick: handleAIAgentsClick
+    },
+    {
+      icon: Layers,
+      title: 'Ferramentas',
+      description: 'Explore 150+ recursos',
+      count: '20 categorias',
+      onClick: handleViewCategories
+    },
+    {
+      icon: BookOpen,
+      title: 'Biblioteca de Prompts',
+      description: 'Templates prontos para uso',
+      count: '100+ prompts',
+      onClick: handlePromptsClick
+    },
+    {
+      icon: Crown,
+      title: 'GPTs Personalizados',
+      description: 'Assistentes customizados',
+      count: '30+ GPTs',
+      onClick: handleGPTsClick
+    }
+  ];
+
+  const handleAIExecute = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (aiInput.trim()) {
+      handleAIAgentsClick();
+    }
+  };
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-{/* Hero Banner */}
-<div 
-  className="relative mb-12 rounded-2xl overflow-hidden"
-  style={{
-    backgroundImage: 'url()',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    minHeight: '300px'
-  }}
->
-  <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/80" />
+    <div className="min-h-screen bg-slate-950">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
-  <div className="relative z-10 flex items-center justify-center min-h-[300px] px-6 py-12 text-center">
-    <div className="max-w-4xl">
+        <section className="text-center pt-8 pb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            O que você quer executar agora?
+          </h1>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            Escolha uma função abaixo ou utilize a IA diretamente
+          </p>
+        </section>
 
-      {/* Título */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">
-        Clube das IAs
-      </h1>
-
-      {/* Subtítulo */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">
-        <span className="bg-gradient-to-r from-orange-500 to-cyan-500 bg-clip-text text-transparent">
-        A maior plataforma de Prompts, Ferramentas de IA e GPTs do Brasil!
-        </span>
-      </h2>
-
-      {/* Texto */}
-      <p className="text-slate-200 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-Organize, descubra e turbine sua criatividade com recursos de IA selecionados e atualizados.
-      </p>
-
-    </div>
-  </div>
-</div>
-
-
-{/* Stats */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-
-  {/* Ferramentas */}
-  <div className="bg-blue-900/30 rounded-xl p-6 text-center border border-blue-500/30">
-    <div className="text-2xl font-bold text-blue-400 mb-1">150+</div>
-    <div className="text-blue-300 text-sm">Ferramentas</div>
-  </div>
-
-  {/* Categorias */}
-  <div className="bg-cyan-900/30 rounded-xl p-6 text-center border border-cyan-500/30">
-    <div className="text-2xl font-bold text-cyan-400 mb-1">20</div>
-    <div className="text-cyan-300 text-sm">Categorias</div>
-  </div>
-
-  {/* Gratuito */}
-  <div className="bg-emerald-900/30 rounded-xl p-6 text-center border border-emerald-500/30">
-    <div className="text-2xl font-bold text-emerald-400 mb-1">100%</div>
-    <div className="text-emerald-300 text-sm">Gratuito</div>
-  </div>
-
-  {/* Disponível */}
-  <div className="bg-purple-900/30 rounded-xl p-6 text-center border border-purple-500/30">
-    <div className="text-2xl font-bold text-purple-400 mb-1">24hrs</div>
-    <div className="text-purple-300 text-sm">Disponível</div>
-  </div>
-
-</div>
-
-      {/* Aviso Importante */}
-      <ImportantNotice onBannerClick={handleViralEditClick} />
-
-      {/* VEO 3 Prompts Banner */}
-      <VEO3PromptsBanner onClick={handleVEO3PromptsClick} />
-
-      {/* Banner de Natal */}
-      <section>
-        <div
-          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-green-600/20 to-red-600/20 border border-green-500/30 animate-christmas-pulse"
-          style={{
-            backgroundImage: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%)',
-          }}
-        >
-          <div className="relative z-10 text-center py-12 px-6">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <Gift className="w-10 h-10 text-green-400" />
-              <h2 className="text-3xl font-bold text-white">🎄 Presente de Natal do Clube das IAs</h2>
-            </div>
-            <div className="mb-4">
-              <p className="text-green-300 text-lg font-semibold mb-2">
-                Liberação de uma nova IA poderosa para criação de vídeos
-              </p>
-              <p className="text-red-300 text-sm font-medium">
-                Acesso exclusivo • Vitalício • Limitado
-              </p>
-            </div>
-            <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
-              Responda a pesquisa oficial e libere o acesso à nova IA que cria vídeos profissionais em segundos.
-            </p>
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {functionCards.map((card, index) => (
             <button
-              onClick={handleQuizAccessClick}
-              className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-green-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
+              key={index}
+              onClick={card.onClick}
+              className="group relative bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 text-left hover:border-slate-700 transition-all duration-300 hover:transform hover:scale-105"
             >
-              <Gift className="w-6 h-6" />
-              <span>Responder Pesquisa e Liberar Acesso</span>
-              <ArrowRight className="w-5 h-5" />
+              <div className={`w-12 h-12 bg-gradient-to-br ${card.color} rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg transition-shadow`}>
+                <card.icon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-white font-semibold mb-2 text-lg">{card.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">{card.description}</p>
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                <ChevronRight className="w-5 h-5 text-slate-400" />
+              </div>
             </button>
-          </div>
-        </div>
-      </section>
+          ))}
+        </section>
 
-      {/* Announcement Banner */}
-      <AnnouncementBanner onViewCategories={handleViewCategories} />
-
-      {/* Comunidade Banner */}
-      <section>
-        <div 
-          className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30"
-          style={{
-            backgroundImage: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%)',
-          }}
-        >
-          <div className="relative z-10 text-center py-12 px-6">
-            <div className="flex items-center justify-center space-x-3 mb-4">
-              <Users className="w-10 h-10 text-blue-400" />
-              <h2 className="text-3xl font-bold text-white">Entre na Comunidade dos Gestores de IA</h2>
+        <section className="bg-gradient-to-br from-slate-900/80 to-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 md:p-10">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center">
+              <Sparkles className="w-6 h-6 text-white" />
             </div>
-            <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
-              Conecte-se com outros profissionais, compartilhe experiências e aprenda as melhores práticas em IA
-            </p>
-            <button
-              onClick={handleCommunityClick}
-              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center space-x-3 mx-auto hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-            >
-              <Users className="w-6 h-6" />
-              <span>Entrar na Comunidade</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            <h2 className="text-2xl font-bold text-white">Assistente de IA</h2>
           </div>
+
+          <form onSubmit={handleAIExecute} className="space-y-4">
+            <div className="relative">
+              <textarea
+                value={aiInput}
+                onChange={(e) => setAiInput(e.target.value)}
+                placeholder="Descreva o que você quer executar com a IA..."
+                rows={4}
+                className="w-full px-6 py-4 bg-slate-950/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 transition-all resize-none"
+              />
+            </div>
+
+            <div className="flex items-center justify-between">
+              <p className="text-xs text-slate-500 max-w-2xl leading-relaxed">
+                Este ambiente utiliza modelos de IA integrados para execução prática de tarefas. Limites podem ser aplicados para manter a estabilidade do sistema.
+              </p>
+              <button
+                type="submit"
+                disabled={!aiInput.trim()}
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 whitespace-nowrap"
+              >
+                <span>Executar com IA</span>
+                <Sparkles className="w-5 h-5" />
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {quickAccessCards.map((card, index) => (
+            <button
+              key={index}
+              onClick={card.onClick}
+              className="bg-slate-900/30 border border-slate-800 rounded-xl p-6 text-left hover:border-slate-700 hover:bg-slate-900/50 transition-all group"
+            >
+              <card.icon className="w-8 h-8 text-blue-400 mb-3 group-hover:scale-110 transition-transform" />
+              <h3 className="text-white font-semibold mb-1">{card.title}</h3>
+              <p className="text-slate-400 text-sm mb-2">{card.description}</p>
+              <span className="text-xs text-blue-400 font-medium">{card.count}</span>
+            </button>
+          ))}
+        </section>
+
+        <div className="space-y-6">
+          <ImportantNotice onBannerClick={handleViralEditClick} />
+          <VEO3PromptsBanner onClick={handleVEO3PromptsClick} />
         </div>
-      </section>
+
+        <section>
+          <div
+            className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-green-600/10 to-red-600/10 border border-green-500/20"
+          >
+            <div className="relative z-10 text-center py-10 px-6">
+              <div className="flex items-center justify-center space-x-3 mb-4">
+                <Gift className="w-9 h-9 text-green-400" />
+                <h2 className="text-2xl md:text-3xl font-bold text-white">Presente de Natal do Clube das IAs</h2>
+              </div>
+              <p className="text-slate-300 text-base md:text-lg mb-6 max-w-2xl mx-auto">
+                Responda a pesquisa oficial e libere o acesso à nova IA que cria vídeos profissionais
+              </p>
+              <button
+                onClick={handleQuizAccessClick}
+                className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-3 rounded-xl font-semibold flex items-center space-x-2 mx-auto hover:from-green-600 hover:to-red-600 transition-all duration-300 hover:scale-105"
+              >
+                <Gift className="w-5 h-5" />
+                <span>Responder e Liberar Acesso</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <AnnouncementBanner onViewCategories={handleViewCategories} />
+
+        <section>
+          <div
+            className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20"
+          >
+            <div className="relative z-10 text-center py-10 px-6">
+              <div className="flex items-center justify-center space-x-3 mb-4">
+                <Users className="w-9 h-9 text-blue-400" />
+                <h2 className="text-2xl md:text-3xl font-bold text-white">Comunidade dos Gestores de IA</h2>
+              </div>
+              <p className="text-slate-300 text-base md:text-lg mb-6 max-w-2xl mx-auto">
+                Conecte-se com outros profissionais e compartilhe experiências
+              </p>
+              <button
+                onClick={handleCommunityClick}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-xl font-semibold flex items-center space-x-2 mx-auto hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:scale-105"
+              >
+                <Users className="w-5 h-5" />
+                <span>Entrar na Comunidade</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8">
+          <div className="bg-slate-900/30 border border-blue-500/20 rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-blue-400 mb-2">150+</div>
+            <div className="text-slate-400 text-sm">Recursos</div>
+          </div>
+          <div className="bg-slate-900/30 border border-cyan-500/20 rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-cyan-400 mb-2">20</div>
+            <div className="text-slate-400 text-sm">Categorias</div>
+          </div>
+          <div className="bg-slate-900/30 border border-emerald-500/20 rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-emerald-400 mb-2">100%</div>
+            <div className="text-slate-400 text-sm">Operacional</div>
+          </div>
+          <div className="bg-slate-900/30 border border-purple-500/20 rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+            <div className="text-slate-400 text-sm">Disponível</div>
+          </div>
+        </section>
+
+      </div>
     </div>
   );
 }

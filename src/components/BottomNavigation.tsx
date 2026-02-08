@@ -10,21 +10,19 @@ interface BottomNavigationProps {
 export default function BottomNavigation({ currentView, onViewChange }: BottomNavigationProps) {
   const [showOthersMenu, setShowOthersMenu] = useState(false);
 
-  // Ícones principais da barra inferior
   const mainNavItems = [
-    { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
+    { id: 'inicio' as ViewMode, label: 'Comando', icon: Home },
     { id: 'favorites' as ViewMode, label: 'Destaque', icon: Award },
-    { id: 'tasks' as ViewMode, label: 'Tarefas', icon: CheckSquare },
+    { id: 'tasks' as ViewMode, label: 'Execução', icon: CheckSquare },
   ];
 
-  // Ícones que ficam no menu "Outros"
   const otherNavItems = [
     { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
-    { id: 'ferramentas-ia' as ViewMode, label: 'Ferramentas de IA', icon: Wrench },
-    { id: 'prompts' as ViewMode, label: 'Prompts', icon: MessageSquare },
+    { id: 'ferramentas-ia' as ViewMode, label: 'Recursos de IA', icon: Wrench },
+    { id: 'prompts' as ViewMode, label: 'Biblioteca', icon: MessageSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'GPTs', icon: Bot },
-    { id: 'ias-pro' as ViewMode, label: 'IAs Pro', icon: Crown },
-    { id: 'cursos' as ViewMode, label: 'Cursos', icon: GraduationCap },
+    { id: 'ias-pro' as ViewMode, label: 'Ferramentas Pro', icon: Crown },
+    { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: GraduationCap },
   ];
 
   const handleOthersClick = () => {
@@ -75,7 +73,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
                   onClick={() => handleOtherItemClick(item.id)}
                   className={`w-full flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 ${
                     isActive
-                      ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white'
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                       : 'text-slate-300 hover:text-white hover:bg-slate-700'
                   }`}
                 >
@@ -102,12 +100,12 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
                 onClick={() => onViewChange(item.id)}
                 className={`flex flex-col items-center justify-center py-2 px-3 rounded-lg transition-all duration-300 min-w-0 flex-1 ${
                   isActive
-                    ? 'text-orange-500 transform scale-105'
+                    ? 'text-blue-400 transform scale-105'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                <Icon className={`w-5 h-5 mb-1 transition-colors ${isActive ? 'text-orange-500' : ''}`} />
-                <span className={`text-xs font-medium transition-colors truncate ${isActive ? 'text-orange-500' : ''}`}>
+                <Icon className={`w-5 h-5 mb-1 transition-colors ${isActive ? 'text-blue-400' : ''}`} />
+                <span className={`text-xs font-medium transition-colors truncate ${isActive ? 'text-blue-400' : ''}`}>
                   {item.label}
                 </span>
               </button>
@@ -119,13 +117,13 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
             onClick={handleOthersClick}
             className={`flex flex-col items-center justify-center py-2 px-3 rounded-lg transition-all duration-300 min-w-0 flex-1 ${
               isOtherViewActive || showOthersMenu
-                ? 'text-orange-500 transform scale-105'
+                ? 'text-blue-400 transform scale-105'
                 : 'text-slate-400 hover:text-white'
             }`}
           >
-            <MoreHorizontal className={`w-5 h-5 mb-1 transition-colors ${isOtherViewActive || showOthersMenu ? 'text-orange-500' : ''}`} />
-            <span className={`text-xs font-medium transition-colors truncate ${isOtherViewActive || showOthersMenu ? 'text-orange-500' : ''}`}>
-              Outros
+            <MoreHorizontal className={`w-5 h-5 mb-1 transition-colors ${isOtherViewActive || showOthersMenu ? 'text-blue-400' : ''}`} />
+            <span className={`text-xs font-medium transition-colors truncate ${isOtherViewActive || showOthersMenu ? 'text-blue-400' : ''}`}>
+              Mais
             </span>
           </button>
         </div>
