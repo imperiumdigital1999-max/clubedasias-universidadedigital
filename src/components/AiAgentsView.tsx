@@ -1,10 +1,11 @@
 import React from 'react';
-import { ArrowLeft, MessageCircle, FileText, PenTool, Image, Video, ArrowRight } from 'lucide-react';
+import { ArrowLeft, MessageCircle, FileText, PenTool, Image, Video, ArrowRight, Sparkles, Play, Film } from 'lucide-react';
 import { aiAgents } from '../data/aiAgents';
 
 interface AiAgentsViewProps {
   onBack: () => void;
   onAgentSelect: (agentId: string) => void;
+  onViewChange?: (view: string) => void;
 }
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -15,7 +16,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Video,
 };
 
-export default function AiAgentsView({ onBack, onAgentSelect }: AiAgentsViewProps) {
+export default function AiAgentsView({ onBack, onAgentSelect, onViewChange }: AiAgentsViewProps) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -38,6 +39,45 @@ export default function AiAgentsView({ onBack, onAgentSelect }: AiAgentsViewProp
           <p className="text-slate-400 text-lg max-w-3xl mx-auto">
             Explore nossos sistemas inteligentes especializados. Cada agente é projetado para uma tarefa específica, proporcionando resultados rápidos e precisos.
           </p>
+        </div>
+
+        {/* Video Creator Banner */}
+        <div className="relative bg-gradient-to-br from-slate-900/80 via-slate-800/60 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 md:p-12 mb-12 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5"></div>
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between">
+            <div className="flex-1 mb-6 md:mb-0">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                Criador de Vídeos com IA
+              </h2>
+
+              <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
+                Crie vídeos com inteligência artificial a partir de prompts prontos e estruturas otimizadas.
+              </p>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <div className="hidden md:flex items-center space-x-3 mr-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center transform rotate-6">
+                  <Film className="w-7 h-7 text-white" />
+                </div>
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform -rotate-6">
+                  <Play className="w-7 h-7 text-white" />
+                </div>
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center transform rotate-12">
+                  <Sparkles className="w-7 h-7 text-white" />
+                </div>
+              </div>
+
+              <button
+                onClick={() => onViewChange?.('veo3')}
+                className="inline-flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-lg shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all"
+              >
+                <span>Usar Agente</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Agents Grid */}

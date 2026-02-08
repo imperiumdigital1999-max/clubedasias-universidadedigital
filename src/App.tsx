@@ -159,7 +159,7 @@ function App() {
       case 'veo3':
         return <VEO3View onBack={handleBackToDashboard} />;
       case 'agentes-ia':
-        return <AiAgentsView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
+        return <AiAgentsView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} onViewChange={handleViewChange} />;
       case 'chat-ia':
         return <ChatAIAgent onBack={handleBackToDashboard} />;
       case 'resumo-texto':
