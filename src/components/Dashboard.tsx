@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import {
-  Plus, Sparkles, Cpu, BookOpen, Layers, Crown
+  Plus, Sparkles, Cpu, BookOpen, Layers, Crown, ArrowRight, Bot
 } from 'lucide-react';
+import { processUserQuery } from '../utils/clubeAssistant';
 
 interface DashboardProps {
   onToolSelect?: (tool: any) => void;
   onViewChange?: (view: string) => void;
 }
 
+interface AssistantResponse {
+  message: string;
+  suggestedView?: string;
+  suggestedAction?: string;
+}
+
 export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
   const [aiInput, setAiInput] = useState('');
+  const [assistantResponse, setAssistantResponse] = useState<AssistantResponse | null>(null);
 
   const handleAIAgentsClick = () => {
     if (onViewChange) {
@@ -65,7 +73,16 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
   const handleAIExecute = (e: React.FormEvent) => {
     e.preventDefault();
     if (aiInput.trim()) {
-      handleAIAgentsClick();
+      const response = processUserQuery(aiInput);
+      setAssistantResponse(response);
+    }
+  };
+
+  const handleNavigateToResource = (view: string) => {
+    if (onViewChange) {
+      onViewChange(view);
+      setAiInput('');
+      setAssistantResponse(null);
     }
   };
 
@@ -125,6 +142,42 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
             </div>
           </form>
         </section>
+
+        {assistantResponse && (
+          <section className="max-w-4xl mx-auto">
+            <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-8 shadow-2xl">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Bot className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-white font-semibold mb-3 text-lg">Assistente do Clube das IAs</h3>
+                  <div className="text-slate-300 leading-relaxed whitespace-pre-line mb-6">
+                    {assistantResponse.message}
+                  </div>
+
+                  {assistantResponse.suggestedView && (
+                    <div className="flex items-center space-x-3">
+                      <button
+                        onClick={() => handleNavigateToResource(assistantResponse.suggestedView!)}
+                        className="inline-flex items-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-6 py-3 rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all"
+                      >
+                        <span>{assistantResponse.suggestedAction}</span>
+                        <ArrowRight className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={() => setAssistantResponse(null)}
+                        className="text-slate-400 hover:text-white transition-colors text-sm"
+                      >
+                        Fazer outra pergunta
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto pt-8">
           {quickAccessCards.map((card, index) => (
