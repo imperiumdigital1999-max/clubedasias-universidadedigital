@@ -192,7 +192,7 @@ function App() {
         />
       )}
 
-      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64' : 'md:ml-64'}`}>
+      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : 'md:ml-64'}`}>
         {renderCurrentView()}
       </main>
 
