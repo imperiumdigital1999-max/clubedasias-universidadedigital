@@ -15,7 +15,7 @@ const FloatingChat: React.FC = () => {
         setIsOpen(true);
         setMessages([
           {
-            text: '🎓 Acesso liberado!\nQuer receber gratuitamente um curso internacional sobre Inteligência Artificial?',
+            text: '🎓 Acesso liberado!\nQuer ganhar acesso gratuito a um curso da Harvard School (EUA) sobre Inteligência Artificial?',
             isUser: false,
           },
         ]);
@@ -30,7 +30,7 @@ const FloatingChat: React.FC = () => {
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
-        { text: 'Quero receber', isUser: true },
+        { text: 'Quero acessar', isUser: true },
       ]);
     }, 300);
 
@@ -38,7 +38,7 @@ const FloatingChat: React.FC = () => {
       setMessages((prev) => [
         ...prev,
         {
-          text: 'Perfeito! 😊\nO Clube das IAs está liberando o acesso a um curso internacional gratuito de Inteligência Artificial, utilizado por profissionais e estudantes ao redor do mundo.',
+          text: 'Excelente escolha 👌\nO Clube das IAs está liberando o acesso a um curso oficial da Harvard School, focado em Inteligência Artificial Generativa.',
           isUser: false,
         },
       ]);
@@ -48,7 +48,7 @@ const FloatingChat: React.FC = () => {
       setMessages((prev) => [
         ...prev,
         {
-          text: '📚 Curso: Generative AI\n🌍 Idioma: Inglês\n🎬 Plataforma: YouTube (com legendas)',
+          text: '📚 Curso: Generative AI\n🏛️ Instituição: Harvard School (EUA)\n🎥 Plataforma: YouTube\n🌍 Idioma: Inglês',
           isUser: false,
         },
       ]);
@@ -69,7 +69,7 @@ const FloatingChat: React.FC = () => {
       setMessages((prev) => [
         ...prev,
         {
-          text: '💡 Dica:\nVocê pode ativar as legendas em português diretamente no YouTube.',
+          text: '💡 Importante:\nO curso é em inglês, mas você pode ativar legendas em português diretamente no YouTube.',
           isUser: false,
         },
       ]);
@@ -91,7 +91,7 @@ const FloatingChat: React.FC = () => {
       setMessages((prev) => [
         ...prev,
         {
-          text: 'Sem problemas 😊\nSe quiser acessar depois, o aviso ficará disponível aqui.',
+          text: 'Sem problemas 😊\nSe quiser acessar depois, esse aviso continuará disponível aqui.',
           isUser: false,
         },
       ]);
@@ -198,7 +198,7 @@ const FloatingChat: React.FC = () => {
                     onClick={handleAccept}
                     className="w-full py-2.5 px-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white font-semibold rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg"
                   >
-                    Quero receber
+                    Quero acessar
                   </button>
                   <button
                     onClick={handleDecline}
