@@ -136,25 +136,6 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           ))}
         </section>
 
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8 mt-8">
-          <div className="bg-slate-900/30 border border-blue-500/20 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">150+</div>
-            <div className="text-slate-400 text-sm">Recursos</div>
-          </div>
-          <div className="bg-slate-900/30 border border-cyan-500/20 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">20</div>
-            <div className="text-slate-400 text-sm">Categorias</div>
-          </div>
-          <div className="bg-slate-900/30 border border-emerald-500/20 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-emerald-400 mb-2">100%</div>
-            <div className="text-slate-400 text-sm">Operacional</div>
-          </div>
-          <div className="bg-slate-900/30 border border-purple-500/20 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-            <div className="text-slate-400 text-sm">Disponível</div>
-          </div>
-        </section>
-
       </div>
     </div>
   );
