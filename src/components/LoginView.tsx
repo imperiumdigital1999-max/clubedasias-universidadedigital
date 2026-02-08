@@ -33,13 +33,13 @@ export default function LoginView({ onLogin }: LoginViewProps) {
 
       <div className="w-full max-w-md relative z-10">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl mb-6 shadow-lg shadow-blue-600/20">
-            <Sparkles className="w-10 h-10 text-white" />
+          <div className="inline-flex items-center justify-center mb-8">
+            <img
+              src="/chatgpt_image_8_de_fev._de_2026,_02_01_19.png"
+              alt="Clube das IAs"
+              className="w-64 h-auto"
+            />
           </div>
-
-          <h1 className="text-4xl font-bold text-white mb-3 tracking-tight">
-            Clube das IAs
-          </h1>
 
           <p className="text-slate-400 text-lg">
             Acesso exclusivo para membros
