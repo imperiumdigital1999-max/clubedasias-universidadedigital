@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Plus, Sparkles, Cpu, BookOpen, Layers, Crown, ArrowRight, Bot
+  Search, Cpu, BookOpen, Layers, Crown, ArrowRight, Info
 } from 'lucide-react';
 import { processUserQuery } from '../utils/clubeAssistant';
 import FloatingChat from './FloatingChat';
@@ -102,42 +102,25 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
         <section className="max-w-4xl mx-auto">
           <form onSubmit={handleAIExecute}>
-            <div className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-8 shadow-2xl">
-              <div className="flex items-start space-x-4 mb-6">
+            <div className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 shadow-2xl">
+              <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-slate-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Plus className="w-6 h-6 text-slate-400" />
+                  <Search className="w-6 h-6 text-slate-400" />
                 </div>
-                <textarea
+                <input
+                  type="text"
                   value={aiInput}
                   onChange={(e) => setAiInput(e.target.value)}
-                  placeholder="Descreva o que você quer criar ou resolver..."
-                  rows={3}
-                  className="flex-1 bg-transparent border-none text-white text-lg placeholder-slate-500 focus:outline-none resize-none"
+                  placeholder="Pesquise aqui para tirar uma dúvida ou encontrar um conteúdo"
+                  className="flex-1 bg-transparent border-none text-white text-lg placeholder-slate-500 focus:outline-none"
                 />
-              </div>
-
-              <div className="flex items-center justify-between pt-4 border-t border-slate-800/50">
-                <div className="flex items-center space-x-3">
-                  <button
-                    type="button"
-                    className="px-4 py-2 bg-slate-800/50 hover:bg-slate-800 text-slate-300 text-sm rounded-lg transition-all"
-                  >
-                    Modo IA
-                  </button>
-                  <button
-                    type="button"
-                    className="px-4 py-2 bg-slate-800/50 hover:bg-slate-800 text-slate-300 text-sm rounded-lg transition-all"
-                  >
-                    Configurações
-                  </button>
-                </div>
                 <button
                   type="submit"
                   disabled={!aiInput.trim()}
-                  className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
                 >
-                  <Sparkles className="w-5 h-5" />
-                  <span>Executar</span>
+                  <Search className="w-5 h-5" />
+                  <span>Buscar</span>
                 </button>
               </div>
             </div>
@@ -148,11 +131,11 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           <section className="max-w-4xl mx-auto">
             <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-8 shadow-2xl">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Bot className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-slate-800/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Info className="w-6 h-6 text-cyan-400" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-white font-semibold mb-3 text-lg">Assistente do Clube das IAs</h3>
+                  <h3 className="text-white font-semibold mb-3 text-lg">Resultado da busca</h3>
                   <div className="text-slate-300 leading-relaxed whitespace-pre-line mb-6">
                     {assistantResponse.message}
                   </div>
@@ -170,7 +153,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
                         onClick={() => setAssistantResponse(null)}
                         className="text-slate-400 hover:text-white transition-colors text-sm"
                       >
-                        Fazer outra pergunta
+                        Fazer outra busca
                       </button>
                     </div>
                   )}
@@ -180,7 +163,14 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           </section>
         )}
 
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto pt-8">
+        <section className="max-w-5xl mx-auto pt-12 pb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-2">
+            Escolha o que você quer acessar:
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+        </section>
+
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {quickAccessCards.map((card, index) => (
             <button
               key={index}
