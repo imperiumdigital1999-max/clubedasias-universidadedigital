@@ -80,7 +80,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
 
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-            INÍCIO
+            PAINEL DE ACESSO
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
             Escolha o núcleo que deseja acessar e ative a tarefa ideal para o que precisa.
