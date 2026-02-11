@@ -295,7 +295,7 @@ export default function AtivacaoTextoView({ onBack, onConcluir }: AtivacaoTextoV
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8">
           <button
-            onClick={onBack}
+            onClick={onConcluir}
             className="flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 border border-slate-700"
           >
             <Home className="w-5 h-5" />
