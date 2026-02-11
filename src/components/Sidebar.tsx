@@ -15,7 +15,7 @@ export default function Sidebar({ currentView, onViewChange, onUpgradeClick, use
     { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
     { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: Layers },
     { id: 'prompts' as ViewMode, label: 'Biblioteca de Prompts', icon: MessageSquare },
-    { id: 'gpts-personalizados' as ViewMode, label: '🟡 Agentes GPTs', icon: Bot },
+    { id: 'gpts-personalizados' as ViewMode, label: 'Agentes GPTs', icon: Bot },
     { id: 'tasks' as ViewMode, label: 'Clube das Tarefas Premium', icon: CheckSquare },
     { id: 'banco-digital' as ViewMode, label: '🔵 Banco DIGITAL', icon: Database },
     { id: 'suporte' as ViewMode, label: '🟣 Suporte', icon: HelpCircle },
