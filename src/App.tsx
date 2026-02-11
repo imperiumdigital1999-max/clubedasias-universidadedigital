@@ -205,6 +205,22 @@ function App() {
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente de Automação (n8n)" description="Automação avançada de processos e workflows" />;
       case 'estrategico-streaming':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Estratégico de Streaming" description="Organização e monetização legal de streaming" />;
+      case 'textos-persuasivos':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Gerador de Textos Persuasivos" description="Textos que vendem e convertem" />;
+      case 'social-media':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Social Media Estratégico" description="Conteúdo estratégico para redes sociais" />;
+      case 'textos-prontos':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Textos Prontos para Vender" description="Templates prontos para uso imediato" />;
+      case 'criador-banners':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Criador de Banners" description="Banners profissionais para suas campanhas" />;
+      case 'criador-thumbnails':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Criador de Thumbnails" description="Thumbnails que atraem cliques e visualizações" />;
+      case 'mockups-produtos':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Mockups de Produtos" description="Mockups realistas para apresentação" />;
+      case 'organizacao-processos':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Organização de Processos" description="Estruturação inteligente de processos" />;
+      case 'estruturacao-fluxos':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Estruturação de Fluxos" description="Criação de fluxos automatizados" />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }

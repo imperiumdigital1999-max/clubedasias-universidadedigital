@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
-  Video, PenTool, Image, Workflow, Search, ArrowRight, Info
+  Video, PenTool, Image, Workflow, ChevronLeft, ChevronRight,
+  Film, Languages, Sparkles, Subtitles, Copy as CopyIcon, Wand2,
+  FileText, Share2, ImageIcon, Palette, Frame, Monitor, Cpu, TrendingUp, GitBranch, Settings
 } from 'lucide-react';
-import { processUserQuery } from '../utils/clubeAssistant';
 import FloatingChat from './FloatingChat';
 
 interface DashboardProps {
@@ -10,82 +11,210 @@ interface DashboardProps {
   onViewChange?: (view: string) => void;
 }
 
-interface AssistantResponse {
-  message: string;
-  suggestedView?: string;
-  suggestedAction?: string;
+interface Agent {
+  id: string;
+  name: string;
+  description: string;
+  icon: React.ElementType;
+  gradient: string;
+}
+
+interface Nucleo {
+  title: string;
+  description: string;
+  agents: Agent[];
 }
 
 export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
-  const [aiInput, setAiInput] = useState('');
-  const [assistantResponse, setAssistantResponse] = useState<AssistantResponse | null>(null);
-
-  const nucleos = [
+  const nucleos: Nucleo[] = [
     {
-      icon: Video,
-      title: 'Núcleo Vídeo & Conteúdo',
+      title: '🎬 Núcleo Vídeo & Conteúdo',
       description: 'Criação, edição, roteiro, tradução e automação de vídeos com IA.',
-      gradient: 'from-purple-500/10 to-blue-500/10',
-      iconColor: 'text-purple-400',
-      hoverShadow: 'hover:shadow-purple-500/20',
-      view: 'nucleo-video'
+      agents: [
+        {
+          id: 'roteirista-video',
+          name: 'Roteirista de Vídeo',
+          description: 'Criação de roteiros envolventes',
+          icon: Film,
+          gradient: 'from-purple-500 to-pink-500'
+        },
+        {
+          id: 'tradutor-multilingue',
+          name: 'Tradutor Multilíngue',
+          description: 'Tradução profissional de vídeos',
+          icon: Languages,
+          gradient: 'from-blue-500 to-purple-500'
+        },
+        {
+          id: 'criador-videos-veo3',
+          name: 'Criador de Vídeos (Flow Veo3)',
+          description: 'Geração de vídeos com IA',
+          icon: Sparkles,
+          gradient: 'from-pink-500 to-purple-500'
+        },
+        {
+          id: 'agente-legendas',
+          name: 'Gerador de Legendas',
+          description: 'Legendas e closed captions',
+          icon: Subtitles,
+          gradient: 'from-cyan-500 to-blue-500'
+        },
+        {
+          id: 'clonagem-videos-kinglia',
+          name: 'Clonagem de Vídeos (Kinglia)',
+          description: 'Clonagem inteligente de vídeos',
+          icon: CopyIcon,
+          gradient: 'from-purple-500 to-blue-500'
+        },
+        {
+          id: 'resumidor-youtube',
+          name: 'Resumidor de Vídeos do YouTube',
+          description: 'Resumos inteligentes de vídeos',
+          icon: Video,
+          gradient: 'from-red-500 to-pink-500'
+        }
+      ]
     },
     {
-      icon: PenTool,
-      title: 'Núcleo Escrita & Vendas',
-      description: 'Copy, páginas, textos persuasivos e conteúdo que converte.',
-      gradient: 'from-blue-500/10 to-cyan-500/10',
-      iconColor: 'text-blue-400',
-      hoverShadow: 'hover:shadow-blue-500/20',
-      view: 'nucleo-escrita'
+      title: '🧠 Núcleo Escrita & Vendas',
+      description: 'Copy, páginas e textos estratégicos para vender todos os dias.',
+      agents: [
+        {
+          id: 'mestre-copy',
+          name: 'Agente Mestre de Copy',
+          description: 'Copy persuasiva e estratégica',
+          icon: Wand2,
+          gradient: 'from-orange-500 to-red-500'
+        },
+        {
+          id: 'pagina-vendas',
+          name: 'Criador de Página de Vendas',
+          description: 'Páginas que convertem',
+          icon: FileText,
+          gradient: 'from-green-500 to-emerald-500'
+        },
+        {
+          id: 'textos-persuasivos',
+          name: 'Gerador de Textos Persuasivos',
+          description: 'Textos que vendem',
+          icon: PenTool,
+          gradient: 'from-blue-500 to-cyan-500'
+        },
+        {
+          id: 'social-media',
+          name: 'Social Media Estratégico',
+          description: 'Conteúdo para redes sociais',
+          icon: Share2,
+          gradient: 'from-pink-500 to-purple-500'
+        },
+        {
+          id: 'textos-prontos',
+          name: 'Textos Prontos para Vender',
+          description: 'Templates prontos para uso',
+          icon: FileText,
+          gradient: 'from-purple-500 to-blue-500'
+        }
+      ]
     },
     {
-      icon: Image,
-      title: 'Núcleo Imagens & Design',
-      description: 'Imagens realistas, banners, thumbnails e criativos profissionais.',
-      gradient: 'from-pink-500/10 to-purple-500/10',
-      iconColor: 'text-pink-400',
-      hoverShadow: 'hover:shadow-pink-500/20',
-      view: 'nucleo-imagens'
+      title: '🎨 Núcleo Imagens & Design',
+      description: 'Imagens realistas, criativos e materiais visuais profissionais.',
+      agents: [
+        {
+          id: 'gerador-imagens',
+          name: 'Gerador de Imagens',
+          description: 'Imagens realistas com IA',
+          icon: ImageIcon,
+          gradient: 'from-purple-500 to-pink-500'
+        },
+        {
+          id: 'gerador-imagens-pro',
+          name: 'Imagens Profissionais',
+          description: 'Imagens de alta qualidade',
+          icon: Image,
+          gradient: 'from-blue-500 to-purple-500'
+        },
+        {
+          id: 'criador-banners',
+          name: 'Criador de Banners',
+          description: 'Banners profissionais',
+          icon: Frame,
+          gradient: 'from-cyan-500 to-blue-500'
+        },
+        {
+          id: 'criador-thumbnails',
+          name: 'Criador de Thumbnails',
+          description: 'Thumbnails que atraem cliques',
+          icon: Monitor,
+          gradient: 'from-orange-500 to-red-500'
+        },
+        {
+          id: 'mockups-produtos',
+          name: 'Mockups de Produtos',
+          description: 'Mockups realistas',
+          icon: Palette,
+          gradient: 'from-pink-500 to-purple-500'
+        }
+      ]
     },
     {
-      icon: Workflow,
-      title: 'Núcleo Automação & Tech',
-      description: 'Automação, sistemas e organização inteligente de processos.',
-      gradient: 'from-cyan-500/10 to-blue-500/10',
-      iconColor: 'text-cyan-400',
-      hoverShadow: 'hover:shadow-cyan-500/20',
-      view: 'nucleo-automacao'
+      title: '⚙️ Núcleo Automação & Tech',
+      description: 'Automação inteligente e organização de sistemas digitais.',
+      agents: [
+        {
+          id: 'agente-automacao-n8n',
+          name: 'Automação com n8n',
+          description: 'Automação de processos',
+          icon: Workflow,
+          gradient: 'from-green-500 to-emerald-500'
+        },
+        {
+          id: 'estrategico-streaming',
+          name: 'Estratégia de Streaming',
+          description: 'Organização e monetização',
+          icon: TrendingUp,
+          gradient: 'from-blue-500 to-cyan-500'
+        },
+        {
+          id: 'organizacao-processos',
+          name: 'Organização de Processos',
+          description: 'Estruturação inteligente',
+          icon: GitBranch,
+          gradient: 'from-purple-500 to-blue-500'
+        },
+        {
+          id: 'estruturacao-fluxos',
+          name: 'Estruturação de Fluxos',
+          description: 'Fluxos automatizados',
+          icon: Settings,
+          gradient: 'from-cyan-500 to-blue-500'
+        }
+      ]
     }
   ];
 
-  const handleAIExecute = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (aiInput.trim()) {
-      const response = processUserQuery(aiInput);
-      setAssistantResponse(response);
+  const handleAgentClick = (agentId: string) => {
+    if (onViewChange) {
+      onViewChange(agentId);
     }
   };
 
-  const handleNavigateToResource = (view: string) => {
-    if (onViewChange) {
-      onViewChange(view);
-      setAiInput('');
-      setAssistantResponse(null);
-    }
-  };
-
-  const handleNucleoClick = (view: string) => {
-    if (onViewChange) {
-      onViewChange(view);
+  const scrollContainer = (direction: 'left' | 'right', containerId: string) => {
+    const container = document.getElementById(containerId);
+    if (container) {
+      const scrollAmount = 320;
+      container.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-        <div className="text-center mb-16 pt-8 relative">
+        <div className="text-center mb-20 pt-8 relative">
           <div className="absolute top-8 right-4 md:right-8">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-slate-300 border border-slate-700/50">
               Sistema Beta
@@ -95,88 +224,76 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
             CENTRO DE COMANDO
           </h1>
-          <p className="text-slate-500 text-sm mb-12">
-            Sistema exclusivo para membros do Clube das IAs.
+          <p className="text-slate-400 text-base max-w-2xl mx-auto">
+            Escolha o núcleo que deseja acessar e ative o agente ideal para executar sua tarefa.
           </p>
-
-          <h2 className="text-2xl md:text-3xl font-semibold text-slate-300 mb-8">
-            Escolha o que você quer acessar:
-          </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-16">
-          {nucleos.map((nucleo, index) => (
-            <button
-              key={index}
-              onClick={() => handleNucleoClick(nucleo.view)}
-              className={`bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-8 text-left hover:border-slate-700/50 hover:bg-slate-900/70 transition-all group hover:shadow-2xl ${nucleo.hoverShadow}`}
-            >
-              <div className={`w-16 h-16 bg-gradient-to-br ${nucleo.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <nucleo.icon className={`w-8 h-8 ${nucleo.iconColor}`} />
+        <div className="space-y-16">
+          {nucleos.map((nucleo, nucleoIndex) => (
+            <section key={nucleoIndex} className="space-y-6">
+              <div className="mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  {nucleo.title}
+                </h2>
+                <p className="text-slate-400 text-base">
+                  {nucleo.description}
+                </p>
               </div>
-              <h3 className="text-white font-bold text-xl mb-3">{nucleo.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{nucleo.description}</p>
-            </button>
-          ))}
-        </div>
 
-        <section className="max-w-4xl mx-auto mt-16">
-          <form onSubmit={handleAIExecute}>
-            <div className="bg-slate-900/30 backdrop-blur-sm border border-slate-800/50 rounded-xl p-4 shadow-xl">
-              <div className="flex items-center space-x-3">
-                <Search className="w-5 h-5 text-slate-500 flex-shrink-0" />
-                <input
-                  type="text"
-                  value={aiInput}
-                  onChange={(e) => setAiInput(e.target.value)}
-                  placeholder="Pesquise aqui para tirar uma dúvida ou encontrar um conteúdo"
-                  className="flex-1 bg-transparent border-none text-white text-base placeholder-slate-600 focus:outline-none"
-                />
+              <div className="relative group">
                 <button
-                  type="submit"
-                  disabled={!aiInput.trim()}
-                  className="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                  onClick={() => scrollContainer('left', `carousel-${nucleoIndex}`)}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-slate-900/90 hover:bg-slate-800 text-white p-3 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -ml-4"
+                  aria-label="Scroll left"
                 >
-                  Buscar
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+
+                <div
+                  id={`carousel-${nucleoIndex}`}
+                  className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                  {nucleo.agents.map((agent, agentIndex) => (
+                    <div
+                      key={agentIndex}
+                      className="flex-shrink-0 w-[280px] bg-slate-900/40 backdrop-blur-sm border border-slate-800/50 rounded-2xl overflow-hidden hover:border-slate-700/50 hover:bg-slate-900/60 transition-all hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-1 group/card"
+                    >
+                      <div className={`h-32 bg-gradient-to-br ${agent.gradient} flex items-center justify-center relative overflow-hidden`}>
+                        <div className="absolute inset-0 bg-black/20"></div>
+                        <agent.icon className="w-16 h-16 text-white relative z-10" />
+                      </div>
+
+                      <div className="p-6">
+                        <h3 className="text-white font-semibold text-lg mb-2 line-clamp-1">
+                          {agent.name}
+                        </h3>
+                        <p className="text-slate-400 text-sm mb-4 line-clamp-2">
+                          {agent.description}
+                        </p>
+                        <button
+                          onClick={() => handleAgentClick(agent.id)}
+                          className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-medium py-2.5 px-4 rounded-lg transition-all shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40"
+                        >
+                          Ativar
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  onClick={() => scrollContainer('right', `carousel-${nucleoIndex}`)}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-slate-900/90 hover:bg-slate-800 text-white p-3 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -mr-4"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight className="w-6 h-6" />
                 </button>
               </div>
-            </div>
-          </form>
-        </section>
-
-        {assistantResponse && (
-          <section className="max-w-4xl mx-auto mt-6">
-            <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 rounded-xl p-6 shadow-xl">
-              <div className="flex items-start space-x-4">
-                <Info className="w-5 h-5 text-slate-400 flex-shrink-0 mt-1" />
-                <div className="flex-1">
-                  <h3 className="text-white font-semibold mb-2">Resultado da busca</h3>
-                  <div className="text-slate-300 text-sm leading-relaxed whitespace-pre-line mb-4">
-                    {assistantResponse.message}
-                  </div>
-
-                  {assistantResponse.suggestedView && (
-                    <div className="flex items-center space-x-3">
-                      <button
-                        onClick={() => handleNavigateToResource(assistantResponse.suggestedView!)}
-                        className="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all"
-                      >
-                        <span>{assistantResponse.suggestedAction}</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                      <button
-                        onClick={() => setAssistantResponse(null)}
-                        className="text-slate-500 hover:text-white transition-colors text-sm"
-                      >
-                        Fazer outra busca
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
+            </section>
+          ))}
+        </div>
 
       </div>
 
