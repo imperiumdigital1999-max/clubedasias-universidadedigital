@@ -19,7 +19,6 @@ import OnboardingChoice from './components/OnboardingChoice';
 import AtivacaoTextoView from './components/AtivacaoTextoView';
 import AtivacaoVideoView from './components/AtivacaoVideoView';
 import LogoutModal from './components/LogoutModal';
-import UpgradeModal from './components/UpgradeModal';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -28,8 +27,6 @@ function App() {
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
-  const [userPlan, setUserPlan] = useState<'free' | 'pro'>('free');
-  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false);
   const [showOnboardingChoice, setShowOnboardingChoice] = useState(false);
   const [showAtivacaoTexto, setShowAtivacaoTexto] = useState(false);
@@ -167,16 +164,6 @@ function App() {
     setCurrentView('cursos');
   };
 
-  const handleUpgradeClick = () => {
-    setShowUpgradeModal(true);
-  };
-
-  const handleUpgrade = () => {
-    setUserPlan('pro');
-    setShowUpgradeModal(false);
-    alert('Upgrade simulado! Em produção, isso levaria ao checkout.');
-  };
-
   const renderCurrentView = () => {
     switch (currentView) {
       case 'tool-detail':
@@ -215,7 +202,7 @@ function App() {
       case 'suporte':
         return <SuporteView />;
       default:
-        return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} onUpgradeClick={handleUpgradeClick} userPlan={userPlan} />;
+        return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
   };
 
@@ -250,16 +237,14 @@ function App() {
       {showOnboardingChoice && <OnboardingChoice onComplete={handleOnboardingComplete} onChoiceSelect={handleOnboardingChoice} />}
 
       {/* Sidebar para Desktop */}
-      <Sidebar currentView={currentView} onViewChange={handleViewChange} onUpgradeClick={handleUpgradeClick} userPlan={userPlan} />
+      <Sidebar currentView={currentView} onViewChange={handleViewChange} />
 
       {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
         <Header
           currentView={currentView}
           onViewChange={handleViewChange}
           onMenuToggle={() => {}}
-          onUpgradeClick={handleUpgradeClick}
           onLogoutClick={handleLogoutClick}
-          userPlan={userPlan}
         />
       )}
 
@@ -269,12 +254,6 @@ function App() {
           onCancel={handleLogoutCancel}
         />
       )}
-
-      <UpgradeModal
-        isOpen={showUpgradeModal}
-        onClose={() => setShowUpgradeModal(false)}
-        onUpgrade={handleUpgrade}
-      />
 
       <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : ''}`}>
         {renderCurrentView()}

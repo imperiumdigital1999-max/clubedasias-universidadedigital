@@ -1,15 +1,13 @@
 import React from 'react';
-import { Home, MessageSquare, CheckSquare, Bot, Crown, Layers, Star, Database, HelpCircle } from 'lucide-react';
+import { Home, MessageSquare, CheckSquare, Bot, Layers, Star, Database, HelpCircle } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface SidebarProps {
   currentView: ViewMode;
   onViewChange: (view: ViewMode) => void;
-  onUpgradeClick?: () => void;
-  userPlan?: 'free' | 'pro';
 }
 
-export default function Sidebar({ currentView, onViewChange, onUpgradeClick, userPlan = 'free' }: SidebarProps) {
+export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
   const navigationItems = [
     { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
     { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
@@ -44,18 +42,6 @@ export default function Sidebar({ currentView, onViewChange, onUpgradeClick, use
           );
         })}
       </nav>
-
-      {userPlan === 'free' && (
-        <div className="p-4 border-t border-slate-800/50">
-          <button
-            onClick={onUpgradeClick}
-            className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-semibold px-4 py-3 rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30"
-          >
-            <Crown className="w-5 h-5" />
-            <span>Upgrade para PRO</span>
-          </button>
-        </div>
-      )}
     </aside>
   );
 }

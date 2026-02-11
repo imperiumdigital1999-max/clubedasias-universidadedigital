@@ -9,8 +9,6 @@ import { AITool } from '../types';
 interface DashboardProps {
   onToolSelect?: (tool: any) => void;
   onViewChange?: (view: string) => void;
-  onUpgradeClick?: () => void;
-  userPlan?: 'free' | 'pro';
 }
 
 interface Nucleo {
@@ -21,7 +19,7 @@ interface Nucleo {
   gradient: string;
 }
 
-export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, userPlan = 'free' }: DashboardProps) {
+export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
   const nucleos: Nucleo[] = [
     {
       title: '🎬 Núcleo Vídeo & Conteúdo',

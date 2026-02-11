@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Copy, Check, ExternalLink, Crown, Sparkles, Play } from 'lucide-react';
+import { ArrowLeft, Copy, Check, ExternalLink, Sparkles, Play } from 'lucide-react';
 import { AgentData } from '../data/agentsData';
 
 interface AgentePageProps {
   agentData: AgentData;
   onBack: () => void;
-  onUpgradeClick?: () => void;
   userPlan?: 'free' | 'pro';
 }
 
-export default function AgentePage({ agentData, onBack, onUpgradeClick, userPlan = 'free' }: AgentePageProps) {
+export default function AgentePage({ agentData, onBack, userPlan = 'free' }: AgentePageProps) {
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [personalizedPrompt, setPersonalizedPrompt] = useState<string>('');
   const [personalizationData, setPersonalizationData] = useState<Record<string, string>>({});
@@ -34,9 +33,6 @@ export default function AgentePage({ agentData, onBack, onUpgradeClick, userPlan
     setPersonalizedPrompt(prompt);
   };
 
-  const isProFeature = agentData.id === 'criador-videos-veo3' || agentData.id === 'clonagem-videos-kinglia';
-  const isLocked = isProFeature && userPlan === 'free';
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -48,27 +44,7 @@ export default function AgentePage({ agentData, onBack, onUpgradeClick, userPlan
           <span>Voltar</span>
         </button>
 
-        {isLocked && (
-          <div className="mb-8 bg-gradient-to-r from-amber-500/10 to-amber-600/10 border border-amber-500/30 rounded-xl p-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <Crown className="w-6 h-6 text-amber-400" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Recurso Exclusivo PRO</h3>
-                  <p className="text-sm text-slate-400">Faça upgrade para acessar este agente</p>
-                </div>
-              </div>
-              <button
-                onClick={onUpgradeClick}
-                className="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-lg"
-              >
-                Fazer Upgrade
-              </button>
-            </div>
-          </div>
-        )}
-
-        <div className={`${isLocked ? 'opacity-50 pointer-events-none' : ''}`}>
+        <div>
           <div className="bg-slate-900/50 backdrop-blur-lg border border-slate-800/50 rounded-2xl p-8 mb-8">
             <div className="flex items-start justify-between mb-6">
               <div className="flex-1">
@@ -78,12 +54,6 @@ export default function AgentePage({ agentData, onBack, onUpgradeClick, userPlan
                   </div>
                   <div>
                     <h1 className="text-3xl font-bold text-white">{agentData.name}</h1>
-                    {isProFeature && (
-                      <span className="inline-flex items-center space-x-1 text-xs text-amber-400 font-semibold">
-                        <Crown className="w-3 h-3" />
-                        <span>PRO</span>
-                      </span>
-                    )}
                   </div>
                 </div>
                 <p className="text-slate-400 text-lg">{agentData.description}</p>

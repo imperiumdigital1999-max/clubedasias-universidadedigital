@@ -33,10 +33,9 @@ interface AgentDetailViewProps {
   agentData: AgentData;
   onBack: () => void;
   userPlan?: 'free' | 'pro';
-  onUpgradeClick?: () => void;
 }
 
-export default function AgentDetailView({ agentData, onBack, userPlan = 'free', onUpgradeClick }: AgentDetailViewProps) {
+export default function AgentDetailView({ agentData, onBack, userPlan = 'free' }: AgentDetailViewProps) {
   const [activeSection, setActiveSection] = useState<'guiado' | 'prompts' | 'personalizar' | 'creditos'>('guiado');
   const [copiedPromptId, setCopiedPromptId] = useState<string | null>(null);
   const [personalizationValues, setPersonalizationValues] = useState<Record<string, string>>({});
@@ -336,13 +335,6 @@ Por favor, gere o conteúdo seguindo essas especificações.`;
                       </li>
                     </ul>
                   </div>
-
-                  <button
-                    onClick={onUpgradeClick}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium py-4 px-6 rounded-lg transition-all shadow-lg shadow-blue-500/20"
-                  >
-                    Upgrade para PRO - Créditos Ilimitados
-                  </button>
                 </>
               ) : (
                 <>
