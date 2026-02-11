@@ -226,13 +226,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-        <div className="text-center mb-20 pt-8 relative">
-          <div className="absolute top-8 right-4 md:right-8">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-slate-300 border border-slate-700/50">
-              Sistema Beta
-            </span>
-          </div>
-
+        <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
             CENTRO DE COMANDO
           </h1>

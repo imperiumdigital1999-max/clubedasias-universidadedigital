@@ -24,19 +24,7 @@ export default function Sidebar({ currentView, onViewChange, onUpgradeClick, use
   ];
 
   return (
-    <aside className="hidden md:flex md:flex-col md:w-64 md:bg-slate-950/95 md:backdrop-blur-lg md:border-r md:border-slate-800/50 md:fixed md:left-0 md:top-0 md:h-full md:z-40">
-      <div className="p-6 border-b border-slate-800/50">
-        <div className="flex items-center space-x-3">
-          <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/20">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <h1 className="text-lg font-semibold text-white tracking-tight">Clube das IAs</h1>
-            <p className="text-xs text-slate-500">Centro de Operações</p>
-          </div>
-        </div>
-      </div>
-
+    <aside className="hidden md:flex md:flex-col md:w-64 md:bg-slate-950/95 md:backdrop-blur-lg md:border-r md:border-slate-800/50 md:fixed md:left-0 md:top-0 md:h-full md:z-30 md:pt-16">
       <nav className="flex-1 p-4 space-y-1.5 overflow-y-auto">
         {navigationItems.map((item) => {
           const Icon = item.icon;
@@ -59,8 +47,8 @@ export default function Sidebar({ currentView, onViewChange, onUpgradeClick, use
         })}
       </nav>
 
-      <div className="p-4 border-t border-slate-800/50 space-y-3">
-        {userPlan === 'free' && (
+      {userPlan === 'free' && (
+        <div className="p-4 border-t border-slate-800/50">
           <button
             onClick={onUpgradeClick}
             className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-semibold px-4 py-3 rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30"
@@ -68,15 +56,8 @@ export default function Sidebar({ currentView, onViewChange, onUpgradeClick, use
             <Crown className="w-5 h-5" />
             <span>Upgrade para PRO</span>
           </button>
-        )}
-
-        <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-3 text-center">
-          <div className="w-2 h-2 bg-emerald-400 rounded-full mx-auto mb-2 animate-pulse" />
-          <p className="text-xs text-slate-500 font-medium">
-            Sistema operacional
-          </p>
         </div>
-      </div>
+      )}
     </aside>
   );
 }

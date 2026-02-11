@@ -24,9 +24,15 @@ export default function Header({ currentView, onViewChange, onMenuToggle, onUpgr
     return name.substring(0, 2).toUpperCase();
   };
 
+  const getUserName = (email: string) => {
+    if (!email) return 'Usuário';
+    const name = email.split('@')[0];
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  };
+
   return (
-    <header className="bg-slate-950/95 backdrop-blur-lg border-b border-slate-800/50 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-slate-950/95 backdrop-blur-lg border-b border-slate-800/50 fixed top-0 left-0 right-0 z-50">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 md:ml-64">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-3">
@@ -38,14 +44,9 @@ export default function Header({ currentView, onViewChange, onMenuToggle, onUpgr
               </div>
             </div>
 
-            <div className="hidden md:flex items-center space-x-2 px-3 py-1.5 bg-slate-900/50 border border-slate-700/50 rounded-lg">
-              <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-xs text-slate-400 font-medium">Sistema operacional</span>
-            </div>
-
-            <div className="hidden md:flex items-center">
-              <span className="px-2.5 py-1 bg-blue-500/10 border border-blue-500/30 rounded-md text-xs font-semibold text-blue-400 uppercase tracking-wider">
-                Beta
+            <div className="hidden lg:flex items-center">
+              <span className="text-sm text-slate-400">
+                Bem-vindo, <span className="text-white font-medium">{getUserName(userEmail)}</span>
               </span>
             </div>
           </div>
