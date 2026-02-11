@@ -34,10 +34,9 @@ import PlaceholderAgent from './components/agents/PlaceholderAgent';
 import AgentDetailView from './components/AgentDetailView';
 import AgentePage from './components/AgentePage';
 import AgentLandingPage from './components/AgentLandingPage';
-import AgentPromptsListView from './components/AgentPromptsListView';
-import PromptDetailView from './components/PromptDetailView';
+import TaskAgentsView from './components/TaskAgentsView';
 import UpgradeModal from './components/UpgradeModal';
-import { getAgentData } from './data/agentsData';
+import { getTaskData } from './data/taskAgents';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -48,7 +47,6 @@ function App() {
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [selectedAgentId, setSelectedAgentId] = useState<string | null>(null);
-  const [selectedPromptId, setSelectedPromptId] = useState<string | null>(null);
   const [showAgentFullPage, setShowAgentFullPage] = useState(false);
   const [userPlan, setUserPlan] = useState<'free' | 'pro'>('free');
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
@@ -96,17 +94,8 @@ function App() {
 
   const handleBackFromAgent = () => {
     setSelectedAgentId(null);
-    setSelectedPromptId(null);
     setShowAgentFullPage(false);
     setCurrentView('inicio');
-  };
-
-  const handlePromptSelect = (promptId: string) => {
-    setSelectedPromptId(promptId);
-  };
-
-  const handleBackFromPrompt = () => {
-    setSelectedPromptId(null);
   };
 
   const handleToolSelect = (tool: AITool) => {
@@ -246,14 +235,10 @@ function App() {
       case 'pagina-vendas':
       case 'gerador-imagens':
       case 'agente-automacao-n8n': {
-        const agentData = getAgentData(currentView);
-        if (!agentData) return null;
+        const taskData = getTaskData(currentView);
+        if (!taskData) return null;
 
-        if (selectedPromptId) {
-          return <PromptDetailView agentData={agentData} promptId={selectedPromptId} onBack={handleBackFromPrompt} />;
-        }
-
-        return <AgentPromptsListView agentData={agentData} onBack={handleBackFromAgent} onPromptSelect={handlePromptSelect} />;
+        return <TaskAgentsView task={taskData} onBack={handleBackFromAgent} />;
       }
       case 'gerador-imagens-pro':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Gerador de Imagens Profissionais" description="Imagens de alta qualidade para uso profissional" />;

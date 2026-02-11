@@ -13,7 +13,7 @@ interface DashboardProps {
   userPlan?: 'free' | 'pro';
 }
 
-interface Agent {
+interface Task {
   id: string;
   name: string;
   description: string;
@@ -25,7 +25,7 @@ interface Agent {
 interface Nucleo {
   title: string;
   description: string;
-  agents: Agent[];
+  tasks: Task[];
 }
 
 export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, userPlan = 'free' }: DashboardProps) {
@@ -33,7 +33,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
     {
       title: '🎬 Núcleo Vídeo & Conteúdo',
       description: 'Criação, edição, roteiro, tradução e automação de vídeos com IA.',
-      agents: [
+      tasks: [
         {
           id: 'roteirista-video',
           name: 'Roteirista de Vídeo',
@@ -83,7 +83,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
     {
       title: '🧠 Núcleo Escrita & Vendas',
       description: 'Copy, páginas e textos estratégicos para vender todos os dias.',
-      agents: [
+      tasks: [
         {
           id: 'mestre-copy',
           name: 'Agente Mestre de Copy',
@@ -124,7 +124,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
     {
       title: '🎨 Núcleo Imagens & Design',
       description: 'Imagens realistas, criativos e materiais visuais profissionais.',
-      agents: [
+      tasks: [
         {
           id: 'gerador-imagens',
           name: 'Gerador de Imagens',
@@ -165,7 +165,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
     {
       title: '⚙️ Núcleo Automação & Tech',
       description: 'Automação inteligente e organização de sistemas digitais.',
-      agents: [
+      tasks: [
         {
           id: 'agente-automacao-n8n',
           name: 'Automação com n8n',
@@ -198,8 +198,8 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
     }
   ];
 
-  const handleAgentClick = (agent: Agent) => {
-    if (agent.isPro && userPlan === 'free') {
+  const handleTaskClick = (task: Task) => {
+    if (task.isPro && userPlan === 'free') {
       if (onUpgradeClick) {
         onUpgradeClick();
       }
@@ -207,7 +207,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
     }
 
     if (onViewChange) {
-      onViewChange(agent.id);
+      onViewChange(task.id);
     }
   };
 
@@ -231,7 +231,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
             INÍCIO
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
-            Escolha o núcleo que deseja acessar e ative o agente ideal para executar sua tarefa.
+            Escolha o núcleo que deseja acessar e ative a tarefa ideal para o que precisa.
           </p>
         </div>
 
@@ -277,15 +277,15 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
                   className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
                   style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
-                  {nucleo.agents.map((agent, agentIndex) => (
+                  {nucleo.tasks.map((task, taskIndex) => (
                     <div
-                      key={agentIndex}
+                      key={taskIndex}
                       className="flex-shrink-0 w-[280px] bg-slate-900/40 backdrop-blur-sm border border-slate-800/50 rounded-2xl overflow-hidden hover:border-slate-700/50 hover:bg-slate-900/60 transition-all hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-1 group/card"
                     >
-                      <div className={`h-32 bg-gradient-to-br ${agent.gradient} flex items-center justify-center relative overflow-hidden`}>
+                      <div className={`h-32 bg-gradient-to-br ${task.gradient} flex items-center justify-center relative overflow-hidden`}>
                         <div className="absolute inset-0 bg-black/20"></div>
-                        <agent.icon className="w-16 h-16 text-white relative z-10" />
-                        {agent.isPro && (
+                        <task.icon className="w-16 h-16 text-white relative z-10" />
+                        {task.isPro && (
                           <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-2 py-1 rounded-md flex items-center space-x-1">
                             <Lock className="w-3 h-3" />
                             <span>PRO</span>
@@ -295,20 +295,20 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
 
                       <div className="p-6">
                         <h3 className="text-white font-semibold text-lg mb-2 line-clamp-1">
-                          {agent.name}
+                          {task.name}
                         </h3>
                         <p className="text-slate-400 text-sm mb-4 line-clamp-2">
-                          {agent.description}
+                          {task.description}
                         </p>
                         <button
-                          onClick={() => handleAgentClick(agent)}
+                          onClick={() => handleTaskClick(task)}
                           className={`w-full font-medium py-2.5 px-4 rounded-lg transition-all shadow-lg ${
-                            agent.isPro && userPlan === 'free'
+                            task.isPro && userPlan === 'free'
                               ? 'bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white shadow-amber-500/20 hover:shadow-amber-500/30'
                               : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white shadow-purple-500/20 hover:shadow-purple-500/40'
                           }`}
                         >
-                          {agent.isPro && userPlan === 'free' ? 'Fazer Upgrade' : 'Ativar'}
+                          {task.isPro && userPlan === 'free' ? 'Fazer Upgrade' : 'Ativar'}
                         </button>
                       </div>
                     </div>
