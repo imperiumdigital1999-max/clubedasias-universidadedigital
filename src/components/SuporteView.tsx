@@ -7,7 +7,7 @@ export default function SuporteView() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            🟣 Suporte
+             Suporte
           </h1>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Estamos aqui para ajudar você. Entre em contato através dos canais abaixo.
