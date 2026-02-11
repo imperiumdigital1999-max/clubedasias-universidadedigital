@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { X, MessageCircle, Minimize2 } from 'lucide-react';
 
-const FloatingChat: React.FC = () => {
+interface FloatingChatProps {
+  shouldShow?: boolean;
+}
+
+const FloatingChat: React.FC<FloatingChatProps> = ({ shouldShow = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [chatStage, setChatStage] = useState<'initial' | 'accepted' | 'declined'>('initial');
@@ -10,7 +14,9 @@ const FloatingChat: React.FC = () => {
 
   useEffect(() => {
     const chatDismissed = localStorage.getItem('chatDismissed');
-    if (!chatDismissed) {
+    const chatShown = localStorage.getItem('chatShownOnce');
+
+    if (!chatDismissed && !chatShown && shouldShow) {
       setTimeout(() => {
         setIsOpen(true);
         setMessages([
@@ -19,9 +25,10 @@ const FloatingChat: React.FC = () => {
             isUser: false,
           },
         ]);
+        localStorage.setItem('chatShownOnce', 'true');
       }, 2000);
     }
-  }, []);
+  }, [shouldShow]);
 
   const handleAccept = () => {
     setShowButtons(false);

@@ -189,7 +189,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
 
       </div>
 
-      <FloatingChat />
+      <FloatingChat shouldShow={true} />
     </div>
   );
 }
