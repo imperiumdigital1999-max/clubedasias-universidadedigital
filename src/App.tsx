@@ -35,6 +35,8 @@ import AgentDetailView from './components/AgentDetailView';
 import AgentePage from './components/AgentePage';
 import AgentLandingPage from './components/AgentLandingPage';
 import TaskAgentsView from './components/TaskAgentsView';
+import WelcomeAnimation from './components/WelcomeAnimation';
+import OnboardingChoice from './components/OnboardingChoice';
 import UpgradeModal from './components/UpgradeModal';
 import { getTaskData } from './data/taskAgents';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
@@ -50,6 +52,8 @@ function App() {
   const [showAgentFullPage, setShowAgentFullPage] = useState(false);
   const [userPlan, setUserPlan] = useState<'free' | 'pro'>('free');
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+  const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false);
+  const [showOnboardingChoice, setShowOnboardingChoice] = useState(false);
 
   useEffect(() => {
     const loggedIn = localStorage.getItem('clube_ias_logged_in') === 'true';
@@ -58,6 +62,23 @@ function App() {
 
   const handleLogin = () => {
     setIsLoggedIn(true);
+
+    const today = new Date().toDateString();
+    const lastShown = localStorage.getItem('clube_ias_welcome_last_shown');
+
+    if (lastShown !== today) {
+      setShowWelcomeAnimation(true);
+      localStorage.setItem('clube_ias_welcome_last_shown', today);
+    }
+  };
+
+  const handleWelcomeComplete = () => {
+    setShowWelcomeAnimation(false);
+    setShowOnboardingChoice(true);
+  };
+
+  const handleOnboardingComplete = () => {
+    setShowOnboardingChoice(false);
   };
 
   const handleViewChange = (view: ViewMode) => {
@@ -271,6 +292,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950">
+      {showWelcomeAnimation && <WelcomeAnimation onComplete={handleWelcomeComplete} />}
+      {showOnboardingChoice && <OnboardingChoice onComplete={handleOnboardingComplete} />}
+
       {/* Sidebar para Desktop */}
       <Sidebar currentView={currentView} onViewChange={handleViewChange} onUpgradeClick={handleUpgradeClick} userPlan={userPlan} />
 
