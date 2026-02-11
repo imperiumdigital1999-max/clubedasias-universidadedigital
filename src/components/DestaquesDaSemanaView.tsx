@@ -1,7 +1,6 @@
 import React from 'react';
-import { Gift, Users, ArrowRight, Sparkles, Zap } from 'lucide-react';
+import { Users, ArrowRight, Sparkles, Zap } from 'lucide-react';
 import AnnouncementBanner from './AnnouncementBanner';
-import ImportantNotice from './ImportantNotice';
 import VEO3PromptsBanner from './VEO3PromptsBanner';
 
 interface DestaquesDaSemanaViewProps {
@@ -13,25 +12,15 @@ export default function DestaquesDaSemanaView({ onViewChange }: DestaquesDaSeman
     window.open('https://whatsapp.com/channel/0029Vb4Byv61noz5kQi01Y1Z', '_blank', 'noopener,noreferrer');
   };
 
-  const handleQuizAccessClick = () => {
-    window.open('https://inlead.digital/presente-de-natal-clube-das-ias', '_blank', 'noopener,noreferrer');
-  };
-
   const handleViewCategories = () => {
     if (onViewChange) {
       onViewChange('ferramentas-ia');
     }
   };
 
-  const handleViralEditClick = () => {
-    if (onViewChange) {
-      onViewChange('viral-edit-vo3');
-    }
-  };
-
   const handleVEO3PromptsClick = () => {
     if (onViewChange) {
-      onViewChange('veo3');
+      onViewChange('prompts');
     }
   };
 
@@ -53,31 +42,8 @@ export default function DestaquesDaSemanaView({ onViewChange }: DestaquesDaSeman
 
         <div className="grid grid-cols-1 gap-6">
 
-          <section className="space-y-6">
-            <ImportantNotice onBannerClick={handleViralEditClick} />
-            <VEO3PromptsBanner onClick={handleVEO3PromptsClick} />
-          </section>
-
           <section>
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-green-600/10 to-red-600/10 border border-green-500/20 hover:border-green-500/30 transition-all">
-              <div className="relative z-10 text-center py-10 px-6">
-                <div className="flex items-center justify-center space-x-3 mb-4">
-                  <Gift className="w-9 h-9 text-green-400" />
-                  <h2 className="text-2xl md:text-3xl font-bold text-white">Presente de Natal do Clube das IAs</h2>
-                </div>
-                <p className="text-slate-300 text-base md:text-lg mb-6 max-w-2xl mx-auto">
-                  Responda a pesquisa oficial e libere o acesso à nova IA que cria vídeos profissionais
-                </p>
-                <button
-                  onClick={handleQuizAccessClick}
-                  className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-3 rounded-xl font-semibold flex items-center space-x-2 mx-auto hover:from-green-600 hover:to-red-600 transition-all duration-300 hover:scale-105"
-                >
-                  <Gift className="w-5 h-5" />
-                  <span>Responder e Liberar Acesso</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
+            <VEO3PromptsBanner onClick={handleVEO3PromptsClick} />
           </section>
 
           <section>
