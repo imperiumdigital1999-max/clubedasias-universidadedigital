@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Copy, Eye, EyeOff, Download, AlertTriangle, Info, CheckCircle2 } from 'lucide-react';
+import { Copy, Eye, EyeOff, Download, AlertTriangle, Info, CheckCircle2, Home, CheckSquare, HelpCircle } from 'lucide-react';
 
 interface AtivacaoTextoViewProps {
   onBack: () => void;
+  onConcluir: () => void;
 }
 
-export default function AtivacaoTextoView({ onBack }: AtivacaoTextoViewProps) {
+export default function AtivacaoTextoView({ onBack, onConcluir }: AtivacaoTextoViewProps) {
   const [userName, setUserName] = useState('Usuário');
   const [activationDate, setActivationDate] = useState('');
   const [progress, setProgress] = useState(0);
@@ -86,19 +87,6 @@ export default function AtivacaoTextoView({ onBack }: AtivacaoTextoViewProps) {
 
   return (
     <div className="min-h-screen bg-slate-950 pb-20">
-      <div className="sticky top-0 z-10 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <button
-            onClick={onBack}
-            className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span>Voltar</span>
-          </button>
-          <span className="text-slate-400 text-sm">Dashboard</span>
-        </div>
-      </div>
-
       <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
         <div className="text-center space-y-3">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
@@ -304,6 +292,32 @@ export default function AtivacaoTextoView({ onBack }: AtivacaoTextoViewProps) {
             </p>
           </div>
         )}
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8">
+          <button
+            onClick={onBack}
+            className="flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 border border-slate-700"
+          >
+            <Home className="w-5 h-5" />
+            <span>Início</span>
+          </button>
+
+          <button
+            onClick={onConcluir}
+            className="flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-900 font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg shadow-amber-500/30"
+          >
+            <CheckSquare className="w-5 h-5" />
+            <span>Concluí Ativação</span>
+          </button>
+
+          <button
+            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+            className="flex items-center justify-center space-x-2 bg-transparent hover:bg-slate-800/50 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 border-2 border-slate-700 hover:border-slate-600"
+          >
+            <HelpCircle className="w-5 h-5" />
+            <span>Ajuda</span>
+          </button>
+        </div>
       </div>
 
       <style>{`

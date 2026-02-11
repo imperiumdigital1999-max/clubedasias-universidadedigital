@@ -64,6 +64,15 @@ function App() {
     setIsLoggedIn(loggedIn);
   }, []);
 
+  useEffect(() => {
+    if (isLoggedIn) {
+      const ativacaoConcluida = localStorage.getItem('ativacaoConcluida') === 'true';
+      if (!ativacaoConcluida && !showWelcomeAnimation && !showOnboardingChoice) {
+        setShowAtivacaoTexto(true);
+      }
+    }
+  }, [isLoggedIn, currentView, showWelcomeAnimation, showOnboardingChoice]);
+
   const handleLogin = () => {
     setIsLoggedIn(true);
 
@@ -92,6 +101,14 @@ function App() {
   };
 
   const handleBackFromAtivacao = () => {
+    const ativacaoConcluida = localStorage.getItem('ativacaoConcluida') === 'true';
+    if (ativacaoConcluida) {
+      setShowAtivacaoTexto(false);
+    }
+  };
+
+  const handleConcluirAtivacao = () => {
+    localStorage.setItem('ativacaoConcluida', 'true');
     setShowAtivacaoTexto(false);
   };
 
@@ -329,11 +346,21 @@ function App() {
     return <LoginView onLogin={handleLogin} />;
   }
 
+  if (showAtivacaoTexto) {
+    return (
+      <div className="min-h-screen bg-slate-950">
+        <AtivacaoTextoView
+          onBack={handleBackFromAtivacao}
+          onConcluir={handleConcluirAtivacao}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-slate-950">
       {showWelcomeAnimation && <WelcomeAnimation onComplete={handleWelcomeComplete} />}
       {showOnboardingChoice && <OnboardingChoice onComplete={handleOnboardingComplete} onChoiceSelect={handleOnboardingChoice} />}
-      {showAtivacaoTexto && <AtivacaoTextoView onBack={handleBackFromAtivacao} />}
 
       {/* Sidebar para Desktop */}
       <Sidebar currentView={currentView} onViewChange={handleViewChange} onUpgradeClick={handleUpgradeClick} userPlan={userPlan} />
