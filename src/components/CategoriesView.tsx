@@ -146,7 +146,7 @@ export default function CategoriesView({ onToolSelect }: CategoriesViewProps) {
               </h2>
 
               <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
-                Utilize diferentes inteligências artificiais em um único ambiente, sem precisar contratar várias ferramentas.
+      
               </p>
             </div>
 
