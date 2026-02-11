@@ -32,6 +32,7 @@ import NucleoImagensView from './components/NucleoImagensView';
 import NucleoAutomacaoView from './components/NucleoAutomacaoView';
 import PlaceholderAgent from './components/agents/PlaceholderAgent';
 import AgentDetailView from './components/AgentDetailView';
+import AgentePage from './components/AgentePage';
 import UpgradeModal from './components/UpgradeModal';
 import { getAgentData } from './data/agentsData';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
@@ -43,6 +44,7 @@ function App() {
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const [selectedAgentId, setSelectedAgentId] = useState<string | null>(null);
   const [userPlan, setUserPlan] = useState<'free' | 'pro'>('free');
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
@@ -62,6 +64,7 @@ function App() {
       setSelectedTool(null);
       setSelectedPlatform(null);
       setSelectedCourse(null);
+      setSelectedAgentId(null);
     }
   };
 
@@ -71,6 +74,17 @@ function App() {
     setSelectedTool(null);
     setSelectedPlatform(null);
     setSelectedCourse(null);
+    setSelectedAgentId(null);
+  };
+
+  const handleAgentSelect = (agentId: string) => {
+    setSelectedAgentId(agentId);
+    setCurrentView('agent-page');
+  };
+
+  const handleBackFromAgent = () => {
+    setSelectedAgentId(null);
+    setCurrentView('inicio');
   };
 
   const handleToolSelect = (tool: AITool) => {
@@ -108,10 +122,6 @@ function App() {
     setCurrentView('cursos');
   };
 
-  const handleAgentSelect = (agentId: string) => {
-    setCurrentView(agentId as ViewMode);
-  };
-
   const handleUpgradeClick = () => {
     setShowUpgradeModal(true);
   };
@@ -120,6 +130,15 @@ function App() {
     setUserPlan('pro');
     setShowUpgradeModal(false);
     alert('Upgrade simulado! Em produção, isso levaria ao checkout.');
+  };
+
+  const isAgentPage = () => {
+    const agentIds = [
+      'roteirista-video', 'tradutor-multilingue', 'criador-videos-veo3',
+      'agente-legendas', 'clonagem-videos-kinglia', 'resumidor-youtube',
+      'mestre-copy', 'pagina-vendas', 'gerador-imagens', 'agente-automacao-n8n'
+    ];
+    return agentIds.includes(currentView);
   };
 
   const renderCurrentView = () => {
@@ -197,39 +216,45 @@ function App() {
         return <NucleoAutomacaoView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
       case 'roteirista-video': {
         const agentData = getAgentData('roteirista-video');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'tradutor-multilingue': {
         const agentData = getAgentData('tradutor-multilingue');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
-      case 'criador-videos-veo3':
-        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Criador de Vídeos (Flow Veo3)" description="Geração de vídeos com IA usando tecnologia Veo3" />;
+      case 'criador-videos-veo3': {
+        const agentData = getAgentData('criador-videos-veo3');
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+      }
       case 'agente-legendas': {
         const agentData = getAgentData('agente-legendas');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
-      case 'clonagem-videos-kinglia':
-        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente de Clonagem de Vídeos (Kinglia)" description="Clonagem e replicação inteligente de vídeos" />;
-      case 'resumidor-youtube':
-        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Resumidor de Vídeos do YouTube" description="Resumos inteligentes de vídeos do YouTube" />;
+      case 'clonagem-videos-kinglia': {
+        const agentData = getAgentData('clonagem-videos-kinglia');
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+      }
+      case 'resumidor-youtube': {
+        const agentData = getAgentData('resumidor-youtube');
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+      }
       case 'mestre-copy': {
         const agentData = getAgentData('mestre-copy');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'pagina-vendas': {
         const agentData = getAgentData('pagina-vendas');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'gerador-imagens': {
         const agentData = getAgentData('gerador-imagens');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'gerador-imagens-pro':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Gerador de Imagens Profissionais" description="Imagens de alta qualidade para uso profissional" />;
       case 'agente-automacao-n8n': {
         const agentData = getAgentData('agente-automacao-n8n');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'estrategico-streaming':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Estratégico de Streaming" description="Organização e monetização legal de streaming" />;
@@ -263,7 +288,7 @@ function App() {
       {/* Sidebar para Desktop */}
       <Sidebar currentView={currentView} onViewChange={handleViewChange} onUpgradeClick={handleUpgradeClick} userPlan={userPlan} />
 
-      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
+      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && !isAgentPage() && (
         <Header
           currentView={currentView}
           onViewChange={handleViewChange}
@@ -279,7 +304,7 @@ function App() {
         onUpgrade={handleUpgrade}
       />
 
-      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : 'md:ml-64'}`}>
+      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && !isAgentPage() ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : ''}`}>
         {renderCurrentView()}
       </main>
 

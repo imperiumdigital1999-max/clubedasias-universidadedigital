@@ -286,6 +286,116 @@ export const agentsData: Record<string, AgentData> = {
       { id: 'gatilho', label: 'Gatilho da Automação', placeholder: 'Ex: Novo email, Formulário preenchido, Horário', type: 'text' }
     ],
     personalizationInstructions: 'Crie uma automação n8n para:'
+  },
+
+  'criador-videos-veo3': {
+    id: 'criador-videos-veo3',
+    name: 'Criador de Vídeos (Flow Veo3)',
+    description: 'Geração automática de vídeos profissionais usando IA avançada',
+    externalLink: 'https://veo3.clube-das-ias.com',
+    externalLinkText: 'Acessar Veo3',
+    steps: [
+      'Defina o conceito e objetivo do seu vídeo',
+      'Escreva ou gere o prompt descritivo da cena',
+      'Configure parâmetros de estilo e duração',
+      'Gere o vídeo usando Veo3',
+      'Baixe e edite se necessário'
+    ],
+    prompts: [
+      {
+        id: 'video-produto',
+        title: 'Vídeo de Produto',
+        category: 'Marketing',
+        prompt: 'Crie um vídeo profissional mostrando [PRODUTO]. O vídeo deve ter:\n- Plano de fundo [DESCREVA]\n- Iluminação: suave e profissional\n- Movimento: rotação suave em 360°\n- Duração: 15 segundos\n- Estilo: clean e moderno\n- Foco: destacar características principais'
+      },
+      {
+        id: 'video-explicativo',
+        title: 'Vídeo Explicativo',
+        category: 'Educacional',
+        prompt: 'Gere um vídeo explicativo sobre [TEMA]:\n- Cenas: [DESCREVA 3-5 CENAS]\n- Transições: suaves\n- Estilo: didático e claro\n- Elementos: ícones e textos quando necessário\n- Duração: 30-60 segundos'
+      }
+    ],
+    personalizationFields: [
+      { id: 'conceito', label: 'Conceito do Vídeo', placeholder: 'Descreva o conceito geral', type: 'textarea' },
+      { id: 'estilo', label: 'Estilo Visual', placeholder: 'Ex: Moderno, Minimalista, Cinematográfico', type: 'text' },
+      { id: 'duracao', label: 'Duração', placeholder: 'Ex: 15s, 30s, 60s', type: 'text' },
+      { id: 'cores', label: 'Paleta de Cores', placeholder: 'Ex: Cores vibrantes, Tons pastéis', type: 'text' }
+    ],
+    personalizationInstructions: 'Crie um prompt para gerar vídeo com Veo3:'
+  },
+
+  'clonagem-videos-kinglia': {
+    id: 'clonagem-videos-kinglia',
+    name: 'Clonagem de Vídeos (Kinglia)',
+    description: 'Clone e recrie vídeos virais com inteligência artificial',
+    externalLink: 'https://kinglia.com',
+    externalLinkText: 'Acessar Kinglia',
+    steps: [
+      'Encontre o vídeo de referência que deseja clonar',
+      'Analise os elementos chave: roteiro, estilo, edição',
+      'Use os prompts para recriar com seu próprio toque',
+      'Ajuste para seu nicho e público',
+      'Produza e publique sua versão'
+    ],
+    prompts: [
+      {
+        id: 'analise-viral',
+        title: 'Análise de Vídeo Viral',
+        category: 'Análise',
+        prompt: 'Analise este vídeo viral e identifique:\n\n1. ESTRUTURA\n- Gancho (primeiros 3s)\n- Desenvolvimento\n- Conclusão/CTA\n\n2. ELEMENTOS DE SUCESSO\n- Por que prende atenção?\n- Quais gatilhos mentais usa?\n- Padrões de edição\n\n3. ADAPTAÇÃO\n- Como recriar para [SEU NICHO]?\n- Quais elementos manter?\n- O que personalizar?\n\n[COLE LINK OU DESCRIÇÃO DO VÍDEO]'
+      },
+      {
+        id: 'clonagem-estrutura',
+        title: 'Clonagem de Estrutura',
+        category: 'Recriação',
+        prompt: 'Recrie a estrutura deste vídeo viral para [SEU TEMA]:\n\nVídeo original: [DESCREVA]\n\nMantendo:\n- Timing e ritmo\n- Estrutura narrativa\n- Gatilhos emocionais\n\nAdaptando:\n- Conteúdo para seu nicho\n- Identidade visual\n- Sua personalidade'
+      }
+    ],
+    personalizationFields: [
+      { id: 'video-ref', label: 'Vídeo de Referência', placeholder: 'Cole o link ou descreva o vídeo', type: 'textarea' },
+      { id: 'seu-nicho', label: 'Seu Nicho', placeholder: 'Ex: Finanças, Fitness, Marketing', type: 'text' },
+      { id: 'diferencial', label: 'Seu Diferencial', placeholder: 'O que torna sua versão única?', type: 'textarea' }
+    ],
+    personalizationInstructions: 'Clone e adapte um vídeo viral para:'
+  },
+
+  'resumidor-youtube': {
+    id: 'resumidor-youtube',
+    name: 'Resumidor de Vídeos do YouTube',
+    description: 'Extraia insights e crie resumos inteligentes de qualquer vídeo',
+    steps: [
+      'Cole o link do vídeo do YouTube',
+      'Escolha o tipo de resumo desejado',
+      'Use o prompt adequado com a IA',
+      'Receba o resumo estruturado',
+      'Use o conteúdo para aprendizado ou criação'
+    ],
+    prompts: [
+      {
+        id: 'resumo-executivo',
+        title: 'Resumo Executivo',
+        category: 'Profissional',
+        prompt: 'Crie um resumo executivo do vídeo [LINK/TÍTULO]:\n\n- Tema principal (1 frase)\n- 5 pontos-chave mais importantes\n- Conclusões e takeaways\n- Aplicação prática\n- Tempo estimado de leitura: 2 min\n\n[COLE TRANSCRIÇÃO OU CONTEXTO]'
+      },
+      {
+        id: 'resumo-detalhado',
+        title: 'Resumo Detalhado com Timestamps',
+        category: 'Completo',
+        prompt: 'Resuma este vídeo incluindo timestamps:\n\nPara cada seção, forneça:\n- [00:00] Timestamp\n- Tópico abordado\n- Pontos principais\n- Insights relevantes\n\n[COLE TRANSCRIÇÃO]'
+      },
+      {
+        id: 'extrator-insights',
+        title: 'Extrator de Insights',
+        category: 'Aprendizado',
+        prompt: 'Extraia os insights mais valiosos deste vídeo:\n\n1. TOP 3 IDEIAS PRINCIPAIS\n2. FRASES MARCANTES (citações)\n3. CONCEITOS EXPLICADOS\n4. AÇÕES RECOMENDADAS\n5. RECURSOS MENCIONADOS\n\n[COLE INFORMAÇÕES DO VÍDEO]'
+      }
+    ],
+    personalizationFields: [
+      { id: 'link', label: 'Link do Vídeo', placeholder: 'Cole o link do YouTube', type: 'text' },
+      { id: 'objetivo', label: 'Objetivo do Resumo', placeholder: 'Ex: Estudo, Revisão, Criar conteúdo', type: 'text' },
+      { id: 'foco', label: 'Foco Específico', placeholder: 'Há algum aspecto específico de interesse?', type: 'text' }
+    ],
+    personalizationInstructions: 'Crie um resumo do vídeo considerando:'
   }
 };
 
