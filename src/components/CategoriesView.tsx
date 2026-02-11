@@ -141,7 +141,6 @@ export default function CategoriesView({ onToolSelect }: CategoriesViewProps) {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
                 Tenha acesso às IAs{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  gratuitamente
                 </span>
               </h2>
 
