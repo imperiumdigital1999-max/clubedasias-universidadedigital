@@ -18,7 +18,7 @@ export default function Sidebar({ currentView, onViewChange, onUpgradeClick, use
     { id: 'gpts-personalizados' as ViewMode, label: 'Agentes GPTs', icon: Bot },
     { id: 'tasks' as ViewMode, label: 'Clube das Tarefas Premium', icon: CheckSquare },
     { id: 'banco-digital' as ViewMode, label: '🔵 Banco DIGITAL', icon: Database },
-    { id: 'suporte' as ViewMode, label: '🟣 Suporte', icon: HelpCircle },
+    { id: 'suporte' as ViewMode, label: 'Suporte', icon: HelpCircle },
   ];
 
   return (
