@@ -56,7 +56,7 @@ export default function SuporteView() {
                 href="mailto:suporte@clubedasias.com"
                 className="text-white font-mono text-lg hover:text-cyan-400 transition-colors"
               >
-                suporte@clubedasias.com
+                grupopestana.suporte01@gmail.com
               </a>
             </div>
           </div>
