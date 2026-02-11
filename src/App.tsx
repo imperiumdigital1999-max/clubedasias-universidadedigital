@@ -35,6 +35,7 @@ function App() {
   const [showAtivacaoTexto, setShowAtivacaoTexto] = useState(false);
   const [showAtivacaoVideo, setShowAtivacaoVideo] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const [initialFlowComplete, setInitialFlowComplete] = useState(false);
 
   useEffect(() => {
     const loggedIn = localStorage.getItem('clube_ias_logged_in') === 'true';
@@ -42,13 +43,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (isLoggedIn) {
+    if (isLoggedIn && initialFlowComplete) {
       const ativacaoConcluida = localStorage.getItem('ativacaoConcluida') === 'true';
-      if (!ativacaoConcluida && !showWelcomeAnimation && !showOnboardingChoice && !showAtivacaoTexto && !showAtivacaoVideo) {
+
+      if (!ativacaoConcluida && !showAtivacaoTexto && !showAtivacaoVideo) {
         setShowAtivacaoTexto(true);
       }
     }
-  }, [isLoggedIn, currentView, showWelcomeAnimation, showOnboardingChoice, showAtivacaoTexto, showAtivacaoVideo]);
+  }, [isLoggedIn, initialFlowComplete, showAtivacaoTexto, showAtivacaoVideo]);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -59,6 +61,8 @@ function App() {
     if (lastShown !== today) {
       setShowWelcomeAnimation(true);
       localStorage.setItem('clube_ias_welcome_last_shown', today);
+    } else {
+      setInitialFlowComplete(true);
     }
   };
 
@@ -69,6 +73,7 @@ function App() {
 
   const handleOnboardingComplete = () => {
     setShowOnboardingChoice(false);
+    setInitialFlowComplete(true);
   };
 
   const handleOnboardingChoice = (choice: 'text' | 'video') => {
@@ -109,6 +114,7 @@ function App() {
     setShowOnboardingChoice(false);
     setShowAtivacaoTexto(false);
     setShowAtivacaoVideo(false);
+    setInitialFlowComplete(false);
   };
 
   const handleLogoutCancel = () => {
