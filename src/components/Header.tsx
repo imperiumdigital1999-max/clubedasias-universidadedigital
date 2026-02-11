@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Crown, Bell } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface HeaderProps {
   currentView: ViewMode;
   onViewChange: (view: ViewMode) => void;
   onMenuToggle: () => void;
+  onUpgradeClick?: () => void;
+  userPlan?: 'free' | 'pro';
 }
 
-export default function Header({ currentView, onViewChange, onMenuToggle }: HeaderProps) {
+export default function Header({ currentView, onViewChange, onMenuToggle, onUpgradeClick, userPlan = 'free' }: HeaderProps) {
   const [userEmail, setUserEmail] = useState<string>('');
 
   useEffect(() => {
@@ -49,6 +51,28 @@ export default function Header({ currentView, onViewChange, onMenuToggle }: Head
           </div>
 
           <div className="flex items-center space-x-3">
+            {userPlan === 'free' && (
+              <button
+                onClick={onUpgradeClick}
+                className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium px-4 py-2 rounded-lg transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30"
+              >
+                <Crown className="w-4 h-4" />
+                <span className="text-sm">Upgrade para PRO</span>
+              </button>
+            )}
+
+            {userPlan === 'pro' && (
+              <div className="hidden md:flex items-center space-x-2 bg-gradient-to-r from-amber-500/10 to-amber-600/10 border border-amber-500/30 text-amber-400 font-medium px-4 py-2 rounded-lg">
+                <Crown className="w-4 h-4" />
+                <span className="text-sm">Plano PRO</span>
+              </div>
+            )}
+
+            <button className="relative p-2 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all">
+              <Bell className="w-5 h-5" />
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-blue-500 rounded-full" />
+            </button>
+
             <div className="flex items-center space-x-3 px-3 py-2 bg-slate-900/50 border border-slate-700/50 rounded-lg hover:border-slate-600/50 transition-colors cursor-pointer">
               <div className="w-7 h-7 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center">
                 <span className="text-xs font-semibold text-white">{getInitials(userEmail)}</span>

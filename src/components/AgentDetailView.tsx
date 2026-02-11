@@ -32,9 +32,11 @@ interface AgentData {
 interface AgentDetailViewProps {
   agentData: AgentData;
   onBack: () => void;
+  userPlan?: 'free' | 'pro';
+  onUpgradeClick?: () => void;
 }
 
-export default function AgentDetailView({ agentData, onBack }: AgentDetailViewProps) {
+export default function AgentDetailView({ agentData, onBack, userPlan = 'free', onUpgradeClick }: AgentDetailViewProps) {
   const [activeSection, setActiveSection] = useState<'guiado' | 'prompts' | 'personalizar' | 'creditos'>('guiado');
   const [copiedPromptId, setCopiedPromptId] = useState<string | null>(null);
   const [personalizationValues, setPersonalizationValues] = useState<Record<string, string>>({});
@@ -292,48 +294,91 @@ Por favor, gere o conteúdo seguindo essas especificações.`;
 
           {activeSection === 'creditos' && (
             <div className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Créditos Gratuitos</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                {userPlan === 'pro' ? 'Créditos Ilimitados PRO' : 'Créditos Gratuitos'}
+              </h2>
 
-              <div className="mb-8">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-slate-400">Créditos Disponíveis</span>
-                  <span className="text-2xl font-bold text-white">
-                    {creditsUsed} / {creditsTotal}
-                  </span>
-                </div>
-                <div className="h-3 bg-slate-800/50 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500"
-                    style={{ width: `${creditsPercentage}%` }}
-                  />
-                </div>
-              </div>
+              {userPlan === 'free' ? (
+                <>
+                  <div className="mb-8">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-slate-400">Créditos Disponíveis</span>
+                      <span className="text-2xl font-bold text-white">
+                        {creditsUsed} / {creditsTotal}
+                      </span>
+                    </div>
+                    <div className="h-3 bg-slate-800/50 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500"
+                        style={{ width: `${creditsPercentage}%` }}
+                      />
+                    </div>
+                  </div>
 
-              <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 mb-8">
-                <h3 className="text-white font-semibold mb-4">Como Funcionam os Créditos</h3>
-                <ul className="space-y-3 text-slate-400">
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-2">•</span>
-                    <span>Cada uso do agente consome 1 crédito</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-2">•</span>
-                    <span>Membros gratuitos recebem 10 créditos por dia</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-2">•</span>
-                    <span>Membros PRO têm créditos ilimitados</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-400 mr-2">•</span>
-                    <span>Os créditos são renovados diariamente às 00h</span>
-                  </li>
-                </ul>
-              </div>
+                  <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 mb-8">
+                    <h3 className="text-white font-semibold mb-4">Como Funcionam os Créditos</h3>
+                    <ul className="space-y-3 text-slate-400">
+                      <li className="flex items-start">
+                        <span className="text-blue-400 mr-2">•</span>
+                        <span>Cada uso do agente consome 1 crédito</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-400 mr-2">•</span>
+                        <span>Membros gratuitos recebem 10 créditos por dia</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-400 mr-2">•</span>
+                        <span>Membros PRO têm créditos ilimitados</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-blue-400 mr-2">•</span>
+                        <span>Os créditos são renovados diariamente às 00h</span>
+                      </li>
+                    </ul>
+                  </div>
 
-              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium py-4 px-6 rounded-lg transition-all shadow-lg shadow-blue-500/20">
-                Upgrade para PRO - Créditos Ilimitados
-              </button>
+                  <button
+                    onClick={onUpgradeClick}
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-medium py-4 px-6 rounded-lg transition-all shadow-lg shadow-blue-500/20"
+                  >
+                    Upgrade para PRO - Créditos Ilimitados
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div className="bg-gradient-to-br from-amber-500/10 to-amber-600/10 border border-amber-500/30 rounded-xl p-8 mb-8 text-center">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl mb-4">
+                      <span className="text-3xl">∞</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Créditos Ilimitados</h3>
+                    <p className="text-amber-400">
+                      Como membro PRO, você tem acesso ilimitado a todos os agentes
+                    </p>
+                  </div>
+
+                  <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6">
+                    <h3 className="text-white font-semibold mb-4">Benefícios PRO Ativos</h3>
+                    <ul className="space-y-3 text-slate-400">
+                      <li className="flex items-start">
+                        <span className="text-amber-400 mr-2">✓</span>
+                        <span>Créditos ilimitados em todos os agentes</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-amber-400 mr-2">✓</span>
+                        <span>Acesso a agentes exclusivos PRO</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-amber-400 mr-2">✓</span>
+                        <span>Suporte prioritário</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-amber-400 mr-2">✓</span>
+                        <span>Atualizações e novos agentes primeiro</span>
+                      </li>
+                    </ul>
+                  </div>
+                </>
+              )}
             </div>
           )}
         </div>

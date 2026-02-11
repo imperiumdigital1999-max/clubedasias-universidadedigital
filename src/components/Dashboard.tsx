@@ -2,13 +2,15 @@ import React, { useState, useRef } from 'react';
 import {
   Video, PenTool, Image, Workflow, ChevronLeft, ChevronRight,
   Film, Languages, Sparkles, Subtitles, Copy as CopyIcon, Wand2,
-  FileText, Share2, ImageIcon, Palette, Frame, Monitor, Cpu, TrendingUp, GitBranch, Settings
+  FileText, Share2, ImageIcon, Palette, Frame, Monitor, Cpu, TrendingUp, GitBranch, Settings, Lock
 } from 'lucide-react';
 import FloatingChat from './FloatingChat';
 
 interface DashboardProps {
   onToolSelect?: (tool: any) => void;
   onViewChange?: (view: string) => void;
+  onUpgradeClick?: () => void;
+  userPlan?: 'free' | 'pro';
 }
 
 interface Agent {
@@ -17,6 +19,7 @@ interface Agent {
   description: string;
   icon: React.ElementType;
   gradient: string;
+  isPro?: boolean;
 }
 
 interface Nucleo {
@@ -25,7 +28,7 @@ interface Nucleo {
   agents: Agent[];
 }
 
-export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
+export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, userPlan = 'free' }: DashboardProps) {
   const nucleos: Nucleo[] = [
     {
       title: '🎬 Núcleo Vídeo & Conteúdo',
@@ -50,7 +53,8 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           name: 'Criador de Vídeos (Flow Veo3)',
           description: 'Geração de vídeos com IA',
           icon: Sparkles,
-          gradient: 'from-pink-500 to-purple-500'
+          gradient: 'from-pink-500 to-purple-500',
+          isPro: true
         },
         {
           id: 'agente-legendas',
@@ -64,7 +68,8 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           name: 'Clonagem de Vídeos (Kinglia)',
           description: 'Clonagem inteligente de vídeos',
           icon: CopyIcon,
-          gradient: 'from-purple-500 to-blue-500'
+          gradient: 'from-purple-500 to-blue-500',
+          isPro: true
         },
         {
           id: 'resumidor-youtube',
@@ -193,9 +198,16 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
     }
   ];
 
-  const handleAgentClick = (agentId: string) => {
+  const handleAgentClick = (agent: Agent) => {
+    if (agent.isPro && userPlan === 'free') {
+      if (onUpgradeClick) {
+        onUpgradeClick();
+      }
+      return;
+    }
+
     if (onViewChange) {
-      onViewChange(agentId);
+      onViewChange(agent.id);
     }
   };
 
@@ -263,6 +275,12 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
                       <div className={`h-32 bg-gradient-to-br ${agent.gradient} flex items-center justify-center relative overflow-hidden`}>
                         <div className="absolute inset-0 bg-black/20"></div>
                         <agent.icon className="w-16 h-16 text-white relative z-10" />
+                        {agent.isPro && (
+                          <div className="absolute top-3 right-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-2 py-1 rounded-md flex items-center space-x-1">
+                            <Lock className="w-3 h-3" />
+                            <span>PRO</span>
+                          </div>
+                        )}
                       </div>
 
                       <div className="p-6">
@@ -273,10 +291,14 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
                           {agent.description}
                         </p>
                         <button
-                          onClick={() => handleAgentClick(agent.id)}
-                          className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-medium py-2.5 px-4 rounded-lg transition-all shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40"
+                          onClick={() => handleAgentClick(agent)}
+                          className={`w-full font-medium py-2.5 px-4 rounded-lg transition-all shadow-lg ${
+                            agent.isPro && userPlan === 'free'
+                              ? 'bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white shadow-amber-500/20 hover:shadow-amber-500/30'
+                              : 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white shadow-purple-500/20 hover:shadow-purple-500/40'
+                          }`}
                         >
-                          Ativar
+                          {agent.isPro && userPlan === 'free' ? 'Fazer Upgrade' : 'Ativar'}
                         </button>
                       </div>
                     </div>

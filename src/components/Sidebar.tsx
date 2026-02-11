@@ -5,9 +5,11 @@ import { ViewMode } from '../types';
 interface SidebarProps {
   currentView: ViewMode;
   onViewChange: (view: ViewMode) => void;
+  onUpgradeClick?: () => void;
+  userPlan?: 'free' | 'pro';
 }
 
-export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
+export default function Sidebar({ currentView, onViewChange, onUpgradeClick, userPlan = 'free' }: SidebarProps) {
   const navigationItems = [
     { id: 'inicio' as ViewMode, label: 'Centro de Comando', icon: Home },
     { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
@@ -57,8 +59,18 @@ export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
         })}
       </nav>
 
-      <div className="p-4 border-t border-slate-800/50">
-        <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-4 text-center">
+      <div className="p-4 border-t border-slate-800/50 space-y-3">
+        {userPlan === 'free' && (
+          <button
+            onClick={onUpgradeClick}
+            className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-semibold px-4 py-3 rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30"
+          >
+            <Crown className="w-5 h-5" />
+            <span>Upgrade para PRO</span>
+          </button>
+        )}
+
+        <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-3 text-center">
           <div className="w-2 h-2 bg-emerald-400 rounded-full mx-auto mb-2 animate-pulse" />
           <p className="text-xs text-slate-500 font-medium">
             Sistema operacional

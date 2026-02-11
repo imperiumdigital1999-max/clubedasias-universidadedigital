@@ -32,6 +32,7 @@ import NucleoImagensView from './components/NucleoImagensView';
 import NucleoAutomacaoView from './components/NucleoAutomacaoView';
 import PlaceholderAgent from './components/agents/PlaceholderAgent';
 import AgentDetailView from './components/AgentDetailView';
+import UpgradeModal from './components/UpgradeModal';
 import { getAgentData } from './data/agentsData';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
@@ -42,6 +43,8 @@ function App() {
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const [userPlan, setUserPlan] = useState<'free' | 'pro'>('free');
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   useEffect(() => {
     const loggedIn = localStorage.getItem('clube_ias_logged_in') === 'true';
@@ -107,6 +110,16 @@ function App() {
 
   const handleAgentSelect = (agentId: string) => {
     setCurrentView(agentId as ViewMode);
+  };
+
+  const handleUpgradeClick = () => {
+    setShowUpgradeModal(true);
+  };
+
+  const handleUpgrade = () => {
+    setUserPlan('pro');
+    setShowUpgradeModal(false);
+    alert('Upgrade simulado! Em produção, isso levaria ao checkout.');
   };
 
   const renderCurrentView = () => {
@@ -184,17 +197,17 @@ function App() {
         return <NucleoAutomacaoView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
       case 'roteirista-video': {
         const agentData = getAgentData('roteirista-video');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} /> : null;
+        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'tradutor-multilingue': {
         const agentData = getAgentData('tradutor-multilingue');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} /> : null;
+        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'criador-videos-veo3':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Criador de Vídeos (Flow Veo3)" description="Geração de vídeos com IA usando tecnologia Veo3" />;
       case 'agente-legendas': {
         const agentData = getAgentData('agente-legendas');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} /> : null;
+        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'clonagem-videos-kinglia':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente de Clonagem de Vídeos (Kinglia)" description="Clonagem e replicação inteligente de vídeos" />;
@@ -202,21 +215,21 @@ function App() {
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Resumidor de Vídeos do YouTube" description="Resumos inteligentes de vídeos do YouTube" />;
       case 'mestre-copy': {
         const agentData = getAgentData('mestre-copy');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} /> : null;
+        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'pagina-vendas': {
         const agentData = getAgentData('pagina-vendas');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} /> : null;
+        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'gerador-imagens': {
         const agentData = getAgentData('gerador-imagens');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} /> : null;
+        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'gerador-imagens-pro':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Gerador de Imagens Profissionais" description="Imagens de alta qualidade para uso profissional" />;
       case 'agente-automacao-n8n': {
         const agentData = getAgentData('agente-automacao-n8n');
-        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} /> : null;
+        return agentData ? <AgentDetailView agentData={agentData} onBack={handleBackToDashboard} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
       }
       case 'estrategico-streaming':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Estratégico de Streaming" description="Organização e monetização legal de streaming" />;
@@ -237,7 +250,7 @@ function App() {
       case 'estruturacao-fluxos':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Estruturação de Fluxos" description="Criação de fluxos automatizados" />;
       default:
-        return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
+        return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} onUpgradeClick={handleUpgradeClick} userPlan={userPlan} />;
     }
   };
 
@@ -248,15 +261,23 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Sidebar para Desktop */}
-      <Sidebar currentView={currentView} onViewChange={handleViewChange} />
+      <Sidebar currentView={currentView} onViewChange={handleViewChange} onUpgradeClick={handleUpgradeClick} userPlan={userPlan} />
 
       {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
         <Header
           currentView={currentView}
           onViewChange={handleViewChange}
           onMenuToggle={() => {}}
+          onUpgradeClick={handleUpgradeClick}
+          userPlan={userPlan}
         />
       )}
+
+      <UpgradeModal
+        isOpen={showUpgradeModal}
+        onClose={() => setShowUpgradeModal(false)}
+        onUpgrade={handleUpgrade}
+      />
 
       <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : 'md:ml-64'}`}>
         {renderCurrentView()}
