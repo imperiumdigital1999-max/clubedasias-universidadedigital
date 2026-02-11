@@ -27,6 +27,11 @@ import ImageGeneratorAgent from './components/agents/ImageGeneratorAgent';
 import VideoGeneratorAgent from './components/agents/VideoGeneratorAgent';
 import DestaquesDaSemanaView from './components/DestaquesDaSemanaView';
 import LoginView from './components/LoginView';
+import NucleoVideoView from './components/NucleoVideoView';
+import NucleoEscritaView from './components/NucleoEscritaView';
+import NucleoImagensView from './components/NucleoImagensView';
+import NucleoAutomacaoView from './components/NucleoAutomacaoView';
+import PlaceholderAgent from './components/agents/PlaceholderAgent';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -170,6 +175,36 @@ function App() {
         return <ImageGeneratorAgent onBack={handleBackToDashboard} />;
       case 'gerador-videos':
         return <VideoGeneratorAgent onBack={handleBackToDashboard} />;
+      case 'nucleo-video':
+        return <NucleoVideoView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
+      case 'nucleo-escrita':
+        return <NucleoEscritaView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
+      case 'nucleo-imagens':
+        return <NucleoImagensView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
+      case 'nucleo-automacao':
+        return <NucleoAutomacaoView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
+      case 'roteirista-video':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Roteirista de Vídeo" description="Criação de roteiros envolventes e estruturados para vídeos" />;
+      case 'tradutor-multilingue':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Tradutor Multilíngue" description="Tradução profissional de vídeos em múltiplos idiomas" />;
+      case 'criador-videos-veo3':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Criador de Vídeos (Flow Veo3)" description="Geração de vídeos com IA usando tecnologia Veo3" />;
+      case 'agente-legendas':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente de Legendas (Captions)" description="Criação automática de legendas e closed captions" />;
+      case 'clonagem-videos-kinglia':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente de Clonagem de Vídeos (Kinglia)" description="Clonagem e replicação inteligente de vídeos" />;
+      case 'resumidor-youtube':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Resumidor de Vídeos do YouTube" description="Resumos inteligentes de vídeos do YouTube" />;
+      case 'mestre-copy':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Mestre de Copy" description="Copy persuasiva com múltiplos modos: Persuasivo, Vendedor, Social Media e Textos Prontos" />;
+      case 'pagina-vendas':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Criador de Página de Vendas" description="Criação completa de páginas de vendas que convertem" />;
+      case 'gerador-imagens-pro':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Gerador de Imagens Profissionais" description="Imagens de alta qualidade para uso profissional" />;
+      case 'agente-automacao-n8n':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente de Automação (n8n)" description="Automação avançada de processos e workflows" />;
+      case 'estrategico-streaming':
+        return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Estratégico de Streaming" description="Organização e monetização legal de streaming" />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
