@@ -38,6 +38,7 @@ import TaskAgentsView from './components/TaskAgentsView';
 import WelcomeAnimation from './components/WelcomeAnimation';
 import OnboardingChoice from './components/OnboardingChoice';
 import AtivacaoTextoView from './components/AtivacaoTextoView';
+import AtivacaoVideoView from './components/AtivacaoVideoView';
 import LogoutModal from './components/LogoutModal';
 import UpgradeModal from './components/UpgradeModal';
 import { getTaskData } from './data/taskAgents';
@@ -57,6 +58,7 @@ function App() {
   const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false);
   const [showOnboardingChoice, setShowOnboardingChoice] = useState(false);
   const [showAtivacaoTexto, setShowAtivacaoTexto] = useState(false);
+  const [showAtivacaoVideo, setShowAtivacaoVideo] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   useEffect(() => {
@@ -67,11 +69,11 @@ function App() {
   useEffect(() => {
     if (isLoggedIn) {
       const ativacaoConcluida = localStorage.getItem('ativacaoConcluida') === 'true';
-      if (!ativacaoConcluida && !showWelcomeAnimation && !showOnboardingChoice) {
+      if (!ativacaoConcluida && !showWelcomeAnimation && !showOnboardingChoice && !showAtivacaoTexto && !showAtivacaoVideo) {
         setShowAtivacaoTexto(true);
       }
     }
-  }, [isLoggedIn, currentView, showWelcomeAnimation, showOnboardingChoice]);
+  }, [isLoggedIn, currentView, showWelcomeAnimation, showOnboardingChoice, showAtivacaoTexto, showAtivacaoVideo]);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -97,6 +99,8 @@ function App() {
   const handleOnboardingChoice = (choice: 'text' | 'video') => {
     if (choice === 'text') {
       setShowAtivacaoTexto(true);
+    } else if (choice === 'video') {
+      setShowAtivacaoVideo(true);
     }
   };
 
@@ -110,6 +114,7 @@ function App() {
   const handleConcluirAtivacao = () => {
     localStorage.setItem('ativacaoConcluida', 'true');
     setShowAtivacaoTexto(false);
+    setShowAtivacaoVideo(false);
   };
 
   const handleLogoutClick = () => {
@@ -131,6 +136,7 @@ function App() {
     setShowWelcomeAnimation(false);
     setShowOnboardingChoice(false);
     setShowAtivacaoTexto(false);
+    setShowAtivacaoVideo(false);
   };
 
   const handleLogoutCancel = () => {
@@ -351,6 +357,16 @@ function App() {
       <div className="min-h-screen bg-slate-950">
         <AtivacaoTextoView
           onBack={handleBackFromAtivacao}
+          onConcluir={handleConcluirAtivacao}
+        />
+      </div>
+    );
+  }
+
+  if (showAtivacaoVideo) {
+    return (
+      <div className="min-h-screen bg-slate-950">
+        <AtivacaoVideoView
           onConcluir={handleConcluirAtivacao}
         />
       </div>
