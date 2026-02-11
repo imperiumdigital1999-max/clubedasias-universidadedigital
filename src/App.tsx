@@ -33,6 +33,7 @@ import NucleoAutomacaoView from './components/NucleoAutomacaoView';
 import PlaceholderAgent from './components/agents/PlaceholderAgent';
 import AgentDetailView from './components/AgentDetailView';
 import AgentePage from './components/AgentePage';
+import AgentLandingPage from './components/AgentLandingPage';
 import UpgradeModal from './components/UpgradeModal';
 import { getAgentData } from './data/agentsData';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
@@ -45,6 +46,7 @@ function App() {
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [selectedAgentId, setSelectedAgentId] = useState<string | null>(null);
+  const [showAgentFullPage, setShowAgentFullPage] = useState(false);
   const [userPlan, setUserPlan] = useState<'free' | 'pro'>('free');
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
@@ -65,6 +67,7 @@ function App() {
       setSelectedPlatform(null);
       setSelectedCourse(null);
       setSelectedAgentId(null);
+      setShowAgentFullPage(false);
     }
   };
 
@@ -75,15 +78,22 @@ function App() {
     setSelectedPlatform(null);
     setSelectedCourse(null);
     setSelectedAgentId(null);
+    setShowAgentFullPage(false);
   };
 
   const handleAgentSelect = (agentId: string) => {
     setSelectedAgentId(agentId);
-    setCurrentView('agent-page');
+    setShowAgentFullPage(false);
+    setCurrentView(agentId as ViewMode);
+  };
+
+  const handleAccessAgentFullPage = () => {
+    setShowAgentFullPage(true);
   };
 
   const handleBackFromAgent = () => {
     setSelectedAgentId(null);
+    setShowAgentFullPage(false);
     setCurrentView('inicio');
   };
 
@@ -216,45 +226,75 @@ function App() {
         return <NucleoAutomacaoView onBack={handleBackToDashboard} onAgentSelect={handleAgentSelect} />;
       case 'roteirista-video': {
         const agentData = getAgentData('roteirista-video');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'tradutor-multilingue': {
         const agentData = getAgentData('tradutor-multilingue');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'criador-videos-veo3': {
         const agentData = getAgentData('criador-videos-veo3');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'agente-legendas': {
         const agentData = getAgentData('agente-legendas');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'clonagem-videos-kinglia': {
         const agentData = getAgentData('clonagem-videos-kinglia');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'resumidor-youtube': {
         const agentData = getAgentData('resumidor-youtube');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'mestre-copy': {
         const agentData = getAgentData('mestre-copy');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'pagina-vendas': {
         const agentData = getAgentData('pagina-vendas');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'gerador-imagens': {
         const agentData = getAgentData('gerador-imagens');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'gerador-imagens-pro':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Gerador de Imagens Profissionais" description="Imagens de alta qualidade para uso profissional" />;
       case 'agente-automacao-n8n': {
         const agentData = getAgentData('agente-automacao-n8n');
-        return agentData ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} /> : null;
+        if (!agentData) return null;
+        return showAgentFullPage
+          ? <AgentePage agentData={agentData} onBack={handleBackFromAgent} userPlan={userPlan} onUpgradeClick={handleUpgradeClick} />
+          : <AgentLandingPage agentData={agentData} onAccessAgent={handleAccessAgentFullPage} />;
       }
       case 'estrategico-streaming':
         return <PlaceholderAgent onBack={handleBackToDashboard} title="Agente Estratégico de Streaming" description="Organização e monetização legal de streaming" />;
