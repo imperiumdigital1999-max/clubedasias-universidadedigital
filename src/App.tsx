@@ -37,6 +37,7 @@ import AgentLandingPage from './components/AgentLandingPage';
 import TaskAgentsView from './components/TaskAgentsView';
 import WelcomeAnimation from './components/WelcomeAnimation';
 import OnboardingChoice from './components/OnboardingChoice';
+import AtivacaoTextoView from './components/AtivacaoTextoView';
 import UpgradeModal from './components/UpgradeModal';
 import { getTaskData } from './data/taskAgents';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
@@ -54,6 +55,7 @@ function App() {
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
   const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false);
   const [showOnboardingChoice, setShowOnboardingChoice] = useState(false);
+  const [showAtivacaoTexto, setShowAtivacaoTexto] = useState(false);
 
   useEffect(() => {
     const loggedIn = localStorage.getItem('clube_ias_logged_in') === 'true';
@@ -79,6 +81,16 @@ function App() {
 
   const handleOnboardingComplete = () => {
     setShowOnboardingChoice(false);
+  };
+
+  const handleOnboardingChoice = (choice: 'text' | 'video') => {
+    if (choice === 'text') {
+      setShowAtivacaoTexto(true);
+    }
+  };
+
+  const handleBackFromAtivacao = () => {
+    setShowAtivacaoTexto(false);
   };
 
   const handleViewChange = (view: ViewMode) => {
@@ -293,7 +305,8 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-950">
       {showWelcomeAnimation && <WelcomeAnimation onComplete={handleWelcomeComplete} />}
-      {showOnboardingChoice && <OnboardingChoice onComplete={handleOnboardingComplete} />}
+      {showOnboardingChoice && <OnboardingChoice onComplete={handleOnboardingComplete} onChoiceSelect={handleOnboardingChoice} />}
+      {showAtivacaoTexto && <AtivacaoTextoView onBack={handleBackFromAtivacao} />}
 
       {/* Sidebar para Desktop */}
       <Sidebar currentView={currentView} onViewChange={handleViewChange} onUpgradeClick={handleUpgradeClick} userPlan={userPlan} />

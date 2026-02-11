@@ -3,13 +3,17 @@ import { FileText, Play } from 'lucide-react';
 
 interface OnboardingChoiceProps {
   onComplete: () => void;
+  onChoiceSelect?: (choice: 'text' | 'video') => void;
 }
 
-export default function OnboardingChoice({ onComplete }: OnboardingChoiceProps) {
+export default function OnboardingChoice({ onComplete, onChoiceSelect }: OnboardingChoiceProps) {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const handleChoice = (choice: 'text' | 'video') => {
     localStorage.setItem('clube_ias_onboarding_choice', choice);
+    if (onChoiceSelect) {
+      onChoiceSelect(choice);
+    }
     onComplete();
   };
 
