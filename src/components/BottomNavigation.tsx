@@ -21,7 +21,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
     { id: 'prompts' as ViewMode, label: 'Biblioteca de Prompts', icon: MessageSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'Agentes GPTs', icon: Bot },
     { id: 'banco-digital' as ViewMode, label: '🔵 Banco DIGITAL', icon: Database },
-    { id: 'suporte' as ViewMode, label: '🟣 Suporte', icon: HelpCircle },
+    { id: 'suporte' as ViewMode, label: 'Suporte', icon: HelpCircle },
   ];
 
   const handleOthersClick = () => {
