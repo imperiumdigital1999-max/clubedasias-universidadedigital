@@ -53,7 +53,7 @@ export default function SuporteView() {
             </p>
             <div className="bg-slate-800/50 rounded-xl p-4 text-center">
               <a
-                href="mailto:suporte@clubedasias.com"
+                href="mailto:grupopestana.suporte01@gmail.com"
                 className="text-white font-mono text-lg hover:text-cyan-400 transition-colors"
               >
                 grupopestana.suporte01@gmail.com
