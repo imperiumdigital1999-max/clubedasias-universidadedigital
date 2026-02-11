@@ -34,7 +34,7 @@ export default function SuporteView() {
             </p>
             <div className="bg-slate-800/50 rounded-xl p-4 text-center">
               <p className="text-white font-mono text-lg">
-                +55 11 99999-9999
+                +55 71 981634836
               </p>
             </div>
           </a>
