@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Sparkles, Crown, Bell } from 'lucide-react';
+import { Sparkles, Crown, Bell, LogOut } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface HeaderProps {
@@ -7,10 +7,11 @@ interface HeaderProps {
   onViewChange: (view: ViewMode) => void;
   onMenuToggle: () => void;
   onUpgradeClick?: () => void;
+  onLogoutClick?: () => void;
   userPlan?: 'free' | 'pro';
 }
 
-export default function Header({ currentView, onViewChange, onMenuToggle, onUpgradeClick, userPlan = 'free' }: HeaderProps) {
+export default function Header({ currentView, onViewChange, onMenuToggle, onUpgradeClick, onLogoutClick, userPlan = 'free' }: HeaderProps) {
   const [userEmail, setUserEmail] = useState<string>('');
 
   useEffect(() => {
@@ -82,6 +83,14 @@ export default function Header({ currentView, onViewChange, onMenuToggle, onUpgr
                 <p className="text-xs text-slate-400 leading-tight max-w-[150px] truncate">{userEmail || 'Usuário'}</p>
               </div>
             </div>
+
+            <button
+              onClick={onLogoutClick}
+              className="p-2 text-slate-400 hover:text-red-400 hover:bg-slate-800/50 rounded-lg transition-all group"
+              title="Sair da Conta"
+            >
+              <LogOut className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>

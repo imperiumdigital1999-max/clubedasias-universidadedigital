@@ -38,6 +38,7 @@ import TaskAgentsView from './components/TaskAgentsView';
 import WelcomeAnimation from './components/WelcomeAnimation';
 import OnboardingChoice from './components/OnboardingChoice';
 import AtivacaoTextoView from './components/AtivacaoTextoView';
+import LogoutModal from './components/LogoutModal';
 import UpgradeModal from './components/UpgradeModal';
 import { getTaskData } from './data/taskAgents';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
@@ -56,6 +57,7 @@ function App() {
   const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false);
   const [showOnboardingChoice, setShowOnboardingChoice] = useState(false);
   const [showAtivacaoTexto, setShowAtivacaoTexto] = useState(false);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   useEffect(() => {
     const loggedIn = localStorage.getItem('clube_ias_logged_in') === 'true';
@@ -91,6 +93,31 @@ function App() {
 
   const handleBackFromAtivacao = () => {
     setShowAtivacaoTexto(false);
+  };
+
+  const handleLogoutClick = () => {
+    setShowLogoutModal(true);
+  };
+
+  const handleLogoutConfirm = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    setIsLoggedIn(false);
+    setShowLogoutModal(false);
+    setCurrentView('inicio');
+    setSelectedCategory('');
+    setSelectedTool(null);
+    setSelectedPlatform(null);
+    setSelectedCourse(null);
+    setSelectedAgentId(null);
+    setShowAgentFullPage(false);
+    setShowWelcomeAnimation(false);
+    setShowOnboardingChoice(false);
+    setShowAtivacaoTexto(false);
+  };
+
+  const handleLogoutCancel = () => {
+    setShowLogoutModal(false);
   };
 
   const handleViewChange = (view: ViewMode) => {
@@ -317,7 +344,15 @@ function App() {
           onViewChange={handleViewChange}
           onMenuToggle={() => {}}
           onUpgradeClick={handleUpgradeClick}
+          onLogoutClick={handleLogoutClick}
           userPlan={userPlan}
+        />
+      )}
+
+      {showLogoutModal && (
+        <LogoutModal
+          onConfirm={handleLogoutConfirm}
+          onCancel={handleLogoutCancel}
         />
       )}
 
