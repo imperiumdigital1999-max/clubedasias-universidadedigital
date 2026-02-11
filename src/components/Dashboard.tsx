@@ -83,7 +83,7 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
             PAINEL DE ACESSO
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
-            Escolha o núcleo que deseja acessar e ative a tarefa ideal para o que precisa.
+            Escolha o núcleo que deseja acessar e ative a IA para o que precisa.
           </p>
         </div>
 
