@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, ArrowRight, Sparkles, Zap } from 'lucide-react';
+import { Users, ArrowRight, Sparkles } from 'lucide-react';
 import AnnouncementBanner from './AnnouncementBanner';
 import VEO3PromptsBanner from './VEO3PromptsBanner';
 
@@ -68,31 +68,6 @@ export default function DestaquesDaSemanaView({ onViewChange }: DestaquesDaSeman
                   <span>Entrar na Comunidade</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
-              </div>
-            </div>
-          </section>
-
-          <section className="bg-slate-900/30 border border-slate-800 rounded-2xl p-8">
-            <div className="flex items-center space-x-3 mb-6">
-              <Zap className="w-8 h-8 text-yellow-400" />
-              <h2 className="text-2xl font-bold text-white">Recursos em Destaque</h2>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-slate-900/50 border border-blue-500/20 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">150+</div>
-                <div className="text-slate-400 text-sm">Recursos</div>
-              </div>
-              <div className="bg-slate-900/50 border border-cyan-500/20 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">20</div>
-                <div className="text-slate-400 text-sm">Categorias</div>
-              </div>
-              <div className="bg-slate-900/50 border border-emerald-500/20 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">100%</div>
-                <div className="text-slate-400 text-sm">Operacional</div>
-              </div>
-              <div className="bg-slate-900/50 border border-purple-500/20 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                <div className="text-slate-400 text-sm">Disponível</div>
               </div>
             </div>
           </section>
