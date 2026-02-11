@@ -228,18 +228,34 @@ export default function Dashboard({ onToolSelect, onViewChange, onUpgradeClick, 
 
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-            CENTRO DE COMANDO
+            INÍCIO
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
             Escolha o núcleo que deseja acessar e ative o agente ideal para executar sua tarefa.
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-20">
           {nucleos.map((nucleo, nucleoIndex) => (
-            <section key={nucleoIndex} className="space-y-6">
-              <div className="mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+            <section
+              key={nucleoIndex}
+              className={`relative rounded-3xl p-8 md:p-10 ${
+                nucleoIndex % 2 === 0
+                  ? 'bg-slate-900/30 shadow-inner'
+                  : 'bg-slate-950/50 shadow-inner'
+              }`}
+              style={{
+                boxShadow: nucleoIndex % 2 === 0
+                  ? 'inset 0 2px 20px rgba(0, 0, 0, 0.3)'
+                  : 'inset 0 2px 20px rgba(0, 0, 0, 0.5)'
+              }}
+            >
+              {nucleoIndex > 0 && (
+                <div className="absolute -top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-700/50 to-transparent" />
+              )}
+
+              <div className="mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                   {nucleo.title}
                 </h2>
                 <p className="text-slate-400 text-base">

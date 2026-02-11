@@ -54,7 +54,7 @@ export default function NucleoVideoView({ onBack, onAgentSelect }: NucleoVideoVi
           className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors mb-8"
         >
           <ArrowLeft className="w-5 h-5" />
-          <span>Voltar ao Centro de Comando</span>
+          <span>Voltar ao Início</span>
         </button>
 
         <div className="mb-12">

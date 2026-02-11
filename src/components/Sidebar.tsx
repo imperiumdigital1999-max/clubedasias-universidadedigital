@@ -11,7 +11,7 @@ interface SidebarProps {
 
 export default function Sidebar({ currentView, onViewChange, onUpgradeClick, userPlan = 'free' }: SidebarProps) {
   const navigationItems = [
-    { id: 'inicio' as ViewMode, label: 'Centro de Comando', icon: Home },
+    { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
     { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
     { id: 'ferramentas-ia' as ViewMode, label: 'Recursos de IA', icon: Wrench },
     { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
