@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Award, CheckSquare, MoreHorizontal, Wrench, MessageSquare, Crown, GraduationCap, X, Bot, Brain, Star } from 'lucide-react';
+import { Home, CheckSquare, MoreHorizontal, MessageSquare, GraduationCap, X, Bot, Star, Database, HelpCircle } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface BottomNavigationProps {
@@ -11,19 +11,17 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
   const [showOthersMenu, setShowOthersMenu] = useState(false);
 
   const mainNavItems = [
-    { id: 'inicio' as ViewMode, label: 'Comando', icon: Home },
-    { id: 'tasks' as ViewMode, label: 'Tarefas Premium', icon: CheckSquare },
-    { id: 'agentes-ia' as ViewMode, label: 'Agentes de IA', icon: Brain },
+    { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
+    { id: 'tasks' as ViewMode, label: 'Tarefas', icon: CheckSquare },
   ];
 
   const otherNavItems = [
-    { id: 'favorites' as ViewMode, label: 'Destaque', icon: Award },
-    { id: 'ferramentas-ia' as ViewMode, label: 'Recursos de IA', icon: Wrench },
     { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
-    { id: 'prompts' as ViewMode, label: 'Biblioteca', icon: MessageSquare },
-    { id: 'gpts-personalizados' as ViewMode, label: 'GPTs', icon: Bot },
-    { id: 'ias-pro' as ViewMode, label: 'Ferramentas Pro', icon: Crown },
     { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: GraduationCap },
+    { id: 'prompts' as ViewMode, label: 'Biblioteca de Prompts', icon: MessageSquare },
+    { id: 'gpts-personalizados' as ViewMode, label: '🟡 Agentes GPTs', icon: Bot },
+    { id: 'banco-digital' as ViewMode, label: '🔵 Banco DIGITAL', icon: Database },
+    { id: 'suporte' as ViewMode, label: '🟣 Suporte', icon: HelpCircle },
   ];
 
   const handleOthersClick = () => {
