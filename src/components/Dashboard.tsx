@@ -96,7 +96,13 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
            Clube das IAs
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto leading-relaxed">
-            Execute tarefas com inteligência artificial em um único lugar. Crie, transforme e automatize com as melhores ferramentas de IA.
+         🚨 Atenção!
+O Clube das IAs está passando por uma atualização para oferecer uma experiência ainda melhor para você.
+
+Se o aplicativo apresentar instabilidades, fique tranquilo — isso faz parte do processo de melhoria.
+🕘 Hoje, às 21h, tudo estará funcionando normalmente!
+
+Agradecemos sua compreensão e estamos preparando novidades incríveis! 🚀
           </p>
         </section>
 
