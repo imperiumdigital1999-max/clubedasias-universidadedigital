@@ -187,7 +187,7 @@ O Dicloak é o programa que você vai usar no seu computador para acessar as fer
               <div className="flex items-start space-x-3">
                 <Info className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <div className="text-blue-200 text-sm space-y-2">
-                  <p className="font-semibold mb-2">para fazer o login no Dicloak siga estas etapas:</p>
+                  <p className="font-semibold mb-2">Para fazer o login no Dicloak siga estas etapas:</p>
                   <ol className="list-decimal list-inside space-y-1 text-blue-200/80">
                     <li>Abra o programa Diclok</li>
                     <li>Copie o usuário abaixo</li>
