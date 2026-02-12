@@ -309,7 +309,7 @@ O Dicloak é o programa que você vai usar no seu computador para acessar as fer
           </button>
 
           <button
-            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+            onClick={() => window.open('https://api.whatsapp.com/send/?phone=5571981634836', '_blank')}
             className="flex items-center justify-center space-x-2 bg-transparent hover:bg-slate-800/50 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-200 border-2 border-slate-700 hover:border-slate-600"
           >
             <HelpCircle className="w-5 h-5" />
