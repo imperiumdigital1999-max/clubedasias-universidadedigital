@@ -20,7 +20,7 @@ export default function DestaquesDaSemanaView({ onViewChange }: DestaquesDaSeman
 
   const handleVEO3PromptsClick = () => {
     if (onViewChange) {
-      onViewChange('prompts', { promptTag: 'VÍDEOS VEO 3' });
+      onViewChange('app-prompts');
     }
   };
 
