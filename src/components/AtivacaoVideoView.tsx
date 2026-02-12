@@ -76,7 +76,7 @@ export default function AtivacaoVideoView({ onConcluir }: AtivacaoVideoViewProps
               Baixe o aplicativo Diclok para acessar todas as ferramentas de IA com as credenciais fornecidas.
             </p>
             <button
-              onClick={() => window.open('https://diclok.com/download', '_blank')}
+              onClick={() => window.open('https://dicloak.com/pt/download', '_blank')}
               className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-900 font-bold py-3 px-4 rounded-xl transition-all duration-200 shadow-lg shadow-amber-500/20"
             >
               Baixar Agora
