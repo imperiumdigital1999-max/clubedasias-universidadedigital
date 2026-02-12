@@ -25,6 +25,7 @@ import VEO3View from './components/VEO3View';
 import CreditosGratuitosView from './components/CreditosGratuitosView';
 import PromptDetailView from './components/PromptDetailView';
 import AppPromptsView from './components/AppPromptsView';
+import AppAutomationsView from './components/AppAutomationsView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -224,6 +225,8 @@ function App() {
         return <CreditosGratuitosView onBack={handleBackToDashboard} />;
       case 'app-prompts':
         return <AppPromptsView />;
+      case 'app-automations':
+        return <AppAutomationsView />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }

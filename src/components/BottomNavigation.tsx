@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, CheckSquare, MoreHorizontal, MessageSquare, GraduationCap, X, Bot, Star, Database, HelpCircle, Video } from 'lucide-react';
+import { Home, CheckSquare, MoreHorizontal, MessageSquare, GraduationCap, X, Bot, Star, Database, HelpCircle, Video, Workflow } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface BottomNavigationProps {
@@ -19,6 +19,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
     { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
     { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: GraduationCap },
     { id: 'app-prompts' as ViewMode, label: 'App de Prompts', icon: Video },
+    { id: 'app-automations' as ViewMode, label: 'App de Automações', icon: Workflow },
     { id: 'prompts' as ViewMode, label: 'Biblioteca de Prompts', icon: MessageSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'Agentes GPTs', icon: Bot },
     { id: 'banco-digital' as ViewMode, label: '🔵 Banco DIGITAL', icon: Database },
