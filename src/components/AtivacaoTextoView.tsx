@@ -59,7 +59,7 @@ export default function AtivacaoTextoView({ onBack, onConcluir }: AtivacaoTextoV
   };
 
   const handleDownloadDiclok = () => {
-    window.open('https://diclok.com/download', '_blank');
+    window.open('https://dicloak.com/pt/download', '_blank');
     setStep1Complete(true);
     updateProgress(1);
   };
