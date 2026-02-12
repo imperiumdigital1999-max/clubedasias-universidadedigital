@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import {
-  Video, PenTool, Image, Workflow, ChevronLeft, ChevronRight, Lock
+  Video, PenTool, Image, Workflow, ChevronLeft, ChevronRight, Lock, Sparkles, ArrowRight
 } from 'lucide-react';
 import FloatingChat from './FloatingChat';
 import { aiTools } from '../data/tools';
@@ -83,6 +83,45 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
             Escolha o núcleo que deseja acessar e ative a IA para o que precisa.
           </p>
+        </div>
+
+        <div
+          onClick={() => onViewChange && onViewChange('viral-edit-vo3')}
+          className="mb-16 relative rounded-3xl overflow-hidden bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-pink-600/20 border-2 border-blue-500/40 hover:border-blue-400/60 p-8 md:p-12 cursor-pointer transition-all duration-300 hover:scale-[1.02] transform group shadow-2xl hover:shadow-blue-500/20"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-6">
+              <div className="flex-shrink-0">
+                <img
+                  src="https://static-media.hotmart.com/rpcnJ1gXq6x2ZXYsMmsHNe-gMMI=/300x300/filters:quality(100)/hotmart/product_pictures/e20d0223-005f-4ee6-ab11-b223621d78d8/ChatGPTImage21dedezde202519_11_37.png"
+                  alt="Viral Edit + VO3 AI"
+                  className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-2xl border-4 border-blue-500/40 group-hover:border-blue-400/60 transition-all duration-300 shadow-xl"
+                />
+              </div>
+
+              <div className="text-left">
+                <div className="flex items-center gap-2 mb-3">
+                  <Sparkles className="w-6 h-6 text-yellow-400" />
+                  <span className="text-yellow-400 text-sm font-bold uppercase tracking-wider">Destaque Especial</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
+                  Viral Edit + VO3 AI
+                </h2>
+                <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
+                  Acesse todas as funcionalidades e recursos da plataforma de criação de vídeos com IA. Tutoriais, prompts personalizados, créditos gratuitos e muito mais.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex-shrink-0">
+              <div className="flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/50">
+                <span>Acessar Agora</span>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="space-y-20">

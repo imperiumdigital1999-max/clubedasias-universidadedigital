@@ -19,6 +19,11 @@ import OnboardingChoice from './components/OnboardingChoice';
 import AtivacaoTextoView from './components/AtivacaoTextoView';
 import AtivacaoVideoView from './components/AtivacaoVideoView';
 import LogoutModal from './components/LogoutModal';
+import ViralEditVO3View from './components/ViralEditVO3View';
+import AulasViralEditView from './components/AulasViralEditView';
+import VEO3View from './components/VEO3View';
+import CreditosGratuitosView from './components/CreditosGratuitosView';
+import PromptDetailView from './components/PromptDetailView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -201,6 +206,14 @@ function App() {
         return <BancoDigitalView />;
       case 'suporte':
         return <SuporteView />;
+      case 'viral-edit-vo3':
+        return <ViralEditVO3View onBack={handleBackToDashboard} onViewChange={handleViewChange} />;
+      case 'aulas-viral-edit':
+        return <AulasViralEditView onBack={handleBackToDashboard} />;
+      case 'veo3':
+        return <VEO3View onBack={handleBackToDashboard} />;
+      case 'creditos-gratuitos':
+        return <CreditosGratuitosView onBack={handleBackToDashboard} />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
@@ -239,7 +252,7 @@ function App() {
       {/* Sidebar para Desktop */}
       <Sidebar currentView={currentView} onViewChange={handleViewChange} />
 
-      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
+      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' && (
         <Header
           currentView={currentView}
           onViewChange={handleViewChange}
@@ -255,11 +268,11 @@ function App() {
         />
       )}
 
-      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : ''}`}>
+      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : ''}`}>
         {renderCurrentView()}
       </main>
 
-      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && (
+      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' && (
         <BottomNavigation
           currentView={currentView}
           onViewChange={handleViewChange}
