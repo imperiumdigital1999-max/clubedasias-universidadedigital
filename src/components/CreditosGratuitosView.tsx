@@ -74,7 +74,7 @@ export default function CreditosGratuitosView({ onBack }: CreditosGratuitosViewP
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-950 py-8 px-4 sm:px-6 lg:px-8 md:pt-24">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <button

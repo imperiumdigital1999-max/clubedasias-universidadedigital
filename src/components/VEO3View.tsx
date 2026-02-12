@@ -59,7 +59,7 @@ export default function VEO3View({ onBack }: VEO3ViewProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-black">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-black md:pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center space-x-4 mb-8">
           <button

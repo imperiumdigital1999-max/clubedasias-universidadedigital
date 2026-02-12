@@ -268,7 +268,7 @@ function App() {
         />
       )}
 
-      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : ''}`}>
+      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : ''}`}>
         {renderCurrentView()}
       </main>
 
