@@ -23,7 +23,7 @@ export default function AppAutomationsView() {
               Bem-vindo, {userName}!
             </h1>
             <p className="text-slate-300 text-sm mb-6 max-w-3xl">
-              Como membro Ouro Master, você tem acesso exclusivo ao nosso pack completo de automações N8N. Economize horas de trabalho com workflows profissionais prontos para usar.
+              Como membro do Clube das IAs, você tem acesso exclusivo ao nosso pack completo de automações N8N. Economize horas de trabalho com workflows profissionais prontos para usar.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
