@@ -15,6 +15,12 @@ export default function PromptsView({ initialTag }: PromptsViewProps = {}) {
   useEffect(() => {
     if (initialTag) {
       setSelectedTag(initialTag);
+      setTimeout(() => {
+        const element = document.getElementById(`tag-${initialTag.toLowerCase().replace(/\s+/g, '-')}`);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
     }
   }, [initialTag]);
 
@@ -2132,6 +2138,7 @@ export default function PromptsView({ initialTag }: PromptsViewProps = {}) {
         {promptTags.map((tag) => (
           <div
             key={tag}
+            id={`tag-${tag.toLowerCase().replace(/\s+/g, '-')}`}
             onClick={() => handleTagClick(tag)}
             className="group cursor-pointer bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 relative overflow-hidden"
           >
