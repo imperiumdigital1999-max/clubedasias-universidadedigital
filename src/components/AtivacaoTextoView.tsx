@@ -132,9 +132,7 @@ export default function AtivacaoTextoView({ onBack, onConcluir }: AtivacaoTextoV
             <h2 className="text-2xl font-bold text-white mb-4">Passo 1: Baixar o Diclok</h2>
 
             <p className="text-slate-300 mb-6 leading-relaxed">
-              O Diclok é um autenticador de dois fatores essencial para proteger sua conta no Clube das IAs.
-              Ele gera códigos temporários de 6 dígitos que mudam a cada 30 segundos, garantindo segurança máxima
-              no seu acesso.
+O Dicloak é o programa que você vai usar no seu computador para acessar as ferramentas premium. É como um "navegador especial" que permite usar todas as funcionalidades com segurança.
             </p>
 
             <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 mb-6">
