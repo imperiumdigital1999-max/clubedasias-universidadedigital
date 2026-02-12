@@ -3,6 +3,7 @@ import { Download, FileUp, Settings, AlertCircle, Sparkles } from 'lucide-react'
 import { automationCategories, getTotalAutomations, getTotalCategories } from '../data/automations';
 
 export default function AppAutomationsView() {
+    const userName = "Gabriel Pereira";
   const totalAutomations = getTotalAutomations();
   const totalCategories = getTotalCategories();
 
