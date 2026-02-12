@@ -24,6 +24,7 @@ import AulasViralEditView from './components/AulasViralEditView';
 import VEO3View from './components/VEO3View';
 import CreditosGratuitosView from './components/CreditosGratuitosView';
 import PromptDetailView from './components/PromptDetailView';
+import AppPromptsView from './components/AppPromptsView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -221,6 +222,8 @@ function App() {
         return <VEO3View onBack={handleBackToDashboard} />;
       case 'creditos-gratuitos':
         return <CreditosGratuitosView onBack={handleBackToDashboard} />;
+      case 'app-prompts':
+        return <AppPromptsView />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
@@ -259,7 +262,7 @@ function App() {
       {/* Sidebar para Desktop */}
       <Sidebar currentView={currentView} onViewChange={handleViewChange} />
 
-      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' && (
+      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' && currentView !== 'app-prompts' && (
         <Header
           currentView={currentView}
           onViewChange={handleViewChange}
@@ -279,7 +282,7 @@ function App() {
         {renderCurrentView()}
       </main>
 
-      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' && (
+      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' && currentView !== 'app-prompts' && (
         <BottomNavigation
           currentView={currentView}
           onViewChange={handleViewChange}

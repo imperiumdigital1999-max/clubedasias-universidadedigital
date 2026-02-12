@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, MessageSquare, CheckSquare, Bot, Layers, Star, Database, HelpCircle } from 'lucide-react';
+import { Home, MessageSquare, CheckSquare, Bot, Layers, Star, Database, HelpCircle, Video } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface SidebarProps {
@@ -12,6 +12,7 @@ export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
     { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
     { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
     { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: Layers },
+    { id: 'app-prompts' as ViewMode, label: 'App de Prompts', icon: Video },
     { id: 'prompts' as ViewMode, label: 'Biblioteca de Prompts', icon: MessageSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'Agentes GPTs', icon: Bot },
     { id: 'tasks' as ViewMode, label: 'Clube das Tarefas Premium', icon: CheckSquare },
