@@ -253,7 +253,7 @@ O Dicloak é o programa que você vai usar no seu computador para acessar as fer
               <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mt-6">
                 <h3 className="text-green-200 font-semibold mb-2">🟢 Código de Segurança (2FA)</h3>
                 <p className="text-green-200/80 text-sm mb-4">
-                  Código temporário de 6 números que muda a cada 30 segundos para máxima segurança.
+          O que é isso? É um código temporário de 6 números que garante a segurança do seu acesso. Ele muda a cada 30 segundos.
                 </p>
 
                 {tfaLimit ? (
