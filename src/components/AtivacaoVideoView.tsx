@@ -177,7 +177,7 @@ export default function AtivacaoVideoView({ onConcluir }: AtivacaoVideoViewProps
           </button>
 
           <button
-            onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+            onClick={() => window.open('https://api.whatsapp.com/send/?phone=5571981634836', '_blank')}
             className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-transparent hover:bg-slate-800/50 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 border-2 border-slate-700 hover:border-slate-600"
           >
             <HelpCircle className="w-5 h-5" />
