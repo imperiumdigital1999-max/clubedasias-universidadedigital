@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageSquare, ArrowLeft, Search, Copy, Eye, X } from 'lucide-react';
 import VEO3View from './VEO3View';
 
-export default function PromptsView() {
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+interface PromptsViewProps {
+  initialTag?: string | null;
+}
+
+export default function PromptsView({ initialTag }: PromptsViewProps = {}) {
+  const [selectedTag, setSelectedTag] = useState<string | null>(initialTag || null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPrompt, setSelectedPrompt] = useState<any | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (initialTag) {
+      setSelectedTag(initialTag);
+    }
+  }, [initialTag]);
 
   // TAGs exatamente como especificado
   const promptTags = [

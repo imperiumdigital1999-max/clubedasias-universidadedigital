@@ -32,6 +32,7 @@ function App() {
   const [selectedTool, setSelectedTool] = useState<AITool | null>(null);
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const [promptInitialTag, setPromptInitialTag] = useState<string | null>(null);
   const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false);
   const [showOnboardingChoice, setShowOnboardingChoice] = useState(false);
   const [showAtivacaoTexto, setShowAtivacaoTexto] = useState(false);
@@ -123,12 +124,18 @@ function App() {
     setShowLogoutModal(false);
   };
 
-  const handleViewChange = (view: ViewMode) => {
+  const handleViewChange = (view: ViewMode, options?: { promptTag?: string }) => {
     setCurrentView(view);
     if (view === 'inicio') {
       setSelectedTool(null);
       setSelectedPlatform(null);
       setSelectedCourse(null);
+      setPromptInitialTag(null);
+    }
+    if (view === 'prompts' && options?.promptTag) {
+      setPromptInitialTag(options.promptTag);
+    } else if (view !== 'prompts') {
+      setPromptInitialTag(null);
     }
   };
 
@@ -199,7 +206,7 @@ function App() {
       case 'cursos':
         return <CursosView onCourseSelect={handleCourseSelect} />;
       case 'prompts':
-        return <PromptsView />;
+        return <PromptsView initialTag={promptInitialTag} />;
       case 'gpts-personalizados':
         return <GPTsPersonalizadosView />;
       case 'banco-digital':

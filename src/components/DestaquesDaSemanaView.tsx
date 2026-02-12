@@ -4,7 +4,7 @@ import AnnouncementBanner from './AnnouncementBanner';
 import VEO3PromptsBanner from './VEO3PromptsBanner';
 
 interface DestaquesDaSemanaViewProps {
-  onViewChange?: (view: string) => void;
+  onViewChange?: (view: string, options?: { promptTag?: string }) => void;
 }
 
 export default function DestaquesDaSemanaView({ onViewChange }: DestaquesDaSemanaViewProps) {
@@ -20,7 +20,7 @@ export default function DestaquesDaSemanaView({ onViewChange }: DestaquesDaSeman
 
   const handleVEO3PromptsClick = () => {
     if (onViewChange) {
-      onViewChange('prompts');
+      onViewChange('prompts', { promptTag: 'VÍDEOS VEO 3' });
     }
   };
 
