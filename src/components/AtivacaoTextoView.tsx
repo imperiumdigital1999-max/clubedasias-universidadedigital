@@ -190,10 +190,10 @@ O Dicloak é o programa que você vai usar no seu computador para acessar as fer
                   <p className="font-semibold mb-2">Para fazer o login no Dicloak siga estas etapas:</p>
                   <ol className="list-decimal list-inside space-y-1 text-blue-200/80">
                     <li>Abra o programa Dicloak que você instalou</li>
-                    <li>Copie o usuário abaixo</li>
-                    <li>Cole no Diclok</li>
-                    <li>Copie a senha abaixo</li>
-                    <li>Gere o código 2FA no botão verde</li>
+                    <li>Copie o usuário clicando no botão "Copiar" abaixo</li>
+                    <li>Cole no campo de usuário do Dicloak</li>
+                    <li>Copie a senha e cole no Dicloak</li>
+                    <li>Gere o código de segurança 2FA no botão verde e cole no Dicloak</li>
                   </ol>
                 </div>
               </div>
