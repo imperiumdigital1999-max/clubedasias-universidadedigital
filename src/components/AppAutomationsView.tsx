@@ -2,10 +2,19 @@ import React from 'react';
 import { Download, FileUp, Settings, AlertCircle, Sparkles } from 'lucide-react';
 import { automationCategories, getTotalAutomations, getTotalCategories } from '../data/automations';
 
-export default function AppAutomationsView() {
-    const userName = "Gabriel Pereira";
+interface AppAutomationsViewProps {
+  onCategorySelect?: (categoryId: string) => void;
+}
+
+export default function AppAutomationsView({ onCategorySelect }: AppAutomationsViewProps) {
   const totalAutomations = getTotalAutomations();
   const totalCategories = getTotalCategories();
+
+  const handleCategoryClick = (categoryId: string) => {
+    if (onCategorySelect) {
+      onCategorySelect(categoryId);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-950">
@@ -20,7 +29,7 @@ export default function AppAutomationsView() {
 
           <div className="pl-20">
             <h1 className="text-2xl font-bold text-white mb-2">
-              Bem-vindo, {userName}!
+              Bem-vindo ao App de Automações
             </h1>
             <p className="text-slate-300 text-sm mb-6 max-w-3xl">
               Como membro do Clube das IAs, você tem acesso exclusivo ao nosso pack completo de automações N8N. Economize horas de trabalho com workflows profissionais prontos para usar.
@@ -72,7 +81,10 @@ export default function AppAutomationsView() {
                   {category.description}
                 </p>
 
-                <button className="w-full bg-slate-800/50 hover:bg-slate-700/70 border border-slate-700/50 text-slate-300 hover:text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 flex items-center justify-center space-x-2 group-hover:border-slate-600/70">
+                <button
+                  onClick={() => handleCategoryClick(category.id)}
+                  className="w-full bg-slate-800/50 hover:bg-slate-700/70 border border-slate-700/50 text-slate-300 hover:text-white px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 flex items-center justify-center space-x-2 group-hover:border-slate-600/70"
+                >
                   <Download className="w-4 h-4" />
                   <span>Ver Automações</span>
                 </button>

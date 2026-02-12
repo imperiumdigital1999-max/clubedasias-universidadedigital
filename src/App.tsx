@@ -26,6 +26,7 @@ import CreditosGratuitosView from './components/CreditosGratuitosView';
 import PromptDetailView from './components/PromptDetailView';
 import AppPromptsView from './components/AppPromptsView';
 import AppAutomationsView from './components/AppAutomationsView';
+import AutomationCategoryView from './components/AutomationCategoryView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
   const [selectedPlatform, setSelectedPlatform] = useState<TaskPlatform | null>(null);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [promptInitialTag, setPromptInitialTag] = useState<string | null>(null);
+  const [selectedAutomationCategory, setSelectedAutomationCategory] = useState<string | null>(null);
   const [showWelcomeAnimation, setShowWelcomeAnimation] = useState(false);
   const [showOnboardingChoice, setShowOnboardingChoice] = useState(false);
   const [showAtivacaoTexto, setShowAtivacaoTexto] = useState(false);
@@ -100,6 +102,14 @@ function App() {
     localStorage.setItem('ativacaoConcluida', 'true');
     setShowAtivacaoTexto(false);
     setShowAtivacaoVideo(false);
+  };
+
+  const handleAutomationCategorySelect = (categoryId: string) => {
+    setSelectedAutomationCategory(categoryId);
+  };
+
+  const handleBackToAutomations = () => {
+    setSelectedAutomationCategory(null);
   };
 
   const handleLogoutClick = () => {
@@ -226,7 +236,15 @@ function App() {
       case 'app-prompts':
         return <AppPromptsView />;
       case 'app-automations':
-        return <AppAutomationsView />;
+        if (selectedAutomationCategory) {
+          return (
+            <AutomationCategoryView
+              categoryId={selectedAutomationCategory}
+              onBack={handleBackToAutomations}
+            />
+          );
+        }
+        return <AppAutomationsView onCategorySelect={handleAutomationCategorySelect} />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
