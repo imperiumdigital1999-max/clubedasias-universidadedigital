@@ -53,15 +53,16 @@ function App() {
     setIsLoggedIn(loggedIn);
   }, []);
 
-  useEffect(() => {
-    if (isLoggedIn && initialFlowComplete) {
-      const ativacaoConcluida = localStorage.getItem('ativacaoConcluida') === 'true';
+  // TEMPORARIAMENTE DESATIVADO: Não mostrar tela de ativação ao entrar no app
+  // useEffect(() => {
+  //   if (isLoggedIn && initialFlowComplete) {
+  //     const ativacaoConcluida = localStorage.getItem('ativacaoConcluida') === 'true';
 
-      if (!ativacaoConcluida && !showAtivacaoTexto && !showAtivacaoVideo) {
-        setShowAtivacaoTexto(true);
-      }
-    }
-  }, [isLoggedIn, initialFlowComplete, showAtivacaoTexto, showAtivacaoVideo]);
+  //     if (!ativacaoConcluida && !showAtivacaoTexto && !showAtivacaoVideo) {
+  //       setShowAtivacaoTexto(true);
+  //     }
+  //   }
+  // }, [isLoggedIn, initialFlowComplete, showAtivacaoTexto, showAtivacaoVideo]);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -271,26 +272,27 @@ function App() {
     return <LoginView onLogin={handleLogin} />;
   }
 
-  if (showAtivacaoTexto) {
-    return (
-      <div className="min-h-screen bg-slate-950">
-        <AtivacaoTextoView
-          onBack={handleBackFromAtivacao}
-          onConcluir={handleConcluirAtivacao}
-        />
-      </div>
-    );
-  }
+  // TEMPORARIAMENTE DESATIVADO: Telas de ativação não aparecem mais no fluxo inicial
+  // if (showAtivacaoTexto) {
+  //   return (
+  //     <div className="min-h-screen bg-slate-950">
+  //       <AtivacaoTextoView
+  //         onBack={handleBackFromAtivacao}
+  //         onConcluir={handleConcluirAtivacao}
+  //       />
+  //     </div>
+  //   );
+  // }
 
-  if (showAtivacaoVideo) {
-    return (
-      <div className="min-h-screen bg-slate-950">
-        <AtivacaoVideoView
-          onConcluir={handleConcluirAtivacao}
-        />
-      </div>
-    );
-  }
+  // if (showAtivacaoVideo) {
+  //   return (
+  //     <div className="min-h-screen bg-slate-950">
+  //       <AtivacaoVideoView
+  //         onConcluir={handleConcluirAtivacao}
+  //       />
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="min-h-screen bg-slate-950">
