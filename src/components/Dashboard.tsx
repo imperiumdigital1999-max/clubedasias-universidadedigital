@@ -79,7 +79,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
 
-            PAINEL DE ACESSO
+      Clube das IAs
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
     O maior Clube de acesso a IAs do Brasil! 
