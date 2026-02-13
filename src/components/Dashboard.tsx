@@ -85,26 +85,29 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           </p>
         </div>
 
-        <div className="mb-16 relative rounded-3xl overflow-hidden bg-gradient-to-br from-amber-600/20 via-orange-600/20 to-red-600/20 border-2 border-amber-500/40 p-8 md:p-12 shadow-2xl">
-          <div className="relative z-10">
-            <div className="flex items-start gap-4 mb-4">
-              <AlertTriangle className="w-7 h-7 text-amber-400 flex-shrink-0 mt-1" />
-              <h2 className="text-2xl md:text-3xl font-bold text-white">
-                ⚠️ Atenção Importante
-              </h2>
-            </div>
-            <p className="text-slate-200 text-base md:text-lg leading-relaxed pl-11 mb-6">
-              Antes de utilizar qualquer ferramenta, assista todas as aulas e entenda como o sistema funciona.
-              A maioria das dúvidas e problemas já foram explicados passo a passo no treinamento.
+        <div className="mb-16 relative rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-500/40">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: 'url(/UNIVERSIDADE.png)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/40" />
+
+          <div className="relative z-10 p-8 md:p-12 text-center">
+            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
+              ⚠️ Assista Todas as Aulas Antes de Usar
+            </h2>
+            <p className="text-slate-100 text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+              Aprenda corretamente como utilizar o produto.<br />
+              A maioria dos erros e dúvidas já foram explicados no treinamento.
             </p>
-            <div className="pl-11">
-              <button
-                onClick={() => onViewChange && onViewChange('cursos')}
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-blue-500/50"
-              >
-                🎓 Ir para as Aulas
-              </button>
-            </div>
+            <a
+              href="https://hotmart.com/pt-br/club/clube-avancy-digital"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+            >
+              🎓 Acessar as Aulas Agora
+            </a>
           </div>
         </div>
 
