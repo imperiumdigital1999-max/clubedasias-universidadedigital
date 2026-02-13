@@ -105,7 +105,7 @@ Agradecemos sua compreensão e estamos preparando novidades incríveis! 🚀
 
           <div className="mt-6 pt-6 border-t border-slate-800">
             <p className="text-xs text-slate-500 text-center leading-relaxed">
-              O acesso é liberado automaticamente após inserir seu e-mail.
+             Use o e-mail da sua compra para acessar!
               <br />
               Aproveite todas as ferramentas e recursos exclusivos.
             </p>
