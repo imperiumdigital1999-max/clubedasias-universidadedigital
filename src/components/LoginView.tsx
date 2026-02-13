@@ -43,10 +43,10 @@ export default function LoginView({ onLogin }: LoginViewProps) {
 
           <p className="text-slate-400 text-lg">
          🚨 Atenção!
-O Clube das IAs está passando por uma atualização para oferecer uma experiência ainda melhor para você.
+O Clube das IAs está passando por uma SUPER ATUALIZAÇÃO para oferecer uma experiência ainda melhor para você.
 
 Se o aplicativo apresentar instabilidades, fique tranquilo — isso faz parte do processo de melhoria.
-🕘 Hoje, às 21h, tudo estará funcionando normalmente!
+🕘 Hoje (13/02/2026), às 20h, tudo estará funcionando normalmente!
 
 Agradecemos sua compreensão e estamos preparando novidades incríveis! 🚀
           </p>
