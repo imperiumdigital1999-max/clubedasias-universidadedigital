@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import {
-  Video, PenTool, Image, Workflow, ChevronLeft, ChevronRight, Lock, Sparkles, ArrowRight, Rocket
+  Video, PenTool, Image, Workflow, ChevronLeft, ChevronRight, Lock, Sparkles, ArrowRight, AlertTriangle
 } from 'lucide-react';
 import FloatingChat from './FloatingChat';
 import { aiTools } from '../data/tools';
@@ -76,17 +76,6 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-        <div className="mb-12 max-w-4xl mx-auto">
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 shadow-sm">
-            <div className="flex items-start gap-3">
-              <Rocket className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-              <p className="text-slate-800 text-sm md:text-base leading-relaxed">
-                <span className="font-semibold">Importante:</span> Antes de usar qualquer ferramenta, assista todas as aulas. Muitos erros e dúvidas já foram explicados passo a passo no treinamento.
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
             PAINEL DE ACESSO
@@ -94,6 +83,21 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
             Escolha o núcleo que deseja acessar e ative a IA para o que precisa.
           </p>
+        </div>
+
+        <div className="mb-16 relative rounded-3xl overflow-hidden bg-gradient-to-br from-amber-600/20 via-orange-600/20 to-red-600/20 border-2 border-amber-500/40 p-8 md:p-12 shadow-2xl">
+          <div className="relative z-10">
+            <div className="flex items-start gap-4 mb-4">
+              <AlertTriangle className="w-7 h-7 text-amber-400 flex-shrink-0 mt-1" />
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
+                ⚠️ Atenção Importante
+              </h2>
+            </div>
+            <p className="text-slate-200 text-base md:text-lg leading-relaxed pl-11">
+              Antes de utilizar qualquer ferramenta, assista todas as aulas e entenda como o sistema funciona.
+              A maioria das dúvidas e problemas já foram explicados passo a passo no treinamento.
+            </p>
+          </div>
         </div>
 
         <div
