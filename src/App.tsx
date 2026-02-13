@@ -27,6 +27,10 @@ import PromptDetailView from './components/PromptDetailView';
 import AppPromptsView from './components/AppPromptsView';
 import AppAutomationsView from './components/AppAutomationsView';
 import AutomationCategoryView from './components/AutomationCategoryView';
+import GereSuaArteView from './components/GereSuaArteView';
+import AnimeSuaImagemView from './components/AnimeSuaImagemView';
+import CloneComIAView from './components/CloneComIAView';
+import EstudioVideosView from './components/EstudioVideosView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -245,6 +249,14 @@ function App() {
           );
         }
         return <AppAutomationsView onCategorySelect={handleAutomationCategorySelect} />;
+      case 'gere-sua-arte':
+        return <GereSuaArteView />;
+      case 'anime-sua-imagem':
+        return <AnimeSuaImagemView />;
+      case 'clone-com-ia':
+        return <CloneComIAView />;
+      case 'estudio-videos':
+        return <EstudioVideosView />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
