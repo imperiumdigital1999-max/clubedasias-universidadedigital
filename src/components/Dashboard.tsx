@@ -93,10 +93,18 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
                 ⚠️ Atenção Importante
               </h2>
             </div>
-            <p className="text-slate-200 text-base md:text-lg leading-relaxed pl-11">
+            <p className="text-slate-200 text-base md:text-lg leading-relaxed pl-11 mb-6">
               Antes de utilizar qualquer ferramenta, assista todas as aulas e entenda como o sistema funciona.
               A maioria das dúvidas e problemas já foram explicados passo a passo no treinamento.
             </p>
+            <div className="pl-11">
+              <button
+                onClick={() => onViewChange && onViewChange('cursos')}
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+              >
+                🎓 Ir para as Aulas
+              </button>
+            </div>
           </div>
         </div>
 
