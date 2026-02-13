@@ -16,17 +16,18 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
   ];
 
   const otherNavItems = [
-    { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
-    { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: GraduationCap },
     { id: 'app-prompts' as ViewMode, label: 'App de Prompts', icon: Video },
-    { id: 'app-automations' as ViewMode, label: 'App de Automações', icon: Workflow },
     { id: 'gere-sua-arte' as ViewMode, label: 'Gere sua Arte', icon: Palette },
-    { id: 'anime-sua-imagem' as ViewMode, label: 'Anime sua Imagem', icon: Wand2 },
-    { id: 'clone-com-ia' as ViewMode, label: 'Clone com IA', icon: Users },
+    { id: 'anime-sua-imagem' as ViewMode, label: 'Anime sua Imagem', icon: Wand2, isRedirect: true },
+    { id: 'clone-com-ia' as ViewMode, label: 'Clone com IA', icon: Users, isRedirect: true },
     { id: 'estudio-videos' as ViewMode, label: 'Estúdio de Vídeos', icon: Clapperboard },
+    { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
+    { id: 'divider' as any, label: '', icon: null, isDivider: true },
     { id: 'prompts' as ViewMode, label: 'Biblioteca de Prompts', icon: MessageSquare },
     { id: 'gpts-personalizados' as ViewMode, label: 'Agentes GPTs', icon: Bot },
+    { id: 'app-automations' as ViewMode, label: 'App de Automações', icon: Workflow },
     { id: 'banco-digital' as ViewMode, label: '🔵 Banco DIGITAL', icon: Database },
+    { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: GraduationCap },
     { id: 'suporte' as ViewMode, label: 'Suporte', icon: HelpCircle },
   ];
 
@@ -69,9 +70,16 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
           </div>
           <div className="p-2">
             {otherNavItems.map((item) => {
+              if (item.isDivider) {
+                return (
+                  <div key={item.id} className="my-3 border-t border-slate-700" />
+                );
+              }
+
               const Icon = item.icon;
               const isActive = currentView === item.id;
-              
+              const isRedirect = item.isRedirect || false;
+
               return (
                 <button
                   key={item.id}
@@ -79,6 +87,8 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
                   className={`w-full flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 ${
                     isActive
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
+                      : isRedirect
+                      ? 'text-slate-300 hover:text-white hover:bg-slate-700 shadow-inner bg-slate-900/30 border border-slate-700/50'
                       : 'text-slate-300 hover:text-white hover:bg-slate-700'
                   }`}
                 >
