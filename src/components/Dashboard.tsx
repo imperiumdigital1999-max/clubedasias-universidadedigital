@@ -74,11 +74,11 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-16">
 
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-            
+
             PAINEL DE ACESSO
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
