@@ -28,11 +28,12 @@ export default function WelcomeAnimation({ onComplete }: WelcomeAnimationProps) 
         <div className="mb-8 flex justify-center">
           <div className="relative">
             <div className="absolute inset-0 blur-3xl bg-blue-500/20 rounded-full animate-pulse"></div>
-            <div className="relative w-40 h-40 flex items-center justify-center p-4">
+            <div className="relative w-40 h-40 flex items-center justify-center p-4 flex-shrink-0">
               <img
                 src="/d6e04999-06b7-4615-b52c-09d5e3684592.png"
                 alt="Clube das IAs"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain pointer-events-none select-none"
+                draggable="false"
               />
             </div>
           </div>

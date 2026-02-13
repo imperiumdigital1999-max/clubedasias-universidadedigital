@@ -35,11 +35,12 @@ export default function Header({ currentView, onViewChange, onMenuToggle, onLogo
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
             <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 flex items-center justify-center">
+              <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
                 <img
                   src="/d6e04999-06b7-4615-b52c-09d5e3684592.png"
                   alt="Clube das IAs"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain pointer-events-none select-none"
+                  draggable="false"
                 />
               </div>
               <h1 className="text-lg font-semibold text-white tracking-tight">Clube das IAs</h1>
