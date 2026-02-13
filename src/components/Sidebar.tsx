@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, MessageSquare, CheckSquare, Bot, Layers, Star, Database, HelpCircle, Video, Workflow, Palette, Wand2, Users, Clapperboard } from 'lucide-react';
+import { Home, MessageSquare, CheckSquare, Bot, Layers, Star, Database, HelpCircle, Video, Workflow, Palette, Wand2, Users, Clapperboard, Camera } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface SidebarProps {
@@ -11,6 +11,7 @@ export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
   const primaryNavigationItems = [
     { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
     { id: 'app-prompts' as ViewMode, label: 'App de Prompts', icon: Video },
+    { id: 'gerador-prompts-ugc' as ViewMode, label: 'Gerador de Prompts UGC', icon: Camera },
     { id: 'gere-sua-arte' as ViewMode, label: 'Gere sua Arte', icon: Palette },
     { id: 'anime-sua-imagem' as ViewMode, label: 'Anime sua Imagem', icon: Wand2, isRedirect: true },
     { id: 'clone-com-ia' as ViewMode, label: 'Clone com IA', icon: Users, isRedirect: true },

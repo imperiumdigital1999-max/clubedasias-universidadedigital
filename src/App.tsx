@@ -31,6 +31,7 @@ import GereSuaArteView from './components/GereSuaArteView';
 import AnimeSuaImagemView from './components/AnimeSuaImagemView';
 import CloneComIAView from './components/CloneComIAView';
 import EstudioVideosView from './components/EstudioVideosView';
+import GeradorPromptsUGCView from './components/GeradorPromptsUGCView';
 import { ViewMode, AITool, TaskPlatform, Course } from './types';
 
 function App() {
@@ -263,6 +264,8 @@ function App() {
         return <CloneComIAView />;
       case 'estudio-videos':
         return <EstudioVideosView />;
+      case 'gerador-prompts-ugc':
+        return <GeradorPromptsUGCView />;
       default:
         return <Dashboard onToolSelect={handleToolSelect} onViewChange={handleViewChange} />;
     }
