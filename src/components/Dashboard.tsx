@@ -85,29 +85,33 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           </p>
         </div>
 
-        <div className="mb-16 relative rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-500/40">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: 'url(/UNIVERSIDADE.png)' }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/60 to-slate-900/40" />
+        <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-400/50 bg-gradient-to-br from-blue-50/50 via-white to-blue-50/30 backdrop-blur-sm">
+          <div className="p-6 md:p-10">
+            <div className="mb-6 flex justify-center">
+              <img
+                src="/UNIVERSIDADE.png"
+                alt="Universidade Clube das IAs"
+                className="w-full max-w-4xl rounded-2xl shadow-lg"
+              />
+            </div>
 
-          <div className="relative z-10 p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
-              ⚠️ Assista Todas as Aulas Antes de Usar
-            </h2>
-            <p className="text-slate-100 text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
-              Aprenda corretamente como utilizar o produto.<br />
-              A maioria dos erros e dúvidas já foram explicados no treinamento.
-            </p>
-            <a
-              href="https://hotmart.com/pt-br/club/clube-avancy-digital"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-blue-500/50"
-            >
-              🎓 Acessar as Aulas Agora
-            </a>
+            <div className="text-center px-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
+                ⚠️ Assista Todas as Aulas Antes de Usar
+              </h2>
+              <p className="text-slate-700 text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+                Aprenda corretamente como utilizar o produto.<br />
+                A maioria dos erros e dúvidas já foram explicados no treinamento.
+              </p>
+              <a
+                href="https://hotmart.com/pt-br/club/clube-avancy-digital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-blue-500/50"
+              >
+                🎓 Acessar as Aulas Agora
+              </a>
+            </div>
           </div>
         </div>
 
