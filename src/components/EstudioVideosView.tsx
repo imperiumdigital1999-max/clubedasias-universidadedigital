@@ -3,11 +3,11 @@ import { Bot, Clapperboard, ExternalLink } from 'lucide-react';
 
 export default function EstudioVideosView() {
   const handleGrokClick = () => {
-    window.open('https://x.com/i/grok', '_blank');
+    window.open('https://grok.com/', '_blank');
   };
 
   const handleTikTokClick = () => {
-    window.open('https://www.tiktok.com/studio', '_blank');
+    window.open('https://ads.tiktok.com/creative/creativestudio/home/pt-BR', '_blank');
   };
 
   return (
