@@ -79,7 +79,9 @@ function App() {
 
   const handleWelcomeComplete = () => {
     setShowWelcomeAnimation(false);
-    setShowOnboardingChoice(true);
+    // TEMPORARIAMENTE DESATIVADO: Ir direto para o Dashboard
+    // setShowOnboardingChoice(true);
+    setInitialFlowComplete(true);
   };
 
   const handleOnboardingComplete = () => {
@@ -290,7 +292,8 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-950">
       {showWelcomeAnimation && <WelcomeAnimation onComplete={handleWelcomeComplete} />}
-      {showOnboardingChoice && <OnboardingChoice onComplete={handleOnboardingComplete} onChoiceSelect={handleOnboardingChoice} />}
+      {/* TEMPORARIAMENTE DESATIVADO: Tela "Como quer começar?" */}
+      {/* {showOnboardingChoice && <OnboardingChoice onComplete={handleOnboardingComplete} onChoiceSelect={handleOnboardingChoice} />} */}
 
       {/* Sidebar para Desktop */}
       <Sidebar currentView={currentView} onViewChange={handleViewChange} />
