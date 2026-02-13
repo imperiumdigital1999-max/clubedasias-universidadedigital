@@ -55,7 +55,7 @@ export const aiTools: AITool[] = [
         content: 'Gere 10 ideias inovadoras para [PROJETO/CAMPANHA] considerando: orçamento [BAIXO/MÉDIO/ALTO], prazo de [X] dias e objetivo de [DESCREVER OBJETIVO]. Priorize soluções práticas e criativas.'
       }
     ],
-    freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+    freeAccessVideo: 'https://chat.openai.com'
   },
   {
     id: '2',
@@ -110,7 +110,7 @@ export const aiTools: AITool[] = [
       content: 'Escreva um script em Python que [DESCREVER FUNÇÃO], incluindo comentários e tratamento de erros.'
     }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://claude.ai'
 },
   {
     id: '3',
@@ -163,7 +163,7 @@ export const aiTools: AITool[] = [
       content: 'Escreva um e‑mail de vendas para [PRODUTO/SERVIÇO] direcionado a [PÚBLICO‑ALVO]. Inclua assunto chamativo, problema, benefícios e call‑to‑action.'
     }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://jasper.ai'
 },
   {
     id: '15',
@@ -216,7 +216,7 @@ export const aiTools: AITool[] = [
   content: 'Crie um pitch de vendas em formato de apresentação para [PRODUTO/SERVIÇO], incluindo problema, solução, diferenciais e call-to-action, com tom [PROFISSIONAL/DESCONTRAÍDO].'
 }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://gamma.app/pt-br'
 },
   // Imagem
   {
@@ -271,7 +271,7 @@ export const aiTools: AITool[] = [
       content: 'Crie uma cena animada de fantasia com dragão voando sobre montanhas ao pôr do sol, com cores vibrantes.'
     }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'  
+  freeAccessVideo: 'https://midjourney.com'
   },
   {
     id: '5',
@@ -312,7 +312,7 @@ export const aiTools: AITool[] = [
     { id: '2', title: 'Cena futurista estilizada', content: 'Crie uma imagem de cidade futurista ao entardecer com néon e atmosfera ciberpunk.' },
     { id: '3', title: 'Mascote fofo para marca', content: 'Desenhe um mascote simpático para marca infantil, estilo cartoon com grupo de cores pastel.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://openai.com/dall-e-3'
 },
   {
     id: '6',
@@ -354,7 +354,7 @@ export const aiTools: AITool[] = [
     { id: '2', title: 'Personagem estilo anime', content: 'Desenhe um personagem anime com cabelo azul, uniforme futurista e expressão confiante.' },
     { id: '3', title: 'Arte retrô anos 80', content: 'Gere arte com estética retrô dos anos 80 para pôster de evento tech.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://leonardo.ai'
 },
   {
     id: '20',
@@ -407,7 +407,7 @@ applications: [
   content: 'Um menino de cabelos loiros e olhos azuis, vestindo jaqueta jeans e camisa xadrez, sentado ao lado de um cachorro amigável sobre tábuas de madeira.'
 }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://ideogram.ai'
 },
 
   {
@@ -449,7 +449,7 @@ applications: [
   { id: '2', title: 'Apresentação corporativa', content: 'Gere uma apresentação de 10 slides sobre resultados trimestrais da empresa, visual clean e profissional.' },
   { id: '3', title: 'Banner promocional', content: 'Desenvolva um banner para campanha de Black Friday, com foco em chamar atenção e CTA claro.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.canva.com/pro/'
 },
   
   // Voz
@@ -505,7 +505,7 @@ applications: [
     content: 'Transforme o seguinte texto em uma narração estilo podcast, com voz feminina suave, tom informal e cadência natural de conversa. Ideal para engajar ouvintes em plataformas como Spotify e YouTube.'
   }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://elevenlabs.io'
 },
   {
     id: '8',
@@ -558,7 +558,7 @@ applications: [
       content: 'Converta este texto educacional em voz neutra, clara e pausada para uso em aulas online e vídeos de treinamento.'
     }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://murf.ai'
 },
   {
     id: '17',
@@ -611,7 +611,7 @@ applications: [
   content: 'Imite uma voz alegre e conversacional com um forte sotaque canadense.'
 }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.naturalreaders.com'
 },
   
   // Vídeo
@@ -655,7 +655,7 @@ applications: [
     { id: '2', title: 'Motion graphics por prompt', content: 'Crie uma animação curta com partículas flutuantes circulares usando um prompt textual.' },
     { id: '3', title: 'Transformação de imagem em vídeo', content: 'Gere um vídeo que transforme uma imagem estática em animações curtas e fluidas.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://runwayml.com'
   },
   {
     id: '10',
@@ -696,7 +696,7 @@ applications: [
     { id: '2', title: 'Tutorial narrado estilo e‑learning', content: 'Crie um script passo a passo para ensinar [FERRAMENTA/PROCESSO] com voz fluida e direta.' },
     { id: '3', title: 'Mensagem institucional corporativa', content: 'Escreva uma mensagem institucional formal para clientes com tom sóbrio e envolvente.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://synthesia.io'
   },
   {
     id: '18',
@@ -749,7 +749,7 @@ applications: [
   content: 'Medium shot, câmera se afasta revelando uma biblioteca antiga que se transforma em círculo mágico, livros voando com luz azul mística.'
 }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://hailuoai.video/pt'
 },
   {
     id: '19',
@@ -802,7 +802,7 @@ applications: [
   content: 'Duas pessoas se aproximam e se abraçam emotivamente, com movimento suave e expressão calorosa.'
 }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://dreamfaceapp.com'
 },
   {
     id: '21',
@@ -855,7 +855,7 @@ applications: [
   content: 'Avatar preparando prato gourmet, usando uniforme de chef, em uma cozinha profissional bem iluminada.'
 }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.heygen.com'
 },
   {
     id: '23',
@@ -896,7 +896,7 @@ applications: [
   { id: '2', title: 'Vídeo promocional', content: 'Gere um vídeo promocional de 30 segundos para produto Y, com tom motivador e imagens animadas.' },
   { id: '3', title: 'Demonstração de produto', content: 'Vídeo mostrando passo a passo do funcionamento de um gadget tecnológico, estilo clean e profissional.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://vmake.ai'
 },
 {
     id: '24',
@@ -937,7 +937,7 @@ applications: [
   { id: '2', title: 'Transcrição multilíngue', content: 'Transcreva e traduza o vídeo em inglês para português e espanhol, mantendo o tempo original.' },
   { id: '3', title: 'Captions para social media', content: 'Gere legendas curtas e envolventes para um vídeo de Instagram de 30 segundos.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://submagic.ai'
 },
   {
     id: '26',
@@ -978,7 +978,7 @@ applications: [
   { id: '2', title: 'Anúncio promocional', content: 'Gere um vídeo de 20 segundos promovendo um produto tecnológico, estilo moderno e dinâmico.' },
   { id: '3', title: 'Apresentação corporativa', content: 'Vídeo apresentando resultados trimestrais da empresa, com gráficos animados e narração profissional.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.kreadoai.com'
 },
   // Automação
   {
@@ -1020,7 +1020,7 @@ applications: [
     { id: '2', title: 'Integração com CRM', content: 'Configure zap para adicionar leads via Typeform diretamente no CRM.' },
     { id: '3', title: 'Notificação por Slack', content: 'Crie automação que envie mensagem no Slack ao registrar compra no WooCommerce.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://zapier.com'
   },
   {
     id: '12',
@@ -1062,7 +1062,7 @@ applications: [
     { id: '2', title: 'Agendamento automático', content: 'Automatize postagens no Instagram a partir de itens marcados no Trello.' },
     { id: '3', title: 'API externa via webhook', content: 'Configure conexão com API externa para processar dados em tempo real no Make.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://make.com'
   },
   {
     id: '16',
@@ -1105,7 +1105,7 @@ applications: [
   content: 'N/A.'
 },
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://clicopy.com'
 },
   
   // Código
@@ -1149,7 +1149,7 @@ applications: [
     { id: '2', title: 'Refatoração de código', content: 'Peça para refatorar este código mantendo lógica e legibilidade: [INSERIR CÓDIGO].' },
     { id: '3', title: 'Documentação automática', content: 'Gere documentação JSDoc para a função abaixo: [INSERIR FUNÇÃO].' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://github.com/features/copilot'
   },
   {
     id: '14',
@@ -1191,7 +1191,7 @@ applications: [
     { id: '2', title: 'Correção de bug', content: 'Explique e corrija este erro no código: "[COLAR ERRO AQUI]".' },
     { id: '3', title: 'Exemplo de API', content: 'Mostre como usar a API pública de [NOME_API] com código claro e comentado.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://cursor.sh'
   },
     //Banco de Imagens
 {
@@ -1233,7 +1233,7 @@ applications: [
   { id: '2', title: 'Ilustração para blog', content: 'Gere ilustração de tecnologia e inovação para artigo online.' },
   { id: '3', title: 'Banner publicitário', content: 'Encontre fotos e vetores para criar banner de campanha promocional.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://lovepik.com'
 },
   {
     id: '30',
@@ -1274,7 +1274,7 @@ applications: [
   { id: '2', title: 'Interface de app', content: 'Gere ícones minimalistas para menu e botões de aplicativo mobile.' },
   { id: '3', title: 'Design de apresentação', content: 'Selecione ícones modernos para slides de apresentação corporativa.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.iconscount.com'
 },
   {
     id: '32',
@@ -1315,7 +1315,7 @@ applications: [
   { id: '2', title: 'Ícones temáticos', content: 'Encontre conjunto de ícones sobre finanças e economia.' },
   { id: '3', title: 'Ícones para apresentação', content: 'Escolha ícones modernos para slides corporativos.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.flaticon.com'
 },
   {
     id: '33',
@@ -1356,7 +1356,7 @@ applications: [
   { id: '2', title: 'Vídeo de marketing', content: 'Selecione clipes curtos e música para vídeo promocional.' },
   { id: '3', title: 'Gráfico animado', content: 'Gere gráficos animados para incluir em vídeo institucional.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.envato.com/elements'
 },
   {
     id: '34',
@@ -1397,7 +1397,7 @@ applications: [
   { id: '2', title: 'Template de vídeo', content: 'Selecione template de vídeo moderno para promoção de produto.' },
   { id: '3', title: 'Ilustração vetorial', content: 'Escolha ilustração vetorial para apresentação corporativa.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://stock.adobe.com'
 },
   {
     id: '35',
@@ -1438,7 +1438,7 @@ applications: [
   { id: '2', title: 'Ícones para app', content: 'Selecione ícones modernos para interface de aplicativo móvel.' },
   { id: '3', title: 'Ilustração para blog', content: 'Busque ilustrações relacionadas a tecnologia e inovação.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.freepik.com'
 },
   {
     id: '36',
@@ -1479,7 +1479,7 @@ applications: [
   { id: '2', title: 'Mockups de embalagem', content: 'Busque mockups de embalagem de alimentos (sachê, pote e caixa) para apresentação de redesign de marca.' },
   { id: '3', title: 'Banco de fotos corporativas', content: 'Selecione fotos de escritório moderno e equipe colaborando para blog e LinkedIn.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://designi.com.br'
 },
     //Edição de Vídeo
   {
@@ -1521,7 +1521,7 @@ applications: [
   { id: '2', title: 'Vídeo promocional', content: 'Gere vídeo de 20 segundos para anúncio de produto, com texto animado e música de fundo.' },
   { id: '3', title: 'Corte de vídeo', content: 'Edite vídeo de palestra, cortando silêncios e ajustando ritmo de apresentação.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.veed.io'
 },
     {
     id: '37',
@@ -1562,7 +1562,7 @@ applications: [
   { id: '2', title: 'Tutorial animado', content: 'Gere vídeo tutorial de 2 minutos com animações e narração clara.' },
   { id: '3', title: 'Promoção de produto', content: 'Crie vídeo promocional de 15 segundos destacando características principais do produto.' }
 ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.capcut.com'
 },
   {
   id: '44',
@@ -1602,7 +1602,7 @@ applications: [
     { id: '1', title: 'Resumo de reunião', content: 'Resuma em tópicos claros os principais pontos desta reunião.' },
     { id: '2', title: 'Planner diário', content: 'Monte uma lista de tarefas organizada para o meu dia.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.notion.so/product/ai'
 },
 {
   id: '45',
@@ -1636,7 +1636,7 @@ applications: [
     { id: '1', title: 'Anúncio Facebook', content: 'Crie 3 variações curtas de anúncio para vender [produto].' },
     { id: '2', title: 'Post Instagram', content: 'Escreva uma legenda curta e persuasiva para [tema].' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.copy.ai'
 },
 {
   id: '46',
@@ -1670,7 +1670,7 @@ applications: [
     { id: '1', title: 'Cortar trechos', content: 'Remova automaticamente pausas e vícios de linguagem deste áudio.' },
     { id: '2', title: 'Transformar vídeo em artigo', content: 'Transcreva e resuma esse vídeo em formato de artigo.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://www.descript.com'
 },
 {
   id: '47',
@@ -1710,7 +1710,7 @@ applications: [
     { id: '1', title: 'Vídeo para anúncio', content: 'Transforme esse texto em um vídeo de até 30 segundos com legendas.' },
     { id: '2', title: 'Resumo visual', content: 'Crie um vídeo com 5 cenas resumindo esse artigo.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
+  freeAccessVideo: 'https://pictory.ai'
 },
 {
   id: '48',
@@ -1744,6 +1744,6 @@ applications: [
     { id: '1', title: 'Foto de produto', content: 'Remova o fundo desta imagem deixando apenas o produto em destaque.' },
     { id: '2', title: 'Montagem social media', content: 'Recorte a pessoa em PNG para usar em um post com fundo personalizado.' }
   ],
-  freeAccessVideo: 'https://www.youtube.com/watch?v=Th6yAKgGbVk'
-} 
+  freeAccessVideo: 'https://remove.bg'
+}
 ];
