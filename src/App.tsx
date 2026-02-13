@@ -66,15 +66,18 @@ function App() {
   const handleLogin = () => {
     setIsLoggedIn(true);
 
-    const today = new Date().toDateString();
-    const lastShown = localStorage.getItem('clube_ias_welcome_last_shown');
+    // TEMPORARIAMENTE DESATIVADO: Ir direto para o Dashboard sem animação de boas-vindas
+    // const today = new Date().toDateString();
+    // const lastShown = localStorage.getItem('clube_ias_welcome_last_shown');
 
-    if (lastShown !== today) {
-      setShowWelcomeAnimation(true);
-      localStorage.setItem('clube_ias_welcome_last_shown', today);
-    } else {
-      setInitialFlowComplete(true);
-    }
+    // if (lastShown !== today) {
+    //   setShowWelcomeAnimation(true);
+    //   localStorage.setItem('clube_ias_welcome_last_shown', today);
+    // } else {
+    //   setInitialFlowComplete(true);
+    // }
+
+    setInitialFlowComplete(true);
   };
 
   const handleWelcomeComplete = () => {
@@ -291,7 +294,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950">
-      {showWelcomeAnimation && <WelcomeAnimation onComplete={handleWelcomeComplete} />}
+      {/* TEMPORARIAMENTE DESATIVADO: Tela "Bem-vindo, Usuário! 🎉" */}
+      {/* {showWelcomeAnimation && <WelcomeAnimation onComplete={handleWelcomeComplete} />} */}
       {/* TEMPORARIAMENTE DESATIVADO: Tela "Como quer começar?" */}
       {/* {showOnboardingChoice && <OnboardingChoice onComplete={handleOnboardingComplete} onChoiceSelect={handleOnboardingChoice} />} */}
 
