@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Copy, Eye, X, ChevronLeft, ChevronRight, Sparkles, Settings } from 'lucide-react';
+import { Search, Copy, Eye, X, ChevronLeft, ChevronRight, Sparkles, Settings, ArrowLeft } from 'lucide-react';
 import { veo3Prompts, veo3Categories, VEO3Prompt } from '../data/veo3Prompts';
 
 const ITEMS_PER_PAGE = 12;
@@ -20,7 +20,11 @@ interface PromptCustomization {
   format: string;
 }
 
-export default function AppPromptsView() {
+interface AppPromptsViewProps {
+  onViewChange?: (view: string) => void;
+}
+
+export default function AppPromptsView({ onViewChange }: AppPromptsViewProps) {
   const [selectedCategory, setSelectedCategory] = useState('Ver Todos');
   const [searchTerm, setSearchTerm] = useState('');
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -120,8 +124,18 @@ export default function AppPromptsView() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-black md:pt-16">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-black pt-20 md:pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {onViewChange && (
+          <button
+            onClick={() => onViewChange('inicio')}
+            className="mb-6 flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Voltar para Início</span>
+          </button>
+        )}
+
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
             App de Prompts VEO 3

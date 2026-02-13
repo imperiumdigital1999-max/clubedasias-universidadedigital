@@ -25,7 +25,7 @@ export default function DestaquesDaSemanaView({ onViewChange }: DestaquesDaSeman
   };
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-slate-950 pt-20 md:pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
 
         <section className="text-center pb-6">

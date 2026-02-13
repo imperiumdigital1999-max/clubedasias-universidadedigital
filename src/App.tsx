@@ -238,7 +238,7 @@ function App() {
       case 'creditos-gratuitos':
         return <CreditosGratuitosView onBack={handleBackToDashboard} />;
       case 'app-prompts':
-        return <AppPromptsView />;
+        return <AppPromptsView onViewChange={handleViewChange} />;
       case 'app-automations':
         if (selectedAutomationCategory) {
           return (
@@ -311,7 +311,7 @@ function App() {
         />
       )}
 
-      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pb-20 md:pb-0 md:ml-64 md:pt-16' : ''}`}>
+      <main className={`min-h-screen ${currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' ? 'pt-16 pb-20 md:pb-0 md:ml-64 md:pt-16' : ''}`}>
         {renderCurrentView()}
       </main>
 

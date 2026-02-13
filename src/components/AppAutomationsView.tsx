@@ -17,7 +17,7 @@ export default function AppAutomationsView({ onCategorySelect }: AppAutomationsV
   };
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-slate-950 pt-20 md:pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-yellow-900/20 via-orange-900/10 to-slate-900/20 border-2 border-yellow-600/30 p-8 mb-10">
