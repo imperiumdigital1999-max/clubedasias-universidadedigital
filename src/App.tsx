@@ -315,7 +315,7 @@ function App() {
         {renderCurrentView()}
       </main>
 
-      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' && currentView !== 'app-prompts' && (
+      {currentView !== 'tool-detail' && currentView !== 'task-detail' && currentView !== 'course-detail' && currentView !== 'viral-edit-vo3' && currentView !== 'aulas-viral-edit' && currentView !== 'veo3' && currentView !== 'creditos-gratuitos' && (
         <BottomNavigation
           currentView={currentView}
           onViewChange={handleViewChange}
