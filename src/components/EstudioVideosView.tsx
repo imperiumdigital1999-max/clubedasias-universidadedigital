@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rocket, Video } from 'lucide-react';
+import { Bot, Clapperboard, ExternalLink } from 'lucide-react';
 
 export default function EstudioVideosView() {
   const handleGrokClick = () => {
@@ -11,32 +11,49 @@ export default function EstudioVideosView() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center px-4">
-      <div className="max-w-2xl w-full">
-        <h1 className="text-3xl font-bold text-white text-center mb-12">
-          Qual plataforma você deseja usar?
-        </h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center px-6 py-12">
+      <div className="max-w-4xl w-full">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
+            Estúdio de Vídeos
+          </h1>
+          <p className="text-lg text-slate-500">
+            Escolha uma plataforma para criar seus vídeos
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <button
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div
             onClick={handleGrokClick}
-            className="group relative bg-slate-900/50 border-2 border-slate-700 hover:border-blue-500 rounded-2xl p-12 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1"
+            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 border border-slate-200"
           >
-            <div className="flex flex-col items-center space-y-4">
-              <Rocket className="w-20 h-20 text-blue-400 group-hover:scale-110 transition-transform" />
-              <span className="text-2xl font-bold text-white">Grok</span>
+            <div className="flex flex-col items-center text-center space-y-4">
+              <Bot className="w-16 h-16 text-blue-600" />
+              <div className="flex items-center gap-2">
+                <h3 className="text-2xl font-bold text-blue-600">Grok</h3>
+                <ExternalLink className="w-4 h-4 text-blue-600" />
+              </div>
+              <p className="text-slate-600 leading-relaxed">
+                Crie vídeos com inteligência artificial usando o Grok
+              </p>
             </div>
-          </button>
+          </div>
 
-          <button
+          <div
             onClick={handleTikTokClick}
-            className="group relative bg-slate-900/50 border-2 border-slate-700 hover:border-cyan-500 rounded-2xl p-12 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1"
+            className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 border border-slate-200"
           >
-            <div className="flex flex-col items-center space-y-4">
-              <Video className="w-20 h-20 text-cyan-400 group-hover:scale-110 transition-transform" />
-              <span className="text-2xl font-bold text-white">TikTok Studio</span>
+            <div className="flex flex-col items-center text-center space-y-4">
+              <Clapperboard className="w-16 h-16 text-blue-600" />
+              <div className="flex items-center gap-2">
+                <h3 className="text-2xl font-bold text-blue-600">TikTok Studio</h3>
+                <ExternalLink className="w-4 h-4 text-blue-600" />
+              </div>
+              <p className="text-slate-600 leading-relaxed">
+                Estúdio criativo do TikTok para produção de vídeos
+              </p>
             </div>
-          </button>
+          </div>
         </div>
       </div>
     </div>
