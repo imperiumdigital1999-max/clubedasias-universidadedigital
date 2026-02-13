@@ -37,7 +37,7 @@ export default function Header({ currentView, onViewChange, onMenuToggle, onLogo
             <div className="flex items-center space-x-3">
               <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
                 <img
-                  src="/d6e04999-06b7-4615-b52c-09d5e3684592.png"
+                  src="https://acessocompleto.site/wp-content/uploads/2026/02/d6e04999-06b7-4615-b52c-09d5e3684592.png"
                   alt="Clube das IAs"
                   className="w-full h-full object-contain pointer-events-none select-none"
                   draggable="false"
