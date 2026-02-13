@@ -90,7 +90,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
           <div className="p-6 md:p-10">
             <div className="mb-6 flex justify-center">
               <img
-                src="/UNIVERSIDADE.png"
+                src="https://acessocompleto.site/wp-content/uploads/2026/02/UNIVERSIDADE.png"
                 alt="Universidade Clube das IAs"
                 className="w-full max-w-4xl rounded-2xl shadow-lg"
               />
