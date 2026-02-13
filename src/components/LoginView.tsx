@@ -35,7 +35,7 @@ export default function LoginView({ onLogin }: LoginViewProps) {
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-24 h-24 mb-6 flex-shrink-0">
             <img
-              src="/d6e04999-06b7-4615-b52c-09d5e3684592.png"
+              src="https://acessocompleto.site/wp-content/uploads/2026/02/d6e04999-06b7-4615-b52c-09d5e3684592.png"
               alt="Clube das IAs"
               className="w-full h-full object-contain pointer-events-none select-none"
               draggable="false"
