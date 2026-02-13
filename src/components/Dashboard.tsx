@@ -100,7 +100,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
                 ⚠️ Assista Todas as Aulas Antes de Usar
               </h2>
               <p className="text-slate-700 text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
-                Aprenda corretamente como utilizar o produto.<br />
+                É fundamental que, antes de utilizar o aplicativo do Clube das IAs, você assista às aulas para entender exatamente como o sistema funciona.<br />
                 A maioria dos erros e dúvidas já foram explicados no treinamento.
               </p>
               <a
