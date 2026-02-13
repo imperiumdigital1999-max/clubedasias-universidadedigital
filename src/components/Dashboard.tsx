@@ -82,7 +82,7 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
             PAINEL DE ACESSO
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
-            Escolha o núcleo que deseja acessar e ative a IA para o que precisa.
+    O maior Clube de acesso a IAs do Brasil! 
           </p>
         </div>
 
