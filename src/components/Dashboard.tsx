@@ -101,8 +101,8 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
                 ⚠️ Assista Todas as Aulas Antes de Usar
               </h2>
               <p className="text-slate-700 text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
-              Devido a nossa última atualização do dia (13/02/2026) É fundamental que, antes de utilizar o aplicativo do Clube das IAs, você assista às aulas para entender exatamente como o sistema funciona.<br />
-                A maioria dos erros e dúvidas já foram explicados no treinamento.
+          APLICATIVO EM ATUALIZAÇÃO = Devido a nossa super atualização de 2026 o nosso aplicativo esta passando por ajustes e melhorias e estará disponivel 100% para todos os membros em: 13/02/2026 ás 20hrs.<br />
+Enquanto isso o aplicativo estará sofrendo com bugs e erros, obrigado pela colaboração de todos!
               </p>
               <a
                 href="https://hotmart.com/pt-br/club/clube-avancy-digital"
