@@ -1748,7 +1748,7 @@ applications: [
 },
   {
     id: '50',
-    name: 'Teste',
+    name: 'Lovable',
     description: 'Automação de workflows entre aplicativos',
     image: 'https://sendbird.imgix.net/cms/Zapier-blog.png',
     url: 'https://zapier.com',
@@ -1765,19 +1765,19 @@ applications: [
       id: '1',
       title: 'Como Usar o Zapier: Tutorial Completo para Automatizar Tarefas',
       thumbnail: 'https://img.youtube.com/vi/IbbFHGwyxuY/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=IbbFHGwyxuY'
+      url: 'hhttps://www.youtube.com/watch?v=rvU34N_Z-oo'
     },
     {
       id: '2',
-      title: 'Zapier para iniciantes: 5 automações incríveis',
-      thumbnail: 'https://img.youtube.com/vi/ElCFy_0lWmo/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=ElCFy_0lWmo'
+      title: 'LOVABLE GRATUITO ILIMITADO SEM HACK DE CRÉDITOS',
+      thumbnail: 'https://img.youtube.com/vi/7eW5UnS5nDw/hqdefault.jpg',
+      url: 'hhttps://www.youtube.com/watch?v=7eW5UnS5nDw'
     },
     {
       id: '3',
-      title: 'O que é e como configurar o Zapier',
-      thumbnail: 'https://img.youtube.com/vi/4g6yDevV7ec/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=4g6yDevV7ec'
+      title: 'COMO CRIAR UM APP NO LOVABLE + SUPABASE',
+      thumbnail: 'https://img.youtube.com/vi/Z5SmACDIhoM/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=Z5SmACDIhoM'
     }
   ],
   prompts: [
