@@ -1763,8 +1763,8 @@ applications: [
   videos: [
     {
       id: '1',
-      title: 'Como Usar o Zapier: Tutorial Completo para Automatizar Tarefas',
-      thumbnail: 'https://img.youtube.com/vi/IbbFHGwyxuY/hqdefault.jpg',
+      title: 'Aprenda a Criar Sites com IA usando LOVABLE (Atualizado 2026)',
+      thumbnail: 'https://img.youtube.com/vi/rvU34N_Z-oo/hqdefault.jpg',
       url: 'hhttps://www.youtube.com/watch?v=rvU34N_Z-oo'
     },
     {
