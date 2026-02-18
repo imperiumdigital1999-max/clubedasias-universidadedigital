@@ -1745,5 +1745,46 @@ applications: [
     { id: '2', title: 'Montagem social media', content: 'Recorte a pessoa em PNG para usar em um post com fundo personalizado.' }
   ],
   freeAccessVideo: 'https://remove.bg'
-}
+},
+  {
+    id: '50',
+    name: 'Teste',
+    description: 'Automação de workflows entre aplicativos',
+    image: 'https://sendbird.imgix.net/cms/Zapier-blog.png',
+    url: 'https://zapier.com',
+    category: 'automacao',
+    function: 'Plataforma de automação que conecta apps e APIs para criar fluxos de trabalho sem código.',
+  applications: [
+    'Automatizar tarefas entre ferramentas',
+    'Enviar notificações e e-mails automáticos',
+    'Integrar CRMs, calendários e bancos',
+    'Acionar IA automaticamente'
+  ],
+  videos: [
+    {
+      id: '1',
+      title: 'Como Usar o Zapier: Tutorial Completo para Automatizar Tarefas',
+      thumbnail: 'https://img.youtube.com/vi/IbbFHGwyxuY/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=IbbFHGwyxuY'
+    },
+    {
+      id: '2',
+      title: 'Zapier para iniciantes: 5 automações incríveis',
+      thumbnail: 'https://img.youtube.com/vi/ElCFy_0lWmo/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=ElCFy_0lWmo'
+    },
+    {
+      id: '3',
+      title: 'O que é e como configurar o Zapier',
+      thumbnail: 'https://img.youtube.com/vi/4g6yDevV7ec/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=4g6yDevV7ec'
+    }
+  ],
+  prompts: [
+    { id: '1', title: 'Automação de e-mail', content: 'Crie um fluxo no Zapier que envie e-mail quando um formulário do Google Forms for enviado.' },
+    { id: '2', title: 'Integração com CRM', content: 'Configure zap para adicionar leads via Typeform diretamente no CRM.' },
+    { id: '3', title: 'Notificação por Slack', content: 'Crie automação que envie mensagem no Slack ao registrar compra no WooCommerce.' }
+  ],
+  freeAccessVideo: 'https://zapier.com'
+  }
 ];
