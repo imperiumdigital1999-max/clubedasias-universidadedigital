@@ -1750,15 +1750,15 @@ applications: [
     id: '50',
     name: 'Lovable',
     description: 'Automação de workflows entre aplicativos',
-    image: 'https://sendbird.imgix.net/cms/Zapier-blog.png',
-    url: 'https://zapier.com',
-    category: 'automacao',
-    function: 'Plataforma de automação que conecta apps e APIs para criar fluxos de trabalho sem código.',
+    image: 'https://hub.asimov.academy/wp-content/uploads/2025/08/lovable.webp',
+    url: 'https://lovable.dev/',
+    category: 'Sites e aplicativos',
+    function: 'Plataforma de construção de sites e aplicativos com IA.',
   applications: [
-    'Automatizar tarefas entre ferramentas',
-    'Enviar notificações e e-mails automáticos',
-    'Integrar CRMs, calendários e bancos',
-    'Acionar IA automaticamente'
+  'Criar aplicativos web sem código',
+  'Construir landing pages profissionais com IA',
+  'Desenvolver MVPs rapidamente',
+  'Gerar interfaces e sistemas a partir de comandos em texto'
   ],
   videos: [
     {
