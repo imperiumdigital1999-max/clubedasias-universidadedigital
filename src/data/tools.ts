@@ -1822,15 +1822,15 @@ applications: [
     },
     {
       id: '2',
-      title: 'LOVABLE GRATUITO ILIMITADO SEM HACK DE CRÉDITOS',
-      thumbnail: 'https://img.youtube.com/vi/7eW5UnS5nDw/hqdefault.jpg',
-      url: 'hhttps://www.youtube.com/watch?v=7eW5UnS5nDw'
+      title: 'A melhor maneira de criar apps: BOLT.NEW de GRAÇA',
+      thumbnail: 'https://img.youtube.com/vi/lqy8iHeCSHI/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=lqy8iHeCSHI'
     },
     {
       id: '3',
-      title: 'COMO CRIAR UM APP NO LOVABLE + SUPABASE',
-      thumbnail: 'https://img.youtube.com/vi/Z5SmACDIhoM/hqdefault.jpg',
-      url: 'https://www.youtube.com/watch?v=Z5SmACDIhoM'
+      title: 'Crie Apps Mobile com IA Usando Bolt! ',
+      thumbnail: 'https://img.youtube.com/vi/0OCvHtF2fTw/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=0OCvHtF2fTw'
     }
   ],
  prompts: [
