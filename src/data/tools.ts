@@ -1780,11 +1780,23 @@ applications: [
       url: 'https://www.youtube.com/watch?v=Z5SmACDIhoM'
     }
   ],
-  prompts: [
-    { id: '1', title: 'Automação de e-mail', content: 'Crie um fluxo no Zapier que envie e-mail quando um formulário do Google Forms for enviado.' },
-    { id: '2', title: 'Integração com CRM', content: 'Configure zap para adicionar leads via Typeform diretamente no CRM.' },
-    { id: '3', title: 'Notificação por Slack', content: 'Crie automação que envie mensagem no Slack ao registrar compra no WooCommerce.' }
-  ],
+ prompts: [
+  { 
+    id: '1', 
+    title: 'Criar Landing Page Profissional', 
+    content: 'Crie uma landing page moderna para um curso online de inteligência artificial. A página deve conter: seção hero com promessa forte, benefícios em tópicos, prova social, FAQ e botão de chamada para ação destacado. Use design moderno e estrutura responsiva.' 
+  },
+  { 
+    id: '2', 
+    title: 'Criar MVP de Aplicativo', 
+    content: 'Crie um aplicativo web simples para gerenciamento de tarefas. O app deve ter: login, dashboard com lista de tarefas, botão para adicionar nova tarefa, opção de marcar como concluída e layout moderno e minimalista.' 
+  },
+  { 
+    id: '3', 
+    title: 'Sistema de Área de Membros', 
+    content: 'Crie um sistema básico de área de membros para um curso online. Deve conter: tela de login, painel do aluno com lista de módulos, bloqueio de conteúdo premium e design profissional focado em experiência do usuário.' 
+  }
+],
   freeAccessVideo: 'https://zapier.com'
   }
 ];
