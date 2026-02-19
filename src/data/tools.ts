@@ -1797,6 +1797,6 @@ applications: [
     content: 'Crie um sistema básico de área de membros para um curso online. Deve conter: tela de login, painel do aluno com lista de módulos, bloqueio de conteúdo premium e design profissional focado em experiência do usuário.' 
   }
 ],
-  freeAccessVideo: 'https://zapier.com'
+  freeAccessVideo: 'https://lovable.dev/'
   }
 ];
