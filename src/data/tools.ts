@@ -1752,7 +1752,7 @@ applications: [
     description: 'Automação de workflows entre aplicativos',
     image: 'https://hub.asimov.academy/wp-content/uploads/2025/08/lovable.webp',
     url: 'https://lovable.dev/',
-    category: 'Automação',
+    category: 'texto',
     function: 'Plataforma de construção de sites e aplicativos com IA.',
   applications: [
   'Criar aplicativos web sem código',
