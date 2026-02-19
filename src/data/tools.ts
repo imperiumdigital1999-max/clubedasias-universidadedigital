@@ -1749,7 +1749,7 @@ applications: [
   {
     id: '50',
     name: 'Lovable',
-    description: 'Automação de workflows entre aplicativos',
+    description: 'Crie aplicativos e sites com essa IA',
     image: 'https://hub.asimov.academy/wp-content/uploads/2025/08/lovable.webp',
     url: 'https://lovable.dev/',
     category: 'automacao',
@@ -1798,5 +1798,58 @@ applications: [
   }
 ],
   freeAccessVideo: 'https://lovable.dev/'
+  },
+  {
+    id: '50',
+    name: 'Bolt',
+    description: 'Crie aplicativos e sites com essa IA',
+    image: 'https://res.cloudinary.com/db194k5td/image/upload/v1738845293/aitools/Bolt.jpg.jpg',
+    url: 'https://bolt.new/',
+    category: 'automacao',
+    function: 'Plataforma de construção de sites e aplicativos com IA.',
+  applications: [
+  'Criar aplicativos web sem código',
+  'Construir landing pages profissionais com IA',
+  'Desenvolver MVPs rapidamente',
+  'Gerar interfaces e sistemas a partir de comandos em texto'
+  ],
+  videos: [
+    {
+      id: '1',
+      title: 'Aprenda a Criar Sites com IA usando LOVABLE (Atualizado 2026)',
+      thumbnail: 'https://img.youtube.com/vi/rvU34N_Z-oo/hqdefault.jpg',
+      url: 'hhttps://www.youtube.com/watch?v=rvU34N_Z-oo'
+    },
+    {
+      id: '2',
+      title: 'LOVABLE GRATUITO ILIMITADO SEM HACK DE CRÉDITOS',
+      thumbnail: 'https://img.youtube.com/vi/7eW5UnS5nDw/hqdefault.jpg',
+      url: 'hhttps://www.youtube.com/watch?v=7eW5UnS5nDw'
+    },
+    {
+      id: '3',
+      title: 'COMO CRIAR UM APP NO LOVABLE + SUPABASE',
+      thumbnail: 'https://img.youtube.com/vi/Z5SmACDIhoM/hqdefault.jpg',
+      url: 'https://www.youtube.com/watch?v=Z5SmACDIhoM'
+    }
+  ],
+ prompts: [
+  { 
+    id: '1', 
+    title: 'Criar Landing Page Profissional', 
+    content: 'Crie uma landing page moderna para um curso online de inteligência artificial. A página deve conter: seção hero com promessa forte, benefícios em tópicos, prova social, FAQ e botão de chamada para ação destacado. Use design moderno e estrutura responsiva.' 
+  },
+  { 
+    id: '2', 
+    title: 'Criar MVP de Aplicativo', 
+    content: 'Crie um aplicativo web simples para gerenciamento de tarefas. O app deve ter: login, dashboard com lista de tarefas, botão para adicionar nova tarefa, opção de marcar como concluída e layout moderno e minimalista.' 
+  },
+  { 
+    id: '3', 
+    title: 'Sistema de Área de Membros', 
+    content: 'Crie um sistema básico de área de membros para um curso online. Deve conter: tela de login, painel do aluno com lista de módulos, bloqueio de conteúdo premium e design profissional focado em experiência do usuário.' 
+  }
+],
+  freeAccessVideo: 'https://bolt.new/'
   }
 ];
