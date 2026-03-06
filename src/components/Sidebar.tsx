@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home, MessageSquare, CheckSquare, Bot, Layers, Star, Database, HelpCircle, Video, Workflow, Palette, Wand2, Users, Clapperboard, Camera } from 'lucide-react';
 import { ViewMode } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface SidebarProps {
   currentView: ViewMode;
@@ -8,25 +9,27 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ currentView, onViewChange }: SidebarProps) {
+  const { t } = useLanguage();
+
   const primaryNavigationItems = [
-    { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
-    { id: 'app-prompts' as ViewMode, label: 'App de Prompts', icon: Video },
-    { id: 'gerador-prompts-ugc' as ViewMode, label: 'Gerador de Prompts UGC', icon: Camera },
-    { id: 'gere-sua-arte' as ViewMode, label: 'Gere sua Arte', icon: Palette },
-    { id: 'anime-sua-imagem' as ViewMode, label: 'Anime sua Imagem', icon: Wand2, isRedirect: true },
-    { id: 'clone-com-ia' as ViewMode, label: 'Clone com IA', icon: Users, isRedirect: true },
-    { id: 'estudio-videos' as ViewMode, label: 'Estúdio de Vídeos', icon: Clapperboard },
-    { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
+    { id: 'inicio' as ViewMode, label: t('sidebar.inicio'), icon: Home },
+    { id: 'app-prompts' as ViewMode, label: t('sidebar.appPrompts'), icon: Video },
+    { id: 'gerador-prompts-ugc' as ViewMode, label: t('sidebar.geradorPromptsUgc'), icon: Camera },
+    { id: 'gere-sua-arte' as ViewMode, label: t('sidebar.gereSuaArte'), icon: Palette },
+    { id: 'anime-sua-imagem' as ViewMode, label: t('sidebar.animeSuaImagem'), icon: Wand2, isRedirect: true },
+    { id: 'clone-com-ia' as ViewMode, label: t('sidebar.cloneComIA'), icon: Users, isRedirect: true },
+    { id: 'estudio-videos' as ViewMode, label: t('sidebar.estudioVideos'), icon: Clapperboard },
+    { id: 'destaques-da-semana' as ViewMode, label: t('sidebar.destaquesDaSemana'), icon: Star },
   ];
 
   const secondaryNavigationItems = [
-    { id: 'prompts' as ViewMode, label: 'Biblioteca de Prompts', icon: MessageSquare },
-    { id: 'gpts-personalizados' as ViewMode, label: 'Agentes GPTs', icon: Bot },
-    { id: 'app-automations' as ViewMode, label: 'App de Automações', icon: Workflow },
-    { id: 'tasks' as ViewMode, label: 'Clube das Tarefas Premium', icon: CheckSquare },
-    { id: 'banco-digital' as ViewMode, label: '🔵 Banco DIGITAL', icon: Database },
-    { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: Layers },
-    { id: 'suporte' as ViewMode, label: 'Suporte', icon: HelpCircle },
+    { id: 'prompts' as ViewMode, label: t('sidebar.bibliotecaPrompts'), icon: MessageSquare },
+    { id: 'gpts-personalizados' as ViewMode, label: t('sidebar.agentesGpts'), icon: Bot },
+    { id: 'app-automations' as ViewMode, label: t('sidebar.appAutomacoes'), icon: Workflow },
+    { id: 'tasks' as ViewMode, label: t('sidebar.clubeTarefasPremium'), icon: CheckSquare },
+    { id: 'banco-digital' as ViewMode, label: t('sidebar.bancoDigital'), icon: Database },
+    { id: 'cursos' as ViewMode, label: t('sidebar.treinamentos'), icon: Layers },
+    { id: 'suporte' as ViewMode, label: t('sidebar.suporte'), icon: HelpCircle },
   ];
 
   return (

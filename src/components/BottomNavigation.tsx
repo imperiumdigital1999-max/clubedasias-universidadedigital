@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Home, CheckSquare, MoreHorizontal, MessageSquare, GraduationCap, X, Bot, Star, Database, HelpCircle, Video, Workflow, Palette, Wand2, Users, Clapperboard } from 'lucide-react';
 import { ViewMode } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface BottomNavigationProps {
   currentView: ViewMode;
@@ -9,26 +10,27 @@ interface BottomNavigationProps {
 
 export default function BottomNavigation({ currentView, onViewChange }: BottomNavigationProps) {
   const [showOthersMenu, setShowOthersMenu] = useState(false);
+  const { t } = useLanguage();
 
   const mainNavItems = [
-    { id: 'inicio' as ViewMode, label: 'Início', icon: Home },
-    { id: 'tasks' as ViewMode, label: 'Tarefas', icon: CheckSquare },
+    { id: 'inicio' as ViewMode, label: t('bottomNav.inicio'), icon: Home },
+    { id: 'tasks' as ViewMode, label: t('bottomNav.tarefas'), icon: CheckSquare },
   ];
 
   const otherNavItems = [
-    { id: 'app-prompts' as ViewMode, label: 'App de Prompts', icon: Video },
-    { id: 'gere-sua-arte' as ViewMode, label: 'Gere sua Arte', icon: Palette },
-    { id: 'anime-sua-imagem' as ViewMode, label: 'Anime sua Imagem', icon: Wand2, isRedirect: true },
-    { id: 'clone-com-ia' as ViewMode, label: 'Clone com IA', icon: Users, isRedirect: true },
-    { id: 'estudio-videos' as ViewMode, label: 'Estúdio de Vídeos', icon: Clapperboard },
-    { id: 'destaques-da-semana' as ViewMode, label: 'Destaques da Semana', icon: Star },
+    { id: 'app-prompts' as ViewMode, label: t('sidebar.appPrompts'), icon: Video },
+    { id: 'gere-sua-arte' as ViewMode, label: t('sidebar.gereSuaArte'), icon: Palette },
+    { id: 'anime-sua-imagem' as ViewMode, label: t('sidebar.animeSuaImagem'), icon: Wand2, isRedirect: true },
+    { id: 'clone-com-ia' as ViewMode, label: t('sidebar.cloneComIA'), icon: Users, isRedirect: true },
+    { id: 'estudio-videos' as ViewMode, label: t('sidebar.estudioVideos'), icon: Clapperboard },
+    { id: 'destaques-da-semana' as ViewMode, label: t('sidebar.destaquesDaSemana'), icon: Star },
     { id: 'divider' as any, label: '', icon: null, isDivider: true },
-    { id: 'prompts' as ViewMode, label: 'Biblioteca de Prompts', icon: MessageSquare },
-    { id: 'gpts-personalizados' as ViewMode, label: 'Agentes GPTs', icon: Bot },
-    { id: 'app-automations' as ViewMode, label: 'App de Automações', icon: Workflow },
-    { id: 'banco-digital' as ViewMode, label: '🔵 Banco DIGITAL', icon: Database },
-    { id: 'cursos' as ViewMode, label: 'Treinamentos', icon: GraduationCap },
-    { id: 'suporte' as ViewMode, label: 'Suporte', icon: HelpCircle },
+    { id: 'prompts' as ViewMode, label: t('sidebar.bibliotecaPrompts'), icon: MessageSquare },
+    { id: 'gpts-personalizados' as ViewMode, label: t('sidebar.agentesGpts'), icon: Bot },
+    { id: 'app-automations' as ViewMode, label: t('sidebar.appAutomacoes'), icon: Workflow },
+    { id: 'banco-digital' as ViewMode, label: t('sidebar.bancoDigital'), icon: Database },
+    { id: 'cursos' as ViewMode, label: t('sidebar.treinamentos'), icon: GraduationCap },
+    { id: 'suporte' as ViewMode, label: t('sidebar.suporte'), icon: HelpCircle },
   ];
 
   const handleOthersClick = () => {
@@ -60,7 +62,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
       {showOthersMenu && (
         <div className="fixed bottom-20 left-4 right-4 bg-slate-800 rounded-2xl border border-slate-700 z-50 overflow-hidden">
           <div className="flex items-center justify-between p-4 border-b border-slate-700">
-            <h3 className="text-white font-semibold">Outras opções</h3>
+            <h3 className="text-white font-semibold">{t('bottomNav.outrasOpcoes')}</h3>
             <button
               onClick={() => setShowOthersMenu(false)}
               className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
@@ -138,7 +140,7 @@ export default function BottomNavigation({ currentView, onViewChange }: BottomNa
           >
             <MoreHorizontal className={`w-5 h-5 mb-1 transition-colors ${isOtherViewActive || showOthersMenu ? 'text-blue-400' : ''}`} />
             <span className={`text-xs font-medium transition-colors truncate ${isOtherViewActive || showOthersMenu ? 'text-blue-400' : ''}`}>
-              Mais
+              {t('bottomNav.mais')}
             </span>
           </button>
         </div>

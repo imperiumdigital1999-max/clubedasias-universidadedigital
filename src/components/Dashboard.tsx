@@ -5,6 +5,7 @@ import {
 import FloatingChat from './FloatingChat';
 import { aiTools } from '../data/tools';
 import { AITool } from '../types';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface DashboardProps {
   onToolSelect?: (tool: any) => void;
@@ -20,31 +21,33 @@ interface Nucleo {
 }
 
 export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps) {
+  const { t } = useLanguage();
+
   const nucleos: Nucleo[] = [
     {
-      title: '🎬 Núcleo Vídeo & Conteúdo',
-      description: 'Criação, edição, roteiro, tradução e automação de vídeos com IA.',
+      title: t('dashboard.nucleos.video.title'),
+      description: t('dashboard.nucleos.video.description'),
       category: 'video',
       icon: Video,
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      title: '🧠 Núcleo Escrita & Vendas',
-      description: 'Copy, páginas e textos estratégicos para vender todos os dias.',
+      title: t('dashboard.nucleos.texto.title'),
+      description: t('dashboard.nucleos.texto.description'),
       category: 'texto',
       icon: PenTool,
       gradient: 'from-orange-500 to-red-500'
     },
     {
-      title: '🎨 Núcleo Imagens & Design',
-      description: 'Imagens realistas, criativos e materiais visuais profissionais.',
+      title: t('dashboard.nucleos.imagem.title'),
+      description: t('dashboard.nucleos.imagem.description'),
       category: 'imagem',
       icon: Image,
       gradient: 'from-blue-500 to-purple-500'
     },
     {
-      title: '⚙️ Núcleo Automação & Tech',
-      description: 'Automação inteligente e organização de sistemas digitais.',
+      title: t('dashboard.nucleos.automacao.title'),
+      description: t('dashboard.nucleos.automacao.description'),
       category: 'automacao',
       icon: Workflow,
       gradient: 'from-green-500 to-emerald-500'
@@ -78,11 +81,10 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-
-      Clube das IAs
+            {t('dashboard.title')}
           </h1>
           <p className="text-slate-400 text-base max-w-2xl mx-auto">
-    O maior Clube de acesso a IAs do Brasil! 
+            {t('dashboard.subtitle')}
           </p>
         </div>
 
@@ -98,11 +100,11 @@ export default function Dashboard({ onToolSelect, onViewChange }: DashboardProps
 
             <div className="text-center px-4">
               <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-4">
-                ⚠️ Assista Todas as Aulas Antes de Usar
+                {t('dashboard.watchClassesWarning')}
               </h2>
               <p className="text-slate-700 text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
-          APLICATIVO EM ATUALIZAÇÃO = Devido a nossa super atualização de 2026 o nosso aplicativo esta passando por ajustes e melhorias e estará disponivel 100% para todos os membros em: 13/02/2026 ás 20hrs.<br />
-Enquanto isso o aplicativo estará sofrendo com bugs e erros, obrigado pela colaboração de todos!
+                {t('dashboard.appUpdateMessage')}<br />
+                {t('dashboard.appUpdateMessageContinued')}
               </p>
               <a
                 href="https://hotmart.com/pt-br/club/clube-avancy-digital"
@@ -110,7 +112,7 @@ Enquanto isso o aplicativo estará sofrendo com bugs e erros, obrigado pela cola
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-blue-500/50"
               >
-                🎓 Acessar as Aulas Agora
+                {t('dashboard.accessClassesNow')}
               </a>
             </div>
           </div>
@@ -135,20 +137,20 @@ Enquanto isso o aplicativo estará sofrendo com bugs e erros, obrigado pela cola
               <div className="text-left">
                 <div className="flex items-center gap-2 mb-3">
                   <Sparkles className="w-6 h-6 text-yellow-400" />
-                  <span className="text-yellow-400 text-sm font-bold uppercase tracking-wider">Destaque Especial</span>
+                  <span className="text-yellow-400 text-sm font-bold uppercase tracking-wider">{t('dashboard.specialHighlight')}</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
-                  Viral Edit + VO3 AI
+                  {t('dashboard.viralEditTitle')}
                 </h2>
                 <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
-                  Acesse todas as funcionalidades e recursos da plataforma de criação de vídeos com IA. Tutoriais, prompts personalizados, créditos gratuitos e muito mais.
+                  {t('dashboard.viralEditDescription')}
                 </p>
               </div>
             </div>
 
             <div className="flex-shrink-0">
               <div className="flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/50">
-                <span>Acessar Agora</span>
+                <span>{t('dashboard.accessNow')}</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </div>
             </div>
@@ -215,12 +217,12 @@ Enquanto isso o aplicativo estará sofrendo com bugs e erros, obrigado pela cola
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                           {tool.new && (
                             <div className="absolute top-3 right-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-md">
-                              NOVO
+                              {t('dashboard.new')}
                             </div>
                           )}
                           {tool.featured && (
                             <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-900 text-xs font-bold px-2 py-1 rounded-md">
-                              DESTAQUE
+                              {t('dashboard.featured')}
                             </div>
                           )}
                         </div>
@@ -235,7 +237,7 @@ Enquanto isso o aplicativo estará sofrendo com bugs e erros, obrigado pela cola
                           <button
                             className="w-full font-medium py-2.5 px-4 rounded-lg transition-all shadow-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white shadow-purple-500/20 hover:shadow-purple-500/40"
                           >
-                            Ver Detalhes
+                            {t('dashboard.viewDetails')}
                           </button>
                         </div>
                       </div>

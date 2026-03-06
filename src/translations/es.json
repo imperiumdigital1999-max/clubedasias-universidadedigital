@@ -4,6 +4,29 @@
     "loginBtn": "Iniciar sesión",
     "logoutBtn": "Cerrar sesión"
   },
+  "sidebar": {
+    "inicio": "Inicio",
+    "appPrompts": "App de Prompts",
+    "geradorPromptsUgc": "Generador de Prompts UGC",
+    "gereSuaArte": "Genera tu Arte",
+    "animeSuaImagem": "Anima tu Imagen",
+    "cloneComIA": "Clon con IA",
+    "estudioVideos": "Estudio de Videos",
+    "destaquesDaSemana": "Destacados de la Semana",
+    "bibliotecaPrompts": "Biblioteca de Prompts",
+    "agentesGpts": "Agentes GPTs",
+    "appAutomacoes": "App de Automatizaciones",
+    "clubeTarefasPremium": "Club de Tareas Premium",
+    "bancoDigital": "🔵 Banco DIGITAL",
+    "treinamentos": "Entrenamientos",
+    "suporte": "Soporte"
+  },
+  "bottomNav": {
+    "inicio": "Inicio",
+    "tarefas": "Tareas",
+    "mais": "Más",
+    "outrasOpcoes": "Otras opciones"
+  },
   "navigation": {
     "dashboard": "Panel de Control",
     "courses": "Cursos",
@@ -32,12 +55,48 @@
     "shortPassword": "La contraseña debe tener al menos 6 caracteres"
   },
   "dashboard": {
-    "title": "Panel de Control",
+    "title": "Club de las IAs",
+    "subtitle": "¡El mayor Club de acceso a IAs de Brasil!",
     "welcome": "Bienvenido",
     "recentContent": "Contenido Reciente",
     "categories": "Categorías",
     "topTools": "Herramientas Populares",
-    "recentPrompts": "Prompts Recientes"
+    "recentPrompts": "Prompts Recientes",
+    "universityTitle": "UNIVERSIDAD CLUB DE LAS IAS",
+    "universitySubtitle": "APRENDE A USAR IAs CON ESTRATEGIA Y ALCANZA EL SIGUIENTE NIVEL DIGITAL",
+    "universityDescription": "Accede ahora a más de 160 clases prácticas enseñándote a usar IAs para generar resultados reales en tu negocio. De básico a avanzado, todo reunido en un solo lugar.",
+    "universityButton": "🎓 ACCEDER A LA UNIVERSIDAD AHORA",
+    "nucleos": {
+      "video": {
+        "title": "🎬 Núcleo Video & Contenido",
+        "description": "Creación, edición, guion, traducción y automatización de videos con IA."
+      },
+      "texto": {
+        "title": "🧠 Núcleo Escritura & Ventas",
+        "description": "Copy, páginas y textos estratégicos para vender todos los días."
+      },
+      "imagem": {
+        "title": "🎨 Núcleo Imágenes & Diseño",
+        "description": "Imágenes realistas, creativos y materiales visuales profesionales."
+      },
+      "automacao": {
+        "title": "⚙️ Núcleo Automatización & Tech",
+        "description": "Automatización inteligente y organización de sistemas digitales."
+      }
+    },
+    "exclusivePlan": "EXCLUSIVO PLAN PREMIUM",
+    "exploreTools": "Explorar Herramientas",
+    "watchClassesWarning": "⚠️ Mira Todas las Clases Antes de Usar",
+    "appUpdateMessage": "APLICACIÓN EN ACTUALIZACIÓN = Debido a nuestra gran actualización de 2026, nuestra aplicación está pasando por ajustes y mejoras y estará disponible al 100% para todos los miembros el: 13/02/2026 a las 20hrs.",
+    "appUpdateMessageContinued": "Mientras tanto, la aplicación estará sufriendo bugs y errores, ¡gracias por la colaboración de todos!",
+    "accessClassesNow": "🎓 Acceder a las Clases Ahora",
+    "specialHighlight": "Destacado Especial",
+    "viralEditTitle": "Viral Edit + VO3 AI",
+    "viralEditDescription": "Accede a todas las funcionalidades y recursos de la plataforma de creación de videos con IA. Tutoriales, prompts personalizados, créditos gratuitos y mucho más.",
+    "accessNow": "Acceder Ahora",
+    "new": "NUEVO",
+    "featured": "DESTACADO",
+    "viewDetails": "Ver Detalles"
   },
   "courses": {
     "title": "Cursos",
