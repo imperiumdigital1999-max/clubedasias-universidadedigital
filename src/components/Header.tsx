@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { LogOut } from 'lucide-react';
+import { LogOut, Globe } from 'lucide-react';
 import { ViewMode } from '../types';
+import { useLanguage, Language } from '../contexts/LanguageContext';
 
 interface HeaderProps {
   currentView: ViewMode;
@@ -11,6 +12,8 @@ interface HeaderProps {
 
 export default function Header({ currentView, onViewChange, onMenuToggle, onLogoutClick }: HeaderProps) {
   const [userEmail, setUserEmail] = useState<string>('');
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const email = localStorage.getItem('clube_ias_email') || '';
@@ -54,6 +57,47 @@ export default function Header({ currentView, onViewChange, onMenuToggle, onLogo
           </div>
 
           <div className="flex items-center space-x-3">
+            <div className="relative">
+              <button
+                onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+                className="p-2 text-slate-400 hover:text-blue-400 hover:bg-slate-800/50 rounded-lg transition-all"
+                title={t('language.selectLanguage')}
+              >
+                <Globe className="w-5 h-5" />
+              </button>
+
+              {showLanguageMenu && (
+                <div className="absolute right-0 mt-2 w-48 bg-slate-900 border border-slate-700 rounded-xl shadow-xl z-50">
+                  <button
+                    onClick={() => {
+                      setLanguage('pt');
+                      setShowLanguageMenu(false);
+                    }}
+                    className={`w-full px-4 py-3 text-left text-sm font-medium rounded-t-xl transition-colors ${
+                      language === 'pt'
+                        ? 'bg-blue-600/20 text-blue-300 border-l-2 border-blue-600'
+                        : 'text-slate-300 hover:bg-slate-800'
+                    }`}
+                  >
+                    🇧🇷 {t('language.portuguese')}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setLanguage('es');
+                      setShowLanguageMenu(false);
+                    }}
+                    className={`w-full px-4 py-3 text-left text-sm font-medium rounded-b-xl transition-colors ${
+                      language === 'es'
+                        ? 'bg-blue-600/20 text-blue-300 border-l-2 border-blue-600'
+                        : 'text-slate-300 hover:bg-slate-800'
+                    }`}
+                  >
+                    🇪🇸 {t('language.spanish')}
+                  </button>
+                </div>
+              )}
+            </div>
+
             <div className="flex items-center space-x-3 px-3 py-2 bg-slate-900/50 border border-slate-700/50 rounded-lg hover:border-slate-600/50 transition-colors cursor-pointer">
               <div className="w-7 h-7 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center">
                 <span className="text-xs font-semibold text-white">{getInitials(userEmail)}</span>

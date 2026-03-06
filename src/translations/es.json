@@ -1,0 +1,145 @@
+{
+  "header": {
+    "title": "Club de las IAs",
+    "loginBtn": "Iniciar sesión",
+    "logoutBtn": "Cerrar sesión"
+  },
+  "navigation": {
+    "dashboard": "Panel de Control",
+    "courses": "Cursos",
+    "prompts": "Prompts",
+    "tools": "Herramientas",
+    "tasks": "Tareas",
+    "agents": "Agentes",
+    "automations": "Automatizaciones",
+    "favorites": "Favoritos",
+    "recent": "Recientes",
+    "support": "Soporte"
+  },
+  "login": {
+    "title": "Bienvenido al Club de las IAs",
+    "subtitle": "Accede a tu cuenta para continuar",
+    "email": "Correo",
+    "password": "Contraseña",
+    "loginBtn": "Iniciar sesión",
+    "signupBtn": "Crear Cuenta",
+    "forgotPassword": "¿Olvidaste la contraseña?",
+    "noAccount": "¿No tienes una cuenta?",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "emailRequired": "El correo es obligatorio",
+    "passwordRequired": "La contraseña es obligatoria",
+    "invalidEmail": "Correo inválido",
+    "shortPassword": "La contraseña debe tener al menos 6 caracteres"
+  },
+  "dashboard": {
+    "title": "Panel de Control",
+    "welcome": "Bienvenido",
+    "recentContent": "Contenido Reciente",
+    "categories": "Categorías",
+    "topTools": "Herramientas Populares",
+    "recentPrompts": "Prompts Recientes"
+  },
+  "courses": {
+    "title": "Cursos",
+    "viewAll": "Ver todos",
+    "description": "Aprende con nuestros cursos especializados",
+    "startCourse": "Iniciar Curso",
+    "continueCourse": "Continuar Curso",
+    "coursesCompleted": "Cursos Completados"
+  },
+  "prompts": {
+    "title": "Prompts",
+    "viewAll": "Ver todos",
+    "description": "Biblioteca de prompts poderosos",
+    "copyPrompt": "Copiar Prompt",
+    "copied": "¡Copiado!",
+    "generatedWith": "Generado con"
+  },
+  "tools": {
+    "title": "Herramientas",
+    "viewAll": "Ver todos",
+    "description": "Herramientas y recursos",
+    "learnMore": "Más Información"
+  },
+  "tasks": {
+    "title": "Tareas",
+    "viewAll": "Ver todos",
+    "description": "Tareas y proyectos",
+    "status": "Estado",
+    "priority": "Prioridad",
+    "dueDate": "Fecha de Entrega"
+  },
+  "agents": {
+    "title": "Agentes IA",
+    "viewAll": "Ver todos",
+    "description": "Agentes de IA inteligentes",
+    "capabilities": "Capacidades",
+    "launch": "Iniciar"
+  },
+  "automations": {
+    "title": "Automatizaciones",
+    "viewAll": "Ver todos",
+    "description": "Automatiza tus tareas",
+    "setup": "Configurar",
+    "enabled": "Activado",
+    "disabled": "Desactivado"
+  },
+  "ugcEngine": {
+    "title": "UGC Prompt Engine™",
+    "subtitle": "Tecnología avanzada para generar prompts ultra realistas.",
+    "exclusiveSystem": "Sistema Exclusivo Club de las IAs",
+    "whatCreate": "¿Qué quieres crear?",
+    "describeCreation": "Describe tu creación",
+    "descriptionPlaceholder": "Describe con riqueza de detalles qué quieres crear… escena, emoción, producto, audiencia, estilo, ambiente…",
+    "moreDetails": "Cuantos más detalles proporciones, más poderoso será el resultado.",
+    "generateBtn": "GENERAR PROMPT AVANZADO",
+    "generating": "Procesando...",
+    "analyzingData": "Analizando datos...",
+    "optimizingStructure": "Optimizando estructura...",
+    "applyingModel": "Aplicando modelo avanzado...",
+    "successTitle": "Prompt generado exitosamente",
+    "modelApplied": "Modelo aplicado",
+    "copyPrompt": "Copiar Prompt",
+    "generateNew": "Generar Nuevo",
+    "professionalTip": "Consejo Profesional",
+    "tipText": "Este prompt fue optimizado usando nuestra tecnología propietaria. Cópialo y úsalo directamente en la plataforma elegida. Para mejores resultados, ajusta pequeños detalles específicos de tu proyecto manteniendo intacta la estructura principal.",
+    "categories": {
+      "imagensProfissionais": "Creativos en imágenes profesionales",
+      "imagensDesc": "Imágenes UGC ultra realistas y auténticas",
+      "veo3": "Creativos estilo VEO3",
+      "veo3Desc": "Vídeos cinematográficos de alta calidad",
+      "animarImagem": "Animar tu imagen",
+      "animarImagemDesc": "Transforma imágenes estáticas en vídeos",
+      "cloneGemini": "Clon Gemini",
+      "cloneGeminiDesc": "IA avanzada para clonación de estilo"
+    },
+    "models": {
+      "imagensProfissionais": "UGC Pro Image Engine",
+      "veo3": "VEO3 Cinema Model",
+      "animarImagem": "AI Animation Studio",
+      "cloneGemini": "Gemini Advanced Clone"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "close": "Cerrar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "selectOption": "Selecciona una opción",
+    "noResults": "No se encontraron resultados"
+  },
+  "language": {
+    "portuguese": "Portugués",
+    "spanish": "Español",
+    "selectLanguage": "Seleccionar Idioma"
+  }
+}

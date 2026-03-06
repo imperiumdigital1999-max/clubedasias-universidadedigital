@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Copy, Sparkles, RefreshCw, Camera, Video, Wand2, Bot, CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 type TipoCategoria = 'imagens-profissionais' | 'veo3' | 'animar-imagem' | 'clone-gemini';
 
@@ -8,39 +9,39 @@ interface LoadingStep {
   duration: number;
 }
 
-const loadingSteps: LoadingStep[] = [
-  { text: 'Analisando dados...', duration: 800 },
-  { text: 'Otimizando estrutura...', duration: 900 },
-  { text: 'Aplicando modelo avançado...', duration: 1000 }
+const getLoadingSteps = (t: (key: string) => string): LoadingStep[] => [
+  { text: t('ugcEngine.analyzingData'), duration: 800 },
+  { text: t('ugcEngine.optimizingStructure'), duration: 900 },
+  { text: t('ugcEngine.applyingModel'), duration: 1000 }
 ];
 
-const categorias = [
+const getCategorias = (t: (key: string) => string) => [
   {
     id: 'imagens-profissionais' as TipoCategoria,
     icon: Camera,
-    titulo: 'Criativos em imagens profissionais',
-    descricao: 'Imagens UGC ultra realistas e autênticas',
+    titulo: t('ugcEngine.categories.imagensProfissionais'),
+    descricao: t('ugcEngine.categories.imagensDesc'),
     gradiente: 'from-blue-600 to-cyan-600'
   },
   {
     id: 'veo3' as TipoCategoria,
     icon: Video,
-    titulo: 'Criativos estilo VEO3',
-    descricao: 'Vídeos cinematográficos de alta qualidade',
+    titulo: t('ugcEngine.categories.veo3'),
+    descricao: t('ugcEngine.categories.veo3Desc'),
     gradiente: 'from-purple-600 to-pink-600'
   },
   {
     id: 'animar-imagem' as TipoCategoria,
     icon: Wand2,
-    titulo: 'Animar sua imagem',
-    descricao: 'Transforme imagens estáticas em vídeos',
+    titulo: t('ugcEngine.categories.animarImagem'),
+    descricao: t('ugcEngine.categories.animarImagemDesc'),
     gradiente: 'from-orange-600 to-red-600'
   },
   {
     id: 'clone-gemini' as TipoCategoria,
     icon: Bot,
-    titulo: 'Clone Gemini',
-    descricao: 'IA avançada para clonagem de estilo',
+    titulo: t('ugcEngine.categories.cloneGemini'),
+    descricao: t('ugcEngine.categories.cloneGeminiDesc'),
     gradiente: 'from-green-600 to-emerald-600'
   }
 ];
@@ -55,14 +56,15 @@ const promptTemplates: Record<TipoCategoria, (descricao: string) => string> = {
   'clone-gemini': (descricao) => `Advanced AI-generated content using Gemini's multimodal capabilities. ${descricao}. Leverage Gemini's understanding of context, style, and nuance to create highly sophisticated output. The generation should demonstrate: deep comprehension of the request with attention to subtle details, style consistency that matches reference or described aesthetic, natural language flow if text-based or coherent visual style if image-based, appropriate tone and voice for intended audience, cultural awareness and sensitivity, creative interpretation that goes beyond literal translation. Use Gemini's ability to synthesize information across modalities - combining visual understanding, language processing, and contextual reasoning. Output should feel intelligent and purposeful, not generic or template-based. Quality indicators: coherent structure, attention to detail, appropriate complexity level, natural feel without obvious AI artifacts, alignment with brand voice or personal style if specified. The result represents cutting-edge AI capability - sophisticated, nuanced, and impressively human-like in quality.`
 };
 
-const nomeModelos: Record<TipoCategoria, string> = {
-  'imagens-profissionais': 'UGC Pro Image Engine',
-  'veo3': 'VEO3 Cinema Model',
-  'animar-imagem': 'AI Animation Studio',
-  'clone-gemini': 'Gemini Advanced Clone'
-};
+const getNomeModelos = (t: (key: string) => string): Record<TipoCategoria, string> => ({
+  'imagens-profissionais': t('ugcEngine.models.imagensProfissionais'),
+  'veo3': t('ugcEngine.models.veo3'),
+  'animar-imagem': t('ugcEngine.models.animarImagem'),
+  'clone-gemini': t('ugcEngine.models.cloneGemini')
+});
 
 export default function GeradorPromptsUGCView() {
+  const { t } = useLanguage();
   const [categoriaEscolhida, setCategoriaEscolhida] = useState<TipoCategoria | null>(null);
   const [descricao, setDescricao] = useState('');
   const [promptGerado, setPromptGerado] = useState('');
@@ -70,15 +72,18 @@ export default function GeradorPromptsUGCView() {
   const [copied, setCopied] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [currentLoadingStep, setCurrentLoadingStep] = useState(0);
+  const loadingSteps = getLoadingSteps(t);
+  const categorias = getCategorias(t);
+  const nomeModelos = getNomeModelos(t);
 
   const gerarPrompt = async () => {
     if (!categoriaEscolhida) {
-      alert('Por favor, selecione o tipo de criativo que você deseja gerar.');
+      alert(t('common.selectOption'));
       return;
     }
 
     if (!descricao.trim()) {
-      alert('Por favor, descreva o que você quer criar.');
+      alert(t('ugcEngine.describeCreation'));
       return;
     }
 
@@ -122,7 +127,7 @@ export default function GeradorPromptsUGCView() {
           <div className="absolute top-0 right-0 md:right-8">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-full">
               <Sparkles className="w-4 h-4 text-blue-400" />
-              <span className="text-xs font-semibold text-blue-300">Sistema Exclusivo Clube das IAs</span>
+              <span className="text-xs font-semibold text-blue-300">{t('ugcEngine.exclusiveSystem')}</span>
             </div>
           </div>
 
@@ -131,11 +136,11 @@ export default function GeradorPromptsUGCView() {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-            UGC Prompt Engine<sup className="text-2xl">™</sup>
+            {t('ugcEngine.title')}<sup className="text-2xl">™</sup>
           </h1>
 
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Tecnologia avançada para geração de prompts ultra realistas.
+            {t('ugcEngine.subtitle')}
           </p>
         </div>
 
@@ -144,7 +149,7 @@ export default function GeradorPromptsUGCView() {
             <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-800 rounded-3xl shadow-2xl p-8 md:p-10">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center space-x-3">
                 <span className="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center text-sm font-bold">1</span>
-                <span>O que você quer criar?</span>
+                <span>{t('ugcEngine.whatCreate')}</span>
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -193,13 +198,13 @@ export default function GeradorPromptsUGCView() {
             <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-800 rounded-3xl shadow-2xl p-8 md:p-10">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center space-x-3">
                 <span className="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center text-sm font-bold">2</span>
-                <span>Descreva sua criação</span>
+                <span>{t('ugcEngine.describeCreation')}</span>
               </h2>
 
               <textarea
                 value={descricao}
                 onChange={(e) => setDescricao(e.target.value)}
-                placeholder="Descreva com riqueza de detalhes o que você quer criar… cenário, emoção, produto, público, estilo, ambiente…"
+                placeholder={t('ugcEngine.descriptionPlaceholder')}
                 rows={6}
                 className="w-full px-6 py-5 bg-slate-950/50 border border-slate-700 rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 transition-all resize-none text-base"
               />
@@ -207,7 +212,7 @@ export default function GeradorPromptsUGCView() {
               <div className="mt-4 flex items-start space-x-2 text-sm text-slate-400">
                 <Sparkles className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                 <p>
-                  <strong className="text-slate-300">Dica:</strong> Quanto mais detalhes você fornecer, mais poderoso será o resultado.
+                  <strong className="text-slate-300">💡</strong> {t('ugcEngine.moreDetails')}
                 </p>
               </div>
             </div>
@@ -221,12 +226,12 @@ export default function GeradorPromptsUGCView() {
                 {isLoading ? (
                   <>
                     <div className="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin" />
-                    <span>{loadingSteps[currentLoadingStep]?.text || 'Processando...'}</span>
+                    <span>{loadingSteps[currentLoadingStep]?.text || t('ugcEngine.generating')}</span>
                   </>
                 ) : (
                   <>
                     <Sparkles className="w-7 h-7" />
-                    <span>GERAR PROMPT AVANÇADO</span>
+                    <span>{t('ugcEngine.generateBtn')}</span>
                   </>
                 )}
               </button>
@@ -239,9 +244,9 @@ export default function GeradorPromptsUGCView() {
                 <div className="flex items-center space-x-3">
                   <CheckCircle2 className="w-8 h-8 text-green-400" />
                   <div>
-                    <h3 className="text-2xl font-bold text-white">Prompt gerado com sucesso</h3>
+                    <h3 className="text-2xl font-bold text-white">{t('ugcEngine.successTitle')}</h3>
                     <p className="text-sm text-slate-400 mt-1">
-                      Modelo aplicado: <span className="text-blue-400 font-semibold">{categoriaEscolhida ? nomeModelos[categoriaEscolhida] : ''}</span>
+                      {t('ugcEngine.modelApplied')}: <span className="text-blue-400 font-semibold">{categoriaEscolhida ? nomeModelos[categoriaEscolhida] : ''}</span>
                     </p>
                   </div>
                 </div>
@@ -249,7 +254,7 @@ export default function GeradorPromptsUGCView() {
 
               <div className="bg-slate-950/70 border border-slate-700/50 rounded-2xl p-6 mb-6 font-mono">
                 <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Prompt Gerado</span>
+                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{t('ugcEngine.copyPrompt')}</span>
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -267,7 +272,7 @@ export default function GeradorPromptsUGCView() {
                   className="flex-1 py-5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-lg rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center justify-center space-x-3"
                 >
                   <Copy className="w-6 h-6" />
-                  <span>{copied ? 'Copiado!' : 'Copiar Prompt'}</span>
+                  <span>{copied ? t('prompts.copied') : t('ugcEngine.copyPrompt')}</span>
                 </button>
 
                 <button
@@ -275,7 +280,7 @@ export default function GeradorPromptsUGCView() {
                   className="flex-1 py-5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-lg rounded-xl border-2 border-slate-600 transition-all flex items-center justify-center space-x-3"
                 >
                   <RefreshCw className="w-6 h-6" />
-                  <span>Gerar Novo</span>
+                  <span>{t('ugcEngine.generateNew')}</span>
                 </button>
               </div>
             </div>
@@ -284,10 +289,9 @@ export default function GeradorPromptsUGCView() {
               <div className="flex items-start space-x-3">
                 <Sparkles className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-base font-bold text-blue-300 mb-2">Dica Profissional</h4>
+                  <h4 className="text-base font-bold text-blue-300 mb-2">{t('ugcEngine.professionalTip')}</h4>
                   <p className="text-sm text-slate-300 leading-relaxed">
-                    Este prompt foi otimizado usando nossa tecnologia proprietária. Copie e use diretamente na plataforma escolhida.
-                    Para melhores resultados, ajuste pequenos detalhes específicos do seu projeto mantendo a estrutura principal intacta.
+                    {t('ugcEngine.tipText')}
                   </p>
                 </div>
               </div>
