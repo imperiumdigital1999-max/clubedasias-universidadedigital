@@ -16,7 +16,7 @@ export default function SuporteView() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <a
-            href="https://api.whatsapp.com/send/?phone=5571983561970"
+            href="https://api.whatsapp.com/send/?phone=5571981634836"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-8 hover:border-green-500/50 transition-all hover:shadow-2xl hover:shadow-green-500/10 group"
@@ -34,7 +34,7 @@ export default function SuporteView() {
             </p>
             <div className="bg-slate-800/50 rounded-xl p-4 text-center">
               <p className="text-white font-mono text-lg">
-                +55 71 983561970
+                +55 71 981634836
               </p>
             </div>
           </a>
